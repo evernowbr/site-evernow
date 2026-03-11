@@ -35,7 +35,20 @@
       <link rel="stylesheet" href="assets/css/super-classes.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/mobile.css">
-      </head>
+      <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+      <script>
+      (function () {
+         var s = document.createElement('script');
+         s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+         s.setAttribute('data-tenant-uuid', 'f8b5a9ef-d04c-44a2-98d1-0bac079cd726');
+         s.setAttribute('data-domain-uuid', '7fc5ff01-30d5-4bcd-b1de-0b9babb906d5');
+         s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+         s.setAttribute('data-skip-css', 'false');
+         s.defer = true;
+         var parent_node = document.head || document.body;
+         parent_node.appendChild(s);
+      })()
+      </script>
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
