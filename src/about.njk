@@ -1,0 +1,181 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}about.html"
+pageMeta: about
+---
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+      
+      <section class="banner-main-con about-page-main-banner-con">
+         <div class="container">
+            <div class="banner-con about-page-banner-con text-center">
+               <div class="row wow slideInLeft">
+                  <div class="col-lg-12">
+                     <div class="about-page-banner-title">
+                        <h1>{{ "about.banner.title" | t }}</h1>
+                        <p class="mb-0">{{ "about.banner.subtitle" | t }}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--- blog-post-section-->
+      <section>
+         <div class="Effective-con about-features-con padding_top_120 padding_bottom_65">
+         <div class="container">
+            <div class="blog-post-details-con">
+               <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-lg-0 mb-md-0 mb-sm-0 mb-4 wow slideInRight">
+                     <div class="blog-post-details-sec-img float-left">
+                        <img src="/assets/image/check-box-icon.png" alt="check-box-icon" class="img-fluid" loading="lazy">
+                     </div>
+                     <div class="blog-post-details-heading-sec">
+                        <div class="blog-post-details-sec-title">
+                           <h4>{{ "about.features.item1.title" | t }}</h4>
+                        </div>
+                        <div class="blog-post-details-sec-content">
+                           <p class="mb-0">{{ "about.features.item1.desc" | t }}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-lg-0 mb-md-0 md-sm-0 mb-4 wow slideInRight">
+                     <div class="blog-post-details-sec-img float-left">
+                        <img src="/assets/image/check-box-icon.png" alt="check-box-icon" class="img-fluid" loading="lazy">
+                     </div>
+                     <div class="blog-post-details-heading-sec">
+                        <div class="blog-post-details-sec-title">
+                           <h4>{{ "about.features.item2.title" | t }}</h4>
+                        </div>
+                        <div class="blog-post-details-sec-content">
+                           <p class="mb-0">{{ "about.features.item2.desc" | t }}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-12 wow slideInRight">
+                     <div class="blog-post-details-sec-img float-left">
+                        <img src="/assets/image/check-box-icon.png" alt="check-box-icon" class="img-fluid" loading="lazy">
+                     </div>
+                     <div class="blog-post-details-heading-sec">
+                        <div class="blog-post-details-sec-title">
+                           <h4>{{ "about.features.item3.title" | t }}</h4>
+                        </div>
+                        <div class="blog-post-details-sec-content">
+                           <p class="mb-0">{{ "about.features.item3.desc" | t }}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </section>
+   </div>
+</div>
+
+<main>
+   <!---slider-section-->
+   {% set partnersTagKey = "about.partners.tag" | t %}
+   {% set partnersSliderExtraClass = "about-slider-con" %}
+   {% include "components/partners-grid.njk" %}
+
+   <!---information-section-->
+   <section>
+      <div class="informationmain-con dots-left-img information-about-page-con w-100 pt-0">
+         <div class="container overlay-content">
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-12 informationmain-left-con wow slideInLeft">
+                  <div class="informationmainleft-sec-img">
+                     <figure class="mb-0">
+                        <img src="/assets/image/informationmain-about-page-left-sec-img.png" alt="informationmain-about-page-left-sec-img" loading="lazy">
+                     </figure>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 informationmain-right-con wow slideInRight">
+                  <div class="informationmain-right-heading">
+                     <h5>{{ "about.how_we_work.tag" | t }}</h5>
+                     <h2>{{ "about.how_we_work.title" | t | safe }}</h2>
+                  </div>
+                  <div class="informationmain-right-content">
+                     <p>{{ "about.how_we_work.desc" | t }}</p>
+                     <ul class="mb-0 list">
+                        <li><i class="fas fa-check-circle"></i>{{ "about.how_we_work.li1" | t | safe }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "about.how_we_work.li2" | t | safe }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "about.how_we_work.li3" | t | safe }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "about.how_we_work.li4" | t | safe }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "about.how_we_work.li5" | t | safe }}</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!---Cyber-Security-section-->
+   <section>
+      <div class="Cyber-Security-con about-page-Cyber-main-con bg-overly-img w-100">
+         <div class="container overlay-content">
+            <div class="row wow fadeInUp">
+               <div class="col-lg-12 col-md-12 Cyber-Security-left-con">
+                  <div class="row Cyber-Security-left-main-con mb-0">
+                     <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-sm-4 text-center">
+                        <div class="Cyber-Security-left-card-con">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img1.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title">
+                              <h3>{{ "about.security_cards.card1.title" | t }}</h3>
+                              <p class="mb-0">{{ "about.security_cards.card1.desc" | t }}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-sm-4 text-center">
+                        <div class="Cyber-Security-left-card-con">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img2.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title">
+                              <h3>{{ "about.security_cards.card2.title" | t }}</h3>
+                              <p class="mb-0">{{ "about.security_cards.card2.desc" | t | safe }}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div class="Cyber-Security-left-card-con">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img3.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title">
+                              <h3>{{ "about.security_cards.card3.title" | t }}</h3>
+                              <p class="mb-0">{{ "about.security_cards.card3.desc" | t }}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div class="Cyber-Security-left-card-con mb-0">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img4.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title d-inline-block position-relative">
+                              <h3>{{ "about.security_cards.card4.title" | t }}</h3>
+                              <p class="mb-0">{{ "about.security_cards.card4.desc" | t }}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about-page-Cyber-Security-link ml-auto mr-auto">
+                        <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ "about.security_cards.btn" | t }}</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>

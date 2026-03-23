@@ -1,0 +1,264 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}index.html"
+pageMeta: home
+---
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+      
+      <section class="banner-main-con">
+         <div class="container">
+            <div class="banner-con">
+               <div class="row">
+                  <div class="col-lg-7 col-md-7 col-sm-12 d-flex justify-content-center flex-column banner-main-left-con">
+                     <div class="banner-left-con wow slideInLeft">
+                        <div class="banner-heading">
+                           <h1>{{ "home.banner.title" | t | safe }}</h1>
+                        </div>
+                        <div class="banner-content">
+                           <p class="col-lg-11 pl-0 pr-0">
+                              {{ "home.banner.subtitle" | t }}
+                           </p>
+                        </div>
+                        <div class="banner-btn">
+                           <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ "home.banner.btn" | t }}</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-12">
+                     <div class="banner-right-con wow slideInRight">
+                        <figure class="mb-0">
+                           <img src="/assets/image/hero-img.png" alt="banner-right-img">
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+<main>
+   <!---slider-section-->
+   {% set partnersTagKey = "home.slider.title" | t %}
+   {% set partnersSubtitle = "home.slider.subtitle" | t %}
+   {% include "components/partners-grid.njk" %}
+
+   <!---information-section-->
+   <section>
+      <div class="informationmain-con dots-left-img w-100">
+         <div class="container overlay-content">
+            <div class="row">
+               <div class="col-lg-6 col-md-6 col-sm-12 informationmain-left-con">
+                  <div class="informationmainleft-sec-img wow slideInLeft">
+                     <figure class="mb-0">
+                        <img src="/assets/image/informationmain-left-sec-img.png" alt="informationmain-left-sec-img" loading="lazy">
+                     </figure>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12 informationmain-right-con wow slideInRight">
+                  <div class="informationmain-right-heading">
+                     <h5>{{ "home.info.tag" | t }}</h5>
+                     <h2>{{ "home.info.title" | t }}</h2>
+                  </div>
+                  <div class="informationmain-right-content">
+                     <p>{{ "home.info.desc" | t }}</p>
+                     <ul class="mb-0 list">
+                        <li><i class="fas fa-check-circle"></i>{{ "home.info.item1" | t }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "home.info.item2" | t }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "home.info.item3" | t }}</li>
+                        <li><i class="fas fa-check-circle"></i>{{ "home.info.item4" | t }}</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!--- Effective-section-->
+   <section>
+      <div class="Effective-con bg-overly-img w-100">
+         <div class="container overlay-content">
+            <div class="Effective-sec-heading text-center">
+               <h2>{{ "home.effective.title" | t | safe }}</h2>
+               <p>{{ "home.effective.subtitle" | t }}</p><br>
+            </div>
+            <div class="row wow fadeInUp">
+               <div class="col-lg-3 col-md-6 col-12">
+                  <div class="Effective-sec-item mb-lg-0 mb-4">
+                     <figure><img src="/assets/image/Effective-sec-item-img1.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "home.effective.item1.title" | t }}</h4>
+                        <p>{{ "home.effective.item1.desc" | t }}</p>
+                        <ul class="list-unstyled list">
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item1.li1" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item1.li2" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item1.li3" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item1.li4" | t }}</li>
+                        </ul>
+                     </div>
+                     <div class="ml-auto mr-auto">
+                        <a href="{{ urlPrefix }}/about.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item1.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-12">
+                  <div class="Effective-sec-item mb-lg-0 mb-4">
+                     <figure><img src="/assets/image/Effective-sec-item-img2.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "home.effective.item2.title" | t }}</h4>
+                        <p>{{ "home.effective.item2.desc" | t }}</p>
+                        <ul class="list-unstyled list">
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item2.li1" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item2.li2" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item2.li3" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item2.li4" | t }}</li>
+                        </ul>
+                     </div>
+                     <div class="ml-auto mr-auto">
+                        <a href="{{ urlPrefix }}/services.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item2.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-12">
+                  <div class="Effective-sec-item Effective-sec-item3">
+                     <figure><img src="/assets/image/Effective-sec-item-img3.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "home.effective.item3.title" | t }}</h4>
+                        <p>{{ "home.effective.item3.desc" | t }}</p>
+                        <ul class="list-unstyled list">
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item3.li1" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item3.li2" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item3.li3" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item3.li4" | t }}</li>
+                        </ul>
+                     </div>
+                     <div class="ml-auto mr-auto">
+                        <a href="{{ urlPrefix }}/solutions.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item3.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-12">
+                  <div class="Effective-sec-item">
+                     <figure><img src="/assets/image/Effective-sec-item-img4.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "home.effective.item4.title" | t }}</h4>
+                        <p>{{ "home.effective.item4.desc" | t }}</p>
+                        <ul class="list-unstyled list">
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item4.li1" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item4.li2" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item4.li3" | t }}</li>
+                           <li><i class="fas fa-check-circle"></i>{{ "home.effective.item4.li4" | t }}</li>
+                        </ul>
+                     </div>
+                     <div class="ml-auto mr-auto">
+                        <a href="{{ urlPrefix }}/services.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item4.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!---Cyber-Security-section-->
+   <section>
+      <div class="informationmain-con bg-overly-img w-100">
+         <div class="container overlay-content">
+            <div class="row">
+               <div class="col-lg-6 col-md-12 Cyber-Security-left-con wow slideInLeft">
+                  <div class="row Cyber-Security-left-main-con">
+                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                        <div class="Cyber-Security-left-card-con">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img4.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title">
+                              <h3>{{ "home.stats.value1" | t }}</h3>
+                              <p class="mb-0">{{ "home.stats.item1" | t | safe }}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                        <div class="Cyber-Security-left-card-con">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img2.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title">
+                              <h3>{{ "home.stats.value2" | t }}</h3>
+                              <p class="mb-0">{{ "home.stats.item2" | t | safe }}</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                        <div class="Cyber-Security-left-card-con mb-0">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img3.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title position-relative d-inline-block">
+                              <h3>{{ "home.stats.value3" | t }}</h3>
+                              <p class="mb-0">{{ "home.stats.item3" | t | safe }}</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                        <div class="Cyber-Security-left-card-con">
+                           <div class="Cyber-Security-left-card-img">
+                              <figure><img src="/assets/image/Cyber-Security-left-card-img1.png" alt="" class="img-fluid" loading="lazy"></figure>
+                           </div>
+                           <div class="Cyber-Security-left-card-title">
+                              <h3 class="count d-inline-block">{{ "home.stats.value4" | t }}</h3>
+                              <p class="mb-0">{{ "home.stats.item4" | t | safe }}</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-12 Cyber-Security-right-con wow slideInRight">
+                  <div class="Cyber-Security-right-heading-con"><br>
+                     <h5>{{ "home.stats.tag" | t }}</h5>
+                     <h2>{{ "home.stats.title" | t }}</h2>
+                     <p>{{ "home.stats.desc" | t | safe }}</p>
+                     <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ "home.stats.btn" | t }}</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Testimonials-section -->
+   {% set testimonialsLayout = "carousel" %}
+   {% set testimonialsTagKey = "home.testimonials.tag" | t %}
+   {% set testimonialsItem1Content = "home.testimonials.item1.content" | t %}
+   {% set testimonialsItem1Author = "Alexandre Domingos" %}
+   {% set testimonialsItem1Role = "CISO & DPO - Grupo DASA" %}
+   {% set testimonialsItem2Content = "home.testimonials.item2.content" | t %}
+   {% set testimonialsItem2Author = "Leandro Bicudo" %}
+   {% set testimonialsItem2Role = "home.testimonials.item2.role" | t %}
+   {% include "components/testimonials.njk" %}
+
+   <!-- Logo Carousel -->
+   {% set partnersTagKey = "home.partners.tag" | t %}
+   {% set partnersAriaLabel = "home.partners.aria" | t %}
+   {% include "components/partners-carousel.njk" %}
+
+   <!-- HubSpot Form Section -->
+   <section>
+      <div class="form-main-con dots-left-img">
+         <div class="container overlay-content">
+            <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+            <div class="hs-form-frame" data-region="na1" data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9" data-portal-id="49406327"></div>
+         </div>
+      </div>
+   </section>
+</main>

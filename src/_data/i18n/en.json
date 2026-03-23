@@ -1,0 +1,460 @@
+{
+  "nav": {
+    "about": "About us",
+    "services": "Services",
+    "solutions": "Solutions",
+    "support": "Support",
+    "contact": "Contact",
+    "toggleLabel": "Toggle navigation"
+  },
+  "footer": {
+    "tagline": "We protect companies with cybersecurity and DevSecOps solutions, combining technology and experts to generate trust, efficiency and secure growth.",
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "copyright": "Copyright Evernow © 2026. All rights reserved.",
+    "links": {
+      "about": "About us",
+      "services": "Services",
+      "solutions": "Solutions",
+      "contact": "Contact"
+    }
+  },
+  "about": {
+    "banner": {
+      "title": "About Evernow",
+      "subtitle": "Specialized digital security consulting for applications, data, and processes. We transform risk into a competitive advantage with a lean methodology, clear metrics, and automation."
+    },
+    "features": {
+      "item1": {
+        "title": "Native integration into your flow",
+        "desc": "DevOps, CI/CD, SAST/DAST/SCA, risk prioritization, and agnostic auto-fix, without switching solutions."
+      },
+      "item2": {
+        "title": "Uncomplicated governance",
+        "desc": "Compliance for LGPD, NIST, ISO 27001, and ISO/IEC 42001 (AI), with efficient executive reports."
+      },
+      "item3": {
+        "title": "Visible impact in 90 days",
+        "desc": "Plan with goals and KPIs: shorter MTTR, coverage, treated critical backlog, and risk reduction."
+      }
+    },
+    "partners": {
+      "tag": "Clients who trust Evernow"
+    },
+    "how_we_work": {
+      "tag": "WHAT WE DO?",
+      "title": "More security.<br>More speed.<br>Less risk.",
+      "desc": "DevSecOps, AppSec, GRC, and AI Governance. Tailor-made end-to-end digital security integration for your business."
+    },
+    "security_cards": {
+      "card1": {
+        "title": "DevSecOps",
+        "desc": "Secure development is our specialty"
+      },
+      "card2": {
+        "title": "Evernow SaaS",
+        "desc": "Managed Services,<br>SIEM, SaaS and Support"
+      },
+      "card3": {
+        "title": "Solutions",
+        "desc": "Best price on licensing"
+      },
+      "card4": {
+        "title": "GRC",
+        "desc": "Tailor-made specialized professionals"
+      },
+      "btn": "Talk to a specialist"
+    }
+  },
+  "services": {
+    "banner": {
+      "title": "Cybersecurity Services",
+      "subtitle": "360° Portfolio in DevOps, AppSec, Data Protection, and GRC. From implementation to operation and evidence for LGPD, NIST, PCI, and ISO 27001, including vendor and third-party assessment."
+    },
+    "cards": {
+      "item1": {
+        "title": "DevSecOps Acceleration Program",
+        "desc": "<strong>Get the most without switching your stack.</strong> CI/CD, SAST, DAST, SCA, IaC, and secrets prioritized by risk, blocking, and auto-fix in the developer workflow."
+      },
+      "item2": {
+        "title": "Managed Secure Development",
+        "desc": "<strong>Continuously reduce vulnerabilities.</strong> Scans, triage, and developer guidance with SLAs and executive dashboards."
+      },
+      "item3": {
+        "title": "Pentest & Security Testing",
+        "desc": "<strong>Discover real risks before the attacker.</strong> Web, APIs, mobile, and cloud with controlled exploitation, evidence, and retest (LGPD/ISO/PCI)."
+      },
+      "item4": {
+        "title": "Data Protection & Encryption",
+        "desc": "<strong>Protect sensitive data and comply with LGPD.</strong> Discovery, consent/cookies, KMS/HSM encryption, tokenization, and hardening."
+      },
+      "item5": {
+        "title": "Governance, Risk, and Compliance (GRC)",
+        "desc": "<strong>Gain compliance without friction.</strong> Assessment, inventories, risk evaluation, policies, and audit trails (LGPD/GDPR/ISO/PCI/NIST)."
+      },
+      "item6": {
+        "title": "Evernow Managed Services",
+        "desc": "<strong>Sleep soundly with 24x7 operation.</strong> SLAs, runbooks, SOC/SIEM, vulnerability response, and compliance reports."
+      }
+    },
+    "tabs_section": {
+      "tag": "What we do?",
+      "title": "Four fronts to shield your business in digital security"
+    },
+    "tabs": {
+      "tab1": {
+        "label": "DevOps & Secure Development",
+        "title": "We integrate security throughout the software lifecycle, from planning to deployment.",
+        "desc1": "Our DevSecOps model accelerates application delivery by automating tests, anticipating the identification and correction of vulnerabilities in modeling, and ensuring continuous compliance.",
+        "desc2": "We combine clear metrics and agile practices to make security a natural part of development, without compromising business speed."
+      },
+      "tab2": {
+        "label": "Evernow SaaS & Managed Services",
+        "title": "We offer continuous security with active monitoring and specialized management.",
+        "desc1": "Through managed services and SaaS solutions, we offer 24/7 protection against threats, reducing operational costs and freeing your team to focus on innovation.",
+        "desc2": "Our approach unifies visibility, automation, and agile response, keeping the environment always secure, up-to-date, and in compliance."
+      },
+      "tab3": {
+        "label": "Tool Selection & Management",
+        "title": "Choose the right solutions and maximize the return on your security investments.",
+        "desc1": "We support everything from market analysis to implementation, adjustment, and operation of tools, ensuring alignment with the company's strategic goals.",
+        "desc2": "With practical expertise, we help reduce redundancies, optimize costs, and increase efficiency, so that each technology brings its maximum potential, delivering real and measurable value."
+      },
+      "tab4": {
+        "label": "Security Assessments & Testing",
+        "title": "Anticipate risks before they become real incidents.",
+        "desc1": "We perform pentests, assessments, and complete audits to identify vulnerabilities, validate controls, and strengthen your company's cyber resilience.",
+        "desc2": "Our reports prioritize clarity and impact, helping leaders make fast and assertive decisions to protect data, processes, and reputation."
+      }
+    },
+    "cta": {
+      "title": "Ready to start?",
+      "subtitle": "Choose the model that best fits your business: 40h, 80h plans, or dedicated professionals.<br>Total flexibility to accelerate results with security.",
+      "btn": "Talk to a specialist"
+    },
+    "partners": {
+      "tag": "Join the clients who trust Evernow"
+    }
+  },
+  "solutions": {
+    "banner": {
+      "title": "Cybersecurity Solutions",
+      "subtitle": "With experience in large organizations and mastery of the main tools on the market, we help your company choose, implement, and operate the right technologies to protect data, applications, and infrastructure efficiently and continuously."
+    },
+    "grid": {
+      "item1": {
+        "img": "/assets/image/analisadores_codigo.png",
+        "category": "Application Security",
+        "tag": "DAST, SAST, SCA",
+        "title": "Code Analyzers",
+        "desc": "Identify vulnerabilities still in the development phase. Reduce risks without compromising delivery speed."
+      },
+      "item2": {
+        "img": "/assets/image/pentest_app.png",
+        "category": "Application Security",
+        "tag": "Application Pentest",
+        "title": "Simulated Attacks on Apps",
+        "desc": "Test the resilience of your applications against real intruders. Gain clarity with objective reports and risk prioritization."
+      },
+      "item3": {
+        "img": "/assets/image/seg_nuvem.png",
+        "category": "Infrastructure Security",
+        "tag": "CSPM",
+        "title": "Cloud Security",
+        "desc": "Monitor configurations and fix flaws automatically. Maintain continuous compliance across multiple providers."
+      },
+      "item4": {
+        "img": "/assets/image/pentest_infra.png",
+        "category": "Infrastructure Security",
+        "tag": "Infrastructure Pentest",
+        "title": "Network and Systems Validation",
+        "desc": "Discover weaknesses in servers and critical connections. Receive practical recommendations for immediate hardening."
+      },
+      "item5": {
+        "img": "/assets/image/dspm.png",
+        "category": "Infrastructure Security",
+        "tag": "DSPM",
+        "title": "Data Posture Management",
+        "desc": "Map risks and define policies and controls over sensitive data. Ensure total visibility throughout the information lifecycle."
+      },
+      "item6": {
+        "img": "/assets/image/discovery_dados.png",
+        "category": "Data Security",
+        "tag": "Data Discovery",
+        "title": "Data Discovery and Protection",
+        "desc": "Classify and protect critical information against leaks. Meet LGPD and other regulations efficiently."
+      }
+    },
+    "partners": {
+      "tag": "Evernow Solution Partners"
+    }
+  },
+  "home": {
+    "banner": {
+      "title": "We accelerate the digital security<br> of <span>your business</span>",
+      "subtitle": "Reduce risks, gain efficiency and prove results with experts in cybersecurity, AI and automation",
+      "btn": "Talk to a specialist now"
+    },
+    "slider": {
+      "title": "Clients who trust Evernow",
+      "subtitle": "The largest companies already trust Evernow as the ideal partner to accelerate innovation"
+    },
+    "info": {
+      "tag": "We are Evernow",
+      "title": "Experts in cybersecurity",
+      "desc": "Experience in large companies, market-leading tools, focus on results.",
+      "item1": "Focus on business results.",
+      "item2": "We select appropriate solutions.",
+      "item3": "Complete governance and consolidated practices.",
+      "item4": "Team with real experience in complex projects."
+    },
+    "effective": {
+      "title": "Protection that generates<br> value for your business",
+      "subtitle": "We offer a complete portfolio to reduce risks, accelerate delivery and ensure compliance",
+      "item1": {
+        "title": "Secure Development",
+        "desc": "Accelerate maturity in Application Security.",
+        "li1": "Structured pipeline",
+        "li2": "Process automation",
+        "li3": "Solution integration",
+        "li4": "Executive dashboards",
+        "btn": "Test your maturity"
+      },
+      "item2": {
+        "title": "Evernow SaaS & Managed Services",
+        "desc": "Continuous security with specialized support.",
+        "li1": "Solution maintenance",
+        "li2": "Updates and security",
+        "li3": "8×5 or 24×7 support",
+        "li4": "Reports and SLAs",
+        "btn": "Request an assessment"
+      },
+      "item3": {
+        "title": "Tool Selection & Management",
+        "desc": "Choose the most efficient solution with security.",
+        "li1": "Requirements and architecture",
+        "li2": "POCs and implementation",
+        "li3": "Negotiation and sizing",
+        "li4": "Training",
+        "btn": "Get recommendations"
+      },
+      "item4": {
+        "title": "Evaluations & Security Testing",
+        "desc": "Validate and strengthen your security posture.",
+        "li1": "Human-centric pentest",
+        "li2": "Quality testing",
+        "li3": "Maturity assessment",
+        "li4": "GRC & Compliance",
+        "btn": "Schedule your test"
+      }
+    },
+    "stats": {
+      "tag": "Statistics",
+      "title": "Bring trust to your customers and employees",
+      "desc": "Cybersecurity is a <b>strategic investment</b>.<br>We help reduce risks and transform security into a competitive advantage,<br>driven by evolutionary metrics and real results.",
+      "btn": "Talk to a Specialist",
+      "value1": "2.4 bi",
+      "value2": "US$ 2.5 mi",
+      "value3": "US$ 1",
+      "value4": "30%",
+      "item1": "Intrusion attempts<br> in applications (2025)",
+      "item2": "Average value of GDPR fines",
+      "item3": "invested in security avoids up to US$ 50 in costs",
+      "item4": "Average ROI in security projects (Ponemon/IBM)"
+    },
+    "testimonials": {
+      "tag": "What leaders say about Evernow",
+      "item1": {
+        "content": "Since security teams are usually small compared to other areas, it's essential to have true partners like Evernow. Together, we achieved remarkable results and moved forward at an accelerated pace toward a more secure future."
+      },
+      "item2": {
+        "content": "The successful partnership between Cielo and Evernow not only solved complex challenges but also established a new standard of security and efficiency in handling sensitive data, elevating the customer experience and the reliability of our services.",
+        "role": "Information Security Specialist - Cielo"
+      }
+    },
+    "partners": {
+      "tag": "Evernow solution partners",
+      "aria": "Partner logos"
+    }
+  },
+  "meta": {
+    "defaultTitle": "Evernow | Cybersecurity Consulting for Businesses",
+    "defaultDescription": "Reduce risks and accelerate digital security. Experts in cybersecurity, DevSecOps and compliance — LGPD, NIST, ISO 27001. Proven results in 90 days.",
+    "home": {
+      "title": "Evernow | Cybersecurity Consulting for Businesses",
+      "description": "Reduce risks and accelerate digital security. Experts in cybersecurity, DevSecOps and compliance — LGPD, NIST, ISO 27001. Proven results in 90 days.",
+      "ogTitle": "Evernow | Cybersecurity that drives business results",
+      "ogDescription": "DevSecOps, AppSec, GRC and data protection. Specialists with real experience in large enterprises. Measurable impact in 90 days."
+    },
+    "about": {
+      "title": "About Evernow | Cybersecurity Consulting Experts",
+      "description": "Meet Evernow: a cybersecurity consulting firm specializing in DevSecOps, AppSec, and GRC. Agile methodology, clear KPIs, and measurable impact in 90 days.",
+      "ogTitle": "About Evernow | Your partner in digital security",
+      "ogDescription": "DevSecOps, AppSec, GRC and compliance. We work side by side with your team to deliver real, measurable results in cybersecurity."
+    },
+    "services": {
+      "title": "Cybersecurity Services | DevSecOps, Pentest and GRC | Evernow",
+      "description": "360° portfolio in DevSecOps, AppSec, Pentest, Data Protection, and GRC. From implementation to operation with LGPD, NIST, PCI, and ISO 27001 compliance.",
+      "ogTitle": "Cybersecurity Services by Evernow | From strategy to results",
+      "ogDescription": "DevSecOps, Pentest, Data Protection and GRC. 40h, 80h or dedicated plans. LGPD, NIST, ISO 27001 and PCI compliance."
+    },
+    "solutions": {
+      "title": "Cybersecurity Solutions | SAST, CSPM, DSPM | Evernow",
+      "description": "We implement leading cybersecurity tools: code analyzers (SAST/DAST/SCA), pentest, cloud security (CSPM), data posture management (DSPM) and data discovery.",
+      "ogTitle": "Cybersecurity Solutions that protect your business | Evernow",
+      "ogDescription": "SAST, DAST, SCA, CSPM, DSPM and Data Discovery. We select, implement and operate the right tools for your company."
+    },
+    "contact": {
+      "title": "Contact Evernow | Cybersecurity Consulting",
+      "description": "Contact Evernow's cybersecurity experts. Request a free security assessment for your business. Based in São Paulo, Brazil — serving companies nationwide.",
+      "ogTitle": "Talk to a Cybersecurity Expert | Evernow",
+      "ogDescription": "Request a free assessment. Our cybersecurity specialists are ready to help your company grow securely."
+    },
+    "pentest": {
+      "title": "Pentest Services for Businesses | Professional Penetration Testing | Evernow",
+      "description": "Manual and automated penetration testing for apps, APIs, networks, and cloud. Detailed report, retest included, and compliance with LGPD, PCI, and ISO 27001.",
+      "ogTitle": "Evernow Pentest | Find vulnerabilities before hackers do",
+      "ogDescription": "Professional penetration testing for applications, infrastructure, and cloud. Technical and executive report, evidence and remediation guidance."
+    },
+    "blog": {
+      "title": "Cybersecurity Blog | DevSecOps and Data Protection | Evernow",
+      "description": "Articles and trends in cybersecurity, DevSecOps, data protection and compliance. Technical and executive content from Evernow's specialists.",
+      "ogTitle": "Evernow Blog | Cybersecurity in practice",
+      "ogDescription": "Articles, guides, and trends in DevSecOps, AppSec, GRC and data protection. Learn from experts who work with major companies."
+    }
+  },
+  "aria": {
+    "logoAlt": "Evernow logo",
+    "langSwitcher": "Switch language"
+  },
+  "pentest": {
+    "banner": {
+      "title": "Test your organization's <br> resilience against <br><span style='color: #00e0a3;'>cyber threats.</span>",
+      "subtitle": "<strong>Evernow's Pentest</strong> is a high-quality solution, adapted to any business. We use advanced attack techniques, combining specialized manual work with automated tools.",
+      "btn": "Talk to a specialist now"
+    },
+    "testimonials": {
+      "tag": "What leaders say about Evernow",
+      "title": "Trusted by several brands.",
+      "item1": {
+        "content": "The successful partnership between Cielo and Evernow not only solved complex challenges but also established a new standard of security and efficiency in handling sensitive data, elevating the customer experience and the reliability of our services.",
+        "author": "Leandro Bicudo",
+        "role": "Information Security Specialist - Cielo"
+      }
+    },
+    "partners": {
+      "tag": "Join the clients who trust Evernow"
+    },
+    "faq": {
+      "tag": "Frequently Asked Questions",
+      "item1": {
+        "q": "What is Pentest or Penetration Testing?",
+        "a1": "Pentest (Penetration Testing) is the most effective way to identify and fix all your business's vulnerabilities.",
+        "a2": "It is an offensive security methodology where we put the real effectiveness of your security systems to the test from a professional hacker's perspective, who will use specific tools and knowledge to invade and escalate privileges within your network, infrastructure, and application."
+      },
+      "item2": {
+        "q": "What is the goal of a Pentest?",
+        "a": "The goal is to identify vulnerabilities in your IT environment through mapping. This way, it's possible to reduce the security risks and gaps that can directly affect your company."
+      },
+      "item3": {
+        "q": "What happens after the Pentest is performed with Evernow?",
+        "a1": "After the Pentest is completed, our professionals will deliver a vulnerability report containing all the threats found, with an explanation of each one and the path taken to find and exploit that vulnerability.",
+        "a2": "The report also includes the criticality level of each vulnerability and a recommendation on how to fix each one."
+      },
+      "item4": {
+        "q": "What happens if a Pentest is not performed?",
+        "a": "Not performing a penetration test with trusted professionals means letting criminals discover and exploit your security flaws, and the average cost of this poor decision in Brazil is R$6.45 million (Cost of Data Breach Report 2022 - IBM), including government fines and lost business - in addition to expenses with post-incident cybersecurity teams and amounts often demanded by criminals who infect machines with ransomware."
+      },
+      "item5": {
+        "q": "What is the recommended frequency for a Pentest?",
+        "a1": "Companies usually perform tests annually, but new vulnerabilities can appear at any time due to changes in network infrastructure, servers / services, or new bug discoveries (vulnerabilities) in existing systems.",
+        "a2": "Thus, Pentest as a service — run daily — will be able to immediately identify new risks and vulnerabilities, preventing attacks or data loss."
+      }
+    }
+  },
+  "contact": {
+    "banner": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with our experts to transform your digital security."
+    },
+    "cards": {
+      "address": {
+        "title": "Our Address",
+        "val": "Rua Irmã Gabriela, 51<br>São Paulo/SP"
+      },
+      "phone": {
+        "title": "Phone Number",
+        "val": "+55 11 91026-0404"
+      },
+      "email": {
+        "title": "Email Address",
+        "val": "contato@evernow.com.br"
+      }
+    }
+  },
+  "blog": {
+    "banner": {
+      "title": "Evernow Blog",
+      "subtitle": "Discover the latest trends in digital security, news, and tips to protect your business against digital threats."
+    },
+    "posts": {
+      "date": "Jan 21, 2017",
+      "read_more": "Read More",
+      "load_more": "Load More",
+      "item1": {
+        "title": "Standard post with a single image",
+        "desc": "Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat."
+      },
+      "item2": {
+        "title": "Simplicity, a post with slider gallery",
+        "desc": "Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat."
+      },
+      "item3": {
+        "title": "Another standard post with a single image",
+        "desc": "Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat."
+      }
+    }
+  },
+  "post": {
+    "banner": {
+      "title": "Blog - Single Post",
+      "home": "Home",
+      "blog": "Blog",
+      "active": "Single Post"
+    },
+    "content": {
+      "title": "Standard post with a single image",
+      "meta": {
+        "comments": "33 Comments",
+        "categories": "Lifestyle, Magazine"
+      },
+      "p1": "Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id ligula pharetra laoreet. Ut nec metus a mi ullamcorper hendrerit.",
+      "quote": "The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.",
+      "author": "Albert Einstein",
+      "p2": "The most happiest time of the day!. Praesent id dolor dui, dapibus gravida elit. Donec consequat laoreet sagittis. Suspendisse ultricies ultrices viverra. Morbi rhoncus laoreet tincidunt."
+    },
+    "tags": {
+      "life": "Life",
+      "sport": "Sport",
+      "tech": "Tech",
+      "travel": "Travel"
+    },
+    "navigation": {
+      "prev": "Previous Post",
+      "next": "Next Post"
+    },
+    "sidebar": {
+      "search": "Search for pages...",
+      "popular": "Popular",
+      "featured": "Featured",
+      "recent": "Recent",
+      "categories": "Categories",
+      "tweets": "Recent Tweets",
+      "tags": "Tags"
+    }
+  },
+  "lang": {
+    "pt": "PT",
+    "en": "EN"
+  }
+}

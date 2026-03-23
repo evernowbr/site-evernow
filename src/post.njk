@@ -1,0 +1,120 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}post.html"
+useBlogStyles: true
+---
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+      
+      <section class="banner-main-con about-page-main-banner-con">
+         <div class="container">
+            <div class="banner-con about-page-banner-con text-center">
+               <div class="row wow slideInLeft">
+                  <div class="col-lg-12">
+                     <div class="about-page-banner-title">
+                        <h1>{{ "post.banner.title" | t }}</h1>
+                        <div class="breadcrumb">
+                           <ul class="list-unstyled mb-0 d-flex justify-content-center">
+                              <li><a href="{{ urlPrefix }}/index.html" class="text-white">{{ "post.banner.home" | t }}</a> </li>
+                              <li class="mx-2"> / </li>
+                              <li><a href="{{ urlPrefix }}/blog.html" class="text-white">{{ "post.banner.blog" | t }}</a> </li>
+                              <li class="mx-2"> / </li>
+                              <li class="active text-white">{{ "post.banner.active" | t }}</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+<main>
+   <section class="blog-posts py-5">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-9 col-lg-9">
+               <div id="blog" class="single-post01">
+                  <div class="post-item">
+                     <div class="post-item-wrap">
+                        <div class="post-image mb-4">
+                           <img src="/assets/image/post-featured-img1.jpg" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="post-item-description">
+                           <h2 class="font_weight_600">{{ "post.content.title" | t }}</h2>
+                           <div class="post-meta mb-4">
+                              <span class="post-meta-date mr-3"><i class="fa fa-calendar-o"></i> {{ "blog.posts.date" | t }}</span>
+                              <span class="post-meta-comments mr-3"><i class="fa fa-comments-o"></i> {{ "post.content.meta.comments" | t }}</span>
+                              <span class="post-meta-category"><i class="fa fa-tag"></i> {{ "post.content.meta.categories" | t }}</span>
+                           </div>
+                           <p>{{ "post.content.p1" | t }}</p>
+                           <div class="blockquote my-4 p-4 border-left">
+                              <p class="font-italic">"{{ "post.content.quote" | t }}"</p>
+                              <small>by <cite>{{ "post.content.author" | t }}</cite></small>
+                           </div>
+                           <p>{{ "post.content.p2" | t }}</p>
+                        </div>
+                        <div class="post-tags mt-5">
+                           <a href="#" class="badge badge-light p-2 mr-2">{{ "post.tags.life" | t }}</a>
+                           <a href="#" class="badge badge-light p-2 mr-2">{{ "post.tags.sport" | t }}</a>
+                           <a href="#" class="badge badge-light p-2 mr-2">{{ "post.tags.tech" | t }}</a>
+                           <a href="#" class="badge badge-light p-2">{{ "post.tags.travel" | t }}</a>
+                        </div>
+                        <div class="post-navigation d-flex justify-content-between mt-5 pt-4 border-top">
+                           <a href="#" class="post-prev"><span><i class="fa fa-arrow-left"></i> {{ "post.navigation.prev" | t }}</span></a>
+                           <a href="#" class="post-next"><span>{{ "post.navigation.next" | t }} <i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+            <aside class="sidebar col-lg-3">
+               <div class="widget mb-5">
+                  <form id="widget-search-form-sidebar" class="form-inline">
+                     <div class="input-group w-100">
+                        <input type="text" class="form-control" placeholder="{{ 'post.sidebar.search' | t }}">
+                        <div class="input-group-append">
+                           <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               
+               <div class="widget mb-5">
+                  <h4 class="font_weight_600 mb-3">{{ "post.sidebar.popular" | t }}</h4>
+                  <ul class="list-unstyled">
+                     <li class="mb-3 border-bottom pb-2">
+                        <a href="#" class="text-dark">A true story, that never been told!</a>
+                     </li>
+                     <li class="mb-3 border-bottom pb-2">
+                        <a href="#" class="text-dark">Beautiful nature, and rare feathers!</a>
+                     </li>
+                  </ul>
+               </div>
+               
+               <div class="widget mb-5">
+                  <h4 class="font_weight_600 mb-3">{{ "post.sidebar.categories" | t }}</h4>
+                  <ul class="list-unstyled">
+                     <li class="d-flex justify-content-between mb-2">
+                        <a href="#" class="text-dark">Coupons</a>
+                        <span>(2)</span>
+                     </li>
+                     <li class="d-flex justify-content-between mb-2">
+                        <a href="#" class="text-dark">Technology</a>
+                        <span>(10)</span>
+                     </li>
+                  </ul>
+               </div>
+            </aside>
+         </div>
+      </div>
+   </section>
+</main>

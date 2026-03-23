@@ -1,0 +1,99 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}contact.html"
+pageMeta: contact
+---
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+      
+      <section class="banner-main-con about-page-main-banner-con">
+         <div class="container">
+            <div class="banner-con about-page-banner-con text-center">
+               <div class="row wow slideInLeft">
+                  <div class="col-lg-12">
+                     <div class="about-page-banner-title">
+                        <h1>{{ "contact.banner.title" | t }}</h1>
+                        <p class="mb-0">{{ "contact.banner.subtitle" | t }}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--- Effective-section-->
+      <section>
+         <div class="Effective-con about-page-Effective-con service-Effective-con w-100 pt-0">
+         <div class="container">
+            <div class="row service-Effective-con-item mb-0 contact-box-card wow fadeInUp">
+               <div class="col-lg-4 col-md-4 col-12">
+                  <div class="Effective-sec-item mb-lg-0 mb-md-0 mb-4">
+                     <div class="Effective-sec-item-img">
+                        <figure>
+                           <img src="/assets/image/contact-card-img1.png" alt="contact-card-img" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "contact.cards.address.title" | t }}</h4>
+                        <p class="mb-0">{{ "contact.cards.address.val" | t | safe }}</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-12">
+                  <div class="Effective-sec-item mb-lg-0 mb-md-0 mb-4">
+                     <div class="Effective-sec-item-img">
+                        <figure>
+                           <img src="/assets/image/contact-card-img2.png" alt="contact-card-img" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "contact.cards.phone.title" | t }}</h4>
+                        <p class="mb-0">
+                           <a href="tel:+5511991388801">{{ "contact.cards.phone.val" | t }}</a>
+                        </p><br>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-12">
+                  <div class="Effective-sec-item Effective-sec-item3">
+                     <div class="Effective-sec-item-img">
+                        <figure>
+                           <img src="/assets/image/contact-card-img3.png" alt="contact-card-img" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="Effective-sec-item-title">
+                        <h4 class="mb-0">{{ "contact.cards.email.title" | t }}</h4>
+                        <p class="mb-0"><a href="mailto:{{ 'contact.cards.email.val' | t }}">{{ "contact.cards.email.val" | t }}</a></p><br>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </section>
+   </div>
+</div>
+
+<main>
+   <!--form-section-->
+   <section>
+      <div class="form-main-con dots-left-img">
+         <div class="container overlay-content">
+            <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+            <div class="hs-form-frame" data-region="na1" data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9" data-portal-id="49406327"></div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Map-section -->
+   <div class="Map-main-con">
+      <div class="Map-main-inner-con wow slideInRight">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.9892137699335!2d-46.69596562367328!3d-23.60471977877006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5776500b3b21%3A0xc0f314558ceeb2e0!2sR.%20Irm%C3%A3%20Gabriela%2C%2051%20-%20Cidade%20Mon%C3%A7%C3%B5es%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004571-130!5e0!3m2!1spt-BR!2sbr!4v1756752755567!5m2!1spt-BR!2sbr" aria-label="Rua Irmã Gabriela, 51, São Paulo/SP" class="w-100 border-0 overflow-hidden m-0"></iframe>
+      </div>
+   </div>
+</main>

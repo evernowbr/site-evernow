@@ -1,0 +1,252 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}services.html"
+pageMeta: services
+---
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+      
+      <section class="banner-main-con about-page-main-banner-con">
+         <div class="container">
+            <div class="banner-con about-page-banner-con text-center">
+               <div class="row wow slideInLeft">
+                  <div class="col-lg-12">
+                     <div class="about-page-banner-title">
+                        <h1>{{ "services.banner.title" | t }}</h1>
+                        <p class="mb-0">{{ "services.banner.subtitle" | t }}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br><br>
+
+         <!--- Effective-section (6 cards) -->
+         <div class="Effective-con about-page-Effective-con service-Effective-con w-100 pt-0 pb-0 services-cards-overlap">
+            <div class="container">
+               <div class="row service-Effective-con-item wow fadeInUp">
+                  <div class="col-lg-4 col-md-4 col-12">
+                     <div class="Effective-sec-item mb-lg-0 mb-4">
+                        <div class="Effective-sec-item-img">
+                           <figure><img src="/assets/image/service-Effective-sec-item-img1.png" alt="" class="img-fluid"></figure>
+                        </div>
+                        <div class="Effective-sec-item-title">
+                           <h4 class="mb-0">{{ "services.cards.item1.title" | t }}</h4>
+                           <p class="mb-0">{{ "services.cards.item1.desc" | t | safe }}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                     <div class="Effective-sec-item mb-lg-0 mb-4">
+                        <div class="Effective-sec-item-img">
+                           <figure><img src="/assets/image/service-Effective-sec-item-img2.png" alt="" class="img-fluid"></figure>
+                        </div>
+                        <div class="Effective-sec-item-title">
+                           <h4 class="mb-0">{{ "services.cards.item2.title" | t }}</h4>
+                           <p class="mb-0">{{ "services.cards.item2.desc" | t | safe }}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                     <div class="Effective-sec-item Effective-sec-item3">
+                        <div class="Effective-sec-item-img">
+                           <figure><img src="/assets/image/service-Effective-sec-item-img3.png" alt="" class="img-fluid"></figure>
+                        </div>
+                        <div class="Effective-sec-item-title">
+                           <h4 class="mb-0">{{ "services.cards.item3.title" | t }}</h4>
+                           <p class="mb-0">{{ "services.cards.item3.desc" | t | safe }}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row service-Effective-con-item mb-0 wow fadeInUp">
+                  <div class="col-lg-4 col-md-4 col-12">
+                     <div class="Effective-sec-item mb-lg-0 mb-md-0 mb-4">
+                        <div class="Effective-sec-item-img">
+                           <figure><img src="/assets/image/service-Effective-sec-item-img4.png" alt="" class="img-fluid"></figure>
+                        </div>
+                        <div class="Effective-sec-item-title">
+                           <h4 class="mb-0">{{ "services.cards.item4.title" | t }}</h4>
+                           <p class="mb-0">{{ "services.cards.item4.desc" | t | safe }}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                     <div class="Effective-sec-item mb-lg-0 mb-md-0 mb-4">
+                        <div class="Effective-sec-item-img">
+                           <figure><img src="/assets/image/service-Effective-sec-item-img5.png" alt="" class="img-fluid"></figure>
+                        </div>
+                        <div class="Effective-sec-item-title">
+                           <h4 class="mb-0">{{ "services.cards.item5.title" | t }}</h4>
+                           <p class="mb-0">{{ "services.cards.item5.desc" | t | safe }}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                     <div class="Effective-sec-item Effective-sec-item3 mb-0">
+                        <div class="Effective-sec-item-img">
+                           <figure><img src="/assets/image/service-Effective-sec-item-img6.png" alt="" class="img-fluid"></figure>
+                        </div>
+                        <div class="Effective-sec-item-title">
+                           <h4 class="mb-0">{{ "services.cards.item6.title" | t }}</h4>
+                           <p class="mb-0">{{ "services.cards.item6.desc" | t | safe }}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+<main>
+
+   <!--- Effective-section (Tabs) -->
+   <section>
+      <div class="Effective-con w-100 service-Effective-tabs-con">
+         <div class="container overlay-content">
+            <div class="Effective-sec-heading text-center">
+               <h5>{{ "services.tabs_section.tag" | t }}</h5>
+               <h2>{{ "services.tabs_section.title" | t }}</h2>
+            </div>
+            <div id="tsum-tabs" class="wow slideInLeft">
+               <input id="tab1" type="radio" name="tabs" checked>
+               <label for="tab1" class="Effective-sec-item mb-lg-0 Effective-sec-item-title Effective-sec-item-img">      
+               <img src="/assets/image/tab-icon1.png" alt="tab-icon1" class="img-fluid" loading="lazy">
+               <span class="mb-0 d-block">{{ "services.tabs.tab1.label" | t }}</span>
+               </label>
+               <input id="tab2" type="radio" name="tabs">
+               <label for="tab2" class="Effective-sec-item mb-lg-0 Effective-sec-item-title Effective-sec-item-img">
+               <img src="/assets/image/tab-icon2.png" alt="tab-icon2" class="img-fluid" loading="lazy">
+               <span class="mb-0 d-block">{{ "services.tabs.tab2.label" | t }}</span>                      
+               </label>
+               <input id="tab3" type="radio" name="tabs">
+               <label for="tab3" class="Effective-sec-item mb-0 Effective-sec-item-title Effective-sec-item-img">      
+               <img src="/assets/image/tab-icon3.png" alt="tab-icon3" class="img-fluid" loading="lazy">                 
+               <span class="mb-0 d-block">{{ "services.tabs.tab3.label" | t }}</span>
+               </label>
+               <input id="tab4" type="radio" name="tabs">
+               <label for="tab4" class="Effective-sec-item mb-0 Effective-sec-item-title Effective-sec-item-img">
+               <img src="/assets/image/tab-icon4.png" alt="tab-icon4" class="img-fluid" loading="lazy">           
+               <span class="mb-0 d-block">{{ "services.tabs.tab4.label" | t }}</span>
+               </label>
+               
+               <section id="content1">
+                  <div class="tabs-content">
+                     <div class="row">
+                        <div class="col-lg-7 col-md-7 col-12">
+                           <h3>{{ "services.tabs.tab1.title" | t }}</h3>
+                           <div class="tab-description">
+                              <p>{{ "services.tabs.tab1.desc1" | t }}</p>
+                              <p class="mb-0">{{ "services.tabs.tab1.desc2" | t }}</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-12">
+                           <div class="tab-sec-img">
+                              <figure class="mb-0">
+                                 <img src="/assets/image/tabs-sec-img1.png" alt="" class="img-fluid mt-lg-0 mt-md-0 mt-3" loading="lazy">
+                              </figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section id="content2">
+                  <div class="tabs-content">
+                     <div class="row">
+                        <div class="col-lg-7 col-md-7 col-12">
+                           <h3>{{ "services.tabs.tab2.title" | t }}</h3>
+                           <div class="tab-description">
+                              <p>{{ "services.tabs.tab2.desc1" | t }}</p>
+                              <p class="mb-0">{{ "services.tabs.tab2.desc2" | t }}</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-12">
+                           <div class="tab-sec-img">
+                              <figure class="mb-0">
+                                 <img src="/assets/image/tabs-content-img2.png" alt="" class="img-fluid mt-lg-0 mt-md-0 mt-3" loading="lazy">
+                              </figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section id="content3">
+                  <div class="tabs-content">
+                     <div class="row">
+                        <div class="col-lg-7 col-md-7 col-12">
+                           <h3>{{ "services.tabs.tab3.title" | t }}</h3>
+                           <div class="tab-description">
+                              <p>{{ "services.tabs.tab3.desc1" | t }}</p>
+                              <p class="mb-0">{{ "services.tabs.tab3.desc2" | t }}</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-12">
+                           <div class="tab-sec-img">
+                              <figure class="mb-0">
+                                 <img src="/assets/image/tabs-content-img3.png" alt="" class="img-fluid mt-lg-0 mt-md-0 mt-3" loading="lazy">
+                              </figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section id="content4">
+                  <div class="tabs-content">
+                     <div class="row">
+                        <div class="col-lg-7 col-md-7 col-12">
+                           <h3>{{ "services.tabs.tab4.title" | t }}</h3>
+                           <div class="tab-description">
+                              <p>{{ "services.tabs.tab4.desc1" | t }}</p>
+                              <p class="mb-0">{{ "services.tabs.tab4.desc2" | t }}</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-12">
+                           <div class="tab-sec-img">
+                              <figure class="mb-0 text-center">
+                                 <img src="/assets/image/tabs-content-img4.png" alt="" class="img-fluid mt-lg-0 mt-md-0 mt-3" loading="lazy">
+                              </figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- get-start-section-->
+   <section>
+      <div class="get-start-con bg-overly-img ">
+         <div class="container overlay-content">
+            <div class="get-start-title text-center">
+               <h1>{{ "services.cta.title" | t }}</h1>
+               <p>{{ "services.cta.subtitle" | t | safe }}</p>
+               <div class="get-start-link text-center">
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ "services.cta.btn" | t }}</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!---slider-section-->
+   {% set partnersTagKey = "services.partners.tag" | t %}
+   {% include "components/partners-grid.njk" %}
+
+   <section>
+      <div class="form-main-con dots-left-img">
+         <div class="container overlay-content">
+            <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+            <div class="hs-form-frame" data-region="na1" data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9" data-portal-id="49406327"></div>
+         </div>
+      </div>
+   </section>
+</main>

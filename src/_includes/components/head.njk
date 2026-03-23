@@ -1,0 +1,98 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+<!-- SEO -->
+{% if pageMeta %}
+  {% set _titleKey = "meta." + pageMeta + ".title" %}
+  {% set _descKey  = "meta." + pageMeta + ".description" %}
+  {% set _ogTitleKey = "meta." + pageMeta + ".ogTitle" %}
+  {% set _ogDescKey  = "meta." + pageMeta + ".ogDescription" %}
+{% else %}
+  {% set _titleKey   = "meta.defaultTitle" %}
+  {% set _descKey    = "meta.defaultDescription" %}
+  {% set _ogTitleKey = "meta.defaultTitle" %}
+  {% set _ogDescKey  = "meta.defaultDescription" %}
+{% endif %}
+<title>{{ _titleKey | t }}</title>
+<meta name="description" content="{{ _descKey | t }}" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<link rel="canonical" href="https://evernow.com.br{{ page.url }}" />
+
+<!-- Favicons / PWA -->
+<meta name="theme-color" content="#00E0A3" />
+
+<!-- Open Graph -->
+<meta property="og:locale" content="{{ 'pt_BR' if lang == 'pt' else 'en_US' }}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Evernow" />
+<meta property="og:url" content="https://evernow.com.br{{ page.url }}" />
+<meta property="og:title" content="{{ _ogTitleKey | t }}" />
+<meta property="og:description" content="{{ _ogDescKey | t }}" />
+<meta property="og:image" content="https://evernow.com.br/assets/image/evernow-logo-bgescuro.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@evernowbr" />
+<meta name="twitter:title" content="{{ _ogTitleKey | t }}" />
+<meta name="twitter:description" content="{{ _ogDescKey | t }}" />
+
+<link rel="stylesheet" href="/assets/css/animate.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/super-classes.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/mobile.css">
+{% if useBlogStyles %}<link rel="stylesheet" href="/assets/css/custom-style.css">{% endif %}
+
+<!-- Language auto-detection: Brazil (pt-BR) → PT, rest of world → EN -->
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem('evernow-lang');
+    var path   = window.location.pathname;
+    var isEn   = path.startsWith('/en');
+    var target;
+
+    if (saved) {
+      target = saved;
+    } else {
+      var bl = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
+      target = bl.startsWith('pt') ? 'pt' : 'en';
+      localStorage.setItem('evernow-lang', target);
+    }
+
+    if (target === 'en' && !isEn) {
+      window.location.replace('/en' + path);
+    } else if (target === 'pt' && isEn) {
+      var ptPath = path.replace(/^\/en/, '') || '/';
+      window.location.replace(ptPath);
+    }
+  } catch (e) {}
+})();
+</script>
+
+<!-- Securiti -->
+<script>
+(function () {
+    var s = document.createElement('script');
+    s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+    s.setAttribute('data-tenant-uuid', 'f8b5a9ef-d04c-44a2-98d1-0bac079cd726');
+    s.setAttribute('data-domain-uuid', '7fc5ff01-30d5-4bcd-b1de-0b9babb906d5');
+    s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+    s.setAttribute('data-skip-css', 'false');
+    s.defer = true;
+    var parent_node = document.head || document.body;
+    parent_node.appendChild(s);
+})()
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W6PP4HHP');</script>
+<!-- End Google Tag Manager -->

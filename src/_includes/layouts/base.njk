@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('pt') }}">
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+<head>
+{% include "components/head.njk" %}
+</head>
+<body>
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6PP4HHP"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+
+   {{ content | safe }}
+
+   <!-- Footer area -->
+   {% if not hideFooter %}
+   {% include "components/footer.njk" %}
+   {% endif %}
+
+   <!-- Scripts -->
+   {% include "components/scripts.njk" %}
+</body>
+</html>
