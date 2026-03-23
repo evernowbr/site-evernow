@@ -44,7 +44,12 @@
     "how_we_work": {
       "tag": "WHAT WE DO?",
       "title": "More security.<br>More speed.<br>Less risk.",
-      "desc": "DevSecOps, AppSec, GRC, and AI Governance. Tailor-made end-to-end digital security integration for your business."
+      "desc": "DevSecOps, AppSec, GRC, and AI Governance. Tailor-made end-to-end digital security integration for your business.",
+      "li1": "<strong>Co-delivery and enablement:</strong> Side by side with your team",
+      "li2": "<strong>90-day plan:</strong> Clear goals and KPIs for fast traction",
+      "li3": "<strong>Total coverage:</strong> Assessment, Design, Delivery, and Operation",
+      "li4": "<strong>Evidence and governance:</strong> Playbooks, guardrails, and auditing",
+      "li5": "<strong>Flexible model:</strong> 40h, 80h plans, and dedicated professionals"
     },
     "security_cards": {
       "card1": {
