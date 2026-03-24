@@ -3,7 +3,19 @@ const path = require("path");
 
 module.exports = function (eleventyConfig) {
   // Configuro a cópia estática dos assets
-  eleventyConfig.addPassthroughCopy("src/assets");
+  // Configuro a cópia estática dos assets
+  eleventyConfig.addPassthroughCopy("src/assets", {
+    expand: true,
+    filter: (path) => {
+      // Ignore raw files that are now part of main.min.css/js
+      // We keep the image directory and dist bundles
+      if (path.includes('css/') && !path.endsWith('main.min.css')) return false;
+      if (path.includes('js/') && !path.endsWith('main.min.js')) return false;
+      if (path.includes('bootstrap/')) return false;
+      if (path.includes('fonts/')) return false;
+      return true;
+    }
+  });
 
   // Habilita o plugin i18n
   eleventyConfig.addPlugin(EleventyI18nPlugin, {

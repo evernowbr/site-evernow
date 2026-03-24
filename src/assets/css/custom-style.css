@@ -1,4 +1,375 @@
 
+/* ==========================================================
+   Blog listing – card (equal-height, no dark gap)
+   ========================================================== */
+
+.blog-card {
+  background-color: #252525;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #EFECEA;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.blog-card__img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card .post-item-description {
+  padding: 20px;
+}
+
+.blog-card .post-meta-date {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Card body (new semantic classes, matching post-layout padding feel) */
+.blog-card__body {
+  padding: 20px 20px 20px 20px;
+}
+
+.blog-card__date {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.blog-card__title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  margin-bottom: 10px !important;
+  color: #ffffff;
+}
+
+.blog-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+.blog-card__title a:hover { color: #00E0A3; }
+
+.blog-card__excerpt {
+  font-size: 14px;
+  color: #b8b4b0;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.blog-card__readmore {
+  font-size: 13px;
+  font-weight: 600;
+  color: #00a87b;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap .2s;
+}
+.blog-card__readmore:hover { color: #007a5e; gap: 8px; text-decoration: none; }
+
+/* ==========================================================
+   Blog listing – white card wrapper (mirrors post-layout)
+   ========================================================== */
+
+.blog-layout {
+  background: transparent;
+  padding: 40px 0;
+  color: #EFECEA;
+}
+
+.blog-layout__page-info {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin-bottom: 24px;
+}
+
+.blog-layout__pagination {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Pagination colours consistent with brand */
+.blog-layout__pagination .page-link {
+  color: #EFECEA;
+  background-color: #252525;
+  border-color: rgba(255,255,255,0.12);
+}
+.blog-layout__pagination .page-item.active .page-link {
+  background-color: #00E0A3;
+  border-color: #00E0A3;
+  color: #1E1E1D;
+}
+.blog-layout__pagination .page-item:not(.disabled) .page-link:hover {
+  background-color: #333333;
+  color: #00E0A3;
+}
+
+/* Banner subtitle – override style.css "padding: 0 250px" that breaks text */
+.about-page-banner-title .blog-banner-subtitle {
+  display: block;
+  padding: 0 !important;           /* cancel the 250px left/right padding */
+  max-width: 580px;
+  margin: 10px auto 0;
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: .88;
+  color: #c1cbf3;
+}
+
+@media (max-width: 991px) {
+  .blog-layout { padding: 24px; }
+}
+
+/* ==========================================================
+   Post page – section background (transparent = dark body)
+   ========================================================== */
+
+.post-section {
+  background-color: var(--blue-color);
+  padding-top: 48px !important;
+  padding-bottom: 64px !important;
+}
+
+/* ==========================================================
+   Post page – unified white card (wraps article + sidebar)
+   ========================================================== */
+
+.post-layout {
+  background: transparent;
+  color: #EFECEA;
+}
+
+.post-layout__main {
+  padding: 40px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.post-layout__sidebar {
+  padding: 40px 24px;
+}
+
+@media (max-width: 991px) {
+  .post-layout__main    { padding: 28px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .post-layout__sidebar { padding: 28px; }
+}
+
+/* ==========================================================
+   Post/Blog banner – shared compact banner style
+   ========================================================== */
+
+/* Reduce the default 120px/124px padding to something compact */
+.post-banner.about-page-main-banner-con {
+  padding-top:    64px !important;
+  padding-bottom: 56px !important;
+}
+
+.post-banner-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+  color: #fff;
+}
+
+/* Blog index title can be slightly bigger (short text) */
+.blog-index-title {
+  font-size: 1.9rem;
+}
+
+@media (max-width: 767px) {
+  .post-banner-title   { font-size: 1.2rem; }
+  .blog-index-title    { font-size: 1.5rem; }
+  .post-banner.about-page-main-banner-con {
+    padding-top: 44px !important;
+    padding-bottom: 36px !important;
+  }
+}
+
+/* ==========================================================
+   Post page – featured image
+   ========================================================== */
+
+.post-featured-img {
+  border-radius: 6px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* ==========================================================
+   Post page – meta bar
+   ========================================================== */
+
+.post-meta {
+  font-size: 13px;
+  color: #aaaaaa;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.post-meta span { margin-right: 16px; }
+
+/* ==========================================================
+   Post page – article body
+   ========================================================== */
+
+.post-body {
+  color: #EFECEA;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Lead paragraph — first paragraph gets larger, slightly lighter */
+.post-body p.post-lead {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #d8d4d0;
+  border-left: 3px solid #00E0A3;
+  padding-left: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.post-body p,
+.post-body li {
+  margin-bottom: 1rem;
+}
+
+.post-body h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-body h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-body h4,
+.post-body h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #EFECEA;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-body ol,
+.post-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-body a {
+  color: #00a87b;
+  text-decoration: none;
+}
+.post-body a:hover { text-decoration: underline; }
+
+.post-body img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* ==========================================================
+   Post page – back link
+   ========================================================== */
+
+/* ==========================================================
+   Post page – tag badges
+   ========================================================== */
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post-tags .badge {
+  background-color: transparent !important;
+  color: #EFECEA !important;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px !important;
+  letter-spacing: .03em;
+  margin: 0 !important;
+}
+
+.post-tags .badge:hover {
+  border-color: #00E0A3;
+  color: #00E0A3 !important;
+}
+
+/* Override Bootstrap border-top in post main column */
+.post-layout__main .border-top {
+  border-top-color: rgba(255,255,255,0.1) !important;
+}
+
+.btn-back-blog {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .2s;
+}
+.btn-back-blog:hover { color: #00E0A3; text-decoration: none; }
+
+/* ==========================================================
+   Sidebar – section title + recent posts
+   ========================================================== */
+
+.sidebar-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #EFECEA;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00E0A3;
+}
+
+.sidebar-recent { padding: 0; margin: 0; }
+
+.sidebar-recent__item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-recent__item:last-child { border-bottom: none; }
+
+.sidebar-recent__link {
+  display: block;
+  color: #EFECEA;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+.sidebar-recent__link:hover { color: #00a87b; }
+
+.sidebar-recent__date {
+  font-size: 11px;
+  color: #888888;
+}
+
 /**************************************************
 =-*=-*=-*=-*=-*=-*= Single Post =-*=-*=-*=-*=-*=-*=
 **************************************************/
@@ -392,7 +763,7 @@ a.item-link{margin-top: 20px; display: inline-block}
 	top: 12px;
 	font-size: 20px;
 	padding-top: 2px;
-	background: url("../image/icon-folder.png"); width: 16px; height: 14px;
+	background: url("../image/icon/folder.png"); width: 16px; height: 14px;
 	transition: all .3s ease;
 	transform: translate3d(0,-50%,0);
 }
@@ -716,4 +1087,47 @@ a.item-link{margin-top: 20px; display: inline-block}
 		font-size: 17px;
 	}
 }
+
+/* ==========================================================
+   Home – Latest posts strip
+   ========================================================== */
+
+.latest-posts-con {
+  background-color: var(--light-blue-color);
+  color: #EFECEA;
+}
+
+.latest-posts-con .latest-posts-tag {
+  color: #00E0A3;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.latest-posts-con .latest-posts-heading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #EFECEA;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.latest-posts-con .latest-posts-subtitle {
+  font-size: 1.05rem;
+  color: rgba(239,236,234,0.75);
+  margin-bottom: 0;
+}
+
+.latest-posts-con .blog-card {
+  background-color: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.latest-posts-con .blog-card__title a { color: #EFECEA; }
+.latest-posts-con .blog-card__title a:hover { color: #00E0A3; }
+.latest-posts-con .blog-card__date { color: rgba(239,236,234,0.6); }
+.latest-posts-con .blog-card__excerpt { color: rgba(239,236,234,0.8); }
+.latest-posts-con .blog-card__readmore { color: #00E0A3; }
 

@@ -1,0 +1,141 @@
+---js
+{
+  layout: "layouts/base.njk",
+  useBlogStyles: true,
+  pageMeta: "blog",
+  pagination: {
+    data: "blogPostPages",
+    size: 1,
+    alias: "postPage"
+  },
+  permalink: function(data) {
+    const lang   = data.postPage && data.postPage.lang;
+    const slug   = data.postPage && data.postPage.slug;
+    const prefix = lang === 'en' ? '/en' : '';
+    return `${prefix}/blog/${slug}.html`;
+  },
+  eleventyComputed: {
+    lang:  (data) => (data.postPage && data.postPage.lang)  || 'pt',
+    title: (data) =>  data.postPage && data.postPage.title
+  }
+}
+---
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+
+      <section class="banner-main-con about-page-main-banner-con post-banner">
+         <div class="container">
+            <div class="banner-con about-page-banner-con text-center">
+               <div class="row wow slideInLeft">
+                  <div class="col-12">
+                     <div class="about-page-banner-title">
+                        <h1 class="post-banner-title">{{ postPage.title }}</h1>
+
+                        {# Breadcrumb — CSS pseudo-element adds ">" between li items #}
+                        <div class="breadcrumb">
+                           <ul class="list-unstyled mb-0 d-flex justify-content-center flex-wrap">
+                              <li><a href="{{ urlPrefix }}/index.html" class="text-white">{{ "post.banner.home" | t }}</a></li>
+                              <li><a href="{{ urlPrefix }}/blog.html" class="text-white">{{ "post.banner.blog" | t }}</a></li>
+                              <li class="active text-white">{{ postPage.title | truncate(55) }}</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+<main>
+   <section class="post-section py-5">
+      <div class="container">
+
+         {# ── Unified white card wrapping both columns ─────────── #}
+         <div class="post-layout">
+            <div class="row">
+
+               {# ── Article column ───────────────────────────────── #}
+               <div class="col-xl-8 col-lg-8 post-layout__main">
+
+                  {# Featured image (only when a real image exists) #}
+                  {% if postPage.featuredImage %}
+                  <div class="post-image mb-4">
+                     <img src="{{ postPage.featuredImage }}"
+                          class="img-fluid w-100 post-featured-img"
+                          alt="{{ postPage.title }}"
+                          loading="lazy">
+                  </div>
+                  {% endif %}
+
+                  {# Meta bar #}
+                  <div class="post-meta mb-4">
+                     <span class="post-meta-date mr-3">
+                        <i class="fa fa-calendar-o"></i>
+                        {% if lang == 'en' %}{{ postPage.dateEn }}{% else %}{{ postPage.datePt }}{% endif %}
+                     </span>
+                     <span class="post-meta-author mr-3">
+                        <i class="fa fa-user-o"></i> {{ postPage.author }}
+                     </span>
+                     {% if postPage.categories.length %}
+                     <span class="post-meta-category">
+                        <i class="fa fa-tag"></i>
+                        {% for cat in postPage.categories %}{{ cat }}{% if not loop.last %}, {% endif %}{% endfor %}
+                     </span>
+                     {% endif %}
+                  </div>
+
+                  {# Article body #}
+                  <div class="post-body">
+                     {{ postPage.content | safe }}
+                  </div>
+
+                  {# Tags #}
+                  {% if postPage.tags.length %}
+                  <div class="post-tags mt-4">
+                     {% for tag in postPage.tags %}
+                     <span class="badge badge-secondary p-2 mr-1 mb-1">{{ tag }}</span>
+                     {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  {# Back to blog #}
+                  <div class="mt-4 pt-4 border-top">
+                     <a href="{{ urlPrefix }}/blog.html" class="btn-back-blog">
+                        <i class="fa fa-arrow-left mr-1"></i>{{ "post.navigation.back" | t }}
+                     </a>
+                  </div>
+
+               </div>
+
+               {# ── Sidebar ──────────────────────────────────────── #}
+               <aside class="col-xl-4 col-lg-4 post-layout__sidebar">
+                  <div class="sidebar-inner">
+                     <h5 class="sidebar-section-title">{{ "post.sidebar.recent" | t }}</h5>
+                     <ul class="list-unstyled sidebar-recent">
+                        {% set shown = 0 %}
+                        {% for recent in publishedPosts %}
+                           {% if shown < 9 and recent.slug != postPage.slug %}
+                              <li class="sidebar-recent__item">
+                                 <a href="{{ urlPrefix }}/blog/{{ recent.slug }}.html" class="sidebar-recent__link">
+                                    {{ recent.title | truncate(65) }}
+                                 </a>
+                                 <span class="sidebar-recent__date">
+                                    <i class="fa fa-calendar-o mr-1"></i>{% if lang == 'en' %}{{ recent.dateEn }}{% else %}{{ recent.datePt }}{% endif %}
+                                 </span>
+                              </li>
+                              {% set shown = shown + 1 %}
+                           {% endif %}
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </aside>
+
+            </div>
+         </div>
+
+      </div>
+   </section>
+</main>

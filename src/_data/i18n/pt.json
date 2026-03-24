@@ -1,11 +1,12 @@
 {
   "nav": {
-    "about": "Quem somos",
+    "about": "Quem&nbsp;Somos",
     "services": "Serviços",
     "solutions": "Soluções",
     "support": "Suporte",
     "contact": "Contato",
-    "toggleLabel": "Alternar navegação"
+    "toggleLabel": "Alternar navegação",
+    "blog": "Blog"
   },
   "footer": {
     "tagline": "Protegemos empresas com soluções de cibersegurança e DevSecOps, unindo tecnologia e especialistas para gerar confiança, eficiência e crescimento seguro.",
@@ -16,7 +17,8 @@
       "about": "Quem somos",
       "services": "Serviços",
       "solutions": "Soluções",
-      "contact": "Contato"
+      "contact": "Contato",
+      "blog": "Blog"
     }
   },
   "about": {
@@ -148,42 +150,42 @@
     },
     "grid": {
       "item1": {
-        "img": "/assets/image/analisadores_codigo.png",
+        "img": "/assets/image/service/code-analysis.png",
         "category": "Segurança de Aplicações",
         "tag": "DAST, SAST, SCA",
         "title": "Analisadores de código",
         "desc": "Identifique vulnerabilidades ainda na fase de desenvolvimento. Reduza riscos sem comprometer a velocidade da entrega."
       },
       "item2": {
-        "img": "/assets/image/pentest_app.png",
+        "img": "/assets/image/service/pentest-app.png",
         "category": "Segurança de Aplicações",
         "tag": "Pentest em Aplicações",
         "title": "Ataques simulados em apps",
         "desc": "Teste a resiliência de suas aplicações contra invasores reais. Ganhe clareza com relatórios objetivos e priorização de riscos."
       },
       "item3": {
-        "img": "/assets/image/seg_nuvem.png",
+        "img": "/assets/image/service/cloud-security.png",
         "category": "Segurança de Infraestrutura",
         "tag": "CSPM",
         "title": "Segurança em nuvem",
         "desc": "Monitore configurações e corrija falhas automaticamente. Mantenha conformidade contínua em múltiplos provedores."
       },
       "item4": {
-        "img": "/assets/image/pentest_infra.png",
+        "img": "/assets/image/service/pentest-infra.png",
         "category": "Segurança de Infraestrutura",
         "tag": "Pentest Infraestrutura",
         "title": "Validação de redes e sistemas",
         "desc": "Descubra pontos fracos em servidores e conexões críticas. Receba recomendações práticas para hardening imediato."
       },
       "item5": {
-        "img": "/assets/image/dspm.png",
+        "img": "/assets/image/service/dspm.png",
         "category": "Segurança de Infraestrutura",
         "tag": "DSPM",
         "title": "Gestão de postura de dados",
         "desc": "Mapeie riscos e defina políticas e controles sobre dados sensíveis. Garanta visibilidade total no ciclo de vida da informação."
       },
       "item6": {
-        "img": "/assets/image/discovery_dados.png",
+        "img": "/assets/image/service/data-discovery.png",
         "category": "Segurança de Dados",
         "tag": "Data Discovery",
         "title": "Descoberta e proteção de dados",
@@ -202,7 +204,7 @@
     "cards": {
       "address": {
         "title": "Endereço",
-        "val": "Rua Irmã Gabriela, 51<br>São Paulo/SP"
+        "val": "Rua Des. Eliseu Guilherme, 200<br>Paraíso - São Paulo/SP - Brasil"
       },
       "phone": {
         "title": "Telefone",
@@ -262,7 +264,7 @@
   "blog": {
     "banner": {
       "title": "Blog Evernow",
-      "subtitle": "Descubra as últimas tendências em segurança digital, novidades e dicas para proteger o seu negócio contra ameaças digitais."
+      "subtitle": "Nosso olhar sobre tendências para as empresas líderes em cibersegurança."
     },
     "posts": {
       "date": "Jan 21, 2017",
@@ -308,13 +310,14 @@
     },
     "navigation": {
       "prev": "Post Anterior",
-      "next": "Próximo Post"
+      "next": "Próximo Post",
+      "back": "Voltar ao Blog"
     },
     "sidebar": {
-      "search": "Buscar páginas...",
+      "search": "Buscar artigos...",
       "popular": "Popular",
       "featured": "Destaque",
-      "recent": "Recente",
+      "recent": "Publicações Recentes",
       "categories": "Categorias",
       "tweets": "Tweets Recentes",
       "tags": "Tags"
@@ -406,6 +409,12 @@
     "partners": {
       "tag": "Parceiros de soluções da Evernow",
       "aria": "Logotipos de parceiros"
+    },
+    "latestPosts": {
+      "tag": "INSIGHTS",
+      "title": "Blog Evernow",
+      "subtitle": "Nosso olhar sobre tendências para as empresas líderes em cibersegurança.",
+      "btn": "Ver todos os artigos"
     }
   },
   "meta": {

@@ -5,7 +5,8 @@
     "solutions": "Solutions",
     "support": "Support",
     "contact": "Contact",
-    "toggleLabel": "Toggle navigation"
+    "toggleLabel": "Toggle navigation",
+    "blog": "Blog"
   },
   "footer": {
     "tagline": "We protect companies with cybersecurity and DevSecOps solutions, combining technology and experts to generate trust, efficiency and secure growth.",
@@ -16,7 +17,8 @@
       "about": "About us",
       "services": "Services",
       "solutions": "Solutions",
-      "contact": "Contact"
+      "contact": "Contact",
+      "blog": "Blog"
     }
   },
   "about": {
@@ -148,42 +150,42 @@
     },
     "grid": {
       "item1": {
-        "img": "/assets/image/analisadores_codigo.png",
+        "img": "/assets/image/service/code-analysis.png",
         "category": "Application Security",
         "tag": "DAST, SAST, SCA",
         "title": "Code Analyzers",
         "desc": "Identify vulnerabilities still in the development phase. Reduce risks without compromising delivery speed."
       },
       "item2": {
-        "img": "/assets/image/pentest_app.png",
+        "img": "/assets/image/service/pentest-app.png",
         "category": "Application Security",
         "tag": "Application Pentest",
         "title": "Simulated Attacks on Apps",
         "desc": "Test the resilience of your applications against real intruders. Gain clarity with objective reports and risk prioritization."
       },
       "item3": {
-        "img": "/assets/image/seg_nuvem.png",
+        "img": "/assets/image/service/cloud-security.png",
         "category": "Infrastructure Security",
         "tag": "CSPM",
         "title": "Cloud Security",
         "desc": "Monitor configurations and fix flaws automatically. Maintain continuous compliance across multiple providers."
       },
       "item4": {
-        "img": "/assets/image/pentest_infra.png",
+        "img": "/assets/image/service/pentest-infra.png",
         "category": "Infrastructure Security",
         "tag": "Infrastructure Pentest",
         "title": "Network and Systems Validation",
         "desc": "Discover weaknesses in servers and critical connections. Receive practical recommendations for immediate hardening."
       },
       "item5": {
-        "img": "/assets/image/dspm.png",
+        "img": "/assets/image/service/dspm.png",
         "category": "Infrastructure Security",
         "tag": "DSPM",
         "title": "Data Posture Management",
         "desc": "Map risks and define policies and controls over sensitive data. Ensure total visibility throughout the information lifecycle."
       },
       "item6": {
-        "img": "/assets/image/discovery_dados.png",
+        "img": "/assets/image/service/data-discovery.png",
         "category": "Data Security",
         "tag": "Data Discovery",
         "title": "Data Discovery and Protection",
@@ -280,11 +282,15 @@
     "partners": {
       "tag": "Evernow solution partners",
       "aria": "Partner logos"
+    },
+    "latestPosts": {
+      "tag": "Blog",
+      "title": "Latest news",
+      "subtitle": "Discover the latest trends in digital security, news, and tips to protect your business against digital threats.",
+      "btn": "View all articles"
     }
   },
   "meta": {
-    "defaultTitle": "Evernow | Cybersecurity Consulting for Businesses",
-    "defaultDescription": "Reduce risks and accelerate digital security. Experts in cybersecurity, DevSecOps and compliance — LGPD, NIST, ISO 27001. Proven results in 90 days.",
     "home": {
       "title": "Evernow | Cybersecurity Consulting for Businesses",
       "description": "Reduce risks and accelerate digital security. Experts in cybersecurity, DevSecOps and compliance — LGPD, NIST, ISO 27001. Proven results in 90 days.",
@@ -385,7 +391,7 @@
     "cards": {
       "address": {
         "title": "Our Address",
-        "val": "Rua Irmã Gabriela, 51<br>São Paulo/SP"
+        "val": "Rua Des. Eliseu Guilherme, 200<br>Paraíso - São Paulo/SP - Brasil"
       },
       "phone": {
         "title": "Phone Number",
@@ -446,13 +452,14 @@
     },
     "navigation": {
       "prev": "Previous Post",
-      "next": "Next Post"
+      "next": "Next Post",
+      "back": "Back to Blog"
     },
     "sidebar": {
-      "search": "Search for pages...",
+      "search": "Search articles...",
       "popular": "Popular",
       "featured": "Featured",
-      "recent": "Recent",
+      "recent": "Recent Posts",
       "categories": "Categories",
       "tweets": "Recent Tweets",
       "tags": "Tags"

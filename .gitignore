@@ -1,3 +1,22 @@
-*.DS_Store
+# Sistema
+.DS_Store
+**/.DS_Store
 .claude
+
+# Eleventy build output
 _site/*
+
+# Build artifacts (gerados por npm run build-assets)
+src/assets/css/main.min.css
+src/assets/css/bundle-entry.css
+src/assets/css/*.png
+src/assets/js/main.min.js
+
+# Dependências
+node_modules/
+
+# Logs e temporários
+*.log
+npm-debug.log*
+/tmp/combined.js
+/tmp/entry.css

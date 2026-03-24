@@ -5,7 +5,7 @@
       <div class="header-con">
          <nav class="navbar navbar-expand-lg navbar-light p-0">
             <a class="navbar-brand p-0" href="{{ urlPrefix }}/index.html">
-               <img src="/assets/image/evernow-logo-bgescuro.png" alt="{% t 'aria.logoAlt' %}" class="img-fluid">
+               <img src="/assets/image/logo/evernow-dark.png" alt="{% t 'aria.logoAlt' %}" class="img-fluid">
             </a>
             <button class="navbar-toggler p-0 collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{% t 'nav.toggleLabel' %}">
                <span class="navbar-toggler-icon"></span>
@@ -23,6 +23,11 @@
                   <li class="nav-item">
                      <a class="nav-link {% if '/solutions' in page.url %}nav-link-active{% endif %} text-white p-0" href="{{ urlPrefix }}/solutions.html"> {% t "nav.solutions" %} </a>
                   </li>
+                  {% if lang == 'pt' %}
+                  <li class="nav-item">
+                     <a class="nav-link {% if '/blog' in page.url %}nav-link-active{% endif %} text-white p-0" href="/blog.html">{% t "nav.blog" %}</a>
+                  </li>
+                  {% endif %}
                   <li class="nav-item">
                      <a class="nav-link text-white p-0" href="https://suporte.evernow.com.br"> {% t "nav.support" %} </a>
                   </li>
