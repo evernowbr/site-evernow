@@ -47,16 +47,7 @@ esbuild.buildSync({
   bundle: true,
   minify: true,
   outfile: path.join(srcDir, 'css/main.min.css'),
-  loader: {
-    '.png': 'file',
-    '.jpg': 'file',
-    '.svg': 'file',
-    '.gif': 'file',
-    '.woff': 'file',
-    '.woff2': 'file',
-    '.ttf': 'file',
-    '.eot': 'file',
-  },
-  external: ['*.woff', '*.woff2', '*.ttf', '*.eot'], // Don't try to bundle fonts if relative
+  // Images and fonts are kept as external references (relative paths preserved in output CSS)
+  external: ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.svg', '*.webp', '*.woff', '*.woff2', '*.ttf', '*.eot'],
 });
 console.log('CSS bundled to', path.join(srcDir, 'css/main.min.css'));
