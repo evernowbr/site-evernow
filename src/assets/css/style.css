@@ -984,7 +984,7 @@ body{
       border-color: transparent;
   }
   #tsum-tabs [id^="tab"]:checked + label img{
-    filter:  brightness(0) invert(1);
+    filter: brightness(0) saturate(100%) invert(13%) sepia(60%) saturate(1200%) hue-rotate(210deg);
   }
   #tsum-tabs .Effective-sec-item-title h4,
   #tsum-tabs .Effective-sec-item-title span
@@ -994,6 +994,10 @@ body{
 
   #tsum-tabs [id^="tab"]:checked + label{
     background: var(--accent);
+    color: #16256e;
+}
+#tsum-tabs [id^="tab"]:checked + label span{
+    color: #16256e !important;
 }
 #tsum-tabs [id^="tab"]:checked + label:after{
     content: "";
