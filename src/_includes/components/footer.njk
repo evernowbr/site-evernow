@@ -1,0 +1,73 @@
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+<section>
+   <div class="weight-footer-main-con bg-overly-img">
+      <div class="container overlay-content">
+         <div class="weight-footer-item-con">
+            <div class="row wow fadeInUp">
+               <div class="col-lg-4 col-md-12 col-12 text-lg-left text-md-center">
+                  <div class="weight-footer-item weight-footer-item1 mb-lg-0 mb-3">
+                     <div class="weight-footer-item-img">
+                        <figure>
+                           <img src="/assets/image/logo/evernow-dark.png" alt="{% t 'aria.logoAlt' %}" class="img-fluid">
+                        </figure>
+                     </div>
+                     <div class="weight-footer-item-content">
+                        <p class="mb-xl-0 mb-lg-0 mb-md-4 weight-footer-item1-content">
+                           {% t "footer.tagline" %}
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-3 col-5">
+                  <div class="weight-footer-item mb-lg-0 mb-md-0 mb-3">
+                     <div class="weight-footer-item-title">
+                        <h3>{% t "footer.aboutUs" %}</h3>
+                     </div>
+                     <div class="weight-footer-item-link">
+                        <ul class="list-unstyled mb-0">
+                           <li><a href="{{ urlPrefix }}/about.html">{% t "footer.links.about" %}</a></li>
+                           <li><a href="{{ urlPrefix }}/services.html">{% t "footer.links.services" %}</a></li>
+                           <li><a href="{{ urlPrefix }}/solutions.html">{% t "footer.links.solutions" %}</a></li>
+                           <li><a href="{{ urlPrefix }}/contact.html">{% t "footer.links.contact" %}</a></li>
+                           {% if lang == 'pt' %}
+                           <li class="mb-0"><a href="/blog.html">{% t "footer.links.blog" %}</a></li>
+                           {% endif %}
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-7">
+                  <div class="weight-footer-item mb-lg-0 mb-md-0 mb-3">
+                     <div class="weight-footer-item-title">
+                        <h3>{% t "footer.ourServices" %}</h3>
+                     </div>
+                     <div class="weight-footer-item-content weight-footer-item-link">
+                        <ul class="list-unstyled mb-0 social-icon-list">
+                           <li class="weight-footer-item2-content col-lg-11 pl-0 pr-0">
+                              Rua Irmã Gabriela, 51<br>São Paulo/SP
+                           </li>
+                           <li><a href="mailto:contato@evernow.com.br">contato@evernow.com.br</a></li>
+                           <li><a href="tel:+11910260404">+55 11 91026-0404</a></li>
+                           <li class="d-inline-block mb-0"><a href="https://www.facebook.com/evernowbr"><i class="fab fa-facebook-f"></i></a></li>
+                           <li class="d-inline-block mb-0"><a href="https://www.linkedin.com/company/evernowbr"><i class="fab fa-linkedin-in"></i></a></li>
+                           <li class="d-inline-block mb-0"><a href="https://www.instagram.com/evernowbr/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-con">
+         <div class="container overlay-content">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="footer-con text-center">
+                     <p>{% t "footer.copyright" %}</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

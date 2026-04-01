@@ -1,0 +1,43 @@
+<section class="latest-posts-con py-5">
+   <div class="container">
+      <div class="latest-posts-heading text-center mb-4">
+         <p class="latest-posts-tag">{{ "home.latestPosts.tag" | t }}</p>
+         <h2>{{ "home.latestPosts.title" | t }}</h2>
+         <p class="latest-posts-subtitle">{{ "home.latestPosts.subtitle" | t }}</p>
+      </div>
+      <div class="row">
+         {% set count = 0 %}
+         {% for post in publishedPosts %}
+            {% if count < 3 %}
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
+               <div class="w-100 d-flex flex-column blog-card">
+                  {% if post.featuredImage %}
+                  <div class="post-image">
+                     <a href="/blog/{{ post.slug }}.html">
+                        <img src="{{ post.featuredImage }}" alt="{{ post.title }}" loading="lazy" class="blog-card__img">
+                     </a>
+                  </div>
+                  {% endif %}
+                  <div class="blog-card__body d-flex flex-column flex-grow-1">
+                     <span class="blog-card__date">
+                        <i class="fa fa-calendar-o mr-1"></i>{{ post.datePt }}
+                     </span>
+                     <h3 class="blog-card__title">
+                        <a href="/blog/{{ post.slug }}.html">{{ post.title }}</a>
+                     </h3>
+                     <p class="blog-card__excerpt flex-grow-1">{{ post.excerpt }}</p>
+                     <a href="/blog/{{ post.slug }}.html" class="blog-card__readmore">
+                        {{ "blog.posts.read_more" | t }} <i class="fa fa-arrow-right"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            {% set count = count + 1 %}
+            {% endif %}
+         {% endfor %}
+      </div>
+      <div class="text-center mt-2">
+         <a href="/blog.html" class="contact-btn">{{ "home.latestPosts.btn" | t }}</a>
+      </div>
+   </div>
+</section>

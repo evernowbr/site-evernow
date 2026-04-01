@@ -1,0 +1,30 @@
+{
+  "name": "site-evernow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve",
+    "build-assets": "node build-assets.js",
+    "optimize-images": "node optimize-images.js",
+    "build": "npm run build-assets && npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evernowbr/site-evernow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evernowbr/site-evernow/issues"
+  },
+  "homepage": "https://github.com/evernowbr/site-evernow#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "esbuild": "^0.27.4",
+    "lightningcss-cli": "^1.32.0",
+    "sharp": "^0.34.5"
+  }
+}

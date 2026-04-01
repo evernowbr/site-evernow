@@ -1,0 +1,23 @@
+<section>
+   <div class="slider-con{% if partnersSliderExtraClass %} {{ partnersSliderExtraClass }}{% endif %} w-100">
+      <div class="container{% if partnersContainerClass %} {{ partnersContainerClass }}{% endif %}">
+         <div class="slider-heading text-center">
+            <h5>{{ partnersTagKey }}</h5>
+            {% if partnersSubtitle %}
+            <p>{{ partnersSubtitle }}</p>
+            {% endif %}
+         </div>
+         <div class="row wow fadeInUp{% if partnersRowClass %} {{ partnersRowClass }}{% endif %}">
+            {% for i in range(1, 7) %}
+            <div class="col-lg-2 col-md-4 col-6">
+               <div class="partner-box text-center mb-lg-0 mb-4">
+                  <figure class="mb-0">
+                     <img src="/assets/image/empresa-{{ i }}.png" alt="" class="img-fluid" loading="lazy">
+                  </figure>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</section>
