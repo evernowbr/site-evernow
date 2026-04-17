@@ -1,0 +1,161 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: solutions
+  size: 1
+  alias: solution
+permalink: "/solucoes/{{ solution.slug }}/"
+lang: pt
+---
+{% set seoTitle = solution.titleTag %}
+{% set seoDescription = solution.metaDescription %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Soluções", url: "/solucoes/" },
+  { label: solution.titulo }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-md-7 col-sm-12 d-flex justify-content-center flex-column banner-main-left-con">
+              <div class="banner-left-con wow slideInLeft">
+                <div class="banner-heading">
+                  <p style="color:#00e0a3;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">Solução</p>
+                  <h1>{{ solution.titulo }}</h1>
+                </div>
+                <div class="banner-content">
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.8);">{{ solution.tagline }}</p>
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7;margin-top:8px;">{{ solution.descricao }}</p>
+                </div>
+                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+                  <a href="/contact.html" class="contact-btn">Fale com um especialista</a>
+                  <a href="/assessment.html" class="ev-btn-outline">Fazer o assessment</a>
+                </div>
+                <div class="ev-hero__trust mt-4">
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Especialistas certificados</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Resultados em 90 dias</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Agnóstico de plataforma</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 mt-4 mt-md-0 d-flex align-items-center">
+              <div class="wow slideInRight w-100">
+                <div class="ev-hero-img-frame">
+                  <img src="{{ solution.heroImage }}" alt="{{ solution.titulo }}" class="img-fluid w-100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <!-- Principais dores -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Desafios</div>
+      <h2 class="ev-section__title wow fadeInUp">Por que isso continua sendo um problema?</h2>
+      <div class="ev-pain-grid">
+        {%- for dor in solution.dores -%}
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon">
+            <i class="{{ solution.doreIcons[loop.index0] if solution.doreIcons[loop.index0] else 'fas fa-exclamation-triangle' }}"></i>
+          </div>
+          <p>{{ dor }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Evernow -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Como a Evernow resolve</div>
+      <h2 class="ev-section__title wow fadeInUp">Nossa abordagem para {{ solution.titulo }}</h2>
+      <div class="ev-delivery-grid">
+        {%- for dif in solution.diferenciais -%}
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon">
+            <i class="{{ solution.difIcons[loop.index0] if solution.difIcons[loop.index0] else 'fas fa-check' }}"></i>
+          </div>
+          <h4>{{ dif.titulo }}</h4>
+          <p>{{ dif.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos do pilar -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Portfólio</div>
+      <h2 class="ev-section__title wow fadeInUp">Ofertas dentro de {{ solution.titulo }}</h2>
+      <p class="ev-section__desc wow fadeInUp">Cada produto pode ser contratado de forma independente ou como parte de um programa estruturado.</p>
+      <div class="ev-pilar-product-grid mt-4">
+        {%- for prod in solution.produtos -%}
+        <a href="/produtos/{{ prod.slug }}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ prod.icon if prod.icon else 'fas fa-shield-alt' }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ prod.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ prod.tagline }}</p>
+            <ul class="ev-pilar-product__features">
+              {%- for feat in prod.features -%}
+              <li><i class="fas fa-check"></i> {{ feat }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <span class="ev-pilar-product__cta">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- Plataformas e fabricantes -->
+  {% set vendorsList = solution.vendors %}
+  {% set vendorsTitle = "Plataformas com que trabalhamos" %}
+  {% include "components/vendors-section.njk" %}
+
+  <!-- Parceiros/clientes -->
+  {% set partnersTagKey = "Empresas que confiam na Evernow" %}
+  {% include "components/partners-grid.njk" %}
+
+  <!-- CTA Final -->
+  {% set ctaTitle = "Pronto para estruturar " + solution.titulo + "?" %}
+  {% set ctaSubtitle = "Fale com um especialista e defina o próximo passo, do assessment ao programa operacional." %}
+  {% set ctaPrimary = "Fale com um especialista" %}
+  {% set ctaSecondary = "Fazer o assessment gratuito" %}
+  {% include "components/cta-final.njk" %}
+</main>
+
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ solution.titulo }} | Evernow",
+  "description": "{{ solution.metaDescription }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Evernow",
+    "url": "https://evernow.com.br"
+  },
+  "areaServed": "BR",
+  "url": "https://evernow.com.br/solucoes/{{ solution.slug }}/"
+}
+</script>

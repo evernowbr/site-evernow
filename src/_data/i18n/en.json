@@ -55,20 +55,20 @@
     },
     "security_cards": {
       "card1": {
-        "title": "DevSecOps",
-        "desc": "Secure development is our specialty"
+        "title": "Secure Code",
+        "desc": "AppSec & DevSecOps from code to deploy"
       },
       "card2": {
-        "title": "Evernow SaaS",
-        "desc": "Managed Services,<br>SIEM, SaaS and Support"
+        "title": "Data Shield",
+        "desc": "Data protection, privacy and encryption"
       },
       "card3": {
-        "title": "Solutions",
-        "desc": "Best price on licensing"
+        "title": "Assurance",
+        "desc": "Audits, certifications and risk management"
       },
       "card4": {
-        "title": "GRC",
-        "desc": "Tailor-made specialized professionals"
+        "title": "Managed Ops",
+        "desc": "Continuous monitoring, SOC and 24x7 support"
       },
       "btn": "Talk to a specialist"
     }
@@ -293,7 +293,7 @@
   "meta": {
     "home": {
       "title": "Evernow | Cybersecurity Consulting for Businesses",
-      "description": "Reduce risks and accelerate digital security. Experts in cybersecurity, DevSecOps and compliance — LGPD, NIST, ISO 27001. Proven results in 90 days.",
+      "description": "Reduce risks and accelerate digital security. Experts in cybersecurity, DevSecOps and compliance, LGPD, NIST, ISO 27001. Proven results in 90 days.",
       "ogTitle": "Evernow | Cybersecurity that drives business results",
       "ogDescription": "DevSecOps, AppSec, GRC and data protection. Specialists with real experience in large enterprises. Measurable impact in 90 days."
     },
@@ -317,7 +317,7 @@
     },
     "contact": {
       "title": "Contact Evernow | Cybersecurity Consulting",
-      "description": "Contact Evernow's cybersecurity experts. Request a free security assessment for your business. Based in São Paulo, Brazil — serving companies nationwide.",
+      "description": "Contact Evernow's cybersecurity experts. Request a free security assessment for your business. Based in São Paulo, Brazil, serving companies nationwide.",
       "ogTitle": "Talk to a Cybersecurity Expert | Evernow",
       "ogDescription": "Request a free assessment. Our cybersecurity specialists are ready to help your company grow securely."
     },
@@ -379,7 +379,7 @@
       "item5": {
         "q": "What is the recommended frequency for a Pentest?",
         "a1": "Companies usually perform tests annually, but new vulnerabilities can appear at any time due to changes in network infrastructure, servers / services, or new bug discoveries (vulnerabilities) in existing systems.",
-        "a2": "Thus, Pentest as a service — run daily — will be able to immediately identify new risks and vulnerabilities, preventing attacks or data loss."
+        "a2": "Thus, Pentest as a service, run daily, will be able to immediately identify new risks and vulnerabilities, preventing attacks or data loss."
       }
     }
   },

@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+lang: pt
+permalink: "/solucoes/"
+---
+{% set seoTitle = "Soluções de Cibersegurança | Evernow" %}
+{% set seoDescription = "Quatro pilares de segurança: Secure Code, Data Shield, Assurance e Managed Ops. A Evernow protege aplicações, dados e infraestrutura de ponta a ponta." %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Soluções" }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="col-lg-8 p-0">
+          <div class="banner-left-con wow slideInLeft">
+            <h1>Soluções de cibersegurança da Evernow</h1>
+            <p class="ev-hero__sub">Quatro pilares que cobrem o ciclo completo de segurança, do código ao dado, do teste ao compliance, da implantação à operação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-solucoes-index">
+        {%- for sol in solutions -%}
+        <a href="/solucoes/{{ sol.slug }}/" class="ev-solucoes-card wow fadeInUp">
+          <p class="ev-solucoes-card__label">{{ sol.titulo }}</p>
+          <h3>{{ sol.subtitulo }}</h3>
+          <p>{{ sol.descricao | truncate(160) }}</p>
+          <span class="ev-solucoes-card__cta">Ver solução <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% include "components/partners-grid.njk" %}
+
+  {% set ctaTitle = "Não sabe por onde começar?" %}
+  {% set ctaSubtitle = "Faça o assessment gratuito e receba um diagnóstico de maturidade com recomendações priorizadas." %}
+  {% set ctaPrimary = "Fale com um especialista" %}
+  {% set ctaSecondary = "Fazer o assessment" %}
+  {% include "components/cta-final.njk" %}
+</main>

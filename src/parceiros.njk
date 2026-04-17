@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}parceiros.html"
+lang: pt
+---
+{% set seoTitle = "Parceiros de Tecnologia | Evernow" %}
+{% set seoDescription = "A Evernow é parceira certificada das principais plataformas de cibersegurança do mercado. Implementação, POC, treinamento e operação gerenciada, do licenciamento à entrega." %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Parceiros" }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="col-lg-8 p-0 wow slideInLeft">
+          <h1>Parceiros certificados de tecnologia</h1>
+          <p class="ev-hero__sub">A Evernow é parceira autorizada e certificada das principais plataformas de cibersegurança do mercado, não apenas revendendo licenças, mas conduzindo POC, implementando, treinando equipes e operando a plataforma com SLAs definidos. Uma parceria que entrega resultado, não apenas software.</p>
+          <div class="ev-hero__trust mt-4">
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> 24 plataformas certificadas</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> POC em até 5 dias úteis</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Do licenciamento à operação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# Parceria técnica, topo, copy BANT #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 wow fadeInLeft">
+          <div class="ev-section__tag">Parceria técnica certificada</div>
+          <h2 class="ev-section__title">A diferença entre ter a ferramenta e ter resultado</h2>
+          <p class="ev-section__desc" style="margin-bottom:24px;">A maioria das empresas paga por licenças que nunca são 100% implementadas. A Evernow muda esse ciclo, somos o parceiro que fica do início ao fim: da POC à operação contínua, com SLAs, treinamento e responsabilidade técnica.</p>
+          <ul class="list-unstyled">
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Implementação por engenheiros certificados na própria plataforma, não por generalistas</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">POC em até 5 dias úteis com resultados no ambiente real do cliente, não em sandbox</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Suporte técnico direto com o engenheiro que implementou, sem fila de chamado ao fabricante</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Operação gerenciada pós-implantação com métricas, relatórios e evolução contínua</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Recomendação independente, indicamos o que resolve o problema, não o que tem maior margem</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="ev-partner-value-grid">
+            <div class="ev-partner-value-item">
+              <i class="fas fa-flask"></i>
+              <div>
+                <strong>POC & Avaliação</strong>
+                <p>Prova de conceito no ambiente real do cliente em até 5 dias úteis, com relatório de achados e análise de ROI.</p>
+              </div>
+            </div>
+            <div class="ev-partner-value-item">
+              <i class="fas fa-cogs"></i>
+              <div>
+                <strong>Implementação & Integração</strong>
+                <p>Instalação, configuração e integração ao stack existente, CI/CD, SIEM, ITSM, sem atrito para as equipes.</p>
+              </div>
+            </div>
+            <div class="ev-partner-value-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>Treinamento & Capacitação</strong>
+                <p>Treinamento técnico e executivo para que a equipe interna opere a plataforma com independência real.</p>
+              </div>
+            </div>
+            <div class="ev-partner-value-item">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <strong>Operação Gerenciada</strong>
+                <p>Monitoramento contínuo, relatórios mensais e evolução da maturidade, para clientes que querem resultado, não tarefa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 p-4" style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.2);border-radius:10px;">
+            <p style="color:#00e0a3;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">Fabricante ou revendedor?</p>
+            <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.6;margin-bottom:16px;">Se você quer levar a Evernow como braço técnico para os seus clientes, implementação, operação e suporte, fale com a gente sobre parceria comercial.</p>
+            <a href="/contact.html" class="contact-btn">Explorar parceria</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Grid de logos linkados #}
+  <section class="ev-vendor-all-strip">
+    <div class="container">
+      <p class="ev-vendor-all-strip__label">Clique em uma plataforma para conhecer nossa atuação</p>
+      <div class="ev-vendor-all-grid">
+        {%- for vendor in vendors -%}
+        <a href="/parceiros/{{ vendor.slug }}/" class="ev-vendor-all-item" title="{{ vendor.nome }}">
+          <img src="{{ vendor.logo }}" alt="{{ vendor.nome }}" loading="lazy" decoding="async">
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+</main>

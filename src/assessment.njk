@@ -1,0 +1,151 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}assessment.html"
+lang: pt
+---
+{% set seoTitle = "Assessment de Maturidade em Cibersegurança | Evernow" %}
+{% set seoDescription = "Faça o assessment gratuito de maturidade em cibersegurança da Evernow e receba um diagnóstico com roadmap de prioridades para seu programa de segurança." %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Recursos", url: "/recursos/" },
+  { label: "Assessment" }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero ev-assessment-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 wow slideInLeft">
+            <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">Assessment gratuito</p>
+            <h1>Descubra o estado real da segurança da sua empresa</h1>
+            <p class="ev-hero__sub">Em 30 minutos, nossos especialistas avaliam seu programa de cibersegurança e entregam um diagnóstico executivo com as prioridades de melhoria mais relevantes para o seu contexto.</p>
+            <div class="ev-hero__trust mt-4">
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Sem compromisso de compra</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Diagnóstico em 48h</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Especialista sênior</span>
+            </div>
+          </div>
+          <div class="col-lg-5 wow slideInRight mt-4 mt-lg-0">
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:32px;">
+              <p style="color:#00e0a3;font-weight:700;margin-bottom:6px;font-size:.9rem;">O que você recebe:</p>
+              <ul class="list-unstyled mt-3" style="font-size:.9rem;color:rgba(255,255,255,.75);">
+                <li class="mb-2"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:8px;"></i>Análise do estado atual do seu programa</li>
+                <li class="mb-2"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:8px;"></i>Mapeamento dos principais gaps de risco</li>
+                <li class="mb-2"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:8px;"></i>Recomendações priorizadas por impacto</li>
+                <li class="mb-2"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:8px;"></i>Benchmarks do seu setor</li>
+                <li><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:8px;"></i>Relatório executivo para o CISO ou board</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <!-- Formatos de assessment -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">O que avaliamos</div>
+      <h2 class="ev-section__title wow fadeInUp">Formatos de assessment disponíveis</h2>
+      <div class="ev-delivery-grid mt-4">
+        <div class="ev-delivery-card wow fadeInUp">
+          <h4>Assessment DevSecOps</h4>
+          <p>Maturidade do programa de segurança em aplicações: pipeline, ferramentas, processos e cultura. Inclui gap analysis e roadmap com benchmarks.</p>
+          <p style="color:#00e0a3;font-size:.85rem;margin-top:10px;font-weight:600;">A partir de R$ 81,5k</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <h4>Assessment ISO 27001</h4>
+          <p>Gap analysis completo contra a ISO 27001:2022. Pontuação por domínio de controle, identificação de riscos e roadmap de certificação.</p>
+          <p style="color:#00e0a3;font-size:.85rem;margin-top:10px;font-weight:600;">A partir de R$ 99k</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <h4>Assessment de Continuidade</h4>
+          <p>Diagnóstico de BCP/DRP com análise de impacto de negócio e avaliação de resiliência operacional para cenários de disrupção.</p>
+          <p style="color:#00e0a3;font-size:.85rem;margin-top:10px;font-weight:600;">A partir de R$ 138k</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <h4>Diagnóstico rápido (gratuito)</h4>
+          <p>Conversa de 30 minutos com especialista sênior para identificar os 3 maiores riscos do seu ambiente e recomendar próximos passos.</p>
+          <p style="color:#00e0a3;font-size:.85rem;margin-top:10px;font-weight:600;">Sem custo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Processo</div>
+      <h2 class="ev-section__title wow fadeInUp">Como funciona o assessment</h2>
+      <div class="ev-method">
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Agendamento</h4>
+          <p>Você preenche o formulário abaixo e um especialista entra em contato em até 24 horas úteis.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Coleta de contexto</h4>
+          <p>Entrevista estruturada com CISO, CTO ou responsável pela área de segurança.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Análise</h4>
+          <p>Nossa equipe processa as informações e elabora o diagnóstico com recomendações.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Entrega</h4>
+          <p>Apresentação do relatório executivo com roadmap de prioridades e próximos passos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-5">
+            <div class="ev-section__tag">Agendar assessment</div>
+            <h2 class="ev-section__title">Solicite o seu assessment agora</h2>
+            <p class="ev-section__desc mx-auto">Preencha o formulário e nossa equipe entra em contato em até 24 horas úteis.</p>
+          </div>
+          <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+          <div class="hs-form-frame" data-region="na1"
+               data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9"
+               data-portal-id="49406327"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links para outros recursos -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Relacionados</div>
+      <h2 class="ev-section__title wow fadeInUp">Aprofunde-se</h2>
+      <div class="ev-related-grid mt-4">
+        <a href="/produtos/assessment-maturidade/" class="ev-related-card wow fadeInUp">
+          <h5>Assessment de Maturidade</h5>
+          <p>Diagnóstico estruturado com roadmap priorizado para ISO 27001, DevSecOps e continuidade.</p>
+        </a>
+        <a href="/solucoes/assurance/" class="ev-related-card wow fadeInUp">
+          <h5>Assurance</h5>
+          <p>Pentest, compliance e validação independente do seu programa de segurança.</p>
+        </a>
+        <a href="/produtos/grc/" class="ev-related-card wow fadeInUp">
+          <h5>GRC</h5>
+          <p>Governança, risco e compliance estruturados após o diagnóstico inicial.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

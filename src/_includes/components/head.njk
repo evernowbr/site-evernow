@@ -3,19 +3,18 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 <!-- SEO -->
-{% if pageMeta %}
+{% if seoTitle %}
+  <title>{{ seoTitle }}</title>
+  <meta name="description" content="{{ seoDescription if seoDescription else seoTitle }}" />
+{% elif pageMeta %}
   {% set _titleKey = "meta." + pageMeta + ".title" %}
   {% set _descKey  = "meta." + pageMeta + ".description" %}
-  {% set _ogTitleKey = "meta." + pageMeta + ".ogTitle" %}
-  {% set _ogDescKey  = "meta." + pageMeta + ".ogDescription" %}
+  <title>{{ _titleKey | t }}</title>
+  <meta name="description" content="{{ _descKey | t }}" />
 {% else %}
-  {% set _titleKey   = "meta.defaultTitle" %}
-  {% set _descKey    = "meta.defaultDescription" %}
-  {% set _ogTitleKey = "meta.defaultTitle" %}
-  {% set _ogDescKey  = "meta.defaultDescription" %}
+  <title>{{ "meta.defaultTitle" | t }}</title>
+  <meta name="description" content="{{ "meta.defaultDescription" | t }}" />
 {% endif %}
-<title>{{ _titleKey | t }}</title>
-<meta name="description" content="{{ _descKey | t }}" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 <link rel="canonical" href="https://evernow.com.br{{ page.url }}" />
 
@@ -27,8 +26,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Evernow" />
 <meta property="og:url" content="https://evernow.com.br{{ page.url }}" />
-<meta property="og:title" content="{{ _ogTitleKey | t }}" />
-<meta property="og:description" content="{{ _ogDescKey | t }}" />
+<meta property="og:title" content="{{ seoTitle if seoTitle else (_ogTitleKey | t if _ogTitleKey else ("meta.defaultTitle" | t)) }}" />
+<meta property="og:description" content="{{ seoDescription if seoDescription else (_ogDescKey | t if _ogDescKey else ("meta.defaultDescription" | t)) }}" />
 <meta property="og:image" content="https://evernow.com.br/assets/image/logo/evernow-dark.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -36,8 +35,8 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@evernowbr" />
-<meta name="twitter:title" content="{{ _ogTitleKey | t }}" />
-<meta name="twitter:description" content="{{ _ogDescKey | t }}" />
+<meta name="twitter:title" content="{{ seoTitle if seoTitle else (_ogTitleKey | t if _ogTitleKey else ("meta.defaultTitle" | t)) }}" />
+<meta name="twitter:description" content="{{ seoDescription if seoDescription else (_ogDescKey | t if _ogDescKey else ("meta.defaultDescription" | t)) }}" />
 
 <link rel="stylesheet" href="/assets/css/main.min.css">
 {# <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> #}

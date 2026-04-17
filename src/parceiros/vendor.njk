@@ -1,0 +1,187 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: vendors
+  size: 1
+  alias: vendor
+permalink: "/parceiros/{{ vendor.slug }}/"
+lang: pt
+---
+{% set seoTitle = vendor.nome + " | Parceiro Evernow" %}
+{% set seoDescription = vendor.heroSubtitle %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Parceiros", url: "/parceiros.html" },
+  { label: vendor.nome }
+] %}
+
+{%- set serviçoIcons = ["fas fa-flask","fas fa-cogs","fas fa-graduation-cap","fas fa-chart-line","fas fa-headset"] -%}
+{%- set oqueFazIcons = ["fas fa-search-plus","fas fa-shield-alt","fas fa-chart-bar","fas fa-file-contract"] -%}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
+                <a href="/parceiros.html" style="color:#00e0a3;text-decoration:none;">Parceiros</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>
+                <a href="/solucoes/{{ vendor.pilarSlug }}/" style="color:#00e0a3;text-decoration:none;">{{ vendor.pilarNome }}</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>{{ vendor.categoria }}
+              </p>
+              <h1>{{ vendor.heroTitle }}</h1>
+              <p class="ev-hero__sub">{{ vendor.heroSubtitle }}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="/contact.html" class="contact-btn">Fale com um especialista</a>
+                <a href="/assessment.html" class="ev-btn-outline">Solicitar POC</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Parceiro certificado</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> POC em até 5 dias úteis</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Implementação + operação</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-5 col-sm-12 mt-4 mt-md-0 d-flex align-items-center justify-content-center">
+            <div class="wow slideInRight w-100">
+              <div class="ev-vendor-hero-logo-box">
+                <img src="{{ vendor.logo }}" alt="{{ vendor.nome }}" loading="eager">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# 1. O que é #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5 wow fadeInLeft">
+          <div class="ev-section__tag">O que é</div>
+          <h2 class="ev-section__title">{{ vendor.nome }}</h2>
+          <p class="ev-section__desc" style="line-height:1.8;">{{ vendor.sobre }}</p>
+          <a href="/solucoes/{{ vendor.pilarSlug }}/" class="about-pillar-link mt-3 d-inline-flex">
+            Ver pilar {{ vendor.pilarNome }} <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="col-lg-7 wow fadeInRight">
+          <div class="ev-pain-grid" style="grid-template-columns: repeat(2,1fr);">
+            {%- for item in vendor.oqueFaz -%}
+            <div class="ev-pain-card">
+              <div class="ev-pain-card__icon">
+                <i class="{{ oqueFazIcons[loop.index0] if oqueFazIcons[loop.index0] else 'fas fa-check-double' }}"></i>
+              </div>
+              <h5 style="color:#fff;font-size:.95rem;font-weight:700;margin-bottom:6px;">{{ item.titulo }}</h5>
+              <p style="color:rgba(255,255,255,.65);font-size:.85rem;line-height:1.6;margin:0;">{{ item.desc }}</p>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# 2. O que a Evernow entrega com este parceiro #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Evernow + {{ vendor.nome }}</div>
+      <h2 class="ev-section__title wow fadeInUp">Do licenciamento à operação, tudo em um único parceiro</h2>
+      <p class="ev-section__desc wow fadeInUp" style="margin-bottom:40px;">Como parceira certificada, a Evernow não apenas revende a licença, conduz a prova de conceito, implementa, treina sua equipe e opera a plataforma com SLAs definidos.</p>
+      <div class="ev-delivery-grid">
+        {%- for servico in vendor.evernowServicos -%}
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon">
+            <i class="{{ servico.icon if servico.icon else 'fas fa-cogs' }}"></i>
+          </div>
+          <h4>{{ servico.titulo }}</h4>
+          <p>{{ servico.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 3. Parceiros/clientes #}
+  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% set partnersContainerClass = "pb-4" %}
+  {% include "components/partners-grid.njk" %}
+
+  {# 4. Produtos relacionados #}
+  {%- if vendor.produtosRelacionados and vendor.produtosRelacionados.length -%}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Serviços relacionados</div>
+      <h2 class="ev-section__title wow fadeInUp">Como a Evernow entrega com {{ vendor.nome }}</h2>
+      <div class="ev-pilar-product-grid">
+        {%- for relSlug in vendor.produtosRelacionados -%}
+        {%- set relCard = productCardsBySlug[relSlug] -%}
+        {%- if relCard -%}
+        <a href="/produtos/{{ relSlug }}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ relCard.icon }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ relCard.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ relCard.tagline }}</p>
+          </div>
+          <span class="ev-pilar-product__cta">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  {# 5. FAQ #}
+  {%- if vendor.faq and vendor.faq.length -%}
+  {% set faqItems = vendor.faq %}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = "Perguntas frequentes sobre " + vendor.nome %}
+  {% include "components/faq-section.njk" %}
+  {%- endif -%}
+
+  {# 6. CTA Final #}
+  {% set ctaTitle = "Quer implementar o " + vendor.nome + "?" %}
+  {% set ctaSubtitle = "A Evernow conduz a POC, implementa e opera a plataforma. Fale com um especialista certificado." %}
+  {% set ctaPrimary = "Fale com um especialista" %}
+  {% set ctaSecondary = "Solicitar POC gratuita" %}
+  {% include "components/cta-final.njk" %}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "{{ vendor.nome }} | Evernow",
+      "description": "{{ vendor.heroSubtitle }}",
+      "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+      "areaServed": "BR",
+      "url": "https://evernow.com.br/parceiros/{{ vendor.slug }}/"
+    }
+    {%- if vendor.faq and vendor.faq.length -%}
+    ,{
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in vendor.faq -%}
+        { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+        {%- endfor -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>

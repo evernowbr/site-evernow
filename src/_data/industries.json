@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "financeiro",
+    "titulo": "Setor Financeiro",
+    "heroTitle": "Cibersegurança para o setor financeiro",
+    "heroSubtitle": "Bancos, fintechs, corretoras e seguradoras operam sob regulação intensa e são alvos prioritários de ataque. A Evernow protege aplicações, dados e infraestrutura com o rigor que o setor exige.",
+    "titleTag": "Cibersegurança para o Setor Financeiro | Evernow",
+    "metaDescription": "Segurança de aplicações, pentest, PCI DSS, LGPD, PAM e gestão de vulnerabilidades para bancos, fintechs e financeiras. A Evernow atende o setor financeiro com rigor técnico e compliance.",
+    "desafios": [
+      "Conformidade simultânea com PCI DSS, LGPD, Bacen e exigências de auditores e parceiros",
+      "Aplicações financeiras e APIs com alta exposição a ataques de injeção, fraude e engenharia reversa",
+      "Acesso privilegiado a sistemas críticos sem segregação adequada nem trilha de auditoria",
+      "Ameaças internas e supply chain risk em ambiente com dezenas de fornecedores e integrações"
+    ],
+    "solucoes": [
+      { "slug": "pentest", "titulo": "Pentest", "desc": "Validação de segurança de apps, APIs e infraestrutura com relatório para compliance." },
+      { "slug": "pci-dss", "titulo": "PCI DSS", "desc": "Conformidade completa para ambientes que processam dados de cartão." },
+      { "slug": "sast-dast-sca", "titulo": "AppSec / SAST DAST SCA", "desc": "Segurança integrada ao pipeline de desenvolvimento de apps financeiras." },
+      { "slug": "pam", "titulo": "PAM", "desc": "Controle e auditoria de acessos privilegiados." },
+      { "slug": "lgpd", "titulo": "LGPD", "desc": "Adequação e conformidade operacional com a LGPD." },
+      { "slug": "gestao-vulnerabilidades", "titulo": "Gestão de Vulnerabilidades", "desc": "Ciclo estruturado de identificação, priorização e remediação." }
+    ],
+    "credibilidade": "A Evernow atende instituições financeiras com equipes de compliance, CISO e engenharia, combinando rigor técnico de segurança com entendimento dos requisitos regulatórios do setor.",
+    "clientes": ["Bradesco", "Cielo", "Itaú"]
+  },
+  {
+    "slug": "saude",
+    "titulo": "Saúde",
+    "heroTitle": "Cibersegurança para o setor de saúde",
+    "heroSubtitle": "Hospitais, laboratórios e planos de saúde processam dados altamente sensíveis em sistemas críticos de vida. A Evernow protege dados de pacientes, sistemas clínicos e conformidade com LGPD.",
+    "titleTag": "Cibersegurança para a Saúde | LGPD | Evernow",
+    "metaDescription": "Proteção de dados de saúde, LGPD, resposta a incidentes e AppSec para hospitais, laboratórios e planos de saúde. Evernow especialista em segurança para o setor de saúde.",
+    "desafios": [
+      "Dados de saúde entre os mais sensíveis da LGPD, exposição gera responsabilidade elevada",
+      "Sistemas legados sem suporte de segurança integrados a aplicações modernas",
+      "Alta frequência de ataques de ransomware em hospitais e laboratórios",
+      "Cadeia de fornecedores extensa com acesso a dados de pacientes sem controle adequado"
+    ],
+    "solucoes": [
+      { "slug": "lgpd", "titulo": "LGPD", "desc": "Conformidade com tratamento de dados sensíveis de saúde." },
+      { "slug": "consentimento-lgpd", "titulo": "Consentimento & Privacy", "desc": "Gestão de consentimento de pacientes e DSR." },
+      { "slug": "dspm", "titulo": "DSPM", "desc": "Postura de segurança de dados de pacientes em cloud." },
+      { "slug": "resposta-incidentes", "titulo": "Resposta a Incidentes", "desc": "Contenção e recuperação em caso de ataque." },
+      { "slug": "soc-monitoramento", "titulo": "SOC", "desc": "Monitoramento contínuo de ameaças." },
+      { "slug": "pentest", "titulo": "Pentest", "desc": "Validação de sistemas clínicos e portais de pacientes." }
+    ],
+    "credibilidade": "A Evernow tem experiência em ambientes de saúde com entendimento das particularidades de sistemas clínicos, prontuários eletrônicos e regulações setoriais.",
+    "clientes": ["DASA", "Orizon"]
+  },
+  {
+    "slug": "varejo",
+    "titulo": "Varejo",
+    "heroTitle": "Cibersegurança para o varejo e e-commerce",
+    "heroSubtitle": "E-commerces, varejistas digitais e marketplaces processam dados de pagamento e dados pessoais em escala, com APIs expostas e alto risco de fraude. A Evernow protege todo esse ambiente.",
+    "titleTag": "Cibersegurança para Varejo e E-commerce | Evernow",
+    "metaDescription": "Pentest, PCI DSS, proteção de APIs, code protection e LGPD para varejo digital e e-commerce. A Evernow protege dados de pagamento, APIs e apps de varejo.",
+    "desafios": [
+      "APIs de pagamento e integração com marketplaces expostas a ataques de injeção e fraude",
+      "Apps mobile de e-commerce vulneráveis a engenharia reversa e bypass de autenticação",
+      "Dados de cartão processados por sistemas sem conformidade PCI DSS formal",
+      "Dados pessoais de clientes sem LGPD estruturada gerando risco de notificação e multa"
+    ],
+    "solucoes": [
+      { "slug": "pentest", "titulo": "Pentest", "desc": "Validação de segurança de apps web, APIs e plataformas de e-commerce." },
+      { "slug": "pci-dss", "titulo": "PCI DSS", "desc": "Conformidade para ambientes que processam cartões." },
+      { "slug": "code-protection", "titulo": "Code Protection", "desc": "Proteção de apps mobile contra engenharia reversa e fraude." },
+      { "slug": "consentimento-lgpd", "titulo": "LGPD & Consentimento", "desc": "Gestão de dados de clientes e consentimento." },
+      { "slug": "sast-dast-sca", "titulo": "AppSec", "desc": "Segurança no pipeline de desenvolvimento." },
+      { "slug": "data-discovery", "titulo": "Proteção de Dados", "desc": "Descoberta e proteção de dados de clientes." }
+    ],
+    "credibilidade": "A Evernow atende varejistas digitais e fintechs que combinam alto volume de transações, exposição de APIs e obrigações de conformidade simultâneas.",
+    "clientes": []
+  },
+  {
+    "slug": "tecnologia",
+    "titulo": "Tecnologia",
+    "heroTitle": "Cibersegurança para empresas de tecnologia",
+    "heroSubtitle": "SaaS, plataformas, scale-ups e ISVs desenvolvem software em alta velocidade. A Evernow integra segurança ao SDLC sem travar o ritmo de entrega.",
+    "titleTag": "Cibersegurança para Empresas de Tecnologia | Evernow",
+    "metaDescription": "DevSecOps, AppSec, CSPM e threat modeling para empresas de tecnologia, SaaS e scale-ups. A Evernow integra segurança ao pipeline de desenvolvimento sem impactar velocidade.",
+    "desafios": [
+      "Ciclo de desenvolvimento acelerado sem processo estruturado de revisão de segurança",
+      "Cloud com postura de segurança degradando conforme a infraestrutura cresce",
+      "Clientes enterprise exigindo pentest, ISO 27001 ou SOC 2 como pré-requisito de contrato",
+      "Time de engenharia sem cultura de secure coding, vulnerabilidades reintroduzidas continuamente"
+    ],
+    "solucoes": [
+      { "slug": "devsecops", "titulo": "DevSecOps", "desc": "Programa de segurança integrado ao pipeline de desenvolvimento." },
+      { "slug": "sast-dast-sca", "titulo": "SAST / DAST / SCA", "desc": "Análise automatizada de segurança no CI/CD." },
+      { "slug": "cspm", "titulo": "CSPM", "desc": "Postura de segurança em cloud com alertas e remediação." },
+      { "slug": "modelagem-ameacas", "titulo": "Threat Modeling", "desc": "Segurança por design na arquitetura das aplicações." },
+      { "slug": "treinamento-devsecops", "titulo": "Treinamento DevSecOps", "desc": "Capacitação do time de engenharia." },
+      { "slug": "iso-27001", "titulo": "ISO 27001", "desc": "Certificação para abertura de contas enterprise." }
+    ],
+    "credibilidade": "A Evernow é parceira de referência para empresas de tecnologia que precisam de segurança sem burocracia, do assessment inicial à operação contínua.",
+    "clientes": ["Telefônica"]
+  },
+  {
+    "slug": "governo",
+    "titulo": "Governo",
+    "heroTitle": "Cibersegurança para órgãos públicos e governo",
+    "heroSubtitle": "Órgãos públicos, autarquias e estatais operam infraestruturas críticas e processam dados sigilosos. A Evernow apoia conformidade, governança e operação de segurança no setor público.",
+    "titleTag": "Cibersegurança para Governo e Setor Público | Evernow",
+    "metaDescription": "Compliance, governança, SOC, resposta a incidentes e assessment de maturidade para órgãos públicos. A Evernow atende governo com rigor técnico e conformidade regulatória.",
+    "desafios": [
+      "Infraestruturas legadas com patches atrasados e exposição elevada a vulnerabilidades conhecidas",
+      "Requisitos de conformidade regulatória (LGPD, IN GSI/PR, frameworks setoriais) sem programa estruturado",
+      "Equipes de TI com múltiplas responsabilidades sem foco dedicado em segurança",
+      "Baixa visibilidade de ameaças e ausência de capacidade de resposta estruturada a incidentes"
+    ],
+    "solucoes": [
+      { "slug": "assessment-maturidade", "titulo": "Assessment de Maturidade", "desc": "Diagnóstico executivo com roadmap priorizado." },
+      { "slug": "grc", "titulo": "GRC", "desc": "Governança, risco e compliance estruturados." },
+      { "slug": "soc-monitoramento", "titulo": "SOC", "desc": "Monitoramento contínuo de segurança." },
+      { "slug": "resposta-incidentes", "titulo": "Resposta a Incidentes", "desc": "Capacidade de resposta estruturada para incidentes." },
+      { "slug": "lgpd", "titulo": "LGPD", "desc": "Adequação ao tratamento de dados pessoais." },
+      { "slug": "pam", "titulo": "PAM", "desc": "Controle de acessos privilegiados a sistemas críticos." }
+    ],
+    "credibilidade": "A Evernow atende órgãos públicos com metodologia que respeita as particularidades do setor: processo licitatório, estruturas hierárquicas e requisitos normativos específicos.",
+    "clientes": []
+  }
+]

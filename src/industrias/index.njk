@@ -1,0 +1,129 @@
+---
+layout: layouts/base.njk
+permalink: "/industrias/"
+lang: pt
+---
+{% set seoTitle = "Indústrias | Cibersegurança por Setor | Evernow" %}
+{% set seoDescription = "Soluções de cibersegurança especializadas para financeiro, saúde, varejo, tecnologia e governo. A Evernow entende as ameaças e regulações de cada setor." %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Indústrias" }
+] %}
+
+{# Mapa de ícones e cor por industria #}
+{% set industryMeta = {
+  "financeiro":  { icon: "fas fa-university",   color: "#4B9EFF" },
+  "saude":       { icon: "fas fa-heartbeat",     color: "#FF6B6B" },
+  "varejo":      { icon: "fas fa-shopping-bag",  color: "#FFB347" },
+  "tecnologia":  { icon: "fas fa-microchip",     color: "#00e0a3" },
+  "governo":     { icon: "fas fa-landmark",      color: "#C084FC" }
+} %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-11">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:12px;">Indústrias</p>
+              <h1>Cibersegurança que entende o seu setor</h1>
+              <p class="ev-hero__sub">Cada indústria tem ameaças, regulações e contexto próprios. A Evernow adapta seu portfólio de {{ industries | length }} setores com especialistas que conhecem o seu mercado, não só a tecnologia.</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="/contact.html" class="contact-btn">Fale com um especialista</a>
+                <a href="/assessment.html" class="ev-btn-outline">Fazer o assessment</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> PCI DSS, LGPD e ISO 27001</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Especialistas certificados</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Resultados em 90 dias</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# ── Grade de indústrias ── #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Setores atendidos</div>
+      <h2 class="ev-section__title wow fadeInUp">Escolha o seu setor</h2>
+      <p class="ev-section__desc wow fadeInUp" style="margin-bottom:40px;">Contexto importa. Nossa abordagem considera as regulações, ameaças e maturidade específicas de cada segmento.</p>
+
+      <div class="ev-industry-index-grid">
+        {%- for ind in industries -%}
+        {%- set meta = industryMeta[ind.slug] -%}
+        <a href="/industrias/{{ ind.slug }}/" class="ev-industry-card wow fadeInUp">
+          <div class="ev-industry-card__icon" style="--ind-color: {{ meta.icon if meta else '#00e0a3' }}; background: rgba(0,224,163,.1); border-color: rgba(0,224,163,.25);">
+            <i class="{{ meta.icon if meta else 'fas fa-building' }}" style="color:{{ meta.color if meta else '#00e0a3' }};"></i>
+          </div>
+          <h3 class="ev-industry-card__title">{{ ind.titulo }}</h3>
+          <p class="ev-industry-card__subtitle">{{ ind.heroSubtitle | truncate(100) }}</p>
+          <ul class="ev-industry-card__challenges">
+            {%- for desafio in ind.desafios | slice(0, 3) -%}
+            <li>{{ desafio | truncate(65) }}</li>
+            {%- endfor -%}
+          </ul>
+          <div class="ev-industry-card__footer">
+            <span class="ev-industry-card__count">{{ ind.solucoes | length }} serviços aplicáveis</span>
+            <span class="ev-industry-card__cta">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# ── Por que especialização importa ── #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6 wow fadeInLeft mb-4 mb-lg-0">
+          <div class="ev-section__tag">Por que especialização</div>
+          <h2 class="ev-section__title">Segurança genérica não funciona para setores regulados</h2>
+          <p class="ev-section__desc">Um banco tem PCI DSS e Bacen. Um hospital tem LGPD e dados de pacientes. Uma fintech tem open banking e supply chain risk. Cada contexto exige abordagem, ferramentas e expertise diferentes.</p>
+          <p class="ev-section__desc mt-3">A Evernow combina especialistas com certificações técnicas e experiência setorial, para entregar resultados que fazem sentido no seu contexto, não em qualquer empresa.</p>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="ev-spec-grid">
+            {%- set specs = [
+              { icon: "fas fa-gavel",       label: "Compliance regulatório",     desc: "PCI DSS, LGPD, Bacen, ISO 27001 e mais" },
+              { icon: "fas fa-bullseye",    label: "Ameaças setoriais",          desc: "Vetores de ataque específicos do seu setor" },
+              { icon: "fas fa-users-cog",   label: "Equipe especializada",       desc: "Consultores com experiência no seu mercado" },
+              { icon: "fas fa-chart-line",  label: "Maturidade progressiva",     desc: "Roadmap realista do ponto onde você está" }
+            ] -%}
+            {%- for spec in specs -%}
+            <div class="ev-spec-item">
+              <i class="{{ spec.icon }}"></i>
+              <div>
+                <strong>{{ spec.label }}</strong>
+                <p>{{ spec.desc }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Parceiros ── #}
+  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% include "components/partners-grid.njk" %}
+
+  {# ── CTA Final ── #}
+  {% set ctaTitle = "Não encontrou seu setor?" %}
+  {% set ctaSubtitle = "A Evernow atende empresas de todos os segmentos. Fale com um especialista e veja como adaptamos o portfólio ao seu contexto." %}
+  {% set ctaPrimary = "Fale com um especialista" %}
+  {% set ctaSecondary = "Fazer o assessment gratuito" %}
+  {% include "components/cta-final.njk" %}
+
+</main>

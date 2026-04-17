@@ -257,7 +257,7 @@
       "item5": {
         "q": "Qual a periodicidade recomendada para um Pentest?",
         "a1": "As empresas costumam realizar os testes anualmente, porém novas vulnerabilidades podem aparecer a qualquer momento, por alterações na infraestrutura de rede, servidores / serviços ou novas descobertas de bugs (vulnerabilidades) nos sistemas existentes.",
-        "a2": "Dessa forma, o Pentest como serviço — rodado diariamente — será capaz de identificar imediatamente novos riscos e vulnerabilidades, prevenindo ataques ou perda de dados."
+        "a2": "Dessa forma, o Pentest como serviço, rodado diariamente, será capaz de identificar imediatamente novos riscos e vulnerabilidades, prevenindo ataques ou perda de dados."
       }
     }
   },
@@ -343,43 +343,43 @@
       "item4": "Equipe com experiência real em projetos complexos."
     },
     "effective": {
-      "title": "Proteção que gera<br> valor para o seu negócio",
-      "subtitle": "Oferecemos um portfólio completo para reduzir riscos, acelerar entregas e garantir conformidade",
+      "title": "Quatro pilares.<br>Um único parceiro.",
+      "subtitle": "Do código ao SOC, da privacidade de dados ao compliance. A Evernow cobre o ciclo completo de cibersegurança da sua empresa.",
       "item1": {
-        "title": "Desenvolvimento Seguro",
-        "desc": "Acelere a maturidade em Segurança de Aplicações.",
-        "li1": "Pipeline estruturado",
-        "li2": "Automação de processos",
-        "li3": "Integração de soluções",
-        "li4": "Dashboards executivos",
-        "btn": "Teste sua maturidade"
+        "title": "Secure Code",
+        "desc": "Código seguro do primeiro commit ao deploy.",
+        "li1": "SAST, DAST e SCA no pipeline",
+        "li2": "DevSecOps e shift-left",
+        "li3": "Threat modeling e code review",
+        "li4": "Treinamento de times dev",
+        "btn": "Explorar Secure Code"
       },
       "item2": {
-        "title": "SaaS Evernow & Serviços Gerenciados",
-        "desc": "Segurança contínua com suporte especializado.",
-        "li1": "Sustentação de soluções",
-        "li2": "Atualização e segurança",
-        "li3": "Suporte 8×5 ou 24×7",
-        "li4": "Relatórios e SLAs",
-        "btn": "Peça uma avaliação"
+        "title": "Data Shield",
+        "desc": "Seus dados protegidos onde quer que estejam.",
+        "li1": "Descoberta e classificação de dados",
+        "li2": "Criptografia e tokenização",
+        "li3": "DLP e prevenção de vazamentos",
+        "li4": "Conformidade com LGPD",
+        "btn": "Explorar Data Shield"
       },
       "item3": {
-        "title": "Seleção & Gestão de Ferramentas",
-        "desc": "Escolha a solução mais eficiente com segurança.",
-        "li1": "Requisitos e arquitetura",
-        "li2": "POC's e implementação",
-        "li3": "Negociação e sizing",
-        "li4": "Treinamentos",
-        "btn": "Saiba recomendações"
+        "title": "Assurance",
+        "desc": "Valide sua postura e comprove conformidade.",
+        "li1": "Pentest e testes de invasão",
+        "li2": "Gestão de vulnerabilidades",
+        "li3": "Assessment de maturidade",
+        "li4": "GRC e conformidade",
+        "btn": "Explorar Assurance"
       },
       "item4": {
-        "title": "Avaliações & Testes de Segurança",
-        "desc": "Valide e fortaleça sua postura em segurança.",
-        "li1": "Pentest humanizado",
-        "li2": "Testes de qualidade",
-        "li3": "Avaliação de maturidade",
-        "li4": "GRC & Conformidade",
-        "btn": "Agende seu teste"
+        "title": "Managed Ops",
+        "desc": "SOC e operação gerenciada com SLAs.",
+        "li1": "SOC e monitoramento 24x7",
+        "li2": "Resposta a incidentes",
+        "li3": "EDR/XDR e SIEM gerenciados",
+        "li4": "PAM e identidades privilegiadas",
+        "btn": "Ver Managed Ops"
       }
     },
     "stats": {
@@ -399,7 +399,7 @@
     "testimonials": {
       "tag": "O que líderes dizem sobre a Evernow",
       "item1": {
-        "content": "Como as equipes de segurança normalmente são reduzidas com relação às demais áreas da companhia, é essencial contar com parceiros de verdade como a Evernow. Juntos, alcançamos resultados notáveis e avançamos de forma acelerada em direção a um futuro mais seguro"
+        "content": "Como as equipes de segurança normalmente são reduzidas com relação às demais áreas da companhia, é importante contar com parceiros de verdade como a Evernow. Juntos, alcançamos resultados notáveis e avançamos de forma acelerada em direção a um futuro mais seguro"
       },
       "item2": {
         "content": "A parceria bem-sucedida entre a Cielo e a Evernow não apenas resolveu desafios complexos, mas também estabeleceu um novo padrão de segurança e eficiência no processamento de dados sensíveis, elevando a experiência do cliente e a confiabilidade de nossos serviços",
@@ -446,7 +446,7 @@
     },
     "contact": {
       "title": "Fale com a Evernow | Consultoria em Cibersegurança",
-      "description": "Entre em contato com os especialistas da Evernow. Solicite uma avaliação gratuita de cibersegurança para sua empresa. São Paulo/SP — atendimento nacional.",
+      "description": "Entre em contato com os especialistas da Evernow. Solicite uma avaliação gratuita de cibersegurança para sua empresa. São Paulo/SP, atendimento nacional.",
       "ogTitle": "Fale com um Especialista em Cibersegurança | Evernow",
       "ogDescription": "Solicite uma avaliação gratuita. Nossos especialistas estão prontos para ajudar sua empresa a crescer com segurança."
     },

@@ -1,73 +1,92 @@
 {% set urlPrefix = "" if lang == "pt" else "/en" %}
 <section>
-   <div class="weight-footer-main-con bg-overly-img">
+  <div class="weight-footer-main-con bg-overly-img">
+    <div class="container overlay-content">
+      <div class="weight-footer-item-con">
+        <div class="row wow fadeInUp">
+          <!-- Logo + tagline -->
+          <div class="col-lg-3 col-md-12 col-12 text-lg-left text-md-center mb-4 mb-lg-0">
+            <div class="weight-footer-item">
+              <figure><img src="/assets/image/logo/evernow-dark.png" alt="Evernow" class="img-fluid" style="max-width:160px;"></figure>
+              <p class="mt-3" style="color:rgba(255,255,255,0.6);font-size:.88rem;line-height:1.6;">
+                Consultoria especializada em cibersegurança: AppSec, proteção de dados, compliance e operações de segurança.
+              </p>
+            </div>
+          </div>
+
+          <!-- Soluções -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4 mb-lg-0">
+            <div class="weight-footer-item">
+              <h3 class="weight-footer-item-title" style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;">Soluções</h3>
+              <ul class="list-unstyled mb-0" style="font-size:.88rem;">
+                <li><a href="/solucoes/secure-code/">Secure Code</a></li>
+                <li><a href="/solucoes/data-shield/">Data Shield</a></li>
+                <li><a href="/solucoes/assurance/">Assurance</a></li>
+                <li><a href="/solucoes/managed-ops/">Managed Ops</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Indústrias + Recursos -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4 mb-lg-0">
+            <div class="weight-footer-item">
+              <h3 class="weight-footer-item-title" style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;">Indústrias</h3>
+              <ul class="list-unstyled mb-0" style="font-size:.88rem;">
+                <li><a href="/industrias/financeiro/">Financeiro</a></li>
+                <li><a href="/industrias/saude/">Saúde</a></li>
+                <li><a href="/industrias/varejo/">Varejo</a></li>
+                <li><a href="/industrias/tecnologia/">Tecnologia</a></li>
+                <li><a href="/industrias/governo/">Governo</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Recursos + Empresa -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4 mb-lg-0">
+            <div class="weight-footer-item">
+              <h3 style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;">Recursos</h3>
+              <ul class="list-unstyled mb-0" style="font-size:.88rem;">
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/assessment.html">Assessment</a></li>
+              </ul>
+              <h3 style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;margin-top:20px;">Empresa</h3>
+              <ul class="list-unstyled mb-0" style="font-size:.88rem;">
+                <li><a href="/about.html">Sobre</a></li>
+                <li><a href="/parceiros.html">Parceiros</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contato -->
+          <div class="col-lg-3 col-md-3 col-6">
+            <div class="weight-footer-item">
+              <h3 style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;">Contato</h3>
+              <ul class="list-unstyled mb-0" style="font-size:.88rem;">
+                <li class="mb-2" style="color:rgba(255,255,255,0.6);">Rua Irmã Gabriela, 51<br>São Paulo / SP</li>
+                <li><a href="mailto:contato@evernow.com.br">contato@evernow.com.br</a></li>
+                <li><a href="tel:+5511910260404">+55 11 91026-0404</a></li>
+                <li class="mt-3">
+                  <a href="https://www.linkedin.com/company/evernowbr" style="margin-right:12px;"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/evernowbr/" style="margin-right:12px;"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/evernowbr"><i class="fab fa-facebook-f"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-con" style="border-top:1px solid rgba(255,255,255,0.07);margin-top:40px;">
       <div class="container overlay-content">
-         <div class="weight-footer-item-con">
-            <div class="row wow fadeInUp">
-               <div class="col-lg-4 col-md-12 col-12 text-lg-left text-md-center">
-                  <div class="weight-footer-item weight-footer-item1 mb-lg-0 mb-3">
-                     <div class="weight-footer-item-img">
-                        <figure>
-                           <img src="/assets/image/logo/evernow-dark.png" alt="{% t 'aria.logoAlt' %}" class="img-fluid">
-                        </figure>
-                     </div>
-                     <div class="weight-footer-item-content">
-                        <p class="mb-xl-0 mb-lg-0 mb-md-4 weight-footer-item1-content">
-                           {% t "footer.tagline" %}
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-2 col-md-3 col-5">
-                  <div class="weight-footer-item mb-lg-0 mb-md-0 mb-3">
-                     <div class="weight-footer-item-title">
-                        <h3>{% t "footer.aboutUs" %}</h3>
-                     </div>
-                     <div class="weight-footer-item-link">
-                        <ul class="list-unstyled mb-0">
-                           <li><a href="{{ urlPrefix }}/about.html">{% t "footer.links.about" %}</a></li>
-                           <li><a href="{{ urlPrefix }}/services.html">{% t "footer.links.services" %}</a></li>
-                           <li><a href="{{ urlPrefix }}/solutions.html">{% t "footer.links.solutions" %}</a></li>
-                           <li><a href="{{ urlPrefix }}/contact.html">{% t "footer.links.contact" %}</a></li>
-                           {% if lang == 'pt' %}
-                           <li class="mb-0"><a href="/blog.html">{% t "footer.links.blog" %}</a></li>
-                           {% endif %}
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-4 col-7">
-                  <div class="weight-footer-item mb-lg-0 mb-md-0 mb-3">
-                     <div class="weight-footer-item-title">
-                        <h3>{% t "footer.ourServices" %}</h3>
-                     </div>
-                     <div class="weight-footer-item-content weight-footer-item-link">
-                        <ul class="list-unstyled mb-0 social-icon-list">
-                           <li class="weight-footer-item2-content col-lg-11 pl-0 pr-0">
-                              Rua Irmã Gabriela, 51<br>São Paulo/SP
-                           </li>
-                           <li><a href="mailto:contato@evernow.com.br">contato@evernow.com.br</a></li>
-                           <li><a href="tel:+11910260404">+55 11 91026-0404</a></li>
-                           <li class="d-inline-block mb-0"><a href="https://www.facebook.com/evernowbr"><i class="fab fa-facebook-f"></i></a></li>
-                           <li class="d-inline-block mb-0"><a href="https://www.linkedin.com/company/evernowbr"><i class="fab fa-linkedin-in"></i></a></li>
-                           <li class="d-inline-block mb-0"><a href="https://www.instagram.com/evernowbr/"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+        <div class="row py-3">
+          <div class="col-lg-12 text-center">
+            <p style="font-size:.82rem;color:rgba(255,255,255,0.4);margin:0;">
+              Copyright Evernow © 2026. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="footer-con">
-         <div class="container overlay-content">
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="footer-con text-center">
-                     <p>{% t "footer.copyright" %}</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+    </div>
+  </div>
 </section>

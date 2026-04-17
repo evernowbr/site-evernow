@@ -1,0 +1,170 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: industries
+  size: 1
+  alias: industry
+permalink: "/industrias/{{ industry.slug }}/"
+lang: pt
+---
+{% set seoTitle = industry.titleTag %}
+{% set seoDescription = industry.metaDescription %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Indústrias", url: "/industrias/" },
+  { label: industry.titulo }
+] %}
+
+{# Trust items por industria #}
+{% set industryTrust = {
+  "financeiro":  ["PCI DSS e Bacen",          "Redução de risco regulatório"],
+  "saude":       ["LGPD dados de saúde",       "Proteção de sistemas críticos"],
+  "varejo":      ["PCI DSS para e-commerce",   "Proteção de dados de clientes"],
+  "tecnologia":  ["DevSecOps e AppSec",        "Segurança no pipeline de dev"],
+  "governo":     ["Compliance e LGPD",         "GRC e gestão de riscos"]
+} %}
+{% set trust = industryTrust[industry.slug] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
+                <a href="/industrias/" style="color:#00e0a3;text-decoration:none;">Indústrias</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>{{ industry.titulo }}
+              </p>
+              <h1>{{ industry.heroTitle }}</h1>
+              <p class="ev-hero__sub">{{ industry.heroSubtitle }}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="/contact.html" class="contact-btn">Fale com um especialista</a>
+                <a href="/assessment.html" class="ev-btn-outline">Fazer o assessment</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {{ trust[0] if trust else "Especialistas certificados" }}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {{ trust[1] if trust else "Resultados em 90 dias" }}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Agnóstico de plataforma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# 1. Desafios do setor — pain cards #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Contexto do setor</div>
+      <h2 class="ev-section__title wow fadeInUp">Principais desafios de segurança no {{ industry.titulo }}</h2>
+      <p class="ev-section__desc wow fadeInUp">{{ industry.credibilidade }}</p>
+      <div class="ev-pain-grid mt-4">
+        {%- set painIcons = ["fas fa-exclamation-triangle","fas fa-lock-open","fas fa-bug","fas fa-user-secret"] -%}
+        {%- for desafio in industry.desafios -%}
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon">
+            <i class="{{ painIcons[loop.index0] }}"></i>
+          </div>
+          <p>{{ desafio }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 2. Soluções aplicáveis — product cards ricos #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Portfólio aplicado</div>
+      <h2 class="ev-section__title wow fadeInUp">O que a Evernow entrega para {{ industry.titulo }}</h2>
+      <p class="ev-section__desc wow fadeInUp mb-4">Serviços selecionados para o contexto, riscos e regulações do setor.</p>
+      <div class="ev-pilar-product-grid">
+        {%- for sol in industry.solucoes -%}
+        {%- set cardData = productCardsBySlug[sol.slug] -%}
+        <a href="/produtos/{{ sol.slug }}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ cardData.icon if cardData else 'fas fa-shield-alt' }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ sol.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ cardData.tagline if cardData else sol.desc }}</p>
+            {%- if cardData and cardData.features -%}
+            <ul class="ev-pilar-product__features">
+              {%- for feat in cardData.features -%}
+              <li><i class="fas fa-check"></i> {{ feat }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
+          <span class="ev-pilar-product__cta">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 3. Por que a Evernow para este setor #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0 wow fadeInLeft">
+          <div class="ev-section__tag">Por que a Evernow</div>
+          <h2 class="ev-section__title">Especialistas que conhecem o seu mercado</h2>
+          <p class="ev-section__desc">{{ industry.credibilidade }}</p>
+          <a href="/contact.html" class="contact-btn mt-4 d-inline-block">Fale com um especialista</a>
+        </div>
+        <div class="col-lg-7 wow fadeInRight">
+          <div class="ev-spec-grid">
+            {%- set specs = [
+              { icon: "fas fa-gavel",       label: "Compliance regulatório",   desc: "Conhecemos as normas e auditorias do setor" },
+              { icon: "fas fa-bullseye",    label: "Ameaças do contexto",      desc: "Vetores de ataque mapeados para o seu segmento" },
+              { icon: "fas fa-certificate", label: "Equipe certificada",       desc: "CISSP, CISM, CEH e certificações relevantes" },
+              { icon: "fas fa-chart-line",  label: "Resultados mensuráveis",   desc: "KPIs e métricas de segurança reportados ao CISO" }
+            ] -%}
+            {%- for spec in specs -%}
+            <div class="ev-spec-item">
+              <i class="{{ spec.icon }}"></i>
+              <div>
+                <strong>{{ spec.label }}</strong>
+                <p>{{ spec.desc }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# 4. Parceiros #}
+  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% include "components/partners-grid.njk" %}
+
+  {# 5. CTA Final #}
+  {% set ctaTitle = "Segurança especializada para " + industry.titulo %}
+  {% set ctaSubtitle = "Fale com um especialista e descubra o que faz mais sentido para o seu contexto regulatório e de ameaças." %}
+  {% set ctaPrimary = "Fale com um especialista" %}
+  {% set ctaSecondary = "Fazer o assessment" %}
+  {% include "components/cta-final.njk" %}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ industry.heroTitle }}",
+  "description": "{{ industry.metaDescription }}",
+  "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+  "areaServed": "BR",
+  "url": "https://evernow.com.br/industrias/{{ industry.slug }}/"
+}
+</script>

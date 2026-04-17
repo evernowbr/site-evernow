@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}webinars.html"
+lang: pt
+---
+{% set seoTitle = "Webinars de Cibersegurança | Evernow" %}
+{% set seoDescription = "Webinars ao vivo e gravados com especialistas da Evernow sobre DevSecOps, LGPD, pentest, cloud security e gestão de vulnerabilidades." %}
+{% set breadcrumbs = [
+  { label: "Início", url: "/" },
+  { label: "Webinars" }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="col-lg-7 p-0 wow slideInLeft">
+          <h1>Webinars de cibersegurança</h1>
+          <p class="ev-hero__sub">Sessões ao vivo e gravações com especialistas da Evernow sobre os temas mais relevantes de segurança para CISOs, arquitetos e times de engenharia.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Próximos eventos</div>
+      <h2 class="ev-section__title wow fadeInUp">Agenda de webinars</h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-4 col-md-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">Em breve</p>
+            <h3>DevSecOps na prática: estruturando o primeiro pipeline seguro</h3>
+            <p>Como integrar SAST, DAST e SCA ao CI/CD sem travar o time de desenvolvimento.</p>
+            <a href="/assessment.html" style="color:#00e0a3;font-size:.88rem;font-weight:600;text-decoration:none;display:block;margin-top:16px;">
+              Receba o aviso de lançamento <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">Em breve</p>
+            <h3>LGPD 2025: o que mudou e o que ainda precisa ser feito</h3>
+            <p>Atualização das regulações, novas exigências da ANPD e como adaptar seu programa de privacidade.</p>
+            <a href="/assessment.html" style="color:#00e0a3;font-size:.88rem;font-weight:600;text-decoration:none;display:block;margin-top:16px;">
+              Receba o aviso de lançamento <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;">Em breve</p>
+            <h3>Cloud Security: os 10 erros mais comuns de configuração em AWS</h3>
+            <p>Demonstração ao vivo das misconfigurações mais críticas e como detectá-las com CSPM.</p>
+            <a href="/assessment.html" style="color:#00e0a3;font-size:.88rem;font-weight:600;text-decoration:none;display:block;margin-top:16px;">
+              Receba o aviso de lançamento <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 wow fadeInUp">
+        <p style="color:rgba(255,255,255,.6);margin-bottom:20px;">Quer ser avisado sobre os próximos webinars?</p>
+        <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+        <div class="hs-form-frame" data-region="na1"
+             data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9"
+             data-portal-id="49406327"
+             style="max-width:560px;margin:0 auto;"></div>
+      </div>
+    </div>
+  </section>
+</main>
