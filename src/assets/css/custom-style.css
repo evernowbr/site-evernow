@@ -1260,8 +1260,8 @@ header { position: relative; z-index: 1000; }
 @media (max-width: 991px) {
   header { z-index: 1000; }
 
-  /* Full-screen panel slides down */
-  .navbar-collapse {
+  /* Full-screen panel — only when open (.show added by Bootstrap) */
+  .navbar-collapse.show {
     position: fixed !important;
     top: 64px !important;
     left: 0 !important;
