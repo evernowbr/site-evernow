@@ -5,13 +5,14 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/{% endif %}parceiros.html"
-lang: pt
+pageMeta: parceiros-index
 ---
-{% set seoTitle = "Parceiros de Tecnologia | Evernow" %}
-{% set seoDescription = "A Evernow é parceira certificada das principais plataformas de cibersegurança do mercado. Implementação, POC, treinamento e operação gerenciada, do licenciamento à entrega." %}
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/parceiros.html" %}
+{% set langEnUrl = "/en/parceiros.html" %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
-  { label: "Parceiros" }
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Partners" if lang == "en" else "Parceiros") }
 ] %}
 
 <div class="header-and-banner-con w-100">
@@ -21,12 +22,12 @@ lang: pt
     <section class="banner-main-con ev-hero">
       <div class="container">
         <div class="col-lg-8 p-0 wow slideInLeft">
-          <h1>Parceiros certificados de tecnologia</h1>
-          <p class="ev-hero__sub">A Evernow é parceira autorizada e certificada das principais plataformas de cibersegurança do mercado, não apenas revendendo licenças, mas conduzindo POC, implementando, treinando equipes e operando a plataforma com SLAs definidos. Uma parceria que entrega resultado, não apenas software.</p>
+          <h1>{% if lang == "en" %}Certified technology partners{% else %}Parceiros certificados de tecnologia{% endif %}</h1>
+          <p class="ev-hero__sub">{% if lang == "en" %}Evernow is an authorized and certified partner of the leading cybersecurity platforms on the market. We go beyond reselling licenses: we conduct POCs, implement, train teams, and operate the platform with defined SLAs. A partnership that delivers results, not just software.{% else %}A Evernow é parceira autorizada e certificada das principais plataformas de cibersegurança do mercado, não apenas revendendo licenças, mas conduzindo POC, implementando, treinando equipes e operando a plataforma com SLAs definidos. Uma parceria que entrega resultado, não apenas software.{% endif %}</p>
           <div class="ev-hero__trust mt-4">
-            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> 24 plataformas certificadas</span>
-            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> POC em até 5 dias úteis</span>
-            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Do licenciamento à operação</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}24 certified platforms{% else %}24 plataformas certificadas{% endif %}</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Fast POC in your real environment{% else %}POC rápida no seu ambiente real{% endif %}</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}From licensing to operations{% else %}Do licenciamento à operação{% endif %}</span>
           </div>
         </div>
       </div>
@@ -41,15 +42,23 @@ lang: pt
     <div class="container overlay-content">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 wow fadeInLeft">
-          <div class="ev-section__tag">Parceria técnica certificada</div>
-          <h2 class="ev-section__title">A diferença entre ter a ferramenta e ter resultado</h2>
-          <p class="ev-section__desc" style="margin-bottom:24px;">A maioria das empresas paga por licenças que nunca são 100% implementadas. A Evernow muda esse ciclo, somos o parceiro que fica do início ao fim: da POC à operação contínua, com SLAs, treinamento e responsabilidade técnica.</p>
+          <div class="ev-section__tag">{% if lang == "en" %}Certified technical partnership{% else %}Parceria técnica certificada{% endif %}</div>
+          <h2 class="ev-section__title">{% if lang == "en" %}The difference between having the tool and getting results{% else %}A diferença entre ter a ferramenta e ter resultado{% endif %}</h2>
+          <p class="ev-section__desc" style="margin-bottom:24px;">{% if lang == "en" %}Most companies pay for licenses that are never 100% implemented. Evernow changes that cycle. We are the partner that stays from start to finish: from POC to continuous operations, with SLAs, training, and technical accountability.{% else %}A maioria das empresas paga por licenças que nunca são 100% implementadas. A Evernow muda esse ciclo, somos o parceiro que fica do início ao fim: da POC à operação contínua, com SLAs, treinamento e responsabilidade técnica.{% endif %}</p>
           <ul class="list-unstyled">
+            {%- if lang == "en" -%}
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Implementation by engineers certified in the platform itself, not generalists</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Fast POC with results in the client's real environment, not in a sandbox</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Direct technical support with the engineer who implemented it, with no ticket queue to the manufacturer</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Post-deployment managed operations with metrics, reports, and continuous improvement</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Independent recommendations: we suggest what solves the problem, not what has the best margin</span></li>
+            {%- else -%}
             <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Implementação por engenheiros certificados na própria plataforma, não por generalistas</span></li>
-            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">POC em até 5 dias úteis com resultados no ambiente real do cliente, não em sandbox</span></li>
+            <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">POC rápida com resultados no ambiente real do cliente, não em sandbox</span></li>
             <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Suporte técnico direto com o engenheiro que implementou, sem fila de chamado ao fabricante</span></li>
             <li class="mb-3" style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Operação gerenciada pós-implantação com métricas, relatórios e evolução contínua</span></li>
             <li style="display:flex;gap:12px;align-items:flex-start;"><i class="fas fa-check-circle" style="color:#00e0a3;margin-top:3px;flex-shrink:0;"></i><span style="color:rgba(255,255,255,.8);">Recomendação independente, indicamos o que resolve o problema, não o que tem maior margem</span></li>
+            {%- endif -%}
           </ul>
         </div>
         <div class="col-lg-6 wow fadeInRight">
@@ -57,36 +66,36 @@ lang: pt
             <div class="ev-partner-value-item">
               <i class="fas fa-flask"></i>
               <div>
-                <strong>POC & Avaliação</strong>
-                <p>Prova de conceito no ambiente real do cliente em até 5 dias úteis, com relatório de achados e análise de ROI.</p>
+                <strong>{% if lang == "en" %}POC & Assessment{% else %}POC & Avaliação{% endif %}</strong>
+                <p>{% if lang == "en" %}Proof of concept in the client's real environment, with a findings report and ROI analysis.{% else %}Prova de conceito no ambiente real do cliente, com relatório de achados e análise de ROI.{% endif %}</p>
               </div>
             </div>
             <div class="ev-partner-value-item">
               <i class="fas fa-cogs"></i>
               <div>
-                <strong>Implementação & Integração</strong>
-                <p>Instalação, configuração e integração ao stack existente, CI/CD, SIEM, ITSM, sem atrito para as equipes.</p>
+                <strong>{% if lang == "en" %}Implementation & Integration{% else %}Implementação & Integração{% endif %}</strong>
+                <p>{% if lang == "en" %}Installation, configuration, and integration into the existing stack (CI/CD, SIEM, ITSM) without friction for teams.{% else %}Instalação, configuração e integração ao stack existente, CI/CD, SIEM, ITSM, sem atrito para as equipes.{% endif %}</p>
               </div>
             </div>
             <div class="ev-partner-value-item">
               <i class="fas fa-graduation-cap"></i>
               <div>
-                <strong>Treinamento & Capacitação</strong>
-                <p>Treinamento técnico e executivo para que a equipe interna opere a plataforma com independência real.</p>
+                <strong>{% if lang == "en" %}Training & Enablement{% else %}Treinamento & Capacitação{% endif %}</strong>
+                <p>{% if lang == "en" %}Technical and executive training so your internal team can operate the platform with real independence.{% else %}Treinamento técnico e executivo para que a equipe interna opere a plataforma com independência real.{% endif %}</p>
               </div>
             </div>
             <div class="ev-partner-value-item">
               <i class="fas fa-chart-line"></i>
               <div>
-                <strong>Operação Gerenciada</strong>
-                <p>Monitoramento contínuo, relatórios mensais e evolução da maturidade, para clientes que querem resultado, não tarefa.</p>
+                <strong>{% if lang == "en" %}Managed Operations{% else %}Operação Gerenciada{% endif %}</strong>
+                <p>{% if lang == "en" %}Continuous monitoring, monthly reports, and maturity improvement for clients who want real results, not just task completion.{% else %}Monitoramento contínuo, relatórios mensais e evolução da maturidade, para clientes que querem resultado, não tarefa.{% endif %}</p>
               </div>
             </div>
           </div>
           <div class="mt-4 p-4" style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.2);border-radius:10px;">
-            <p style="color:#00e0a3;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">Fabricante ou revendedor?</p>
-            <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.6;margin-bottom:16px;">Se você quer levar a Evernow como braço técnico para os seus clientes, implementação, operação e suporte, fale com a gente sobre parceria comercial.</p>
-            <a href="/contact.html" class="contact-btn">Explorar parceria</a>
+            <p style="color:#00e0a3;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">{% if lang == "en" %}Manufacturer or reseller?{% else %}Fabricante ou revendedor?{% endif %}</p>
+            <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.6;margin-bottom:16px;">{% if lang == "en" %}If you want to bring Evernow as a technical arm for your clients covering implementation, operations, and support, talk to us about a commercial partnership.{% else %}Se você quer levar a Evernow como braço técnico para os seus clientes, implementação, operação e suporte, fale com a gente sobre parceria comercial.{% endif %}</p>
+            <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Explore partnership{% else %}Explorar parceria{% endif %}</a>
           </div>
         </div>
       </div>
@@ -96,10 +105,10 @@ lang: pt
   {# Grid de logos linkados #}
   <section class="ev-vendor-all-strip">
     <div class="container">
-      <p class="ev-vendor-all-strip__label">Clique em uma plataforma para conhecer nossa atuação</p>
+      <p class="ev-vendor-all-strip__label">{% if lang == "en" %}Click on a platform to learn about our work{% else %}Clique em uma plataforma para conhecer nossa atuação{% endif %}</p>
       <div class="ev-vendor-all-grid">
         {%- for vendor in vendors -%}
-        <a href="/parceiros/{{ vendor.slug }}/" class="ev-vendor-all-item" title="{{ vendor.nome }}">
+        <a href="{{ urlPrefix }}/{% if lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vendor.slug }}/" class="ev-vendor-all-item" title="{{ vendor.nome }}">
           <img src="{{ vendor.logo }}" alt="{{ vendor.nome }}" loading="lazy" decoding="async">
         </a>
         {%- endfor -%}

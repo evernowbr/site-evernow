@@ -5,13 +5,12 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/{% endif %}ebooks.html"
-lang: pt
+pageMeta: ebooks
 ---
-{% set seoTitle = "Ebooks e Guias de Cibersegurança | Evernow" %}
-{% set seoDescription = "Guias práticos sobre DevSecOps, LGPD, pentest, ISO 27001 e gestão de vulnerabilidades produzidos por especialistas da Evernow." %}
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
-  { label: "Ebooks" }
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Ebooks & Guides" if lang == "en" else "Ebooks") }
 ] %}
 
 <div class="header-and-banner-con w-100">
@@ -21,8 +20,8 @@ lang: pt
     <section class="banner-main-con ev-hero">
       <div class="container">
         <div class="col-lg-7 p-0 wow slideInLeft">
-          <h1>Ebooks e guias de cibersegurança</h1>
-          <p class="ev-hero__sub">Conteúdo técnico e executivo produzido pelos especialistas da Evernow para ajudar CISOs, engenheiros e times de segurança a tomar decisões mais informadas.</p>
+          <h1>{% if lang == "en" %}Cybersecurity Ebooks & Guides{% else %}Ebooks e guias de cibersegurança{% endif %}</h1>
+          <p class="ev-hero__sub">{% if lang == "en" %}Technical and executive content produced by Evernow specialists to help CISOs, engineers, and security teams make more informed decisions.{% else %}Conteúdo técnico e executivo produzido pelos especialistas da Evernow para ajudar CISOs, engenheiros e times de segurança a tomar decisões mais informadas.{% endif %}</p>
         </div>
       </div>
     </section>
@@ -65,14 +64,14 @@ lang: pt
         </div>
       </div>
       <div class="text-center mt-5 wow fadeInUp">
-        <p style="color:rgba(255,255,255,.6);margin-bottom:20px;">Quer receber os próximos conteúdos em primeira mão?</p>
-        <a href="/assessment.html" class="contact-btn">Cadastre-se agora</a>
+        <p style="color:rgba(255,255,255,.6);margin-bottom:20px;">{% if lang == "en" %}Want to receive upcoming content first?{% else %}Quer receber os próximos conteúdos em primeira mão?{% endif %}</p>
+        <a href="{{ urlPrefix }}/assessment.html" class="contact-btn">{% if lang == "en" %}Subscribe now{% else %}Cadastre-se agora{% endif %}</a>
       </div>
     </div>
   </section>
 
-  {% set ctaTitle = "Quer aprofundar em algum tema?" %}
-  {% set ctaSubtitle = "Fale com nossos especialistas e tire dúvidas técnicas ou estratégicas sobre o seu programa de segurança." %}
-  {% set ctaPrimary = "Fale com um especialista" %}
+  {% set ctaTitle = ("Want to go deeper on a topic?" if lang == "en" else "Quer aprofundar em algum tema?") %}
+  {% set ctaSubtitle = ("Talk to our specialists and get technical or strategic answers about your security program." if lang == "en" else "Fale com nossos especialistas e tire dúvidas técnicas ou estratégicas sobre o seu programa de segurança.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
   {% include "components/cta-final.njk" %}
 </main>

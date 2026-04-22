@@ -1,13 +1,16 @@
 ---
 layout: layouts/base.njk
-lang: pt
-permalink: "/solucoes/"
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en{% endif %}/solucoes/"
+pageMeta: solucoes-index
 ---
-{% set seoTitle = "Soluções de Cibersegurança | Evernow" %}
-{% set seoDescription = "Quatro pilares de segurança: Secure Code, Data Shield, Assurance e Managed Ops. A Evernow protege aplicações, dados e infraestrutura de ponta a ponta." %}
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
-  { label: "Soluções" }
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Solutions" if lang == "en" else "Soluções") }
 ] %}
 
 <div class="header-and-banner-con w-100">
@@ -18,8 +21,8 @@ permalink: "/solucoes/"
       <div class="container">
         <div class="col-lg-8 p-0">
           <div class="banner-left-con wow slideInLeft">
-            <h1>Soluções de cibersegurança da Evernow</h1>
-            <p class="ev-hero__sub">Quatro pilares que cobrem o ciclo completo de segurança, do código ao dado, do teste ao compliance, da implantação à operação.</p>
+            <h1>{% if lang == "en" %}Evernow Cybersecurity Solutions{% else %}Soluções de cibersegurança da Evernow{% endif %}</h1>
+            <p class="ev-hero__sub">{% if lang == "en" %}Four pillars covering the full security lifecycle: from code to data, from testing to compliance, from deployment to operations.{% else %}Quatro pilares que cobrem o ciclo completo de segurança, do código ao dado, do teste ao compliance, da implantação à operação.{% endif %}</p>
           </div>
         </div>
       </div>
@@ -32,23 +35,42 @@ permalink: "/solucoes/"
     <div class="container overlay-content">
       <div class="ev-solucoes-index">
         {%- for sol in solutions -%}
-        <a href="/solucoes/{{ sol.slug }}/" class="ev-solucoes-card wow fadeInUp">
-          <p class="ev-solucoes-card__label">{{ sol.titulo }}</p>
-          <h3>{{ sol.subtitulo }}</h3>
-          <p>{{ sol.descricao | truncate(160) }}</p>
-          <span class="ev-solucoes-card__cta">Ver solução <i class="fas fa-arrow-right"></i></span>
+        <a href="{{ urlPrefix }}/solucoes/{{ sol.slug }}/" class="ev-solucoes-card wow fadeInUp">
+          <div class="ev-solucoes-card__header">
+            <p class="ev-solucoes-card__label">{{ sol.titulo }}</p>
+            <div class="ev-solucoes-card__icon"><i class="{{ sol.icon }}"></i></div>
+          </div>
+          {% if lang == "en" %}
+            {% if sol.slug == "secure-code" %}
+              <h3>Security integrated into the development pipeline, from design to production.</h3>
+              <p>Teams that develop fast without built-in security accumulate vulnerabilities that only surface when the damage is already done. Evernow structures AppSec and DevSecOps programs that fit your real workflow (SAST, DAST, SCA, threat modeling, and training) so security is part of the delivery, not a later blocker.</p>
+            {% elif sol.slug == "data-shield" %}
+              <h3>Protection and governance of sensitive data in hybrid and multi-cloud environments.</h3>
+              <p>Sensitive data scattered across multiple environments, without inventory and without granular access control, is the greatest silent risk vector in modern companies. Evernow's Data Shield covers the full cycle: discovery, classification, encryption, tokenization, cloud posture, and LGPD privacy automation, with leading platforms and a specialized team.</p>
+            {% elif sol.slug == "assurance" %}
+              <h3>Independent validation of security, compliance, and maturity.</h3>
+              <p>Companies invest in security but rarely validate whether it works. Evernow's Assurance practice performs this validation independently: technical and humanized pentest, real adversary simulation with red team, maturity assessment with a prioritized roadmap, and regulatory compliance for ISO 27001, LGPD, and PCI DSS.</p>
+            {% elif sol.slug == "managed-ops" %}
+              <h3>Continuous security with dedicated specialists and defined SLAs.</h3>
+              <p>The biggest gap in security programs is not the technology. It is continuous operation. Evernow fills this gap with managed services that keep your program running: SOC, monitoring, incident response, vulnerability management, and tool sustainment, with documented SLA, monthly reports, and specialists who know your environment.</p>
+            {% endif %}
+          {% else %}
+            <h3>{{ sol.subtitulo }}</h3>
+            <p>{{ sol.descricao }}</p>
+          {% endif %}
+          <span class="ev-solucoes-card__cta">{% if lang == "en" %}View solution{% else %}Ver solução{% endif %} <i class="fas fa-arrow-right"></i></span>
         </a>
         {%- endfor -%}
       </div>
     </div>
   </section>
 
-  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% set partnersTagKey = ("Clients who trust Evernow" if lang == "en" else "Clientes que confiam na Evernow") %}
   {% include "components/partners-grid.njk" %}
 
-  {% set ctaTitle = "Não sabe por onde começar?" %}
-  {% set ctaSubtitle = "Faça o assessment gratuito e receba um diagnóstico de maturidade com recomendações priorizadas." %}
-  {% set ctaPrimary = "Fale com um especialista" %}
-  {% set ctaSecondary = "Fazer o assessment" %}
+  {% set ctaTitle = ("Don't know where to start?" if lang == "en" else "Não sabe por onde começar?") %}
+  {% set ctaSubtitle = ("Take the free assessment and receive a maturity diagnosis with prioritized recommendations." if lang == "en" else "Faça o assessment gratuito e receba um diagnóstico de maturidade com recomendações priorizadas.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the assessment" if lang == "en" else "Fazer o assessment") %}
   {% include "components/cta-final.njk" %}
 </main>

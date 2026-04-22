@@ -1187,27 +1187,33 @@ body { background-color: #122062; }
 .ev-nav { gap: 0; align-items: center; }
 .ev-nav .nav-link { padding: 8px 4px !important; font-size: 18px; font-weight: 400; white-space: nowrap; }
 
-/* The li itself is the hover trigger — add a pseudo-bridge so
-   moving the cursor from the toggle into the menu doesn't break hover */
+/* Garante que o header e o dropdown flutuem acima de todo o conteúdo da página.
+   O .header-and-banner-con precisa de z-index explícito pois o <main> vem depois
+   no DOM e pintaria por cima do dropdown (que extrapola a área do header). */
+.header-and-banner-con { z-index: 500; }
+header { position: relative; z-index: 1000; }
+
+/* Quando o dropdown está ativo, eleva o container ao máximo */
+.ev-dropdown:hover { z-index: 2000; }
+
 .ev-dropdown { position: relative; }
 .ev-dropdown__caret { font-size: .6rem; margin-left: 4px; transition: transform .2s; }
 .ev-dropdown:hover .ev-dropdown__caret { transform: rotate(180deg); }
 .ev-dropdown__toggle { cursor: pointer; display: flex; align-items: center; }
 
+/* ---- Desktop dropdown ---- */
 .ev-dropdown__menu {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  /* Extend top so the gap between toggle and menu is covered — no hover gap */
   top: 100%;
-  padding-top: 10px;   /* invisible bridge above the visible panel */
+  padding-top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
   transition: opacity .15s, visibility .15s;
 }
-/* Inner panel — visually the dropdown box */
 .ev-dropdown__menu-inner {
   background: #16256e;
   border: 1px solid rgba(255,255,255,0.15);
@@ -1245,8 +1251,56 @@ body { background-color: #122062; }
 .ev-dropdown__item span { color: rgba(255,255,255,.5); font-size: .8rem; }
 .nav-item-active > .ev-dropdown__toggle { color: #00e0a3 !important; }
 
-/* Restore original nav-item horizontal spacing (slightly reduced vs 27px to acomodar 5 itens) */
+/* Restore original nav-item horizontal spacing */
 .navbar .ev-nav > .nav-item { padding: 0 16px; }
+
+/* ---- Mobile dropdown (< 992px) ---- */
+@media (max-width: 991px) {
+  header { z-index: 1000; }
+  .navbar .ev-nav > .nav-item { padding: 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .ev-nav .nav-link { padding: 12px 0 !important; width: 100%; justify-content: space-between; }
+
+  /* Sobrescreve o absolute do desktop */
+  .ev-dropdown__menu {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    padding-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease, opacity .2s ease, visibility .2s;
+    pointer-events: none;
+  }
+  .ev-dropdown__menu.is-open {
+    visibility: visible;
+    opacity: 1;
+    max-height: 800px;
+    pointer-events: auto;
+  }
+  /* No hover no mobile */
+  .ev-dropdown:hover .ev-dropdown__menu { visibility: hidden; opacity: 0; }
+  .ev-dropdown.is-open .ev-dropdown__menu { visibility: visible; opacity: 1; max-height: 800px; pointer-events: auto; }
+  .ev-dropdown.is-open .ev-dropdown__caret { transform: rotate(180deg); }
+
+  .ev-dropdown__menu-inner {
+    background: rgba(0,0,0,.2);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px 12px;
+    box-shadow: none;
+    min-width: unset;
+    width: 100%;
+  }
+  .ev-dropdown__menu--wide,
+  .ev-dropdown__menu--medium { min-width: unset; width: 100%; left: auto; transform: none; }
+  .ev-dropdown__grid--2,
+  .ev-dropdown__grid--3 { grid-template-columns: 1fr 1fr; }
+  .ev-dropdown__item { font-size: .82rem; padding: 6px 8px; }
+  .ev-dropdown__item strong { font-size: .85rem; }
+}
 
 /* ==========================================================
    Breadcrumbs
@@ -1758,9 +1812,14 @@ body { background-color: #122062; }
 }
 
 /* Solucoes index page */
-.ev-solucoes-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
+.ev-solucoes-index { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+@media (max-width: 767px) { .ev-solucoes-index { grid-template-columns: 1fr; } }
 .ev-solucoes-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 10px; padding: 32px; text-decoration: none !important; transition: border-color .2s, transform .2s; display: flex; flex-direction: column; }
 .ev-solucoes-card:hover { border-color: #00e0a3; transform: translateY(-2px); }
+.ev-solucoes-card__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.ev-solucoes-card__header .ev-solucoes-card__label { margin-bottom: 0; }
+.ev-solucoes-card__icon { width: 52px; height: 52px; border-radius: 12px; background: rgba(0,224,163,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ev-solucoes-card__icon i { font-size: 1.45rem; color: #00e0a3; }
 .ev-solucoes-card__label { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: #00e0a3; font-weight: 700; margin-bottom: 10px; }
 .ev-solucoes-card h3 { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
 .ev-solucoes-card p { color: rgba(255,255,255,.6); font-size: .9rem; line-height: 1.6; flex: 1; }

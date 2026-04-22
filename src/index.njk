@@ -7,6 +7,7 @@ pagination:
 permalink: "{% if lang == 'en' %}/en/{% endif %}index.html"
 pageMeta: home
 ---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 <div class="header-and-banner-con w-100">
    <div class="header-and-banner-inner-con overlay-content">
       {% include "components/header.njk" %}
@@ -178,7 +179,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-intrusion-attempts.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/stats-intrusion-attempts.png" alt="Estatística de tentativas de invasão" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title">
                               <h3>{{ "home.stats.value1" | t }}</h3>
@@ -189,7 +190,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-lgpd-fines.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/stats-lgpd-fines.png" alt="Estatística de multas LGPD" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title">
                               <h3>{{ "home.stats.value2" | t }}</h3>
@@ -202,7 +203,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con mb-0">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-security-roi.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/stats-security-roi.png" alt="Estatística de ROI em segurança" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title position-relative d-inline-block">
                               <h3>{{ "home.stats.value3" | t }}</h3>
@@ -213,7 +214,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/security-card-1.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/security-card-1.png" alt="Estatística de ROI médio em segurança" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title">
                               <h3 class="count d-inline-block">{{ "home.stats.value4" | t }}</h3>

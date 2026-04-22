@@ -5,12 +5,11 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/{% endif %}webinars.html"
-lang: pt
+pageMeta: webinars
 ---
-{% set seoTitle = "Webinars de Cibersegurança | Evernow" %}
-{% set seoDescription = "Webinars ao vivo e gravados com especialistas da Evernow sobre DevSecOps, LGPD, pentest, cloud security e gestão de vulnerabilidades." %}
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
   { label: "Webinars" }
 ] %}
 
@@ -21,8 +20,8 @@ lang: pt
     <section class="banner-main-con ev-hero">
       <div class="container">
         <div class="col-lg-7 p-0 wow slideInLeft">
-          <h1>Webinars de cibersegurança</h1>
-          <p class="ev-hero__sub">Sessões ao vivo e gravações com especialistas da Evernow sobre os temas mais relevantes de segurança para CISOs, arquitetos e times de engenharia.</p>
+          <h1>{% if lang == "en" %}Cybersecurity Webinars{% else %}Webinars de cibersegurança{% endif %}</h1>
+          <p class="ev-hero__sub">{% if lang == "en" %}Live sessions and recordings with Evernow specialists on the most relevant security topics for CISOs, architects, and engineering teams.{% else %}Sessões ao vivo e gravações com especialistas da Evernow sobre os temas mais relevantes de segurança para CISOs, arquitetos e times de engenharia.{% endif %}</p>
         </div>
       </div>
     </section>
@@ -32,8 +31,8 @@ lang: pt
 <main>
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Próximos eventos</div>
-      <h2 class="ev-section__title wow fadeInUp">Agenda de webinars</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Upcoming events{% else %}Próximos eventos{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Webinar schedule{% else %}Agenda de webinars{% endif %}</h2>
 
       <div class="row g-4 mt-2">
         <div class="col-lg-4 col-md-6 wow fadeInUp">
@@ -69,7 +68,7 @@ lang: pt
       </div>
 
       <div class="text-center mt-5 wow fadeInUp">
-        <p style="color:rgba(255,255,255,.6);margin-bottom:20px;">Quer ser avisado sobre os próximos webinars?</p>
+        <p style="color:rgba(255,255,255,.6);margin-bottom:20px;">{% if lang == "en" %}Want to be notified about upcoming webinars?{% else %}Quer ser avisado sobre os próximos webinars?{% endif %}</p>
         <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
         <div class="hs-form-frame" data-region="na1"
              data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9"

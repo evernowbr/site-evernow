@@ -1,18 +1,25 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: products
+  data: productPages
   size: 1
   alias: product
-permalink: "/produtos/{{ product.slug }}/"
-lang: pt
+permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[product.slug] or product.slug }}/{% else %}/produtos/{{ product.slug }}/{% endif %}"
 ---
-{% set seoTitle = product.titleTag %}
-{% set seoDescription = product.metaDescription %}
+{% set prod_lang = product.lang %}
+{% set lang = prod_lang %}
+{% set urlPrefix = "" if prod_lang == "pt" else "/en" %}
+{% set langPtUrl = "/produtos/" + product.slug + "/" %}
+{% set langEnUrl = "/en/products/" + (enSlugs.products[product.slug] or product.slug) + "/" %}
+{% if prod_lang == "en" and product.en %}
+  {% set prodData = product.en %}
+{% else %}
+  {% set prodData = product %}
+{% endif %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
-  { label: "Portfólio", url: "/produtos/" },
-  { label: product.pilarNome, url: "/solucoes/" + product.pilar + "/" },
+  { label: ("Home" if prod_lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Portfolio" if prod_lang == "en" else "Portfólio"), url: urlPrefix + ("/products/" if prod_lang == "en" else "/produtos/") },
+  { label: product.pilarNome, url: urlPrefix + "/solucoes/" + product.pilar + "/" },
   { label: product.titulo }
 ] %}
 
@@ -68,19 +75,19 @@ lang: pt
           <div class="col-lg-9 col-md-11">
             <div class="banner-left-con wow slideInLeft">
               <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
-                <a href="/solucoes/{{ product.pilar }}/" style="color:#00e0a3;text-decoration:none;">{{ product.pilarNome }}</a>
+                <a href="{{ urlPrefix }}/solucoes/{{ product.pilar }}/" style="color:#00e0a3;text-decoration:none;">{{ product.pilarNome }}</a>
                 <span style="opacity:.4;margin:0 6px;">/</span>{{ product.categoria }}
               </p>
-              <h1>{{ product.heroTitle }}</h1>
-              <p class="ev-hero__sub">{{ product.heroSubtitle }}</p>
+              <h1>{{ prodData.heroTitle }}</h1>
+              <p class="ev-hero__sub">{{ prodData.heroSubtitle }}</p>
               <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
-                <a href="/contact.html" class="contact-btn">{{ product.ctaPrimario if product.ctaPrimario else "Fale com um especialista" }}</a>
-                <a href="/assessment.html" class="ev-btn-outline">{{ product.ctaSecundario if product.ctaSecundario else "Fazer o assessment" }}</a>
+                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") }}</a>
+                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{{ prodData.ctaSecundario if prodData.ctaSecundario else ("Take the assessment" if prod_lang == "en" else "Fazer o assessment") }}</a>
               </div>
               <div class="ev-hero__trust mt-4">
-                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Especialistas certificados</span>
-                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Resultados em 90 dias</span>
-                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Agnóstico de plataforma</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
               </div>
             </div>
           </div>
@@ -95,11 +102,11 @@ lang: pt
   {# 1. Dores #}
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">O problema</div>
-      <h2 class="ev-section__title wow fadeInUp">Por que sua empresa precisa disso agora?</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}The problem{% else %}O problema{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}Why does your company need this now?{% else %}Por que sua empresa precisa disso agora?{% endif %}</h2>
       <div class="ev-pain-grid">
         {%- set painIcons = ["fas fa-exclamation-triangle","fas fa-clock","fas fa-lock-open","fas fa-clipboard-list"] -%}
-        {%- for dor in product.dores -%}
+        {%- for dor in prodData.dores -%}
         <div class="ev-pain-card wow fadeInUp">
           <div class="ev-pain-card__icon">
             <i class="{{ painIcons[loop.index0] if painIcons[loop.index0] else 'fas fa-exclamation-triangle' }}"></i>
@@ -114,10 +121,10 @@ lang: pt
   {# 2. Entregas — com ícones #}
   <section class="ev-section ev-section--alt">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Como a Evernow resolve</div>
-      <h2 class="ev-section__title wow fadeInUp">O que entregamos</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}How Evernow solves it{% else %}Como a Evernow resolve{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}What we deliver{% else %}O que entregamos{% endif %}</h2>
       <div class="ev-delivery-grid">
-        {%- for entrega in product.entregas -%}
+        {%- for entrega in prodData.entregas -%}
         <div class="ev-delivery-card wow fadeInUp">
           <div class="ev-delivery-card__icon">
             <i class="{{ dIcons[loop.index0] if dIcons[loop.index0] else 'fas fa-check-double' }}"></i>
@@ -133,10 +140,10 @@ lang: pt
   {# 3. Metodologia #}
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Metodologia</div>
-      <h2 class="ev-section__title wow fadeInUp">Como funciona na prática</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}Methodology{% else %}Metodologia{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}How it works in practice{% else %}Como funciona na prática{% endif %}</h2>
       <div class="ev-method">
-        {%- for etapa in product.metodologia -%}
+        {%- for etapa in prodData.metodologia -%}
         <div class="ev-method-step wow fadeInUp">
           <h4>{{ etapa.etapa }}</h4>
           <p>{{ etapa.desc }}</p>
@@ -147,13 +154,13 @@ lang: pt
   </section>
 
   {# 4. Métricas #}
-  {%- if product.metricas and product.metricas.length -%}
+  {%- if prodData.metricas and prodData.metricas.length -%}
   <section class="ev-section ev-section--alt">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Resultados esperados</div>
-      <h2 class="ev-section__title wow fadeInUp">O que você ganha com isso</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}Expected results{% else %}Resultados esperados{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}What you gain from this{% else %}O que você ganha com isso{% endif %}</h2>
       <div class="ev-metrics">
-        {%- for metrica in product.metricas -%}
+        {%- for metrica in prodData.metricas -%}
         <div class="ev-metric wow fadeInUp">
           <span class="ev-metric__value">{{ metrica.valor }}</span>
           <p class="ev-metric__desc">{{ metrica.desc }}</p>
@@ -168,11 +175,11 @@ lang: pt
   {%- if vendorsList and vendorsList.length -%}
   <section class="ev-section ev-section--alt" style="padding:40px 0;">
     <div class="container overlay-content">
-      <p class="ev-vendors-carousel__title">Plataformas e fabricantes que utilizamos</p>
+      <p class="ev-vendors-carousel__title">{% if prod_lang == "en" %}Platforms and vendors we use{% else %}Plataformas e fabricantes que utilizamos{% endif %}</p>
       <div class="ev-vendor-static-grid">
         {%- for vendor in vendorsList -%}
         {%- if vendor.slug -%}
-        <a href="/parceiros/{{ vendor.slug }}/" class="ev-vendor-static-item" title="Ver página {{ vendor.name }}">
+        <a href="{{ urlPrefix }}/{% if prod_lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vendor.slug }}/" class="ev-vendor-static-item" title="{% if prod_lang == 'en' %}View{% else %}Ver página{% endif %} {{ vendor.name }}">
           <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async">
         </a>
         {%- else -%}
@@ -187,42 +194,43 @@ lang: pt
   {%- endif -%}
 
   {# 6. Parceiros #}
-  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% set partnersTagKey = ("Clients who trust Evernow" if prod_lang == "en" else "Clientes que confiam na Evernow") %}
   {% set partnersContainerClass = "border-bottom pb-5" %}
   {% include "components/partners-grid.njk" %}
 
   {# 7. FAQ #}
-  {% set faqItems = product.faq %}
+  {% set faqItems = prodData.faq %}
   {% set faqTag = "FAQ" %}
-  {% set faqTitle = "Perguntas frequentes sobre " + product.titulo %}
+  {% set faqTitle = ("Frequently asked questions about " if prod_lang == "en" else "Perguntas frequentes sobre ") + product.titulo %}
   {% include "components/faq-section.njk" %}
 
   {# 8. Produtos relacionados — lookup via productCardsBySlug (evita bug do selectattr em templates paginados) #}
   {%- if product.relacionados and product.relacionados.length -%}
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Veja também</div>
-      <h2 class="ev-section__title wow fadeInUp">Serviços complementares</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}See also{% else %}Veja também{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}Complementary services{% else %}Serviços complementares{% endif %}</h2>
       <div class="ev-pilar-product-grid">
         {%- for relSlug in product.relacionados -%}
         {%- set relCard = productCardsBySlug[relSlug] -%}
         {%- if relCard -%}
-        <a href="/produtos/{{ relSlug }}/" class="ev-pilar-product wow fadeInUp">
+        {%- set relCardData = relCard.en if prod_lang == "en" and relCard.en else relCard -%}
+        <a href="{{ urlPrefix }}/{% if prod_lang == 'en' %}products/{{ enSlugs.products[relSlug] or relSlug }}{% else %}produtos/{{ relSlug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
           <div class="ev-pilar-product__icon">
             <i class="{{ relCard.icon }}"></i>
           </div>
           <div class="ev-pilar-product__body">
-            <h5>{{ relCard.titulo }}</h5>
-            <p class="ev-pilar-product__tagline">{{ relCard.tagline }}</p>
-            {%- if relCard.features -%}
+            <h5>{{ relCardData.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ relCardData.tagline }}</p>
+            {%- if relCardData.features -%}
             <ul class="ev-pilar-product__features">
-              {%- for feat in relCard.features -%}
+              {%- for feat in relCardData.features -%}
               <li><i class="fas fa-check"></i> {{ feat }}</li>
               {%- endfor -%}
             </ul>
             {%- endif -%}
           </div>
-          <span class="ev-pilar-product__cta">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+          <span class="ev-pilar-product__cta">{% if prod_lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
         </a>
         {%- endif -%}
         {%- endfor -%}
@@ -232,10 +240,10 @@ lang: pt
   {%- endif -%}
 
   {# 9. CTA Final #}
-  {% set ctaTitle = "Quer avançar com " + product.titulo + "?" %}
-  {% set ctaSubtitle = "Fale com um especialista da Evernow e defina o próximo passo com clareza." %}
-  {% set ctaPrimary = product.ctaPrimario if product.ctaPrimario else "Fale com um especialista" %}
-  {% set ctaSecondary = product.ctaSecundario if product.ctaSecundario else "Fazer o assessment" %}
+  {% set ctaTitle = ("Want to move forward with " if prod_lang == "en" else "Quer avançar com ") + product.titulo + "?" %}
+  {% set ctaSubtitle = ("Talk to an Evernow specialist and define the next step clearly." if prod_lang == "en" else "Fale com um especialista da Evernow e defina o próximo passo com clareza.") %}
+  {% set ctaPrimary = prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = prodData.ctaSecundario if prodData.ctaSecundario else ("Take the assessment" if prod_lang == "en" else "Fazer o assessment") %}
   {% include "components/cta-final.njk" %}
 
 </main>
@@ -247,16 +255,17 @@ lang: pt
     {
       "@type": "Service",
       "name": "{{ product.titulo }} | Evernow",
-      "description": "{{ product.metaDescription }}",
+      "description": "{{ product.en.metaDescription if prod_lang == 'en' and product.en else product.metaDescription }}",
       "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
       "areaServed": "BR",
-      "url": "https://evernow.com.br/produtos/{{ product.slug }}/"
+      "url": "https://evernow.com.br{% if prod_lang == 'en' %}/en/products/{{ enSlugs.products[product.slug] or product.slug }}{% else %}/produtos/{{ product.slug }}{% endif %}/"
     }
-    {%- if product.faq and product.faq.length -%}
+    {%- set _faqData = prodData.faq if prodData.faq else product.faq -%}
+    {%- if _faqData and _faqData.length -%}
     ,{
       "@type": "FAQPage",
       "mainEntity": [
-        {%- for item in product.faq -%}
+        {%- for item in _faqData -%}
         { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
         {%- endfor -%}
       ]

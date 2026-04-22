@@ -15,32 +15,77 @@
   <title>{{ "meta.defaultTitle" | t }}</title>
   <meta name="description" content="{{ "meta.defaultDescription" | t }}" />
 {% endif %}
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+{% if seoKeywords %}<meta name="keywords" content="{{ seoKeywords }}" />{% endif %}
+<meta name="robots" content="{{ 'noindex,nofollow' if noIndex else 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}" />
 <link rel="canonical" href="https://evernow.com.br{{ page.url }}" />
+
+<!-- hreflang (PT/EN bilíngue) -->
+{%- if lang == 'pt' -%}
+{%- set _hreflangEn = langEnUrl if langEnUrl else ('/en' + page.url) -%}
+<link rel="alternate" hreflang="pt-BR"    href="https://evernow.com.br{{ page.url }}" />
+<link rel="alternate" hreflang="en"       href="https://evernow.com.br{{ _hreflangEn }}" />
+<link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ page.url }}" />
+{%- elif lang == 'en' -%}
+{%- set _hreflangPt = langPtUrl if langPtUrl else (page.url | replace('/en/', '/')) -%}
+<link rel="alternate" hreflang="pt-BR"    href="https://evernow.com.br{{ _hreflangPt }}" />
+<link rel="alternate" hreflang="en"       href="https://evernow.com.br{{ page.url }}" />
+<link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _hreflangPt }}" />
+{%- endif -%}
 
 <!-- Favicons / PWA -->
 <meta name="theme-color" content="#00E0A3" />
 
 <!-- Open Graph -->
-<meta property="og:locale" content="{{ 'pt_BR' if lang == 'pt' else 'en_US' }}" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Evernow" />
-<meta property="og:url" content="https://evernow.com.br{{ page.url }}" />
-<meta property="og:title" content="{{ seoTitle if seoTitle else (_ogTitleKey | t if _ogTitleKey else ("meta.defaultTitle" | t)) }}" />
-<meta property="og:description" content="{{ seoDescription if seoDescription else (_ogDescKey | t if _ogDescKey else ("meta.defaultDescription" | t)) }}" />
-<meta property="og:image" content="https://evernow.com.br/assets/image/logo/evernow-dark.png" />
-<meta property="og:image:width" content="1200" />
+{%- set _ogImage = seoImage if seoImage else "https://evernow.com.br/assets/image/logo/evernow-og.png" -%}
+{%- if seoTitle -%}
+  {%- set _ogTitle = seoTitle -%}
+{%- elif _ogTitleKey -%}
+  {%- set _ogTitle = _ogTitleKey | t -%}
+{%- elif pageMeta -%}
+  {%- set _ogTitle = ("meta." + pageMeta + ".ogTitle") | t -%}
+{%- else -%}
+  {%- set _ogTitle = "meta.defaultTitle" | t -%}
+{%- endif -%}
+{%- if seoDescription -%}
+  {%- set _ogDesc = seoDescription -%}
+{%- elif _ogDescKey -%}
+  {%- set _ogDesc = _ogDescKey | t -%}
+{%- elif pageMeta -%}
+  {%- set _ogDesc = ("meta." + pageMeta + ".ogDescription") | t -%}
+{%- else -%}
+  {%- set _ogDesc = "meta.defaultDescription" | t -%}
+{%- endif -%}
+<meta property="og:locale"      content="{{ 'pt_BR' if lang == 'pt' else 'en_US' }}" />
+<meta property="og:type"        content="website" />
+<meta property="og:site_name"   content="Evernow" />
+<meta property="og:url"         content="https://evernow.com.br{{ page.url }}" />
+<meta property="og:title"       content="{{ _ogTitle }}" />
+<meta property="og:description" content="{{ _ogDesc }}" />
+<meta property="og:image"       content="{{ _ogImage }}" />
+<meta property="og:image:width"  content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt"    content="{{ _ogTitle }}" />
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@evernowbr" />
-<meta name="twitter:title" content="{{ seoTitle if seoTitle else (_ogTitleKey | t if _ogTitleKey else ("meta.defaultTitle" | t)) }}" />
-<meta name="twitter:description" content="{{ seoDescription if seoDescription else (_ogDescKey | t if _ogDescKey else ("meta.defaultDescription" | t)) }}" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="@evernowbr" />
+<meta name="twitter:title"       content="{{ _ogTitle }}" />
+<meta name="twitter:description" content="{{ _ogDesc }}" />
+<meta name="twitter:image"       content="{{ _ogImage }}" />
+<meta name="twitter:image:alt"   content="{{ _ogTitle }}" />
 
+<!-- Preconnect a origens críticas (PageSpeed) -->
+<link rel="preconnect" href="https://pro.fontawesome.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://js.hsforms.net" />
+<link rel="dns-prefetch" href="https://cdn-prod.securiti.ai" />
+<link rel="dns-prefetch" href="https://app.securiti.ai" />
+
+<!-- CSS crítico -->
 <link rel="stylesheet" href="/assets/css/main.min.css">
-{# <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> #}
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!-- FontAwesome Pro: carregado de forma não-bloqueante -->
+<link rel="preload" as="style" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"></noscript>
 
 <!-- Language auto-detection: Brazil (pt-BR) → PT, rest of world → EN -->
 <script>
@@ -69,7 +114,7 @@
 })();
 </script>
 
-<!-- Securiti -->
+<!-- Securiti (consent SDK — diferido) -->
 <script>
 (function () {
     var s = document.createElement('script');
@@ -84,6 +129,39 @@
 })()
 </script>
 
+<!-- Mobile dropdown toggle -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.innerWidth > 991) return;
+  document.querySelectorAll('.ev-dropdown__toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var parent = this.closest('.ev-dropdown');
+      var isOpen = parent.classList.contains('is-open');
+      document.querySelectorAll('.ev-dropdown.is-open').forEach(function (el) {
+        el.classList.remove('is-open');
+        var m = el.querySelector('.ev-dropdown__menu');
+        if (m) m.classList.remove('is-open');
+      });
+      if (!isOpen) {
+        parent.classList.add('is-open');
+        var menu = parent.querySelector('.ev-dropdown__menu');
+        if (menu) menu.classList.add('is-open');
+      }
+    });
+  });
+});
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 991) {
+    document.querySelectorAll('.ev-dropdown.is-open').forEach(function (el) {
+      el.classList.remove('is-open');
+      var m = el.querySelector('.ev-dropdown__menu');
+      if (m) m.classList.remove('is-open');
+    });
+  }
+});
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -91,3 +169,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W6PP4HHP');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Structured Data: BreadcrumbList JSON-LD -->
+{%- if breadcrumbs and breadcrumbs.length -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {%- for crumb in breadcrumbs -%}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": {{ crumb.label | dump }},
+      "item": "https://evernow.com.br{{ crumb.url if crumb.url else page.url }}"
+    }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+<!-- Structured Data: Organization + LocalBusiness + WebSite (homepage) -->
+{%- if pageMeta == 'home' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://evernow.com.br/#organization",
+      "name": "Evernow",
+      "url": "https://evernow.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png",
+        "width": 280,
+        "height": 60
+      },
+      "description": "Consultoria brasileira especializada em cibersegurança: AppSec, DevSecOps, proteção de dados, compliance e operações de segurança gerenciadas.",
+      "areaServed": { "@type": "Country", "name": "BR" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+55-11-91026-0404",
+        "email": "contato@evernow.com.br",
+        "areaServed": "BR",
+        "availableLanguage": ["pt-BR", "en"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/evernowbr",
+        "https://www.instagram.com/evernowbr",
+        "https://www.facebook.com/evernowbr",
+        "https://twitter.com/evernowbr"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://evernow.com.br/#localbusiness",
+      "name": "Evernow",
+      "url": "https://evernow.com.br",
+      "telephone": "+55-11-91026-0404",
+      "email": "contato@evernow.com.br",
+      "image": "https://evernow.com.br/assets/image/logo/evernow-og.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Irmã Gabriela, 51",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/evernowbr",
+        "https://www.instagram.com/evernowbr",
+        "https://www.facebook.com/evernowbr"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://evernow.com.br/#website",
+      "url": "https://evernow.com.br",
+      "name": "Evernow",
+      "inLanguage": ["pt-BR", "en"],
+      "publisher": { "@id": "https://evernow.com.br/#organization" }
+    }
+  ]
+}
+</script>
+{%- endif -%}

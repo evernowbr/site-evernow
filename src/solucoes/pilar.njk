@@ -1,17 +1,24 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: solutions
+  data: solutionPages
   size: 1
   alias: solution
-permalink: "/solucoes/{{ solution.slug }}/"
-lang: pt
+permalink: "{% if solution.lang == 'en' %}/en{% endif %}/solucoes/{{ solution.slug }}/"
 ---
-{% set seoTitle = solution.titleTag %}
-{% set seoDescription = solution.metaDescription %}
+{% set sol_lang = solution.lang %}
+{% set lang = sol_lang %}
+{% set urlPrefix = "" if sol_lang == "pt" else "/en" %}
+{% set langPtUrl = "/solucoes/" + solution.slug + "/" %}
+{% set langEnUrl = "/en/solucoes/" + solution.slug + "/" %}
+{% if sol_lang == "en" and solution.en %}
+  {% set solData = solution.en %}
+{% else %}
+  {% set solData = solution %}
+{% endif %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
-  { label: "Soluções", url: "/solucoes/" },
+  { label: ("Home" if sol_lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Solutions" if sol_lang == "en" else "Soluções"), url: urlPrefix + "/solucoes/" },
   { label: solution.titulo }
 ] %}
 
@@ -28,21 +35,21 @@ lang: pt
             <div class="col-lg-7 col-md-7 col-sm-12 d-flex justify-content-center flex-column banner-main-left-con">
               <div class="banner-left-con wow slideInLeft">
                 <div class="banner-heading">
-                  <p style="color:#00e0a3;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">Solução</p>
+                  <p style="color:#00e0a3;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if sol_lang == "en" %}Solution{% else %}Solução{% endif %}</p>
                   <h1>{{ solution.titulo }}</h1>
                 </div>
                 <div class="banner-content">
-                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.8);">{{ solution.tagline }}</p>
-                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7;margin-top:8px;">{{ solution.descricao }}</p>
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.8);">{{ solData.tagline }}</p>
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7;margin-top:8px;">{{ solData.descricao }}</p>
                 </div>
                 <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
-                  <a href="/contact.html" class="contact-btn">Fale com um especialista</a>
-                  <a href="/assessment.html" class="ev-btn-outline">Fazer o assessment</a>
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if sol_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if sol_lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
                 </div>
                 <div class="ev-hero__trust mt-4">
-                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Especialistas certificados</span>
-                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Resultados em 90 dias</span>
-                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Agnóstico de plataforma</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if sol_lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if sol_lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if sol_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
                 </div>
               </div>
             </div>
@@ -64,10 +71,10 @@ lang: pt
   <!-- Principais dores -->
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Desafios</div>
-      <h2 class="ev-section__title wow fadeInUp">Por que isso continua sendo um problema?</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if sol_lang == "en" %}Challenges{% else %}Desafios{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if sol_lang == "en" %}Why does this remain a problem?{% else %}Por que isso continua sendo um problema?{% endif %}</h2>
       <div class="ev-pain-grid">
-        {%- for dor in solution.dores -%}
+        {%- for dor in solData.dores -%}
         <div class="ev-pain-card wow fadeInUp">
           <div class="ev-pain-card__icon">
             <i class="{{ solution.doreIcons[loop.index0] if solution.doreIcons[loop.index0] else 'fas fa-exclamation-triangle' }}"></i>
@@ -82,10 +89,10 @@ lang: pt
   <!-- Diferenciais Evernow -->
   <section class="ev-section ev-section--alt">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Como a Evernow resolve</div>
-      <h2 class="ev-section__title wow fadeInUp">Nossa abordagem para {{ solution.titulo }}</h2>
+      <div class="ev-section__tag wow fadeInUp">{% if sol_lang == "en" %}How Evernow solves it{% else %}Como a Evernow resolve{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if sol_lang == "en" %}Our approach to{% else %}Nossa abordagem para{% endif %} {{ solution.titulo }}</h2>
       <div class="ev-delivery-grid">
-        {%- for dif in solution.diferenciais -%}
+        {%- for dif in solData.diferenciais -%}
         <div class="ev-delivery-card wow fadeInUp">
           <div class="ev-delivery-card__icon">
             <i class="{{ solution.difIcons[loop.index0] if solution.difIcons[loop.index0] else 'fas fa-check' }}"></i>
@@ -101,14 +108,15 @@ lang: pt
   <!-- Produtos do pilar -->
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      <div class="ev-section__tag wow fadeInUp">Portfólio</div>
-      <h2 class="ev-section__title wow fadeInUp">Ofertas dentro de {{ solution.titulo }}</h2>
-      <p class="ev-section__desc wow fadeInUp">Cada produto pode ser contratado de forma independente ou como parte de um programa estruturado.</p>
+      <div class="ev-section__tag wow fadeInUp">{% if sol_lang == "en" %}Portfolio{% else %}Portfólio{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if sol_lang == "en" %}Offerings within{% else %}Ofertas dentro de{% endif %} {{ solution.titulo }}</h2>
+      <p class="ev-section__desc wow fadeInUp">{% if sol_lang == "en" %}Each service can be contracted independently or as part of a structured program.{% else %}Cada produto pode ser contratado de forma independente ou como parte de um programa estruturado.{% endif %}</p>
       <div class="ev-pilar-product-grid mt-4">
-        {%- for prod in solution.produtos -%}
-        <a href="/produtos/{{ prod.slug }}/" class="ev-pilar-product wow fadeInUp">
+        {%- for prod in solData.produtos -%}
+        {%- set ptProd = solution.produtos | selectattr("slug", "equalto", prod.slug) | first -%}
+        <a href="{{ urlPrefix }}/{% if sol_lang == 'en' %}products/{{ enSlugs.products[prod.slug] or prod.slug }}{% else %}produtos/{{ prod.slug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
           <div class="ev-pilar-product__icon">
-            <i class="{{ prod.icon if prod.icon else 'fas fa-shield-alt' }}"></i>
+            <i class="{{ ptProd.icon if ptProd.icon else 'fas fa-shield-alt' }}"></i>
           </div>
           <div class="ev-pilar-product__body">
             <h5>{{ prod.titulo }}</h5>
@@ -119,7 +127,7 @@ lang: pt
               {%- endfor -%}
             </ul>
           </div>
-          <span class="ev-pilar-product__cta">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+          <span class="ev-pilar-product__cta">{% if sol_lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
         </a>
         {%- endfor -%}
       </div>
@@ -128,18 +136,18 @@ lang: pt
 
   <!-- Plataformas e fabricantes -->
   {% set vendorsList = solution.vendors %}
-  {% set vendorsTitle = "Plataformas com que trabalhamos" %}
+  {% set vendorsTitle = ("Platforms we work with" if sol_lang == "en" else "Plataformas com que trabalhamos") %}
   {% include "components/vendors-section.njk" %}
 
   <!-- Parceiros/clientes -->
-  {% set partnersTagKey = "Empresas que confiam na Evernow" %}
+  {% set partnersTagKey = ("Companies that trust Evernow" if sol_lang == "en" else "Empresas que confiam na Evernow") %}
   {% include "components/partners-grid.njk" %}
 
   <!-- CTA Final -->
-  {% set ctaTitle = "Pronto para estruturar " + solution.titulo + "?" %}
-  {% set ctaSubtitle = "Fale com um especialista e defina o próximo passo, do assessment ao programa operacional." %}
-  {% set ctaPrimary = "Fale com um especialista" %}
-  {% set ctaSecondary = "Fazer o assessment gratuito" %}
+  {% set ctaTitle = ("Ready to build " if sol_lang == "en" else "Pronto para estruturar ") + solution.titulo + ("?" if sol_lang == "en" else "?") %}
+  {% set ctaSubtitle = ("Talk to a specialist and define the next step, from the assessment to the operational program." if sol_lang == "en" else "Fale com um especialista e defina o próximo passo, do assessment ao programa operacional.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if sol_lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the free assessment" if sol_lang == "en" else "Fazer o assessment gratuito") %}
   {% include "components/cta-final.njk" %}
 </main>
 
@@ -149,13 +157,13 @@ lang: pt
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "{{ solution.titulo }} | Evernow",
-  "description": "{{ solution.metaDescription }}",
+  "description": "{{ solution.en.metaDescription if sol_lang == 'en' and solution.en else solution.metaDescription }}",
   "provider": {
     "@type": "Organization",
     "name": "Evernow",
     "url": "https://evernow.com.br"
   },
   "areaServed": "BR",
-  "url": "https://evernow.com.br/solucoes/{{ solution.slug }}/"
+  "url": "https://evernow.com.br{% if sol_lang == 'en' %}/en{% endif %}/solucoes/{{ solution.slug }}/"
 }
 </script>

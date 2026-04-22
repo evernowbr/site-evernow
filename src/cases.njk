@@ -5,13 +5,12 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/{% endif %}cases.html"
-lang: pt
+pageMeta: cases
 ---
-{% set seoTitle = "Cases e Clientes | Evernow" %}
-{% set seoDescription = "Conheça os resultados que a Evernow entregou para empresas do setor financeiro, saúde, varejo e tecnologia em projetos de cibersegurança." %}
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 {% set breadcrumbs = [
-  { label: "Início", url: "/" },
-  { label: "Cases" }
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Case Studies" if lang == "en" else "Cases") }
 ] %}
 
 <div class="header-and-banner-con w-100">
@@ -21,8 +20,8 @@ lang: pt
     <section class="banner-main-con ev-hero">
       <div class="container">
         <div class="col-lg-7 p-0 wow slideInLeft">
-          <h1>Cases e resultados</h1>
-          <p class="ev-hero__sub">Projetos reais com métricas reais. Veja como a Evernow ajudou empresas a estruturar e evoluir seus programas de cibersegurança.</p>
+          <h1>{% if lang == "en" %}Case Studies and Results{% else %}Cases e resultados{% endif %}</h1>
+          <p class="ev-hero__sub">{% if lang == "en" %}Real projects with real metrics. See how Evernow helped companies build and evolve their cybersecurity programs.{% else %}Projetos reais com métricas reais. Veja como a Evernow ajudou empresas a estruturar e evoluir seus programas de cibersegurança.{% endif %}</p>
         </div>
       </div>
     </section>
@@ -32,7 +31,7 @@ lang: pt
 <main>
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
-      {% set partnersTagKey = "Empresas que confiam na Evernow" %}
+      {% set partnersTagKey = ("Companies that trust Evernow" if lang == "en" else "Empresas que confiam na Evernow") %}
       {% include "components/partners-grid.njk" %}
 
       <div class="row mt-5 g-4">
@@ -91,9 +90,9 @@ lang: pt
     </div>
   </section>
 
-  {% set ctaTitle = "Seu case começa aqui" %}
-  {% set ctaSubtitle = "Fale com um especialista e entenda como a Evernow pode gerar resultados concretos para o seu programa de segurança." %}
-  {% set ctaPrimary = "Fale com um especialista" %}
-  {% set ctaSecondary = "Fazer o assessment" %}
+  {% set ctaTitle = ("Your case starts here" if lang == "en" else "Seu case começa aqui") %}
+  {% set ctaSubtitle = ("Talk to a specialist and understand how Evernow can deliver concrete results for your security program." if lang == "en" else "Fale com um especialista e entenda como a Evernow pode gerar resultados concretos para o seu programa de segurança.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the assessment" if lang == "en" else "Fazer o assessment") %}
   {% include "components/cta-final.njk" %}
 </main>

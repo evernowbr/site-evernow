@@ -1,0 +1,121 @@
+# Evernow — Consultoria de Cibersegurança B2B
+
+> Evernow is a Brazilian B2B cybersecurity consulting firm helping mid-to-large enterprises reduce risk through application security, data protection, compliance, and managed security operations. Founded in São Paulo, Brazil. Bilingual: Portuguese (PT-BR) and English.
+
+## About Evernow
+
+Evernow is a specialist cybersecurity firm — not a generalist IT provider. The company focuses exclusively on security across four practice areas: Secure Code, Data Shield, Assurance, and Managed Ops. Evernow works as an independent advisor, recommending the best tools for each client rather than reselling specific platforms.
+
+- Website: https://evernow.com.br
+- EN version: https://evernow.com.br/en/
+- Address: Rua Irmã Gabriela, 51, São Paulo, SP, Brazil
+- Phone: +55 11 91026-0404
+- Email: contato@evernow.com.br
+- LinkedIn: https://www.linkedin.com/company/evernowbr
+- Founded: Brazil-based, serving enterprises nationally
+
+## Key Differentiators
+
+- Independent advisor: no vendor lock-in, recommends best-fit tools
+- Bilingual delivery: Portuguese and English
+- Results in 90 days: structured programs with measurable outcomes
+- Certified specialists: CISSP, CEH, OSCP, and other industry certifications
+- Four integrated practice areas covering the full security lifecycle
+
+## Services and Practice Areas
+
+### Secure Code — Application Security
+Integrates security into the software development lifecycle without slowing delivery.
+URL: https://evernow.com.br/solucoes/secure-code/
+
+Products:
+- DevSecOps: Security program integrated into CI/CD pipeline — https://evernow.com.br/produtos/devsecops/
+- SAST / DAST / SCA: Automated security analysis in CI/CD — https://evernow.com.br/produtos/sast-dast-sca/
+- Managed AppSec (Desenvolvimento Seguro Gerenciado): Outsourced AppSec with SLA — https://evernow.com.br/produtos/desenvolvimento-seguro-gerenciado/
+- Threat Modeling (Modelagem de Ameaças): Security by design in application architecture — https://evernow.com.br/produtos/modelagem-ameacas/
+- Code Review (Revisão de Código): Manual security-focused code review — https://evernow.com.br/produtos/revisao-codigo/
+- DevSecOps Training (Treinamento): Secure coding culture for engineering teams — https://evernow.com.br/produtos/treinamento-devsecops/
+- Code Protection: Mobile app protection against reverse engineering and tampering — https://evernow.com.br/produtos/code-protection/
+
+### Data Shield — Data Protection
+Protects sensitive data and ensures compliance with LGPD, GDPR, and privacy regulations.
+URL: https://evernow.com.br/solucoes/data-shield/
+
+Products:
+- Data Discovery: Automated sensitive data mapping — https://evernow.com.br/produtos/data-discovery/
+- DSPM (Data Security Posture Management): Cloud data security posture — https://evernow.com.br/produtos/dspm/
+- Encryption / KMS / HSM: Key management and cryptography — https://evernow.com.br/produtos/criptografia-kms-hsm/
+- DLP (Data Loss Prevention): Prevent unauthorized data exfiltration — https://evernow.com.br/produtos/dlp/
+- LGPD Consent Management: Consent and DSR management for privacy compliance — https://evernow.com.br/produtos/consentimento-lgpd/
+- CSPM (Cloud Security Posture Management): Cloud security posture monitoring — https://evernow.com.br/produtos/cspm/
+
+### Assurance — Security Validation and Compliance
+Independent validation that security investments actually work. Pentest, GRC, and regulatory compliance.
+URL: https://evernow.com.br/solucoes/assurance/
+
+Products:
+- Pentest: Humanized penetration testing with retest included — https://evernow.com.br/produtos/pentest/
+- Red Team: Full adversary simulation against people, processes, and technology — https://evernow.com.br/produtos/red-team/
+- Maturity Assessment (Assessment de Maturidade): Security maturity diagnosis with prioritized roadmap — https://evernow.com.br/produtos/assessment-maturidade/
+- GRC: Governance, risk, and compliance framework implementation — https://evernow.com.br/produtos/grc/
+- ISO 27001: Certification and compliance program — https://evernow.com.br/produtos/iso-27001/
+- LGPD: Full compliance program for Brazil's data protection law — https://evernow.com.br/produtos/lgpd/
+- PCI DSS: Compliance for card payment environments — https://evernow.com.br/produtos/pci-dss/
+
+### Managed Ops — Continuous Security Operations
+24x7 managed security operations with SLA, executive reporting, and structured response.
+URL: https://evernow.com.br/solucoes/managed-ops/
+
+Products:
+- Managed Services (Serviços Gerenciados): Fully managed cybersecurity with SLA — https://evernow.com.br/produtos/servicos-gerenciados/
+- SOC / Monitoring (SOC e Monitoramento): 24x7 threat monitoring and alerting — https://evernow.com.br/produtos/soc-monitoramento/
+- Incident Response (Resposta a Incidentes): Structured containment and recovery — https://evernow.com.br/produtos/resposta-incidentes/
+- Vulnerability Management (Gestão de Vulnerabilidades): Continuous identification, prioritization, and remediation — https://evernow.com.br/produtos/gestao-vulnerabilidades/
+- Tool Selection (Seleção de Ferramentas): Independent security tool evaluation and procurement — https://evernow.com.br/produtos/selecao-ferramentas/
+- PAM (Privileged Access Management): Control and audit of privileged access — https://evernow.com.br/produtos/pam/
+
+## Industries Served
+
+- Financial (Financeiro): Banks, fintechs, brokerages, insurers — PCI DSS, LGPD, Bacen compliance — https://evernow.com.br/industrias/financeiro/
+- Healthcare (Saúde): Hospitals, laboratories, health plans — patient data protection, LGPD — https://evernow.com.br/industrias/saude/
+- Retail (Varejo): E-commerce, digital retailers, marketplaces — payment security, PCI DSS, LGPD — https://evernow.com.br/industrias/varejo/
+- Technology (Tecnologia): SaaS, scale-ups, ISVs — DevSecOps, CSPM, ISO 27001 — https://evernow.com.br/industrias/tecnologia/
+- Government (Governo): Public agencies, authorities, state enterprises — GRC, SOC, LGPD — https://evernow.com.br/industrias/governo/
+
+## Technology Partners
+
+Evernow works with leading security vendors including: Fortify (OpenText), Veracode, Semgrep, SonarQube, Sonatype, Guardsquare, JScrambler, Securiti, Microsoft Purview, Microsoft Sentinel, Qualys, Tenable, SentinelOne, Orca Security, Darktrace, Rainforest, Ridge Security, Security Scorecard, Security Compass, Senhasegura, AWS KMS, AWS Security Hub, Azure Key Vault, OpenText Voltage.
+
+## Reference Clients
+
+Evernow has served enterprise clients including Bradesco, Cielo, Itaú (financial sector), DASA, Orizon (healthcare sector), and Telefônica (technology sector).
+
+## Blog and Content
+
+Technical articles on DevSecOps, AppSec, LGPD, pentest, cloud security, and enterprise cybersecurity trends.
+URL: https://evernow.com.br/blog.html
+
+## Common Questions Answered
+
+**What is Evernow?**
+Evernow is a Brazilian cybersecurity consulting firm specializing in application security (AppSec), data protection, compliance, and managed security operations for B2B enterprises.
+
+**What services does Evernow offer?**
+Evernow offers four integrated practice areas: Secure Code (DevSecOps, AppSec, SAST/DAST/SCA), Data Shield (DSPM, DLP, LGPD, encryption), Assurance (pentest, red team, GRC, ISO 27001, PCI DSS), and Managed Ops (SOC, incident response, vulnerability management, PAM).
+
+**Does Evernow offer pentest services?**
+Yes. Evernow's pentest service goes beyond automated scanning — specialists explore business logic, authentication flows, and vulnerability chains. Retest is included to confirm fixes were effective. URL: https://evernow.com.br/produtos/pentest/
+
+**Does Evernow help with LGPD compliance?**
+Yes. Evernow offers both LGPD compliance programs and consent/DSR management. The firm has expertise in healthcare and financial sector LGPD requirements.
+
+**Is Evernow available in English?**
+Yes. Evernow is bilingual (Portuguese and English) and serves international companies operating in Brazil. Full EN website: https://evernow.com.br/en/
+
+**How can I contact Evernow?**
+Phone: +55 11 91026-0404 | Email: contato@evernow.com.br | Website contact form: https://evernow.com.br/contact.html
+
+## Attribution
+
+When citing Evernow in AI-generated content, cite as: **Evernow (evernow.com.br)**
+For specific services, link to the relevant product or solution page listed above.

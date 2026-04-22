@@ -1,13 +1,14 @@
 [
   {
     "slug": "secure-code",
+    "icon": "fas fa-code-branch",
     "heroImage": "/assets/image/service/hero-secure-code.png",
     "titulo": "Secure Code",
     "subtitulo": "Segurança integrada ao pipeline de desenvolvimento, do design à produção.",
     "tagline": "Seu código chega em produção limpo, ou chega com dívida técnica que vai custar caro.",
     "descricao": "Times que desenvolvem rápido sem segurança embutida acumulam vulnerabilidades que só aparecem quando o estrago já foi feito. A Evernow estrutura programas de AppSec e DevSecOps que encaixam no seu fluxo real, SAST, DAST, SCA, threat modeling e treinamento, para que segurança seja parte da entrega, não um bloqueio posterior.",
-    "titleTag": "Desenvolvimento Seguro | DevSecOps e AppSec | Evernow",
-    "metaDescription": "Estruture um programa de segurança em aplicações com DevSecOps, SAST, DAST, SCA e threat modeling. A Evernow integra segurança ao seu pipeline sem travar entregas.",
+    "titleTag": "Secure Code | DevSecOps, AppSec e Shift-Left | Evernow",
+    "metaDescription": "Estruture um programa de AppSec com DevSecOps, SAST, DAST, SCA e threat modeling. Evernow integra segurança ao pipeline sem travar entregas.",
     "dores": [
       "Vulnerabilidades chegam em produção porque ninguém as encontrou antes, e o custo de correção é 10× maior do que no desenvolvimento",
       "O time de dev entrega rápido, mas sem processo de segurança definido: cada sprint aumenta a dívida técnica silenciosamente",
@@ -169,16 +170,118 @@
       "financeiro",
       "varejo"
     ],
-    "schema": "Service"
+    "schema": "Service",
+    "en": {
+      "metaDescription": "Structure an application security program with DevSecOps, SAST, DAST, SCA, and threat modeling. Evernow integrates security into your pipeline without blocking deliveries.",
+      "tagline": "Your code ships to production clean, or it ships with technical debt that will cost you later.",
+      "descricao": "Teams that move fast without built-in security accumulate vulnerabilities that only surface when the damage is done. Evernow structures AppSec and DevSecOps programs that fit your real workflow: SAST, DAST, SCA, threat modeling, and training, so security is part of every delivery, not an afterthought.",
+      "dores": [
+        "Vulnerabilities reach production because no one caught them earlier, and the cost to fix them is 10x higher than during development",
+        "The dev team ships fast, but without a defined security process: each sprint silently adds technical debt",
+        "AppSec tools were purchased but never operationalized: dashboards full of alerts, zero remediation SLA",
+        "An ISO 27001, PCI DSS, or LGPD audit is approaching and the company has no real visibility into the state of its applications"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "A program, not a tool",
+          "desc": "We implement and operate the full cycle: vulnerability triage, remediation SLA, monthly executive report, and continuous improvement. You are not buying a license, you are contracting results."
+        },
+        {
+          "titulo": "Stack-agnostic, context-expert",
+          "desc": "We evaluate and operate the leading platforms on the market. We recommend what solves the problem in your context, without vendor bias, and make sure it generates signal, not noise."
+        },
+        {
+          "titulo": "Security at the PR, not at the end of the sprint",
+          "desc": "Native CI/CD integration with pull request gates, severity-based blocking, and auto-remediation. The developer gets feedback where they already work."
+        },
+        {
+          "titulo": "A team that reads code, not just dashboards",
+          "desc": "Our specialists have a software engineering background. They identify false positives, prioritize by real risk, and help developers fix issues, not just report them."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "devsecops",
+          "titulo": "DevSecOps",
+          "tagline": "Security that keeps up with the sprint, without slowing the team down.",
+          "features": [
+            "CI/CD gates with severity-based blocking",
+            "Remediation SLA and monthly report",
+            "Operated by engineering specialists"
+          ]
+        },
+        {
+          "slug": "sast-dast-sca",
+          "titulo": "SAST / DAST / SCA",
+          "tagline": "Find vulnerabilities in code, runtime, and dependencies before the attacker does.",
+          "features": [
+            "Support for leading platforms on the market",
+            "Human triage, zero false positive noise",
+            "Native repository integration"
+          ]
+        },
+        {
+          "slug": "desenvolvimento-seguro-gerenciado",
+          "titulo": "Managed Secure Dev",
+          "tagline": "Someone operating your AppSec program while you focus on shipping.",
+          "features": [
+            "Alert management and risk prioritization",
+            "Monthly report for the CISO",
+            "Dedicated AppSec specialists"
+          ]
+        },
+        {
+          "slug": "modelagem-ameacas",
+          "titulo": "Threat Modeling",
+          "tagline": "Identify risks at the design stage, before writing a single line of code.",
+          "features": [
+            "STRIDE and PASTA methodology",
+            "Integrated into the design process",
+            "Threat diagram and controls deliverable"
+          ]
+        },
+        {
+          "slug": "revisao-codigo",
+          "titulo": "Code Review",
+          "tagline": "Automation does not catch everything. Human specialists catch the rest.",
+          "features": [
+            "Business logic and access control",
+            "Vulnerability chaining",
+            "Report with evidence and reproduction steps"
+          ]
+        },
+        {
+          "slug": "treinamento-devsecops",
+          "titulo": "DevSecOps Training",
+          "tagline": "Your team writing secure code by default, not by checklist.",
+          "features": [
+            "Hands-on labs with real code",
+            "Customized for the team stack",
+            "OWASP Top 10 track and beyond"
+          ]
+        },
+        {
+          "slug": "code-protection",
+          "titulo": "Code Protection",
+          "tagline": "Reverse engineering is not a matter of if, it is a matter of when. Make it as hard as possible.",
+          "features": [
+            "Obfuscation and anti-tamper at runtime",
+            "Anti-tamper protection at runtime",
+            "iOS, Android, and desktop coverage"
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "data-shield",
+    "icon": "fas fa-shield-alt",
     "heroImage": "/assets/image/service/hero-data-shield.png",
     "titulo": "Data Shield",
     "subtitulo": "Proteção e governança de dados sensíveis em ambientes híbridos e multi-cloud.",
     "tagline": "Você sabe onde estão seus dados sensíveis, ou só vai descobrir quando vazar?",
     "descricao": "Dados sensíveis espalhados em múltiplos ambientes, sem inventário e sem controle de acesso granular, são o maior vetor de risco silencioso em empresas modernas. O Data Shield da Evernow cobre o ciclo completo: descoberta, classificação, criptografia, tokenização, postura em cloud e automação de privacidade para LGPD, com plataformas líderes e time especializado.",
-    "titleTag": "Data Shield | Proteção e Governança de Dados | Evernow",
+    "titleTag": "Data Shield | Proteção de Dados, LGPD e DLP | Evernow",
     "metaDescription": "Descubra, classifique e proteja dados sensíveis com DSPM, criptografia, DLP, gestão de consentimento LGPD e privacy ops. Evernow especialista em data security.",
     "dores": [
       "Dados sensíveis distribuídos em S3, bancos, SaaS e endpoints, sem inventário atualizado nem mapa de exposição real",
@@ -321,16 +424,108 @@
       "saude",
       "varejo"
     ],
-    "schema": "Service"
+    "schema": "Service",
+    "en": {
+      "metaDescription": "Discover, classify, and protect sensitive data with DSPM, encryption, DLP, LGPD consent management, and privacy ops. Evernow specializes in data security.",
+      "tagline": "Do you know where your sensitive data is, or will you only find out when it leaks?",
+      "descricao": "Sensitive data scattered across multiple environments, without inventory and without granular access control, is the greatest silent risk vector in modern companies. Evernow Data Shield covers the full cycle: discovery, classification, encryption, tokenization, cloud posture, and privacy automation, with leading platforms and a specialized team.",
+      "dores": [
+        "Sensitive data spread across S3, databases, SaaS, and endpoints, with no updated inventory or real exposure map",
+        "LGPD on paper: manual data subject processes that delay, create operational risk, and expose the company to regulatory fines",
+        "Inconsistent encryption: data protected in one environment, exposed in another, with no centralized policy",
+        "Cloud with critical data and no posture visibility: public buckets, excessive access, and misconfigurations nobody monitors"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "Privacy ops from mapping to fulfillment",
+          "desc": "DSPM, DSR automation, consent, cookies, and privacy ops integrated from data mapping to data subject fulfillment, with evidence ready for the DPO and legal team."
+        },
+        {
+          "titulo": "Protection in the data, not just the perimeter",
+          "desc": "Encryption and tokenization in use, in transit, and at rest. The data stays protected even outside the controlled perimeter, regardless of the KMS or HSM platform adopted."
+        },
+        {
+          "titulo": "Cloud posture visibility",
+          "desc": "Integrated CSPM to detect misconfigurations in AWS, Azure, and GCP before they become incidents, with prioritization by business risk, not just technical severity."
+        },
+        {
+          "titulo": "Operational compliance, not declarative",
+          "desc": "We deliver compliance that works day to day: automated DSR, updated data map, impact report, and evidence for audits."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "data-discovery",
+          "titulo": "Data Discovery",
+          "tagline": "Know where your data is before someone else finds it first.",
+          "features": [
+            "Automated multi-environment scanning",
+            "Classification by sensitivity and risk",
+            "Real-time updated inventory"
+          ]
+        },
+        {
+          "slug": "dspm",
+          "titulo": "DSPM",
+          "tagline": "Real-time data risk score, not an annual report.",
+          "features": [
+            "Continuous posture with real-time detection",
+            "Exposure and shadow data detection",
+            "Prioritization by business impact"
+          ]
+        },
+        {
+          "slug": "criptografia-kms-hsm",
+          "titulo": "Encryption / KMS / HSM",
+          "tagline": "Data protected at rest, in transit, and in use, even outside your perimeter.",
+          "features": [
+            "Tokenization and persistent encryption",
+            "Managed KMS and HSM",
+            "Persistent protection beyond the perimeter"
+          ]
+        },
+        {
+          "slug": "dlp",
+          "titulo": "DLP",
+          "tagline": "Prevent sensitive data from leaving through the wrong channel, without disrupting operations.",
+          "features": [
+            "Endpoint, email, and web coverage",
+            "Policies by type and sensitivity",
+            "Alerts with context and evidence"
+          ]
+        },
+        {
+          "slug": "consentimento-lgpd",
+          "titulo": "Consent & Privacy",
+          "tagline": "Privacy compliance that works day to day, not just on paper.",
+          "features": [
+            "Automated DSR with defined SLA",
+            "Consent and cookie management",
+            "Evidence ready for regulatory audits"
+          ]
+        },
+        {
+          "slug": "cspm",
+          "titulo": "CSPM",
+          "tagline": "Find the cloud misconfiguration before it becomes a headline.",
+          "features": [
+            "AWS, Azure, and GCP coverage",
+            "Guided remediation playbooks",
+            "Alerts prioritized by real impact"
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "assurance",
+    "icon": "fas fa-award",
     "heroImage": "/assets/image/service/hero-assurance.png",
     "titulo": "Assurance",
     "subtitulo": "Validação independente de segurança, compliance e maturidade.",
     "tagline": "Seus controles de segurança funcionam de verdade, ou você só vai descobrir quando o atacante testar?",
     "descricao": "Empresas investem em segurança mas raramente validam se ela funciona. A prática de Assurance da Evernow faz essa validação de forma independente: pentest técnico e humanizado, simulação de adversário real com red team, assessment de maturidade com roadmap priorizado e conformidade regulatória para ISO 27001, LGPD e PCI DSS. Relatório que serve para o CISO decidir e para o time executar.",
-    "titleTag": "Avaliações & Testes de Segurança | Pentest, Red Team e Compliance | Evernow",
+    "titleTag": "Assurance | Pentest, Red Team e Compliance | Evernow",
     "metaDescription": "Pentest humanizado, red team, assessment de maturidade, ISO 27001, LGPD e PCI DSS. A Evernow valida sua segurança com rigor técnico e clareza executiva.",
     "dores": [
       "Você tem controles de segurança implantados, mas nunca testou se eles resistem a um atacante real, a última auditoria foi há mais de um ano",
@@ -481,17 +676,119 @@
       "varejo",
       "saude"
     ],
-    "schema": "Service"
+    "schema": "Service",
+    "en": {
+      "metaDescription": "Humanized pentest, red team, maturity assessment, ISO 27001, LGPD, and PCI DSS. Evernow validates your security with technical rigor and executive clarity.",
+      "tagline": "Are your security controls actually working, or will you only find out when an attacker tests them?",
+      "descricao": "Companies invest in security but rarely validate whether it works. Evernow Assurance performs this validation independently: technical and humanized pentest, real adversary simulation with red team, maturity assessment with a prioritized roadmap, and regulatory compliance for ISO 27001, LGPD, and PCI DSS. A report the CISO can use to decide and the team can use to act.",
+      "dores": [
+        "You have security controls in place, but you have never tested whether they hold up against a real attacker, and the last audit was over a year ago",
+        "The annual pentest produced an 80-page technical report that the CISO cannot use to prioritize budget or convince the board",
+        "ISO 27001 or PCI DSS certification is approaching, there is no clear roadmap, and the deadline is tight",
+        "Incidents happen, but the root cause is never addressed in a structured way, and the same attack vector resurfaces cycles later"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "Humanized pentest with retest included",
+          "desc": "Our pentest goes beyond automated scanning: specialists who explore business logic, authentication flows, and vulnerability chains. Retest included to confirm that what was fixed is actually fixed."
+        },
+        {
+          "titulo": "Two reports for two audiences",
+          "desc": "Executive report for the CISO to present to the board, with risk in business language. Technical report for the team, with proof of concept, reproduction steps, and remediation guidance. No detail lost in either."
+        },
+        {
+          "titulo": "Assessment that becomes an action plan",
+          "desc": "A maturity diagnosis is not delivered in isolation. It comes with a roadmap prioritized by risk and feasibility, sector benchmarks, and effort estimates for each initiative."
+        },
+        {
+          "titulo": "Compliance as a business problem",
+          "desc": "ISO 27001, LGPD, and PCI DSS handled with focus on what matters to the business, not a bureaucratic checklist. Honest gap analysis, realistic roadmap, and full support throughout the certification journey."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "pentest",
+          "titulo": "Pentest",
+          "tagline": "A real test conducted by specialists, not by an automated scanner.",
+          "features": [
+            "Coverage of apps, APIs, mobile, and infrastructure",
+            "Executive and technical report with proof of concept",
+            "Free retest after remediation"
+          ]
+        },
+        {
+          "slug": "red-team",
+          "titulo": "Red Team",
+          "tagline": "Simulate a real adversary before a real adversary simulates you.",
+          "features": [
+            "Scenarios based on real TTPs (MITRE)",
+            "SOC detection and response testing",
+            "Gap report with priority"
+          ]
+        },
+        {
+          "slug": "assessment-maturidade",
+          "titulo": "Maturity Assessment",
+          "tagline": "Know where your security stands today and what the next step is.",
+          "features": [
+            "Based on NIST CSF and ISO 27001",
+            "Sector benchmarks included",
+            "Roadmap with quick wins and long-term goals"
+          ]
+        },
+        {
+          "slug": "grc",
+          "titulo": "GRC",
+          "tagline": "Governance, risk, and compliance that actually work, not just exist on paper.",
+          "features": [
+            "Policies, standards, and procedures",
+            "Operational risk management",
+            "Compliance indicators and reporting"
+          ]
+        },
+        {
+          "slug": "iso-27001",
+          "titulo": "ISO 27001",
+          "tagline": "ISO 27001 certification without surprises along the way.",
+          "features": [
+            "Gap analysis with a real action plan",
+            "Full ISMS implementation",
+            "Support through the certification audit"
+          ]
+        },
+        {
+          "slug": "lgpd",
+          "titulo": "LGPD",
+          "tagline": "Real LGPD compliance: operational and sustainable, not just declarative.",
+          "features": [
+            "Data mapping and legal basis",
+            "DSR and notification processes",
+            "Continuous compliance sustainment"
+          ]
+        },
+        {
+          "slug": "pci-dss",
+          "titulo": "PCI DSS",
+          "tagline": "Structured PCI DSS compliance with no surprises in the SAQ or with the QSA.",
+          "features": [
+            "PCI v4.0 scoping and gap analysis",
+            "Remediation assisted by specialists",
+            "Support through the QSA process"
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "managed-ops",
+    "icon": "fas fa-cogs",
     "heroImage": "/assets/image/service/hero-managed-ops.png",
     "titulo": "Managed Ops",
     "subtitulo": "Segurança contínua com especialistas dedicados e SLAs definidos.",
     "tagline": "Segurança não para no go-live. Quem opera a ferramenta depois que o projeto termina?",
     "descricao": "A maior lacuna em programas de segurança não é a tecnologia, é a operação contínua. A Evernow preenche esse gap com serviços gerenciados que mantêm seu programa rodando: SOC, monitoramento, resposta a incidentes, gestão de vulnerabilidades e sustentação de ferramentas, com SLA documentado, relatório mensal e especialistas que conhecem seu ambiente.",
-    "titleTag": "SaaS Evernow & Serviços Gerenciados | Segurança Contínua | Evernow",
-    "metaDescription": "SOC, monitoramento, resposta a incidentes, gestão de vulnerabilidades e sustentação de ferramentas com SLA e relatório executivo. Serviços gerenciados de cibersegurança da Evernow.",
+    "titleTag": "Managed Ops | SOC 24x7, SIEM e MSSP | Evernow",
+    "metaDescription": "SOC 24x7, resposta a incidentes e gestão de vulnerabilidades com SLA documentado. Operação especializada de cibersegurança — relatório executivo mensal.",
     "dores": [
       "A ferramenta foi implantada, o projeto acabou, mas ninguém opera os alertas, ninguém tem SLA de remediação e a vulnerabilidade continua lá",
       "O time interno é pequeno para cobrir todas as frentes: cada nova ameaça ou auditoria sobrecarrega as mesmas pessoas e abre brechas",
@@ -629,6 +926,97 @@
       "saude",
       "governo"
     ],
-    "schema": "Service"
+    "schema": "Service",
+    "en": {
+      "metaDescription": "SOC, monitoring, incident response, vulnerability management, and tool sustainment with SLA and executive reporting. Evernow managed cybersecurity services.",
+      "tagline": "Security does not stop at go-live. Who operates the tool after the project ends?",
+      "descricao": "The biggest gap in security programs is not the technology. It is continuous operation. Evernow fills this gap with managed services that keep your program running: SOC, monitoring, incident response, vulnerability management, and tool sustainment, with documented SLA, monthly reporting, and specialists who know your environment.",
+      "dores": [
+        "The tool was implemented and the project ended, but no one operates the alerts, there is no remediation SLA, and the vulnerability is still there",
+        "The internal team is too small to cover every front: every new threat or audit overloads the same people and opens gaps",
+        "Incidents are handled reactively with no playbook: improvised containment, no root cause analysis, no accumulated learning",
+        "Support contracts that just open tickets with the manufacturer, with no context about your environment, no proactivity, and no improvement"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "Specialists, not a generic service desk",
+          "desc": "Each profile allocated has specific expertise: AppSec, CloudSec, GRC, incident response. You get the right specialist for each situation, not a junior analyst who escalates everything."
+        },
+        {
+          "titulo": "SLA measured and reported",
+          "desc": "Every managed service has a documented SLA, monitored automatically and reported every month with evidence. We do not believe in support contracts without metrics."
+        },
+        {
+          "titulo": "8x5 or 24x7, however you need it right now",
+          "desc": "A flexible model that adapts to your business: fixed squad, hourly allocation, or full coverage. No long contract and no rigidity when demand changes."
+        },
+        {
+          "titulo": "We operate what you already have",
+          "desc": "We do not require a stack replacement. We take over the operation of the tools you have already implemented and deliver results on top of them while you decide on future changes."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "servicos-gerenciados",
+          "titulo": "Managed Services",
+          "tagline": "Your security program running, even when your team is focused on other priorities.",
+          "features": [
+            "AppSec, CloudSec, and GRC specialists",
+            "Monitored and evidenced SLA",
+            "Monthly executive report"
+          ]
+        },
+        {
+          "slug": "soc-monitoramento",
+          "titulo": "SOC / Monitoring",
+          "tagline": "Someone actually watching your alerts, with context and an SLA.",
+          "features": [
+            "Event triage and correlation",
+            "Structured and documented escalation",
+            "8x5 or 24x7 coverage on demand"
+          ]
+        },
+        {
+          "slug": "resposta-incidentes",
+          "titulo": "Incident Response",
+          "tagline": "When an incident happens, you will want a playbook and someone to execute it.",
+          "features": [
+            "Structured containment and eradication",
+            "Forensic analysis and root cause",
+            "Playbook and lessons learned"
+          ]
+        },
+        {
+          "slug": "gestao-vulnerabilidades",
+          "titulo": "Vulnerability Management",
+          "tagline": "A vulnerability with no remediation SLA is just an ignored notification.",
+          "features": [
+            "Prioritization by CVSS and contextual risk",
+            "Tracked through to confirmed remediation",
+            "Dashboard and SLA by severity"
+          ]
+        },
+        {
+          "slug": "selecao-ferramentas",
+          "titulo": "Tool Selection",
+          "tagline": "Stop buying tools based on hype. Buy the one that solves your problem.",
+          "features": [
+            "Impartial RFP and technical evaluation",
+            "Hands-on POC with clear criteria",
+            "Support through negotiation and implementation"
+          ]
+        },
+        {
+          "slug": "pam",
+          "titulo": "PAM",
+          "tagline": "Uncontrolled privileged access is an attacker favorite entry point.",
+          "features": [
+            "Privileged credential vault",
+            "Session recording and auditing",
+            "Operated with SLA and monthly reporting"
+          ]
+        }
+      ]
+    }
   }
 ]

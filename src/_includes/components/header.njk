@@ -8,7 +8,7 @@
         </a>
         <button class="navbar-toggler p-0 collapsed" type="button" data-toggle="collapse"
                 data-target="#navbarMain" aria-controls="navbarMain"
-                aria-expanded="false" aria-label="Alternar navegação">
+                aria-expanded="false" aria-label="{{ 'nav.toggleLabel' | t }}">
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
@@ -17,128 +17,130 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
           <ul class="navbar-nav ev-nav">
 
-            <!-- Empresa -->
+            <!-- Empresa / Company -->
             <li class="nav-item ev-dropdown {% if '/about' in page.url or '/parceiros' in page.url %}nav-item-active{% endif %}">
               <a class="nav-link text-white p-0 ev-dropdown__toggle" href="#" role="button">
-                Empresa <i class="fas fa-chevron-down ev-dropdown__caret"></i>
+                {{ "nav.empresa" | t }} <i class="fas fa-chevron-down ev-dropdown__caret"></i>
               </a>
               <div class="ev-dropdown__menu">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--1">
-                    <a class="ev-dropdown__item" href="/about.html">Sobre a Evernow</a>
-                    <a class="ev-dropdown__item" href="/parceiros.html">Parceiros</a>
-                    <a class="ev-dropdown__item" href="https://suporte.evernow.com.br" target="_blank" rel="noopener">Suporte</a>
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/about.html">{{ "nav.sobre" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/parceiros.html">{{ "nav.parceiros" | t }}</a>
+                    <a class="ev-dropdown__item" href="https://suporte.evernow.com.br" target="_blank" rel="noopener">{{ "nav.support" | t }}</a>
                   </div>
                 </div>
               </div>
             </li>
 
-            <!-- Soluções -->
+            <!-- Soluções / Solutions -->
             <li class="nav-item ev-dropdown {% if '/solucoes' in page.url %}nav-item-active{% endif %}">
-              <a class="nav-link text-white p-0 ev-dropdown__toggle" href="/solucoes/" role="button">
-                Soluções <i class="fas fa-chevron-down ev-dropdown__caret"></i>
+              <a class="nav-link text-white p-0 ev-dropdown__toggle" href="{{ urlPrefix }}/solucoes/" role="button">
+                {{ "nav.solucoes" | t }} <i class="fas fa-chevron-down ev-dropdown__caret"></i>
               </a>
               <div class="ev-dropdown__menu ev-dropdown__menu--medium">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--2">
-                    <a class="ev-dropdown__item" href="/solucoes/secure-code/">
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/solucoes/secure-code/">
                       <strong>Secure Code</strong>
-                      <span>Segurança em aplicações e DevSecOps</span>
+                      <span>{{ "nav.sol_sc_desc" | t }}</span>
                     </a>
-                    <a class="ev-dropdown__item" href="/solucoes/data-shield/">
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/solucoes/data-shield/">
                       <strong>Data Shield</strong>
-                      <span>Proteção e governança de dados</span>
+                      <span>{{ "nav.sol_ds_desc" | t }}</span>
                     </a>
-                    <a class="ev-dropdown__item" href="/solucoes/assurance/">
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/solucoes/assurance/">
                       <strong>Assurance</strong>
-                      <span>Pentest, compliance e maturidade</span>
+                      <span>{{ "nav.sol_ass_desc" | t }}</span>
                     </a>
-                    <a class="ev-dropdown__item" href="/solucoes/managed-ops/">
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/solucoes/managed-ops/">
                       <strong>Managed Ops</strong>
-                      <span>Serviços gerenciados e SOC</span>
+                      <span>{{ "nav.sol_mo_desc" | t }}</span>
                     </a>
                   </div>
                 </div>
               </div>
             </li>
 
-            <!-- Produtos -->
-            <li class="nav-item ev-dropdown {% if '/produtos' in page.url %}nav-item-active{% endif %}">
-              <a class="nav-link text-white p-0 ev-dropdown__toggle" href="/produtos/" role="button">
-                Produtos <i class="fas fa-chevron-down ev-dropdown__caret"></i>
+            <!-- Produtos / Products -->
+            {%- set prodBase = urlPrefix + ("/products/" if lang == "en" else "/produtos/") -%}
+            <li class="nav-item ev-dropdown {% if '/produtos' in page.url or '/products' in page.url %}nav-item-active{% endif %}">
+              <a class="nav-link text-white p-0 ev-dropdown__toggle" href="{{ prodBase }}" role="button">
+                {{ "nav.produtos" | t }} <i class="fas fa-chevron-down ev-dropdown__caret"></i>
               </a>
               <div class="ev-dropdown__menu ev-dropdown__menu--wide">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__section-title">Secure Code</div>
                   <div class="ev-dropdown__grid ev-dropdown__grid--3">
-                    <a class="ev-dropdown__item" href="/produtos/devsecops/">DevSecOps</a>
-                    <a class="ev-dropdown__item" href="/produtos/sast-dast-sca/">SAST / DAST / SCA</a>
-                    <a class="ev-dropdown__item" href="/produtos/desenvolvimento-seguro-gerenciado/">Dev Seguro Gerenciado</a>
-                    <a class="ev-dropdown__item" href="/produtos/modelagem-ameacas/">Modelagem de Ameaças</a>
-                    <a class="ev-dropdown__item" href="/produtos/revisao-codigo/">Revisão de Código</a>
-                    <a class="ev-dropdown__item" href="/produtos/treinamento-devsecops/">Treinamento DevSecOps</a>
-                    <a class="ev-dropdown__item" href="/produtos/code-protection/">Code Protection</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}devsecops/">DevSecOps</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}sast-dast-sca/">SAST / DAST / SCA</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}managed-appsec{% else %}desenvolvimento-seguro-gerenciado{% endif %}/">{{ "nav.prod_dev_seguro" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}threat-modeling{% else %}modelagem-ameacas{% endif %}/">{{ "nav.prod_modelagem" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}code-review{% else %}revisao-codigo{% endif %}/">{{ "nav.prod_revisao" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}devsecops-training{% else %}treinamento-devsecops{% endif %}/">{{ "nav.blog" | t | replace("Blog", "Training DevSecOps") if lang == "en" else "Treinamento DevSecOps" }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}code-protection/">Code Protection</a>
                   </div>
                   <div class="ev-dropdown__section-title mt-3">Data Shield</div>
                   <div class="ev-dropdown__grid ev-dropdown__grid--3">
-                    <a class="ev-dropdown__item" href="/produtos/data-discovery/">Data Discovery</a>
-                    <a class="ev-dropdown__item" href="/produtos/dspm/">DSPM</a>
-                    <a class="ev-dropdown__item" href="/produtos/criptografia-kms-hsm/">Criptografia / KMS / HSM</a>
-                    <a class="ev-dropdown__item" href="/produtos/dlp/">DLP</a>
-                    <a class="ev-dropdown__item" href="/produtos/consentimento-lgpd/">Consentimento & LGPD</a>
-                    <a class="ev-dropdown__item" href="/produtos/cspm/">CSPM</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}data-discovery/">Data Discovery</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}dspm/">DSPM</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}encryption-kms-hsm{% else %}criptografia-kms-hsm{% endif %}/">{{ "nav.prod_criptografia" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}dlp/">DLP</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}lgpd-consent{% else %}consentimento-lgpd{% endif %}/">{{ "nav.prod_consentimento" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}cspm/">CSPM</a>
                   </div>
                   <div class="ev-dropdown__section-title mt-3">Assurance</div>
                   <div class="ev-dropdown__grid ev-dropdown__grid--3">
-                    <a class="ev-dropdown__item" href="/produtos/pentest/">Pentest</a>
-                    <a class="ev-dropdown__item" href="/produtos/red-team/">Red Team</a>
-                    <a class="ev-dropdown__item" href="/produtos/assessment-maturidade/">Assessment de Maturidade</a>
-                    <a class="ev-dropdown__item" href="/produtos/grc/">GRC</a>
-                    <a class="ev-dropdown__item" href="/produtos/iso-27001/">ISO 27001</a>
-                    <a class="ev-dropdown__item" href="/produtos/lgpd/">LGPD</a>
-                    <a class="ev-dropdown__item" href="/produtos/pci-dss/">PCI DSS</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}pentest/">Pentest</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}red-team/">Red Team</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}maturity-assessment{% else %}assessment-maturidade{% endif %}/">{{ "nav.prod_assessment_mat" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}grc/">GRC</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}iso-27001/">ISO 27001</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}lgpd/">LGPD</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}pci-dss/">PCI DSS</a>
                   </div>
                   <div class="ev-dropdown__section-title mt-3">Managed Ops</div>
                   <div class="ev-dropdown__grid ev-dropdown__grid--3">
-                    <a class="ev-dropdown__item" href="/produtos/servicos-gerenciados/">Serviços Gerenciados</a>
-                    <a class="ev-dropdown__item" href="/produtos/soc-monitoramento/">SOC / Monitoramento</a>
-                    <a class="ev-dropdown__item" href="/produtos/resposta-incidentes/">Resposta a Incidentes</a>
-                    <a class="ev-dropdown__item" href="/produtos/gestao-vulnerabilidades/">Gestão de Vulnerabilidades</a>
-                    <a class="ev-dropdown__item" href="/produtos/selecao-ferramentas/">Seleção de Ferramentas</a>
-                    <a class="ev-dropdown__item" href="/produtos/pam/">PAM</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}managed-services{% else %}servicos-gerenciados{% endif %}/">{{ "nav.prod_servicos_ger" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}soc-monitoring{% else %}soc-monitoramento{% endif %}/">SOC / {% if lang == "en" %}Monitoring{% else %}Monitoramento{% endif %}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}incident-response{% else %}resposta-incidentes{% endif %}/">{{ "nav.prod_resposta" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}vulnerability-management{% else %}gestao-vulnerabilidades{% endif %}/">{{ "nav.prod_gestao_vuln" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}{% if lang == 'en' %}tool-selection{% else %}selecao-ferramentas{% endif %}/">{{ "nav.prod_selecao" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ prodBase }}pam/">PAM</a>
                   </div>
                 </div>
               </div>
             </li>
 
-            <!-- Indústrias -->
-            <li class="nav-item ev-dropdown {% if '/industrias' in page.url %}nav-item-active{% endif %}">
-              <a class="nav-link text-white p-0 ev-dropdown__toggle" href="/industrias/" role="button">
-                Indústrias <i class="fas fa-chevron-down ev-dropdown__caret"></i>
+            <!-- Indústrias / Industries -->
+            {%- set indBase = urlPrefix + ("/industries/" if lang == "en" else "/industrias/") -%}
+            <li class="nav-item ev-dropdown {% if '/industrias' in page.url or '/industries' in page.url %}nav-item-active{% endif %}">
+              <a class="nav-link text-white p-0 ev-dropdown__toggle" href="{{ indBase }}" role="button">
+                {{ "nav.industrias" | t }} <i class="fas fa-chevron-down ev-dropdown__caret"></i>
               </a>
               <div class="ev-dropdown__menu">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--1">
-                    <a class="ev-dropdown__item" href="/industrias/financeiro/">Financeiro</a>
-                    <a class="ev-dropdown__item" href="/industrias/saude/">Saúde</a>
-                    <a class="ev-dropdown__item" href="/industrias/varejo/">Varejo</a>
-                    <a class="ev-dropdown__item" href="/industrias/tecnologia/">Tecnologia</a>
-                    <a class="ev-dropdown__item" href="/industrias/governo/">Governo</a>
+                    <a class="ev-dropdown__item" href="{{ indBase }}{% if lang == 'en' %}financial{% else %}financeiro{% endif %}/">{{ "nav.ind_financeiro" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ indBase }}{% if lang == 'en' %}healthcare{% else %}saude{% endif %}/">{{ "nav.ind_saude" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ indBase }}{% if lang == 'en' %}retail{% else %}varejo{% endif %}/">{{ "nav.ind_varejo" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ indBase }}{% if lang == 'en' %}technology{% else %}tecnologia{% endif %}/">{{ "nav.ind_tecnologia" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ indBase }}{% if lang == 'en' %}government{% else %}governo{% endif %}/">{{ "nav.ind_governo" | t }}</a>
                   </div>
                 </div>
               </div>
             </li>
 
-            <!-- Recursos -->
+            <!-- Recursos / Resources -->
             <li class="nav-item ev-dropdown {% if '/blog' in page.url or '/assessment' in page.url %}nav-item-active{% endif %}">
               <a class="nav-link text-white p-0 ev-dropdown__toggle" href="#" role="button">
-                Recursos <i class="fas fa-chevron-down ev-dropdown__caret"></i>
+                {{ "nav.recursos" | t }} <i class="fas fa-chevron-down ev-dropdown__caret"></i>
               </a>
               <div class="ev-dropdown__menu">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--1">
-                    <a class="ev-dropdown__item" href="/blog.html">Blog</a>
-                    <a class="ev-dropdown__item" href="/assessment.html">Assessment</a>
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/blog.html">Blog</a>
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/assessment.html">Assessment</a>
                   </div>
                 </div>
               </div>
@@ -147,25 +149,25 @@
             <!-- Mobile: lang switcher -->
             <li class="nav-item d-lg-none mt-3">
               {% if lang == 'pt' %}
-              <a href="/en{{ page.url }}" class="lang-flag-btn" data-set-lang="en" aria-label="Switch to English">
+              <a href="{{ langEnUrl if langEnUrl else '/en' + page.url }}" class="lang-flag-btn" data-set-lang="en" aria-label="Switch to English">
                 <span class="lang-flag">🇺🇸</span><span class="lang-flag-text">EN</span>
               </a>
               {% else %}
-              <a href="{{ page.url | replace('/en/', '/') }}" class="lang-flag-btn" data-set-lang="pt" aria-label="Mudar para Português">
+              <a href="{{ langPtUrl if langPtUrl else (page.url | replace('/en/', '/')) }}" class="lang-flag-btn" data-set-lang="pt" aria-label="Mudar para Português">
                 <span class="lang-flag">🇧🇷</span><span class="lang-flag-text">PT</span>
               </a>
               {% endif %}
             </li>
           </ul>
 
-          <a href="/contact.html" class="my-2 my-sm-0 contact-btn ev-contact-btn">Contato</a>
+          <a href="{{ urlPrefix }}/contact.html" class="my-2 my-sm-0 contact-btn ev-contact-btn">{{ "nav.contato" | t }}</a>
 
           {% if lang == 'pt' %}
-          <a href="/en{{ page.url }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="en" aria-label="Switch to English">
+          <a href="{{ langEnUrl if langEnUrl else '/en' + page.url }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="en" aria-label="Switch to English">
             <span class="lang-flag">🇺🇸</span><span class="lang-flag-text">EN</span>
           </a>
           {% else %}
-          <a href="{{ page.url | replace('/en/', '/') }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="pt" aria-label="Mudar para Português">
+          <a href="{{ langPtUrl if langPtUrl else (page.url | replace('/en/', '/')) }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="pt" aria-label="Mudar para Português">
             <span class="lang-flag">🇧🇷</span><span class="lang-flag-text">PT</span>
           </a>
           {% endif %}

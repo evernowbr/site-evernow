@@ -1,0 +1,166 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+{# ── Static pages ──────────────────────────────────────────── #}
+{% set staticPages = [
+  { pt: "/",                en: "/en/",               prio: "1.0" },
+  { pt: "/about.html",      en: "/en/about.html",      prio: "0.7" },
+  { pt: "/services.html",   en: "/en/services.html",   prio: "0.7" },
+  { pt: "/contact.html",    en: "/en/contact.html",    prio: "0.7" },
+  { pt: "/pentest.html",    en: "/en/pentest.html",    prio: "0.8" },
+  { pt: "/assessment.html", en: "/en/assessment.html", prio: "0.7" },
+  { pt: "/parceiros.html",  en: "/en/parceiros.html",  prio: "0.6" },
+  { pt: "/solutions.html",  en: "/en/solutions.html",  prio: "0.6" },
+  { pt: "/cases.html",      en: "/en/cases.html",      prio: "0.6" },
+  { pt: "/blog.html",       en: "/en/blog.html",       prio: "0.7" },
+  { pt: "/solucoes/",       en: "/en/solucoes/",       prio: "0.8" },
+  { pt: "/produtos/",       en: "/en/products/",       prio: "0.8" },
+  { pt: "/industrias/",     en: "/en/industries/",     prio: "0.7" }
+] %}
+{%- for p in staticPages -%}
+  <url>
+    <loc>https://evernow.com.br{{ p.pt }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ p.pt }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ p.en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ p.pt }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>{{ p.prio }}</priority>
+  </url>
+  <url>
+    <loc>https://evernow.com.br{{ p.en }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ p.pt }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ p.en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ p.pt }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>{{ p.prio }}</priority>
+  </url>
+{%- endfor -%}
+
+{# ── Solution pages ────────────────────────────────────────── #}
+{%- for sol in solutionPages -%}
+{%- if sol.lang == 'pt' -%}
+{%- set _ptUrl = "/solucoes/" + sol.slug + "/" -%}
+{%- set _enUrl = "/en/solucoes/" + sol.slug + "/" -%}
+  <url>
+    <loc>https://evernow.com.br{{ _ptUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://evernow.com.br{{ _enUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+{%- endif -%}
+{%- endfor -%}
+
+{# ── Product pages ─────────────────────────────────────────── #}
+{%- for prod in productPages -%}
+{%- if prod.lang == 'pt' -%}
+{%- set _ptUrl = "/produtos/" + prod.slug + "/" -%}
+{%- set _enSlug = enSlugs.products[prod.slug] or prod.slug -%}
+{%- set _enUrl = "/en/products/" + _enSlug + "/" -%}
+  <url>
+    <loc>https://evernow.com.br{{ _ptUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evernow.com.br{{ _enUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{%- endif -%}
+{%- endfor -%}
+
+{# ── Industry pages ────────────────────────────────────────── #}
+{%- for ind in industryPages -%}
+{%- if ind.lang == 'pt' -%}
+{%- set _ptUrl = "/industrias/" + ind.slug + "/" -%}
+{%- set _enSlug = enSlugs.industries[ind.slug] or ind.slug -%}
+{%- set _enUrl = "/en/industries/" + _enSlug + "/" -%}
+  <url>
+    <loc>https://evernow.com.br{{ _ptUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evernow.com.br{{ _enUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{%- endif -%}
+{%- endfor -%}
+
+{# ── Vendor / Partner pages ────────────────────────────────── #}
+{%- for vendor in vendorPages -%}
+{%- if vendor.lang == 'pt' -%}
+{%- set _ptUrl = "/parceiros/" + vendor.slug + "/" -%}
+{%- set _enUrl = "/en/partners/" + vendor.slug + "/" -%}
+  <url>
+    <loc>https://evernow.com.br{{ _ptUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://evernow.com.br{{ _enUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{%- endif -%}
+{%- endfor -%}
+
+{# ── Blog posts ────────────────────────────────────────────── #}
+{%- for post in blogPostPages -%}
+{%- if post.lang == 'pt' -%}
+{%- set _ptUrl = "/blog/" + post.slug + ".html" -%}
+{%- set _enUrl = "/en/blog/" + post.slug + ".html" -%}
+  <url>
+    <loc>https://evernow.com.br{{ _ptUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://evernow.com.br{{ _enUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://evernow.com.br{{ _enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _ptUrl }}"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+{%- endif -%}
+{%- endfor -%}
+
+</urlset>
