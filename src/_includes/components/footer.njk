@@ -46,7 +46,7 @@
             <div class="weight-footer-item">
               <h3 style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;">{{ "nav.recursos" | t }}</h3>
               <ul class="list-unstyled mb-0" style="font-size:.88rem;">
-                <li><a href="{{ urlPrefix }}/blog.html">Blog</a></li>
+                {% if lang != "en" %}<li><a href="{{ urlPrefix }}/blog.html">Blog</a></li>{% endif %}
                 <li><a href="{{ urlPrefix }}/assessment.html">Assessment</a></li>
               </ul>
               <h3 style="font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:#00e0a3;margin-bottom:14px;margin-top:20px;">{{ "nav.empresa" | t }}</h3>

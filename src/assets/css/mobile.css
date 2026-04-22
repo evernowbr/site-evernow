@@ -109,16 +109,7 @@
         transform: rotate(-45deg);
         transform-origin: 24% 2%;
     }
-    .navbar-collapse{
-        background: var(--light-blue-color);
-        padding:8px 0;
-        min-width: 35% !important;
-        float: right;
-        position: absolute;
-        right: 0;
-        top: 48px;
-        z-index: 2;
-    }
+    /* navbar-collapse mobile redesigned in custom-style.css */
     .banner-right-con img {
         width: 49vw;
         max-width: 49vw;
@@ -529,9 +520,7 @@
 
         text-align: center;
     }
-    .navbar-collapse{
-        min-width: 50% !important;
-    }
+    /* navbar-collapse mobile redesigned in custom-style.css */
     .banner-main-left-con,
     .informationmain-right-con{
         order: 2;
@@ -614,7 +603,7 @@
         padding-top: 25px;
     }
     h5{
-        line-height: 12px;
+        line-height: 1.4;
         margin-bottom: 10px;
     }
     .informationmain-right-heading h5{
@@ -698,7 +687,7 @@
 }
 .service-box-content h6 {
     font-size: 18px;
-    line-height: 12px;
+    line-height: 1.4;
 }
 .service-box-content p {
     line-height: 26px;
@@ -752,10 +741,7 @@
     .Effective-sec-heading h2{
         line-height: 29px;
     }
-    .navbar-collapse {
-        min-width: 100% !important;
-        top: 50px;
-    }
+    /* navbar-collapse mobile redesigned in custom-style.css */
     .Cyber-Security-left-main-con,
     .service-Effective-con-item{
         margin-bottom: 0;

@@ -7,9 +7,9 @@
          <div class="logo-scroller" aria-label="{{ partnersAriaLabel if partnersAriaLabel else 'Partner Logos' }}">
             <div class="logo-track">
                {% for i in range(1, 23) %}
-               <a class="logo-item" href="#" aria-label="Partner {{ i }}">
+               <div class="logo-item" aria-label="Partner {{ i }}">
                   <img src="/assets/image/parceiro-{{ i }}.png" alt="" loading="lazy" decoding="async">
-               </a>
+               </div>
                {% endfor %}
             </div>
          </div>

@@ -139,7 +139,7 @@
               <div class="ev-dropdown__menu">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--1">
-                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/blog.html">Blog</a>
+                    {% if lang != "en" %}<a class="ev-dropdown__item" href="{{ urlPrefix }}/blog.html">Blog</a>{% endif %}
                     <a class="ev-dropdown__item" href="{{ urlPrefix }}/assessment.html">Assessment</a>
                   </div>
                 </div>
