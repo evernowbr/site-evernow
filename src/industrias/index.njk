@@ -1,0 +1,144 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/industries/{% else %}/industrias/{% endif %}"
+pageMeta: industrias-index
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/industrias/" %}
+{% set langEnUrl = "/en/industries/" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Industries" if lang == "en" else "Indústrias") }
+] %}
+
+{# Mapa de ícones e cor por industria #}
+{% set industryMeta = {
+  "financeiro":  { icon: "fas fa-university",   color: "#4B9EFF" },
+  "saude":       { icon: "fas fa-heartbeat",     color: "#FF6B6B" },
+  "varejo":      { icon: "fas fa-shopping-bag",  color: "#FFB347" },
+  "tecnologia":  { icon: "fas fa-microchip",     color: "#00e0a3" },
+  "governo":     { icon: "fas fa-landmark",      color: "#C084FC" }
+} %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-11">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Industries{% else %}Indústrias{% endif %}</p>
+              <h1>{% if lang == "en" %}Cybersecurity that understands your industry{% else %}Cibersegurança que entende o seu setor{% endif %}</h1>
+              <p class="ev-hero__sub">{% if lang == "en" %}Every industry has its own threats, regulations, and context. Evernow adapts its portfolio across {{ industries | length }} sectors with specialists who know your market, not just the technology.{% else %}Cada indústria tem ameaças, regulações e contexto próprios. A Evernow adapta seu portfólio de {{ industries | length }} setores com especialistas que conhecem o seu mercado, não só a tecnologia.{% endif %}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> PCI DSS, LGPD {% if lang == "en" %}and{% else %}e{% endif %} ISO 27001</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# ── Grade de indústrias ── #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Industries served{% else %}Setores atendidos{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Choose your industry{% else %}Escolha o seu setor{% endif %}</h2>
+      <p class="ev-section__desc wow fadeInUp" style="margin-bottom:40px;">{% if lang == "en" %}Context matters. Our approach considers the specific regulations, threats, and maturity of each segment.{% else %}Contexto importa. Nossa abordagem considera as regulações, ameaças e maturidade específicas de cada segmento.{% endif %}</p>
+
+      <div class="ev-industry-index-grid">
+        {%- for ind in industries -%}
+        {%- set meta = industryMeta[ind.slug] -%}
+        {%- set indData = ind.en if lang == "en" and ind.en else ind -%}
+        <a href="{{ urlPrefix }}/{% if lang == 'en' %}industries/{{ enSlugs.industries[ind.slug] or ind.slug }}{% else %}industrias/{{ ind.slug }}{% endif %}/" class="ev-industry-card wow fadeInUp">
+          <div class="ev-industry-card__icon" style="--ind-color: {{ meta.icon if meta else '#00e0a3' }}; background: rgba(0,224,163,.1); border-color: rgba(0,224,163,.25);">
+            <i class="{{ meta.icon if meta else 'fas fa-building' }}" style="color:{{ meta.color if meta else '#00e0a3' }};"></i>
+          </div>
+          <h3 class="ev-industry-card__title">{{ indData.titulo }}</h3>
+          <p class="ev-industry-card__subtitle">{{ indData.heroSubtitle }}</p>
+          <ul class="ev-industry-card__challenges">
+            {%- for desafio in indData.desafios | slice(0, 3) -%}
+            <li>{{ desafio }}</li>
+            {%- endfor -%}
+          </ul>
+          <div class="ev-industry-card__footer">
+            <span class="ev-industry-card__count">{{ ind.solucoes | length }} {% if lang == "en" %}applicable services{% else %}serviços aplicáveis{% endif %}</span>
+            <span class="ev-industry-card__cta">{% if lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# ── Por que especialização importa ── #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6 wow fadeInLeft mb-4 mb-lg-0">
+          <div class="ev-section__tag">{% if lang == "en" %}Why specialization{% else %}Por que especialização{% endif %}</div>
+          <h2 class="ev-section__title">{% if lang == "en" %}Generic security doesn't work for regulated industries{% else %}Segurança genérica não funciona para setores regulados{% endif %}</h2>
+          <p class="ev-section__desc">{% if lang == "en" %}A bank has PCI DSS and Bacen. A hospital has LGPD and patient data. A fintech has open banking and supply chain risk. Each context requires a different approach, tools, and expertise.{% else %}Um banco tem PCI DSS e Bacen. Um hospital tem LGPD e dados de pacientes. Uma fintech tem open banking e supply chain risk. Cada contexto exige abordagem, ferramentas e expertise diferentes.{% endif %}</p>
+          <p class="ev-section__desc mt-3">{% if lang == "en" %}Evernow combines specialists with technical certifications and sector experience to deliver results that make sense in your context, not in any generic company.{% else %}A Evernow combina especialistas com certificações técnicas e experiência setorial, para entregar resultados que fazem sentido no seu contexto, não em qualquer empresa.{% endif %}</p>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="ev-spec-grid">
+            {%- if lang == "en" -%}
+            {%- set specs = [
+              { icon: "fas fa-gavel",       label: "Regulatory compliance",      desc: "PCI DSS, LGPD, Bacen, ISO 27001 and more" },
+              { icon: "fas fa-bullseye",    label: "Industry threats",           desc: "Attack vectors specific to your sector" },
+              { icon: "fas fa-users-cog",   label: "Specialized team",           desc: "Consultants with experience in your market" },
+              { icon: "fas fa-chart-line",  label: "Progressive maturity",       desc: "Realistic roadmap from where you are today" }
+            ] -%}
+            {%- else -%}
+            {%- set specs = [
+              { icon: "fas fa-gavel",       label: "Compliance regulatório",     desc: "PCI DSS, LGPD, Bacen, ISO 27001 e mais" },
+              { icon: "fas fa-bullseye",    label: "Ameaças setoriais",          desc: "Vetores de ataque específicos do seu setor" },
+              { icon: "fas fa-users-cog",   label: "Equipe especializada",       desc: "Consultores com experiência no seu mercado" },
+              { icon: "fas fa-chart-line",  label: "Maturidade progressiva",     desc: "Roadmap realista do ponto onde você está" }
+            ] -%}
+            {%- endif -%}
+            {%- for spec in specs -%}
+            <div class="ev-spec-item">
+              <i class="{{ spec.icon }}"></i>
+              <div>
+                <strong>{{ spec.label }}</strong>
+                <p>{{ spec.desc }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Parceiros ── #}
+  {% set partnersTagKey = ("Clients who trust Evernow" if lang == "en" else "Clientes que confiam na Evernow") %}
+  {% include "components/partners-grid.njk" %}
+
+  {# ── CTA Final ── #}
+  {% set ctaTitle = ("Didn't find your industry?" if lang == "en" else "Não encontrou seu setor?") %}
+  {% set ctaSubtitle = ("Evernow serves companies in all segments. Talk to a specialist and see how we adapt our portfolio to your context." if lang == "en" else "A Evernow atende empresas de todos os segmentos. Fale com um especialista e veja como adaptamos o portfólio ao seu contexto.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the free assessment" if lang == "en" else "Fazer o assessment gratuito") %}
+  {% include "components/cta-final.njk" %}
+
+</main>

@@ -1,0 +1,16 @@
+<svg width="240" height="56" viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rainforest leaf/tree icon -->
+  <g transform="translate(0, 4)">
+    <!-- Tree shape -->
+    <path d="M24 44 L24 30" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bottom layer -->
+    <path d="M12 34 Q24 22 36 34 Z" fill="white" opacity="0.9"/>
+    <!-- Middle layer -->
+    <path d="M15 26 Q24 14 33 26 Z" fill="white"/>
+    <!-- Top layer -->
+    <path d="M18 19 Q24 8 30 19 Z" fill="white" opacity="0.85"/>
+  </g>
+  <!-- Text: rainforest -->
+  <text x="52" y="33" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="white" letter-spacing="-0.5">rainforest</text>
+  <text x="52" y="48" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.6)" letter-spacing="1.5">SECURITY TESTING</text>
+</svg>

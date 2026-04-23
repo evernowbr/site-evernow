@@ -1,0 +1,1022 @@
+[
+  {
+    "slug": "secure-code",
+    "icon": "fas fa-code-branch",
+    "heroImage": "/assets/image/service/hero-secure-code.png",
+    "titulo": "Secure Code",
+    "subtitulo": "Segurança integrada ao pipeline de desenvolvimento, do design à produção.",
+    "tagline": "Seu código chega em produção limpo, ou chega com dívida técnica que vai custar caro.",
+    "descricao": "Times que desenvolvem rápido sem segurança embutida acumulam vulnerabilidades que só aparecem quando o estrago já foi feito. A Evernow estrutura programas de AppSec e DevSecOps que encaixam no seu fluxo real, SAST, DAST, SCA, threat modeling e treinamento, para que segurança seja parte da entrega, não um bloqueio posterior.",
+    "titleTag": "Secure Code | DevSecOps, AppSec e Shift-Left | Evernow",
+    "metaDescription": "Estruture um programa de AppSec com DevSecOps, SAST, DAST, SCA e threat modeling. Evernow integra segurança ao pipeline sem travar entregas.",
+    "dores": [
+      "Vulnerabilidades chegam em produção porque ninguém as encontrou antes, e o custo de correção é 10× maior do que no desenvolvimento",
+      "O time de dev entrega rápido, mas sem processo de segurança definido: cada sprint aumenta a dívida técnica silenciosamente",
+      "Ferramentas de AppSec foram compradas, mas nunca operacionalizadas, painel cheio de alertas, zero SLA de remediação",
+      "Auditoria de ISO 27001, PCI DSS ou LGPD se aproxima e a empresa não tem visibilidade real do estado das aplicações"
+    ],
+    "doreIcons": [
+      "fas fa-bug",
+      "fas fa-shipping-fast",
+      "fas fa-tools",
+      "fas fa-clipboard-list"
+    ],
+    "diferenciais": [
+      {
+        "titulo": "Programa, não ferramenta",
+        "desc": "Implantamos e operamos o ciclo completo: triagem de vulnerabilidades, SLA de remediação, relatório executivo mensal e melhoria contínua. Você não compra licença, você contrata resultado."
+      },
+      {
+        "titulo": "Agnóstico de stack, especialista em contexto",
+        "desc": "Avaliamos e operamos as principais plataformas do mercado. Indicamos a que resolve o problema no seu contexto, sem viés de fabricante, e garantimos que ela gere sinal, não ruído."
+      },
+      {
+        "titulo": "Segurança no PR, não no final do sprint",
+        "desc": "Integração nativa ao CI/CD com pull request gates, bloqueio por severidade e auto-remediation. O desenvolvedor recebe feedback onde já trabalha."
+      },
+      {
+        "titulo": "Time que lê código, não só painel",
+        "desc": "Nossos especialistas têm background em engenharia de software. Identificam falso positivo, priorizam por risco real e ajudam o dev a corrigir, não só relatam."
+      }
+    ],
+    "difIcons": [
+      "fas fa-project-diagram",
+      "fas fa-puzzle-piece",
+      "fas fa-code-branch",
+      "fas fa-glasses"
+    ],
+    "produtos": [
+      {
+        "slug": "devsecops",
+        "titulo": "DevSecOps",
+        "icon": "fas fa-terminal",
+        "tagline": "Segurança que acompanha o sprint, sem travar o time.",
+        "desc": "Estruture um programa completo de AppSec integrado ao seu pipeline real, com métricas e SLA.",
+        "features": [
+          "Gates no CI/CD com bloqueio por severidade",
+          "SLA de remediação e relatório mensal",
+          "Operado por especialistas em engenharia"
+        ]
+      },
+      {
+        "slug": "sast-dast-sca",
+        "titulo": "SAST / DAST / SCA",
+        "icon": "fas fa-microscope",
+        "tagline": "Encontre vulnerabilidades em código, runtime e dependências antes do atacante.",
+        "desc": "Cobertura de análise estática, dinâmica e de composição, escolhemos a ferramenta certa para o seu stack.",
+        "features": [
+          "Suporte às principais plataformas do mercado",
+          "Triagem humana, zero falso positivo ruído",
+          "Integração nativa ao repositório"
+        ]
+      },
+      {
+        "slug": "desenvolvimento-seguro-gerenciado",
+        "titulo": "Dev Seguro Gerenciado",
+        "icon": "fas fa-hard-hat",
+        "tagline": "Alguém operando seu programa de AppSec enquanto você foca em entregar.",
+        "desc": "Operação contínua do programa de segurança em aplicações com SLA documentado e relatório executivo.",
+        "features": [
+          "Gestão de alertas e priorização de risco",
+          "Relatório mensal para o CISO",
+          "Especialistas AppSec dedicados"
+        ]
+      },
+      {
+        "slug": "modelagem-ameacas",
+        "titulo": "Modelagem de Ameaças",
+        "icon": "fas fa-sitemap",
+        "tagline": "Identifique riscos no design, antes de escrever uma linha de código.",
+        "desc": "Workshops estruturados de threat modeling para arquitetos e times de produto identificarem vetores antes do desenvolvimento.",
+        "features": [
+          "Metodologia STRIDE e PASTA",
+          "Integrado ao processo de design",
+          "Entrega de diagrama de ameaças e controles"
+        ]
+      },
+      {
+        "slug": "revisao-codigo",
+        "titulo": "Revisão de Código",
+        "icon": "fas fa-code",
+        "tagline": "Automatização não pega tudo. Especialistas humanos pegam o resto.",
+        "desc": "Análise manual por engenheiros de segurança com foco em lógica de negócio, autenticação e fluxos críticos.",
+        "features": [
+          "Lógica de negócio e controle de acesso",
+          "Encadeamento de vulnerabilidades",
+          "Relatório com evidência e reprodução"
+        ]
+      },
+      {
+        "slug": "treinamento-devsecops",
+        "titulo": "Treinamento DevSecOps",
+        "icon": "fas fa-graduation-cap",
+        "tagline": "Seu time escrevendo código seguro por padrão, não por checklist.",
+        "desc": "Capacitação prática para engenheiros com labs reais, focada nas vulnerabilidades que afetam o stack da empresa.",
+        "features": [
+          "Labs hands-on com código real",
+          "Personalizado para o stack do time",
+          "Trilha de OWASP Top 10 e além"
+        ]
+      },
+      {
+        "slug": "code-protection",
+        "titulo": "Code Protection",
+        "icon": "fas fa-mobile-alt",
+        "tagline": "Engenharia reversa não é questão de se, é de quando. Dificulte ao máximo.",
+        "desc": "Ofuscação e blindagem de apps móveis e desktop contra decompilação, tamper e roubo de propriedade intelectual.",
+        "features": [
+          "Ofuscação e anti-tamper em runtime",
+          "Proteção anti-tamper em runtime",
+          "Cobertura iOS, Android e desktop"
+        ]
+      }
+    ],
+    "vendors": [
+      {
+        "name": "Fortify (OpenText)",
+        "logo": "/assets/image/vendor/fortify.svg"
+      },
+      {
+        "name": "Veracode",
+        "logo": "/assets/image/vendor/veracode.svg"
+      },
+      {
+        "name": "Sonatype",
+        "logo": "/assets/image/vendor/sonatype.svg"
+      },
+      {
+        "name": "Semgrep",
+        "logo": "/assets/image/vendor/semgrep.svg"
+      },
+      {
+        "name": "SonarQube",
+        "logo": "/assets/image/vendor/sonarqube.svg"
+      },
+      {
+        "name": "Security Compass",
+        "logo": "/assets/image/vendor/security-compass.svg"
+      },
+      {
+        "name": "Guardsquare",
+        "logo": "/assets/image/vendor/guardsquare.svg"
+      },
+      {
+        "name": "JScrambler",
+        "logo": "/assets/image/vendor/jscrambler.svg"
+      }
+    ],
+    "industriasAplicaveis": [
+      "tecnologia",
+      "financeiro",
+      "varejo"
+    ],
+    "schema": "Service",
+    "en": {
+      "metaDescription": "Structure an application security program with DevSecOps, SAST, DAST, SCA, and threat modeling. Evernow integrates security into your pipeline without blocking deliveries.",
+      "tagline": "Your code ships to production clean, or it ships with technical debt that will cost you later.",
+      "descricao": "Teams that move fast without built-in security accumulate vulnerabilities that only surface when the damage is done. Evernow structures AppSec and DevSecOps programs that fit your real workflow: SAST, DAST, SCA, threat modeling, and training, so security is part of every delivery, not an afterthought.",
+      "dores": [
+        "Vulnerabilities reach production because no one caught them earlier, and the cost to fix them is 10x higher than during development",
+        "The dev team ships fast, but without a defined security process: each sprint silently adds technical debt",
+        "AppSec tools were purchased but never operationalized: dashboards full of alerts, zero remediation SLA",
+        "An ISO 27001, PCI DSS, or LGPD audit is approaching and the company has no real visibility into the state of its applications"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "A program, not a tool",
+          "desc": "We implement and operate the full cycle: vulnerability triage, remediation SLA, monthly executive report, and continuous improvement. You are not buying a license, you are contracting results."
+        },
+        {
+          "titulo": "Stack-agnostic, context-expert",
+          "desc": "We evaluate and operate the leading platforms on the market. We recommend what solves the problem in your context, without vendor bias, and make sure it generates signal, not noise."
+        },
+        {
+          "titulo": "Security at the PR, not at the end of the sprint",
+          "desc": "Native CI/CD integration with pull request gates, severity-based blocking, and auto-remediation. The developer gets feedback where they already work."
+        },
+        {
+          "titulo": "A team that reads code, not just dashboards",
+          "desc": "Our specialists have a software engineering background. They identify false positives, prioritize by real risk, and help developers fix issues, not just report them."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "devsecops",
+          "titulo": "DevSecOps",
+          "tagline": "Security that keeps up with the sprint, without slowing the team down.",
+          "features": [
+            "CI/CD gates with severity-based blocking",
+            "Remediation SLA and monthly report",
+            "Operated by engineering specialists"
+          ]
+        },
+        {
+          "slug": "sast-dast-sca",
+          "titulo": "SAST / DAST / SCA",
+          "tagline": "Find vulnerabilities in code, runtime, and dependencies before the attacker does.",
+          "features": [
+            "Support for leading platforms on the market",
+            "Human triage, zero false positive noise",
+            "Native repository integration"
+          ]
+        },
+        {
+          "slug": "desenvolvimento-seguro-gerenciado",
+          "titulo": "Managed Secure Dev",
+          "tagline": "Someone operating your AppSec program while you focus on shipping.",
+          "features": [
+            "Alert management and risk prioritization",
+            "Monthly report for the CISO",
+            "Dedicated AppSec specialists"
+          ]
+        },
+        {
+          "slug": "modelagem-ameacas",
+          "titulo": "Threat Modeling",
+          "tagline": "Identify risks at the design stage, before writing a single line of code.",
+          "features": [
+            "STRIDE and PASTA methodology",
+            "Integrated into the design process",
+            "Threat diagram and controls deliverable"
+          ]
+        },
+        {
+          "slug": "revisao-codigo",
+          "titulo": "Code Review",
+          "tagline": "Automation does not catch everything. Human specialists catch the rest.",
+          "features": [
+            "Business logic and access control",
+            "Vulnerability chaining",
+            "Report with evidence and reproduction steps"
+          ]
+        },
+        {
+          "slug": "treinamento-devsecops",
+          "titulo": "DevSecOps Training",
+          "tagline": "Your team writing secure code by default, not by checklist.",
+          "features": [
+            "Hands-on labs with real code",
+            "Customized for the team stack",
+            "OWASP Top 10 track and beyond"
+          ]
+        },
+        {
+          "slug": "code-protection",
+          "titulo": "Code Protection",
+          "tagline": "Reverse engineering is not a matter of if, it is a matter of when. Make it as hard as possible.",
+          "features": [
+            "Obfuscation and anti-tamper at runtime",
+            "Anti-tamper protection at runtime",
+            "iOS, Android, and desktop coverage"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "data-shield",
+    "icon": "fas fa-shield-alt",
+    "heroImage": "/assets/image/service/hero-data-shield.png",
+    "titulo": "Data Shield",
+    "subtitulo": "Proteção e governança de dados sensíveis em ambientes híbridos e multi-cloud.",
+    "tagline": "Você sabe onde estão seus dados sensíveis, ou só vai descobrir quando vazar?",
+    "descricao": "Dados sensíveis espalhados em múltiplos ambientes, sem inventário e sem controle de acesso granular, são o maior vetor de risco silencioso em empresas modernas. O Data Shield da Evernow cobre o ciclo completo: descoberta, classificação, criptografia, tokenização, postura em cloud e automação de privacidade para LGPD, com plataformas líderes e time especializado.",
+    "titleTag": "Data Shield | Proteção de Dados, LGPD e DLP | Evernow",
+    "metaDescription": "Descubra, classifique e proteja dados sensíveis com DSPM, criptografia, DLP, gestão de consentimento LGPD e privacy ops. Evernow especialista em data security.",
+    "dores": [
+      "Dados sensíveis distribuídos em S3, bancos, SaaS e endpoints, sem inventário atualizado nem mapa de exposição real",
+      "LGPD em papel: processos manuais de atendimento a titulares que atrasam, geram risco operacional e expõem a multas da ANPD",
+      "Criptografia pontual e inconsistente, dados protegidos num ambiente, expostos em outro, sem política centralizada",
+      "Cloud com dados críticos sem visibilidade de postura: bucket público, acesso excessivo, configuração errada que ninguém monitora"
+    ],
+    "doreIcons": [
+      "fas fa-database",
+      "fas fa-file-contract",
+      "fas fa-lock-open",
+      "fas fa-cloud"
+    ],
+    "diferenciais": [
+      {
+        "titulo": "Privacy ops do mapeamento ao atendimento",
+        "desc": "DSPM, automação de DSR, consentimento, cookies e privacy ops integrados, do mapeamento de dados ao atendimento de titulares com evidências prontas para o DPO e o jurídico."
+      },
+      {
+        "titulo": "Proteção no dado, não só no perímetro",
+        "desc": "Criptografia e tokenização em uso, em trânsito e em repouso. O dado permanece protegido mesmo fora do perímetro controlado, independente da plataforma de KMS ou HSM adotada."
+      },
+      {
+        "titulo": "Visibilidade de postura em cloud",
+        "desc": "CSPM integrado para detectar misconfigurações em AWS, Azure e GCP antes que virem incidentes, com priorização por risco de negócio, não só severidade técnica."
+      },
+      {
+        "titulo": "LGPD operacional, não declarativa",
+        "desc": "Entregamos conformidade que funciona no dia a dia: DSR automatizado, mapa de dados atualizado, relatório de impacto e evidências para auditorias."
+      }
+    ],
+    "difIcons": [
+      "fas fa-shield-alt",
+      "fas fa-key",
+      "fas fa-eye",
+      "fas fa-balance-scale"
+    ],
+    "produtos": [
+      {
+        "slug": "data-discovery",
+        "titulo": "Data Discovery",
+        "icon": "fas fa-map-marked-alt",
+        "tagline": "Saiba onde estão seus dados antes que alguém os encontre antes de você.",
+        "desc": "Mapeamento, classificação e inventário contínuo de dados sensíveis em cloud, SaaS, bancos e endpoints.",
+        "features": [
+          "Varredura automatizada multi-ambiente",
+          "Classificação por sensibilidade e risco",
+          "Inventário atualizado em tempo real"
+        ]
+      },
+      {
+        "slug": "dspm",
+        "titulo": "DSPM",
+        "icon": "fas fa-tachometer-alt",
+        "tagline": "Score de risco de dados em tempo real, não um relatório anual.",
+        "desc": "Gestão contínua de postura de segurança de dados, detectando exposição e acesso excessivo antes que virem incidentes.",
+        "features": [
+          "Postura contínua com detecção em tempo real",
+          "Detecção de exposição e shadow data",
+          "Priorização por impacto de negócio"
+        ]
+      },
+      {
+        "slug": "criptografia-kms-hsm",
+        "titulo": "Criptografia / KMS / HSM",
+        "icon": "fas fa-lock",
+        "tagline": "Dado protegido em repouso, em trânsito e em uso, mesmo fora do seu perímetro.",
+        "desc": "Criptografia e tokenização format-preserving, gestão centralizada de chaves e hardware security modules, adequados ao seu ambiente e requisitos de compliance.",
+        "features": [
+          "Tokenização e criptografia persistente",
+          "KMS e HSM gerenciados",
+          "Proteção persistente fora do perímetro"
+        ]
+      },
+      {
+        "slug": "dlp",
+        "titulo": "DLP",
+        "icon": "fas fa-filter",
+        "tagline": "Impeça que dados sensíveis saiam pelo canal errado, sem travar a operação.",
+        "desc": "Prevenção de exfiltração de dados por endpoint, email, web e cloud com políticas baseadas em classificação.",
+        "features": [
+          "Cobertura de endpoint, email e web",
+          "Políticas por tipo e sensibilidade",
+          "Alertas com contexto e evidência"
+        ]
+      },
+      {
+        "slug": "consentimento-lgpd",
+        "titulo": "Consentimento & LGPD",
+        "icon": "fas fa-file-signature",
+        "tagline": "LGPD que funciona no dia a dia, não só no papel para a ANPD.",
+        "desc": "Privacy ops completo: DSR automatizado, gestão de cookies, consentimento e relatório de impacto prontos para auditoria.",
+        "features": [
+          "DSR automatizado com SLA definido",
+          "Gestão de consentimento e cookies",
+          "Evidências prontas para fiscalização ANPD"
+        ]
+      },
+      {
+        "slug": "cspm",
+        "titulo": "CSPM",
+        "icon": "fas fa-cloud-upload-alt",
+        "tagline": "Encontre a misconfiguration na cloud antes que vire manchete.",
+        "desc": "Monitoramento e remediação de postura em AWS, Azure e GCP com priorização por risco de negócio.",
+        "features": [
+          "Cobertura AWS, Azure e GCP",
+          "Playbooks de remediação guiada",
+          "Alertas priorizados por impacto real"
+        ]
+      }
+    ],
+    "vendors": [
+      {
+        "name": "Securiti.ai",
+        "logo": "/assets/image/vendor/securiti.svg"
+      },
+      {
+        "name": "OpenText Voltage",
+        "logo": "/assets/image/vendor/voltage.svg"
+      },
+      {
+        "name": "Microsoft Purview",
+        "logo": "/assets/image/vendor/purview.svg"
+      },
+      {
+        "name": "AWS KMS",
+        "logo": "/assets/image/vendor/aws-kms.svg"
+      },
+      {
+        "name": "Azure Key Vault",
+        "logo": "/assets/image/vendor/azure-kv.svg"
+      },
+      {
+        "name": "Orca Security",
+        "logo": "/assets/image/vendor/orca.svg"
+      }
+    ],
+    "industriasAplicaveis": [
+      "financeiro",
+      "saude",
+      "varejo"
+    ],
+    "schema": "Service",
+    "en": {
+      "metaDescription": "Discover, classify, and protect sensitive data with DSPM, encryption, DLP, LGPD consent management, and privacy ops. Evernow specializes in data security.",
+      "tagline": "Do you know where your sensitive data is, or will you only find out when it leaks?",
+      "descricao": "Sensitive data scattered across multiple environments, without inventory and without granular access control, is the greatest silent risk vector in modern companies. Evernow Data Shield covers the full cycle: discovery, classification, encryption, tokenization, cloud posture, and privacy automation, with leading platforms and a specialized team.",
+      "dores": [
+        "Sensitive data spread across S3, databases, SaaS, and endpoints, with no updated inventory or real exposure map",
+        "LGPD on paper: manual data subject processes that delay, create operational risk, and expose the company to regulatory fines",
+        "Inconsistent encryption: data protected in one environment, exposed in another, with no centralized policy",
+        "Cloud with critical data and no posture visibility: public buckets, excessive access, and misconfigurations nobody monitors"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "Privacy ops from mapping to fulfillment",
+          "desc": "DSPM, DSR automation, consent, cookies, and privacy ops integrated from data mapping to data subject fulfillment, with evidence ready for the DPO and legal team."
+        },
+        {
+          "titulo": "Protection in the data, not just the perimeter",
+          "desc": "Encryption and tokenization in use, in transit, and at rest. The data stays protected even outside the controlled perimeter, regardless of the KMS or HSM platform adopted."
+        },
+        {
+          "titulo": "Cloud posture visibility",
+          "desc": "Integrated CSPM to detect misconfigurations in AWS, Azure, and GCP before they become incidents, with prioritization by business risk, not just technical severity."
+        },
+        {
+          "titulo": "Operational compliance, not declarative",
+          "desc": "We deliver compliance that works day to day: automated DSR, updated data map, impact report, and evidence for audits."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "data-discovery",
+          "titulo": "Data Discovery",
+          "tagline": "Know where your data is before someone else finds it first.",
+          "features": [
+            "Automated multi-environment scanning",
+            "Classification by sensitivity and risk",
+            "Real-time updated inventory"
+          ]
+        },
+        {
+          "slug": "dspm",
+          "titulo": "DSPM",
+          "tagline": "Real-time data risk score, not an annual report.",
+          "features": [
+            "Continuous posture with real-time detection",
+            "Exposure and shadow data detection",
+            "Prioritization by business impact"
+          ]
+        },
+        {
+          "slug": "criptografia-kms-hsm",
+          "titulo": "Encryption / KMS / HSM",
+          "tagline": "Data protected at rest, in transit, and in use, even outside your perimeter.",
+          "features": [
+            "Tokenization and persistent encryption",
+            "Managed KMS and HSM",
+            "Persistent protection beyond the perimeter"
+          ]
+        },
+        {
+          "slug": "dlp",
+          "titulo": "DLP",
+          "tagline": "Prevent sensitive data from leaving through the wrong channel, without disrupting operations.",
+          "features": [
+            "Endpoint, email, and web coverage",
+            "Policies by type and sensitivity",
+            "Alerts with context and evidence"
+          ]
+        },
+        {
+          "slug": "consentimento-lgpd",
+          "titulo": "Consent & Privacy",
+          "tagline": "Privacy compliance that works day to day, not just on paper.",
+          "features": [
+            "Automated DSR with defined SLA",
+            "Consent and cookie management",
+            "Evidence ready for regulatory audits"
+          ]
+        },
+        {
+          "slug": "cspm",
+          "titulo": "CSPM",
+          "tagline": "Find the cloud misconfiguration before it becomes a headline.",
+          "features": [
+            "AWS, Azure, and GCP coverage",
+            "Guided remediation playbooks",
+            "Alerts prioritized by real impact"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "assurance",
+    "icon": "fas fa-award",
+    "heroImage": "/assets/image/service/hero-assurance.png",
+    "titulo": "Assurance",
+    "subtitulo": "Validação independente de segurança, compliance e maturidade.",
+    "tagline": "Seus controles de segurança funcionam de verdade, ou você só vai descobrir quando o atacante testar?",
+    "descricao": "Empresas investem em segurança mas raramente validam se ela funciona. A prática de Assurance da Evernow faz essa validação de forma independente: pentest técnico e humanizado, simulação de adversário real com red team, assessment de maturidade com roadmap priorizado e conformidade regulatória para ISO 27001, LGPD e PCI DSS. Relatório que serve para o CISO decidir e para o time executar.",
+    "titleTag": "Assurance | Pentest, Red Team e Compliance | Evernow",
+    "metaDescription": "Pentest humanizado, red team, assessment de maturidade, ISO 27001, LGPD e PCI DSS. A Evernow valida sua segurança com rigor técnico e clareza executiva.",
+    "dores": [
+      "Você tem controles de segurança implantados, mas nunca testou se eles resistem a um atacante real, a última auditoria foi há mais de um ano",
+      "O pentest anual gerou um relatório técnico de 80 páginas que o CISO não consegue usar para priorizar orçamento nem convencer o board",
+      "Certificação ISO 27001 ou PCI DSS se aproxima, a empresa não tem roadmap claro e o prazo está comprimido",
+      "Incidentes acontecem, mas a causa raiz nunca é endereçada de forma estruturada, o mesmo vetor de ataque reaparece ciclos depois"
+    ],
+    "doreIcons": [
+      "fas fa-user-secret",
+      "fas fa-file-alt",
+      "fas fa-certificate",
+      "fas fa-redo-alt"
+    ],
+    "diferenciais": [
+      {
+        "titulo": "Pentest humanizado com reteste incluído",
+        "desc": "Nosso pentest vai além de scanner automatizado: especialistas que exploram lógica de negócio, fluxos de autenticação e encadeamentos de vulnerabilidade. Reteste incluso para validar que o que foi corrigido realmente foi."
+      },
+      {
+        "titulo": "Dois relatórios para dois públicos",
+        "desc": "Executivo para o CISO apresentar ao board com risco em linguagem de negócio. Técnico para o time com PoC, reprodução e recomendação de correção. Nenhum detalhe perdido em nenhum dos dois."
+      },
+      {
+        "titulo": "Assessment que vira plano de ação",
+        "desc": "Diagnóstico de maturidade não é entregue solto. Vem com roadmap priorizado por risco e viabilidade, benchmarks do setor e estimativas de esforço para cada iniciativa."
+      },
+      {
+        "titulo": "Compliance como problema de negócio",
+        "desc": "ISO 27001, LGPD e PCI DSS tratados com foco no que importa para a empresa, não em checklist burocrático. Gap analysis honesto, roadmap realista e suporte durante toda a jornada de certificação."
+      }
+    ],
+    "difIcons": [
+      "fas fa-user-secret",
+      "fas fa-users",
+      "fas fa-route",
+      "fas fa-handshake"
+    ],
+    "produtos": [
+      {
+        "slug": "pentest",
+        "titulo": "Pentest",
+        "icon": "fas fa-crosshairs",
+        "tagline": "Teste real, realizado por especialistas, não por scanner automatizado.",
+        "desc": "Pentest humanizado em aplicações, APIs, mobile e infraestrutura com reteste incluso e dois relatórios.",
+        "features": [
+          "Cobertura de apps, APIs, mobile e infra",
+          "Relatório executivo + técnico com PoC",
+          "Reteste gratuito após remediação"
+        ]
+      },
+      {
+        "slug": "red-team",
+        "titulo": "Red Team",
+        "icon": "fas fa-chess-knight",
+        "tagline": "Simule um adversário real, antes que um adversário real simule em você.",
+        "desc": "Exercício de ataque coordenado para validar controles de detecção, resposta e resiliência operacional.",
+        "features": [
+          "Cenários baseados em TTPs reais (MITRE)",
+          "Teste de detecção e resposta do SOC",
+          "Relatório de gaps com prioridade"
+        ]
+      },
+      {
+        "slug": "assessment-maturidade",
+        "titulo": "Assessment de Maturidade",
+        "icon": "fas fa-chart-bar",
+        "tagline": "Saiba onde sua segurança está, e o próximo passo para onde precisa ir.",
+        "desc": "Diagnóstico de maturidade com roadmap priorizado por risco, benchmarks do setor e estimativas de esforço.",
+        "features": [
+          "Baseado em NIST CSF e ISO 27001",
+          "Benchmarks setoriais incluídos",
+          "Roadmap com quick wins e longo prazo"
+        ]
+      },
+      {
+        "slug": "grc",
+        "titulo": "GRC",
+        "icon": "fas fa-landmark",
+        "tagline": "Governança, risco e compliance que funcionam, não só existem no papel.",
+        "desc": "Estruturação de processos sustentáveis de GRC integrados à operação da empresa, com métricas e evidências.",
+        "features": [
+          "Política, normas e procedimentos",
+          "Gestão de riscos operacional",
+          "Indicadores e relatório de conformidade"
+        ]
+      },
+      {
+        "slug": "iso-27001",
+        "titulo": "ISO 27001",
+        "icon": "fas fa-award",
+        "tagline": "Certificação ISO 27001 sem surpresa no meio do caminho.",
+        "desc": "Gap analysis honesto, implementação do SGSI e suporte durante toda a jornada até a certificação.",
+        "features": [
+          "Gap analysis com plano de ação real",
+          "Implementação do SGSI completo",
+          "Suporte até a auditoria de certificação"
+        ]
+      },
+      {
+        "slug": "lgpd",
+        "titulo": "LGPD",
+        "icon": "fas fa-gavel",
+        "tagline": "Adequação real à LGPD, operacional e sustentável, não só declarativa.",
+        "desc": "Adequação operacional e sustentação de conformidade com a ANPD, com evidências prontas para fiscalização.",
+        "features": [
+          "Mapeamento de dados e base legal",
+          "Processos de DSR e notificação",
+          "Sustentação contínua de conformidade"
+        ]
+      },
+      {
+        "slug": "pci-dss",
+        "titulo": "PCI DSS",
+        "icon": "fas fa-credit-card",
+        "tagline": "Conformidade PCI DSS estruturada, sem surpresa no SAQ nem na QSA.",
+        "desc": "Conformidade estruturada para ambientes que processam, armazenam ou transmitem dados de cartão.",
+        "features": [
+          "Scoping e gap analysis PCI v4.0",
+          "Remediação assistida por especialistas",
+          "Suporte ao processo com QSA"
+        ]
+      }
+    ],
+    "vendors": [
+      {
+        "name": "Plataforma própria Evernow",
+        "logo": "/assets/image/vendor/fortify.svg"
+      },
+      {
+        "name": "Ridge Security",
+        "logo": "/assets/image/vendor/ridge.svg"
+      },
+      {
+        "name": "Tenable",
+        "logo": "/assets/image/vendor/tenable.svg"
+      },
+      {
+        "name": "Qualys",
+        "logo": "/assets/image/vendor/qualys.svg"
+      },
+      {
+        "name": "Rainforest",
+        "logo": "/assets/image/vendor/rainforest.svg"
+      }
+    ],
+    "industriasAplicaveis": [
+      "financeiro",
+      "varejo",
+      "saude"
+    ],
+    "schema": "Service",
+    "en": {
+      "metaDescription": "Humanized pentest, red team, maturity assessment, ISO 27001, LGPD, and PCI DSS. Evernow validates your security with technical rigor and executive clarity.",
+      "tagline": "Are your security controls actually working, or will you only find out when an attacker tests them?",
+      "descricao": "Companies invest in security but rarely validate whether it works. Evernow Assurance performs this validation independently: technical and humanized pentest, real adversary simulation with red team, maturity assessment with a prioritized roadmap, and regulatory compliance for ISO 27001, LGPD, and PCI DSS. A report the CISO can use to decide and the team can use to act.",
+      "dores": [
+        "You have security controls in place, but you have never tested whether they hold up against a real attacker, and the last audit was over a year ago",
+        "The annual pentest produced an 80-page technical report that the CISO cannot use to prioritize budget or convince the board",
+        "ISO 27001 or PCI DSS certification is approaching, there is no clear roadmap, and the deadline is tight",
+        "Incidents happen, but the root cause is never addressed in a structured way, and the same attack vector resurfaces cycles later"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "Humanized pentest with retest included",
+          "desc": "Our pentest goes beyond automated scanning: specialists who explore business logic, authentication flows, and vulnerability chains. Retest included to confirm that what was fixed is actually fixed."
+        },
+        {
+          "titulo": "Two reports for two audiences",
+          "desc": "Executive report for the CISO to present to the board, with risk in business language. Technical report for the team, with proof of concept, reproduction steps, and remediation guidance. No detail lost in either."
+        },
+        {
+          "titulo": "Assessment that becomes an action plan",
+          "desc": "A maturity diagnosis is not delivered in isolation. It comes with a roadmap prioritized by risk and feasibility, sector benchmarks, and effort estimates for each initiative."
+        },
+        {
+          "titulo": "Compliance as a business problem",
+          "desc": "ISO 27001, LGPD, and PCI DSS handled with focus on what matters to the business, not a bureaucratic checklist. Honest gap analysis, realistic roadmap, and full support throughout the certification journey."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "pentest",
+          "titulo": "Pentest",
+          "tagline": "A real test conducted by specialists, not by an automated scanner.",
+          "features": [
+            "Coverage of apps, APIs, mobile, and infrastructure",
+            "Executive and technical report with proof of concept",
+            "Free retest after remediation"
+          ]
+        },
+        {
+          "slug": "red-team",
+          "titulo": "Red Team",
+          "tagline": "Simulate a real adversary before a real adversary simulates you.",
+          "features": [
+            "Scenarios based on real TTPs (MITRE)",
+            "SOC detection and response testing",
+            "Gap report with priority"
+          ]
+        },
+        {
+          "slug": "assessment-maturidade",
+          "titulo": "Maturity Assessment",
+          "tagline": "Know where your security stands today and what the next step is.",
+          "features": [
+            "Based on NIST CSF and ISO 27001",
+            "Sector benchmarks included",
+            "Roadmap with quick wins and long-term goals"
+          ]
+        },
+        {
+          "slug": "grc",
+          "titulo": "GRC",
+          "tagline": "Governance, risk, and compliance that actually work, not just exist on paper.",
+          "features": [
+            "Policies, standards, and procedures",
+            "Operational risk management",
+            "Compliance indicators and reporting"
+          ]
+        },
+        {
+          "slug": "iso-27001",
+          "titulo": "ISO 27001",
+          "tagline": "ISO 27001 certification without surprises along the way.",
+          "features": [
+            "Gap analysis with a real action plan",
+            "Full ISMS implementation",
+            "Support through the certification audit"
+          ]
+        },
+        {
+          "slug": "lgpd",
+          "titulo": "LGPD",
+          "tagline": "Real LGPD compliance: operational and sustainable, not just declarative.",
+          "features": [
+            "Data mapping and legal basis",
+            "DSR and notification processes",
+            "Continuous compliance sustainment"
+          ]
+        },
+        {
+          "slug": "pci-dss",
+          "titulo": "PCI DSS",
+          "tagline": "Structured PCI DSS compliance with no surprises in the SAQ or with the QSA.",
+          "features": [
+            "PCI v4.0 scoping and gap analysis",
+            "Remediation assisted by specialists",
+            "Support through the QSA process"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "managed-ops",
+    "icon": "fas fa-cogs",
+    "heroImage": "/assets/image/service/hero-managed-ops.png",
+    "titulo": "Managed Ops",
+    "subtitulo": "Segurança contínua com especialistas dedicados e SLAs definidos.",
+    "tagline": "Segurança não para no go-live. Quem opera a ferramenta depois que o projeto termina?",
+    "descricao": "A maior lacuna em programas de segurança não é a tecnologia, é a operação contínua. A Evernow preenche esse gap com serviços gerenciados que mantêm seu programa rodando: SOC, monitoramento, resposta a incidentes, gestão de vulnerabilidades e sustentação de ferramentas, com SLA documentado, relatório mensal e especialistas que conhecem seu ambiente.",
+    "titleTag": "Managed Ops | SOC 24x7, SIEM e MSSP | Evernow",
+    "metaDescription": "SOC 24x7, resposta a incidentes e gestão de vulnerabilidades com SLA documentado. Operação especializada de cibersegurança — relatório executivo mensal.",
+    "dores": [
+      "A ferramenta foi implantada, o projeto acabou, mas ninguém opera os alertas, ninguém tem SLA de remediação e a vulnerabilidade continua lá",
+      "O time interno é pequeno para cobrir todas as frentes: cada nova ameaça ou auditoria sobrecarrega as mesmas pessoas e abre brechas",
+      "Incidentes são tratados de forma reativa, sem playbook: contenção improvisada, sem análise de causa raiz, sem aprendizado acumulado",
+      "Contratos de suporte técnico que só passam chamado ao fabricante, sem contexto do seu ambiente, sem proatividade, sem evolução"
+    ],
+    "doreIcons": [
+      "fas fa-power-off",
+      "fas fa-user-times",
+      "fas fa-fire-alt",
+      "fas fa-headset"
+    ],
+    "diferenciais": [
+      {
+        "titulo": "Especialistas, não service desk genérico",
+        "desc": "Cada perfil alocado tem expertise específica: AppSec, CloudSec, GRC, resposta a incidentes. Você não paga por analista júnior que escala tudo, você acessa o especialista certo para cada situação."
+      },
+      {
+        "titulo": "SLA medido e reportado",
+        "desc": "Cada serviço gerenciado tem SLA documentado, monitorado automaticamente e reportado todo mês com evidências. Não acreditamos em contrato de suporte sem métrica."
+      },
+      {
+        "titulo": "8×5 ou 24×7, do jeito que você precisa agora",
+        "desc": "Modelo flexível que se adapta ao momento do negócio: squad fixo, alocação por horas ou cobertura integral. Sem contrato longo e sem rigidez quando a demanda muda."
+      },
+      {
+        "titulo": "Operamos o que você já tem",
+        "desc": "Não exigimos substituição de stack. Assumimos a operação das ferramentas que você já implantou, e entregamos resultado sobre elas enquanto você decide sobre futuras mudanças."
+      }
+    ],
+    "difIcons": [
+      "fas fa-user-tie",
+      "fas fa-chart-line",
+      "fas fa-clock",
+      "fas fa-cogs"
+    ],
+    "produtos": [
+      {
+        "slug": "servicos-gerenciados",
+        "titulo": "Serviços Gerenciados",
+        "icon": "fas fa-server",
+        "tagline": "Seu programa de segurança operando, mesmo quando sua equipe está focada em outras frentes.",
+        "desc": "MSS completo com especialistas dedicados, SLA documentado e relatório mensal para o CISO.",
+        "features": [
+          "Especialistas AppSec, CloudSec e GRC",
+          "SLA monitorado e evidenciado",
+          "Relatório executivo mensal"
+        ]
+      },
+      {
+        "slug": "soc-monitoramento",
+        "titulo": "SOC / Monitoramento",
+        "icon": "fas fa-desktop",
+        "tagline": "Alguém olhando para os seus alertas, de verdade, com contexto e SLA.",
+        "desc": "Monitoramento contínuo, triagem de alertas e correlação de eventos com cobertura 8×5 ou 24×7.",
+        "features": [
+          "Triagem e correlação de eventos",
+          "Escalação estruturada e documentada",
+          "Cobertura 8×5 ou 24×7 sob demanda"
+        ]
+      },
+      {
+        "slug": "resposta-incidentes",
+        "titulo": "Resposta a Incidentes",
+        "icon": "fas fa-ambulance",
+        "tagline": "Quando o incidente acontecer, você vai querer ter um playbook, e quem o execute.",
+        "desc": "Contenção estruturada, análise de causa raiz e lições aprendidas documentadas para evitar reincidência.",
+        "features": [
+          "Contenção e erradicação estruturada",
+          "Análise forense e causa raiz",
+          "Playbook e lições aprendidas"
+        ]
+      },
+      {
+        "slug": "gestao-vulnerabilidades",
+        "titulo": "Gestão de Vulnerabilidades",
+        "icon": "fas fa-tasks",
+        "tagline": "Vulnerabilidade sem SLA de remediação é só uma notificação ignorada.",
+        "desc": "Ciclo completo de identificação, priorização por risco real e acompanhamento de remediação até o fechamento.",
+        "features": [
+          "Priorização por CVSS e risco contextual",
+          "Acompanhamento até remediação confirmada",
+          "Dashboard e SLA por criticidade"
+        ]
+      },
+      {
+        "slug": "selecao-ferramentas",
+        "titulo": "Seleção de Ferramentas",
+        "icon": "fas fa-wrench",
+        "tagline": "Pare de comprar ferramenta por buzz. Compre a que resolve o seu problema.",
+        "desc": "Avaliação independente, POC estruturado e negociação da solução certa para o contexto e maturidade da empresa.",
+        "features": [
+          "RFP e avaliação técnica imparcial",
+          "POC hands-on com critérios claros",
+          "Suporte na negociação e implantação"
+        ]
+      },
+      {
+        "slug": "pam",
+        "titulo": "PAM",
+        "icon": "fas fa-user-lock",
+        "tagline": "Acesso privilegiado sem controle é a brecha favorita do atacante.",
+        "desc": "Controle, auditoria e monitoramento de acessos privilegiados com a plataforma adequada ao seu ambiente, operado pela Evernow com SLA e relatório mensal.",
+        "features": [
+          "Cofre de credenciais privilegiadas",
+          "Gravação e auditoria de sessões",
+          "Operado com SLA e relatório mensal"
+        ]
+      }
+    ],
+    "vendors": [
+      {
+        "name": "senhasegura",
+        "logo": "/assets/image/vendor/senhasegura.svg"
+      },
+      {
+        "name": "SentinelOne",
+        "logo": "/assets/image/vendor/sentinelone.svg"
+      },
+      {
+        "name": "Darktrace",
+        "logo": "/assets/image/vendor/darktrace.svg"
+      },
+      {
+        "name": "Security Scorecard",
+        "logo": "/assets/image/vendor/security-scorecard.svg"
+      },
+      {
+        "name": "Microsoft Sentinel",
+        "logo": "/assets/image/vendor/ms-sentinel.svg"
+      }
+    ],
+    "industriasAplicaveis": [
+      "financeiro",
+      "saude",
+      "governo"
+    ],
+    "schema": "Service",
+    "en": {
+      "metaDescription": "SOC, monitoring, incident response, vulnerability management, and tool sustainment with SLA and executive reporting. Evernow managed cybersecurity services.",
+      "tagline": "Security does not stop at go-live. Who operates the tool after the project ends?",
+      "descricao": "The biggest gap in security programs is not the technology. It is continuous operation. Evernow fills this gap with managed services that keep your program running: SOC, monitoring, incident response, vulnerability management, and tool sustainment, with documented SLA, monthly reporting, and specialists who know your environment.",
+      "dores": [
+        "The tool was implemented and the project ended, but no one operates the alerts, there is no remediation SLA, and the vulnerability is still there",
+        "The internal team is too small to cover every front: every new threat or audit overloads the same people and opens gaps",
+        "Incidents are handled reactively with no playbook: improvised containment, no root cause analysis, no accumulated learning",
+        "Support contracts that just open tickets with the manufacturer, with no context about your environment, no proactivity, and no improvement"
+      ],
+      "diferenciais": [
+        {
+          "titulo": "Specialists, not a generic service desk",
+          "desc": "Each profile allocated has specific expertise: AppSec, CloudSec, GRC, incident response. You get the right specialist for each situation, not a junior analyst who escalates everything."
+        },
+        {
+          "titulo": "SLA measured and reported",
+          "desc": "Every managed service has a documented SLA, monitored automatically and reported every month with evidence. We do not believe in support contracts without metrics."
+        },
+        {
+          "titulo": "8x5 or 24x7, however you need it right now",
+          "desc": "A flexible model that adapts to your business: fixed squad, hourly allocation, or full coverage. No long contract and no rigidity when demand changes."
+        },
+        {
+          "titulo": "We operate what you already have",
+          "desc": "We do not require a stack replacement. We take over the operation of the tools you have already implemented and deliver results on top of them while you decide on future changes."
+        }
+      ],
+      "produtos": [
+        {
+          "slug": "servicos-gerenciados",
+          "titulo": "Managed Services",
+          "tagline": "Your security program running, even when your team is focused on other priorities.",
+          "features": [
+            "AppSec, CloudSec, and GRC specialists",
+            "Monitored and evidenced SLA",
+            "Monthly executive report"
+          ]
+        },
+        {
+          "slug": "soc-monitoramento",
+          "titulo": "SOC / Monitoring",
+          "tagline": "Someone actually watching your alerts, with context and an SLA.",
+          "features": [
+            "Event triage and correlation",
+            "Structured and documented escalation",
+            "8x5 or 24x7 coverage on demand"
+          ]
+        },
+        {
+          "slug": "resposta-incidentes",
+          "titulo": "Incident Response",
+          "tagline": "When an incident happens, you will want a playbook and someone to execute it.",
+          "features": [
+            "Structured containment and eradication",
+            "Forensic analysis and root cause",
+            "Playbook and lessons learned"
+          ]
+        },
+        {
+          "slug": "gestao-vulnerabilidades",
+          "titulo": "Vulnerability Management",
+          "tagline": "A vulnerability with no remediation SLA is just an ignored notification.",
+          "features": [
+            "Prioritization by CVSS and contextual risk",
+            "Tracked through to confirmed remediation",
+            "Dashboard and SLA by severity"
+          ]
+        },
+        {
+          "slug": "selecao-ferramentas",
+          "titulo": "Tool Selection",
+          "tagline": "Stop buying tools based on hype. Buy the one that solves your problem.",
+          "features": [
+            "Impartial RFP and technical evaluation",
+            "Hands-on POC with clear criteria",
+            "Support through negotiation and implementation"
+          ]
+        },
+        {
+          "slug": "pam",
+          "titulo": "PAM",
+          "tagline": "Uncontrolled privileged access is an attacker favorite entry point.",
+          "features": [
+            "Privileged credential vault",
+            "Session recording and auditing",
+            "Operated with SLA and monthly reporting"
+          ]
+        }
+      ]
+    }
+  }
+]

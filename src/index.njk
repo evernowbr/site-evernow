@@ -7,6 +7,7 @@ pagination:
 permalink: "{% if lang == 'en' %}/en/{% endif %}index.html"
 pageMeta: home
 ---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 <div class="header-and-banner-con w-100">
    <div class="header-and-banner-inner-con overlay-content">
       {% include "components/header.njk" %}
@@ -93,7 +94,7 @@ pageMeta: home
             <div class="row wow fadeInUp">
                <div class="col-lg-3 col-md-6 col-12">
                   <div class="Effective-sec-item mb-lg-0 mb-4">
-                     <figure><img src="/assets/image/service/home-secure-development.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="ev-effective-icon"><i class="fas fa-code-branch"></i></div>
                      <div class="Effective-sec-item-title">
                         <h4 class="mb-0">{{ "home.effective.item1.title" | t }}</h4>
                         <p>{{ "home.effective.item1.desc" | t }}</p>
@@ -105,13 +106,13 @@ pageMeta: home
                         </ul>
                      </div>
                      <div class="ml-auto mr-auto">
-                        <a href="{{ urlPrefix }}/about.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item1.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ urlPrefix }}/solucoes/secure-code/" class="blog-post-item-title-link service-box-link">{{ "home.effective.item1.btn" | t }} <i class="fas fa-chevron-right"></i></a>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-12">
                   <div class="Effective-sec-item mb-lg-0 mb-4">
-                     <figure><img src="/assets/image/service/home-managed-services.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="ev-effective-icon"><i class="fas fa-shield-alt"></i></div>
                      <div class="Effective-sec-item-title">
                         <h4 class="mb-0">{{ "home.effective.item2.title" | t }}</h4>
                         <p>{{ "home.effective.item2.desc" | t }}</p>
@@ -123,13 +124,13 @@ pageMeta: home
                         </ul>
                      </div>
                      <div class="ml-auto mr-auto">
-                        <a href="{{ urlPrefix }}/services.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item2.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ urlPrefix }}/solucoes/data-shield/" class="blog-post-item-title-link service-box-link">{{ "home.effective.item2.btn" | t }} <i class="fas fa-chevron-right"></i></a>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-12">
                   <div class="Effective-sec-item Effective-sec-item3">
-                     <figure><img src="/assets/image/service/home-tool-management.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="ev-effective-icon"><i class="fas fa-award"></i></div>
                      <div class="Effective-sec-item-title">
                         <h4 class="mb-0">{{ "home.effective.item3.title" | t }}</h4>
                         <p>{{ "home.effective.item3.desc" | t }}</p>
@@ -141,13 +142,13 @@ pageMeta: home
                         </ul>
                      </div>
                      <div class="ml-auto mr-auto">
-                        <a href="{{ urlPrefix }}/solutions.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item3.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ urlPrefix }}/solucoes/assurance/" class="blog-post-item-title-link service-box-link">{{ "home.effective.item3.btn" | t }} <i class="fas fa-chevron-right"></i></a>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-12">
                   <div class="Effective-sec-item">
-                     <figure><img src="/assets/image/service/home-security-testing.png" alt="" class="img-fluid" loading="lazy"></figure>
+                     <div class="ev-effective-icon"><i class="fas fa-cogs"></i></div>
                      <div class="Effective-sec-item-title">
                         <h4 class="mb-0">{{ "home.effective.item4.title" | t }}</h4>
                         <p>{{ "home.effective.item4.desc" | t }}</p>
@@ -159,7 +160,7 @@ pageMeta: home
                         </ul>
                      </div>
                      <div class="ml-auto mr-auto">
-                        <a href="{{ urlPrefix }}/services.html" class="blog-post-item-title-link service-box-link">{{ "home.effective.item4.btn" | t }} <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ urlPrefix }}/solucoes/managed-ops/" class="blog-post-item-title-link service-box-link">{{ "home.effective.item4.btn" | t }} <i class="fas fa-chevron-right"></i></a>
                      </div>
                   </div>
                </div>
@@ -178,7 +179,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-intrusion-attempts.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/stats-intrusion-attempts.png" alt="Estatística de tentativas de invasão" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title">
                               <h3>{{ "home.stats.value1" | t }}</h3>
@@ -189,7 +190,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-lgpd-fines.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/stats-lgpd-fines.png" alt="Estatística de multas LGPD" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title">
                               <h3>{{ "home.stats.value2" | t }}</h3>
@@ -202,7 +203,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con mb-0">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-security-roi.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/stats-security-roi.png" alt="Estatística de ROI em segurança" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title position-relative d-inline-block">
                               <h3>{{ "home.stats.value3" | t }}</h3>
@@ -213,7 +214,7 @@ pageMeta: home
                      <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                         <div class="Cyber-Security-left-card-con">
                            <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/security-card-1.png" alt="" class="img-fluid" loading="lazy"></figure>
+                              <figure><img src="/assets/image/service/security-card-1.png" alt="Estatística de ROI médio em segurança" class="img-fluid" loading="lazy"></figure>
                            </div>
                            <div class="Cyber-Security-left-card-title">
                               <h3 class="count d-inline-block">{{ "home.stats.value4" | t }}</h3>

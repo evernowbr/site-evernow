@@ -1,0 +1,195 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: vendorPages
+  size: 1
+  alias: vendor
+permalink: "{% if vendor.lang == 'en' %}/en/partners/{{ vendor.slug }}/{% else %}/parceiros/{{ vendor.slug }}/{% endif %}"
+---
+{% set vend_lang = vendor.lang %}
+{% set lang = vend_lang %}
+{% set urlPrefix = "" if vend_lang == "pt" else "/en" %}
+{% set langPtUrl = "/parceiros/" + vendor.slug + "/" %}
+{% set langEnUrl = "/en/partners/" + vendor.slug + "/" %}
+{% if vend_lang == "en" and vendor.en %}
+  {% set vendData = vendor.en %}
+{% else %}
+  {% set vendData = vendor %}
+{% endif %}
+{% set breadcrumbs = [
+  { label: ("Home" if vend_lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Partners" if vend_lang == "en" else "Parceiros"), url: urlPrefix + "/parceiros.html" },
+  { label: vendor.nome }
+] %}
+
+{%- set serviçoIcons = ["fas fa-flask","fas fa-cogs","fas fa-graduation-cap","fas fa-chart-line","fas fa-headset"] -%}
+{%- set oqueFazIcons = ["fas fa-search-plus","fas fa-shield-alt","fas fa-chart-bar","fas fa-file-contract"] -%}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
+                <a href="{{ urlPrefix }}/parceiros.html" style="color:#00e0a3;text-decoration:none;">{% if vend_lang == "en" %}Partners{% else %}Parceiros{% endif %}</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>
+                <a href="{{ urlPrefix }}/solucoes/{{ vendor.pilarSlug }}/" style="color:#00e0a3;text-decoration:none;">{{ vendor.pilarNome }}</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>{{ vendor.categoria }}
+              </p>
+              <h1>{{ vendData.heroTitle }}</h1>
+              <p class="ev-hero__sub">{{ vendData.heroSubtitle }}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if vend_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if vend_lang == "en" %}Request POC{% else %}Solicitar POC{% endif %}</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if vend_lang == "en" %}Certified partner{% else %}Parceiro certificado{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if vend_lang == "en" %}Fast POC in your environment{% else %}POC rápida no seu ambiente{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if vend_lang == "en" %}Implementation + operations{% else %}Implementação + operação{% endif %}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-5 col-sm-12 mt-4 mt-md-0 d-flex align-items-center justify-content-center">
+            <div class="wow slideInRight w-100">
+              <div class="ev-vendor-hero-logo-box">
+                <img src="{{ vendor.logo }}" alt="{{ vendor.nome }}" loading="eager">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# 1. O que é #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5 wow fadeInLeft">
+          <div class="ev-section__tag">{% if vend_lang == "en" %}What it is{% else %}O que é{% endif %}</div>
+          <h2 class="ev-section__title">{{ vendor.nome }}</h2>
+          <p class="ev-section__desc" style="line-height:1.8;">{{ vendData.sobre }}</p>
+          <a href="{{ urlPrefix }}/solucoes/{{ vendor.pilarSlug }}/" class="about-pillar-link mt-3 d-inline-flex">
+            {% if vend_lang == "en" %}View pillar{% else %}Ver pilar{% endif %} {{ vendor.pilarNome }} <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="col-lg-7 wow fadeInRight">
+          <div class="ev-pain-grid" style="grid-template-columns: repeat(2,1fr);">
+            {%- for item in vendData.oqueFaz -%}
+            <div class="ev-pain-card">
+              <div class="ev-pain-card__icon">
+                <i class="{{ oqueFazIcons[loop.index0] if oqueFazIcons[loop.index0] else 'fas fa-check-double' }}"></i>
+              </div>
+              <h5 style="color:#fff;font-size:.95rem;font-weight:700;margin-bottom:6px;">{{ item.titulo }}</h5>
+              <p style="color:rgba(255,255,255,.65);font-size:.85rem;line-height:1.6;margin:0;">{{ item.desc }}</p>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# 2. O que a Evernow entrega com este parceiro #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Evernow + {{ vendor.nome }}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if vend_lang == "en" %}From licensing to operations, all in one partner{% else %}Do licenciamento à operação, tudo em um único parceiro{% endif %}</h2>
+      <p class="ev-section__desc wow fadeInUp" style="margin-bottom:40px;">{% if vend_lang == "en" %}As a certified partner, Evernow goes beyond reselling the license. We conduct the proof of concept, implement, train your team, and operate the platform with defined SLAs.{% else %}Como parceira certificada, a Evernow não apenas revende a licença, conduz a prova de conceito, implementa, treina sua equipe e opera a plataforma com SLAs definidos.{% endif %}</p>
+      <div class="ev-delivery-grid">
+        {%- for servico in vendData.evernowServicos -%}
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon">
+            <i class="{{ servico.icon if servico.icon else 'fas fa-cogs' }}"></i>
+          </div>
+          <h4>{{ servico.titulo }}</h4>
+          <p>{{ servico.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 3. Parceiros/clientes #}
+  {% set partnersTagKey = ("Clients who trust Evernow" if vend_lang == "en" else "Clientes que confiam na Evernow") %}
+  {% set partnersContainerClass = "pb-4" %}
+  {% include "components/partners-grid.njk" %}
+
+  {# 4. Produtos relacionados #}
+  {%- if vendor.produtosRelacionados and vendor.produtosRelacionados.length -%}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if vend_lang == "en" %}Related services{% else %}Serviços relacionados{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if vend_lang == "en" %}How Evernow delivers with{% else %}Como a Evernow entrega com{% endif %} {{ vendor.nome }}</h2>
+      <div class="ev-pilar-product-grid">
+        {%- for relSlug in vendor.produtosRelacionados -%}
+        {%- set relCard = productCardsBySlug[relSlug] -%}
+        {%- if relCard -%}
+        {%- set relCardData = relCard.en if vend_lang == "en" and relCard.en else relCard -%}
+        <a href="{{ urlPrefix }}/{% if vend_lang == 'en' %}products/{{ enSlugs.products[relSlug] or relSlug }}{% else %}produtos/{{ relSlug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ relCard.icon }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ relCardData.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ relCardData.tagline }}</p>
+          </div>
+          <span class="ev-pilar-product__cta">{% if vend_lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  {# 5. FAQ #}
+  {%- if vendData.faq and vendData.faq.length -%}
+  {% set faqItems = vendData.faq %}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about " if vend_lang == "en" else "Perguntas frequentes sobre ") + vendor.nome %}
+  {% include "components/faq-section.njk" %}
+  {%- endif -%}
+
+  {# 6. CTA Final #}
+  {% set ctaTitle = ("Want to implement " if vend_lang == "en" else "Quer implementar o ") + vendor.nome + "?" %}
+  {% set ctaSubtitle = ("Evernow conducts the POC, implements, and operates the platform. Talk to a certified specialist." if vend_lang == "en" else "A Evernow conduz a POC, implementa e opera a plataforma. Fale com um especialista certificado.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if vend_lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Request free POC" if vend_lang == "en" else "Solicitar POC gratuita") %}
+  {% include "components/cta-final.njk" %}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "{{ vendor.nome }} | Evernow",
+      "description": "{{ vendData.heroSubtitle }}",
+      "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+      "areaServed": "BR",
+      "url": "https://evernow.com.br{% if vend_lang == 'en' %}/en/partners{% else %}/parceiros{% endif %}/{{ vendor.slug }}/"
+    }
+    {%- if vendData.faq and vendData.faq.length -%}
+    ,{
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in vendData.faq -%}
+        { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+        {%- endfor -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>

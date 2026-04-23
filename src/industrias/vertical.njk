@@ -1,0 +1,194 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: industryPages
+  size: 1
+  alias: industry
+permalink: "{% if industry.lang == 'en' %}/en/industries/{{ enSlugs.industries[industry.slug] or industry.slug }}/{% else %}/industrias/{{ industry.slug }}/{% endif %}"
+---
+{% set ind_lang = industry.lang %}
+{% set lang = ind_lang %}
+{% set urlPrefix = "" if ind_lang == "pt" else "/en" %}
+{% set langPtUrl = "/industrias/" + industry.slug + "/" %}
+{% set langEnUrl = "/en/industries/" + (enSlugs.industries[industry.slug] or industry.slug) + "/" %}
+{% if ind_lang == "en" and industry.en %}
+  {% set indData = industry.en %}
+{% else %}
+  {% set indData = industry %}
+{% endif %}
+{% set breadcrumbs = [
+  { label: ("Home" if ind_lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Industries" if ind_lang == "en" else "Indústrias"), url: urlPrefix + ("/industries/" if ind_lang == "en" else "/industrias/") },
+  { label: indData.titulo }
+] %}
+
+{# Trust items por industria #}
+{% set industryTrustPT = {
+  "financeiro":  ["PCI DSS e Bacen",          "Redução de risco regulatório"],
+  "saude":       ["LGPD dados de saúde",       "Proteção de sistemas críticos"],
+  "varejo":      ["PCI DSS para e-commerce",   "Proteção de dados de clientes"],
+  "tecnologia":  ["DevSecOps e AppSec",        "Segurança no pipeline de dev"],
+  "governo":     ["Compliance e LGPD",         "GRC e gestão de riscos"]
+} %}
+{% set industryTrustEN = {
+  "financeiro":  ["PCI DSS and Bacen",         "Regulatory risk reduction"],
+  "saude":       ["LGPD health data",          "Critical systems protection"],
+  "varejo":      ["PCI DSS for e-commerce",    "Customer data protection"],
+  "tecnologia":  ["DevSecOps and AppSec",      "Security in dev pipeline"],
+  "governo":     ["Compliance and LGPD",       "GRC and risk management"]
+} %}
+{% set trust = (industryTrustEN[industry.slug] if ind_lang == "en" else industryTrustPT[industry.slug]) %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
+                <a href="{{ urlPrefix }}/{% if ind_lang == 'en' %}industries{% else %}industrias{% endif %}/" style="color:#00e0a3;text-decoration:none;">{% if ind_lang == "en" %}Industries{% else %}Indústrias{% endif %}</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>{{ indData.titulo }}
+              </p>
+              <h1>{{ indData.heroTitle }}</h1>
+              <p class="ev-hero__sub">{{ indData.heroSubtitle }}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if ind_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if ind_lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {{ trust[0] if trust else ("Certified specialists" if ind_lang == "en" else "Especialistas certificados") }}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {{ trust[1] if trust else ("Results in 90 days" if ind_lang == "en" else "Resultados em 90 dias") }}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if ind_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# 1. Desafios do setor — pain cards #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if ind_lang == "en" %}Industry context{% else %}Contexto do setor{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if ind_lang == "en" %}Main security challenges{% else %}Principais desafios de segurança{% endif %} {{ indData.headingDesafio if indData.headingDesafio else (("in " + indData.titulo) if ind_lang == "en" else ("no " + indData.titulo)) }}</h2>
+      <p class="ev-section__desc wow fadeInUp">{{ indData.credibilidade }}</p>
+      <div class="ev-pain-grid mt-4">
+        {%- set painIcons = ["fas fa-exclamation-triangle","fas fa-lock-open","fas fa-bug","fas fa-user-secret"] -%}
+        {%- for desafio in indData.desafios -%}
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon">
+            <i class="{{ painIcons[loop.index0] }}"></i>
+          </div>
+          <p>{{ desafio }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 2. Soluções aplicáveis — product cards ricos #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if ind_lang == "en" %}Applied portfolio{% else %}Portfólio aplicado{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if ind_lang == "en" %}What Evernow delivers{% else %}O que a Evernow entrega{% endif %} {{ indData.headingEntrega if indData.headingEntrega else (("for " + indData.titulo) if ind_lang == "en" else ("para " + indData.titulo)) }}</h2>
+      <p class="ev-section__desc wow fadeInUp mb-4">{% if ind_lang == "en" %}Services selected for the context, risks, and regulations of the sector.{% else %}Serviços selecionados para o contexto, riscos e regulações do setor.{% endif %}</p>
+      <div class="ev-pilar-product-grid">
+        {%- for sol in industry.solucoes -%}
+        {%- set cardData = productCardsBySlug[sol.slug] -%}
+        <a href="{{ urlPrefix }}/{% if ind_lang == 'en' %}products/{{ enSlugs.products[sol.slug] or sol.slug }}{% else %}produtos/{{ sol.slug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ cardData.icon if cardData else 'fas fa-shield-alt' }}"></i>
+          </div>
+          {%- set cardDataLang = cardData.en if cardData and cardData.en and ind_lang == "en" else cardData -%}
+          <div class="ev-pilar-product__body">
+            <h5>{{ (cardDataLang.titulo if cardDataLang) or sol.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ (cardDataLang.tagline if cardDataLang) or sol.desc }}</p>
+            {%- if cardDataLang and cardDataLang.features -%}
+            <ul class="ev-pilar-product__features">
+              {%- for feat in cardDataLang.features -%}
+              <li><i class="fas fa-check"></i> {{ feat }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
+          <span class="ev-pilar-product__cta">{% if ind_lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 3. Por que a Evernow para este setor #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0 wow fadeInLeft">
+          <div class="ev-section__tag">{% if ind_lang == "en" %}Why Evernow{% else %}Por que a Evernow{% endif %}</div>
+          <h2 class="ev-section__title">{% if ind_lang == "en" %}Specialists who know your market{% else %}Especialistas que conhecem o seu mercado{% endif %}</h2>
+          <p class="ev-section__desc">{{ indData.credibilidade }}</p>
+          <a href="{{ urlPrefix }}/contact.html" class="contact-btn mt-4 d-inline-block">{% if ind_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+        </div>
+        <div class="col-lg-7 wow fadeInRight">
+          <div class="ev-spec-grid">
+            {%- if ind_lang == "en" -%}
+            {%- set specs = [
+              { icon: "fas fa-gavel",       label: "Regulatory compliance",    desc: "We know the sector's standards and audits" },
+              { icon: "fas fa-bullseye",    label: "Context threats",          desc: "Attack vectors mapped for your segment" },
+              { icon: "fas fa-certificate", label: "Certified team",           desc: "CISSP, CISM, CEH and relevant certifications" },
+              { icon: "fas fa-chart-line",  label: "Measurable results",       desc: "KPIs and security metrics reported to the CISO" }
+            ] -%}
+            {%- else -%}
+            {%- set specs = [
+              { icon: "fas fa-gavel",       label: "Compliance regulatório",   desc: "Conhecemos as normas e auditorias do setor" },
+              { icon: "fas fa-bullseye",    label: "Ameaças do contexto",      desc: "Vetores de ataque mapeados para o seu segmento" },
+              { icon: "fas fa-certificate", label: "Equipe certificada",       desc: "CISSP, CISM, CEH e certificações relevantes" },
+              { icon: "fas fa-chart-line",  label: "Resultados mensuráveis",   desc: "KPIs e métricas de segurança reportados ao CISO" }
+            ] -%}
+            {%- endif -%}
+            {%- for spec in specs -%}
+            <div class="ev-spec-item">
+              <i class="{{ spec.icon }}"></i>
+              <div>
+                <strong>{{ spec.label }}</strong>
+                <p>{{ spec.desc }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# 4. Parceiros #}
+  {% set partnersTagKey = ("Clients who trust Evernow" if ind_lang == "en" else "Clientes que confiam na Evernow") %}
+  {% include "components/partners-grid.njk" %}
+
+  {# 5. CTA Final #}
+  {% set ctaTitle = ("Specialized security for " if ind_lang == "en" else "Segurança especializada para ") + indData.titulo %}
+  {% set ctaSubtitle = ("Talk to a specialist and discover what makes sense for your regulatory and threat context." if ind_lang == "en" else "Fale com um especialista e descubra o que faz mais sentido para o seu contexto regulatório e de ameaças.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if ind_lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the assessment" if ind_lang == "en" else "Fazer o assessment") %}
+  {% include "components/cta-final.njk" %}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ indData.heroTitle }}",
+  "description": "{{ industry.metaDescription }}",
+  "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+  "areaServed": "BR",
+  "url": "https://evernow.com.br{% if ind_lang == 'en' %}/en/industries/{{ enSlugs.industries[industry.slug] or industry.slug }}{% else %}/industrias/{{ industry.slug }}{% endif %}/"
+}
+</script>

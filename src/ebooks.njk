@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}ebooks.html"
+pageMeta: ebooks
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Ebooks & Guides" if lang == "en" else "Ebooks") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="col-lg-7 p-0 wow slideInLeft">
+          <h1>{% if lang == "en" %}Cybersecurity Ebooks & Guides{% else %}Ebooks e guias de cibersegurança{% endif %}</h1>
+          <p class="ev-hero__sub">{% if lang == "en" %}Technical and executive content produced by Evernow specialists to help CISOs, engineers, and security teams make more informed decisions.{% else %}Conteúdo técnico e executivo produzido pelos especialistas da Evernow para ajudar CISOs, engenheiros e times de segurança a tomar decisões mais informadas.{% endif %}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">DevSecOps</p>
+            <h3>Guia de DevSecOps: do zero ao programa operacional</h3>
+            <p>Como estruturar um programa de segurança em aplicações do zero, do assessment inicial à operação contínua com SAST, DAST e SCA.</p>
+            <a href="/assessment.html" class="ev-related-card mt-3 d-inline-block" style="font-size:.88rem;color:#00e0a3;font-weight:600;text-decoration:none;">
+              Em breve, cadastre-se para receber <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">LGPD</p>
+            <h3>LGPD na prática: da conformidade ao programa contínuo</h3>
+            <p>Guia executivo sobre como implementar LGPD operacionalmente, mapeamento de dados, consentimento, DSR e auditorias.</p>
+            <a href="/assessment.html" class="ev-related-card mt-3 d-inline-block" style="font-size:.88rem;color:#00e0a3;font-weight:600;text-decoration:none;">
+              Em breve, cadastre-se para receber <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;font-weight:700;text-transform:uppercase;margin-bottom:12px;">Pentest</p>
+            <h3>O que perguntar antes de contratar um pentest</h3>
+            <p>Checklist para CISOs e gerentes de segurança avaliarem a qualidade de um projeto de pentest antes da contratação.</p>
+            <a href="/assessment.html" class="ev-related-card mt-3 d-inline-block" style="font-size:.88rem;color:#00e0a3;font-weight:600;text-decoration:none;">
+              Em breve, cadastre-se para receber <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5 wow fadeInUp">
+        <p style="color:rgba(255,255,255,.6);margin-bottom:20px;">{% if lang == "en" %}Want to receive upcoming content first?{% else %}Quer receber os próximos conteúdos em primeira mão?{% endif %}</p>
+        <a href="{{ urlPrefix }}/assessment.html" class="contact-btn">{% if lang == "en" %}Subscribe now{% else %}Cadastre-se agora{% endif %}</a>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Want to go deeper on a topic?" if lang == "en" else "Quer aprofundar em algum tema?") %}
+  {% set ctaSubtitle = ("Talk to our specialists and get technical or strategic answers about your security program." if lang == "en" else "Fale com nossos especialistas e tire dúvidas técnicas ou estratégicas sobre o seu programa de segurança.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% include "components/cta-final.njk" %}
+</main>

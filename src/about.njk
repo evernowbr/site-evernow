@@ -7,6 +7,7 @@ pagination:
 permalink: "{% if lang == 'en' %}/en/{% endif %}about.html"
 pageMeta: about
 ---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
 <div class="header-and-banner-con w-100">
    <div class="header-and-banner-inner-con overlay-content">
       {% include "components/header.njk" %}
@@ -123,55 +124,119 @@ pageMeta: about
       <div class="Cyber-Security-con about-page-Cyber-main-con bg-overly-img w-100">
          <div class="container overlay-content">
             <div class="row wow fadeInUp">
-               <div class="col-lg-12 col-md-12 Cyber-Security-left-con">
-                  <div class="row Cyber-Security-left-main-con mb-0">
-                     <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-sm-4 text-center">
-                        <div class="Cyber-Security-left-card-con">
-                           <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/security-card-1.png" alt="" class="img-fluid" loading="lazy"></figure>
-                           </div>
-                           <div class="Cyber-Security-left-card-title">
-                              <h3>{{ "about.security_cards.card1.title" | t }}</h3>
-                              <p class="mb-0">{{ "about.security_cards.card1.desc" | t }}</p>
-                           </div>
-                        </div>
+               <div class="col-lg-12">
+                  <div class="about-pillars-header text-center mb-5">
+                     {% if lang == 'en' %}
+                     <div class="ev-section__tag d-inline-block mb-3">Portfolio</div>
+                     <h2 class="about-pillars-title">End-to-end cybersecurity,<br>without depending on multiple vendors</h2>
+                     <p class="about-pillars-subtitle">Evernow covers the four critical security fronts: from code to data, from audit to continuous operations, with certified specialists, 90-day delivery, and evidence for ISO 27001, LGPD, and PCI DSS.</p>
+                     {% else %}
+                     <div class="ev-section__tag d-inline-block mb-3">Portfólio</div>
+                     <h2 class="about-pillars-title">Cibersegurança de ponta a ponta,<br>sem depender de múltiplos fornecedores</h2>
+                     <p class="about-pillars-subtitle">A Evernow cobre as quatro frentes críticas de segurança, do código ao dado, da auditoria à operação contínua, com especialistas certificados, entrega em 90 dias e evidências para ISO 27001, LGPD e PCI DSS.</p>
+                     {% endif %}
+                  </div>
+                  <div class="about-pillars-grid">
+
+                     <div class="about-pillar-card wow fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-code-branch"></i></div>
+                        <h3>Secure Code</h3>
+                        {% if lang == 'en' %}
+                        <p class="about-pillar-desc">Security integrated into the development pipeline, from design to production.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> DevSecOps</li>
+                           <li><i class="fas fa-check"></i> SAST / DAST / SCA</li>
+                           <li><i class="fas fa-check"></i> Managed Secure Dev</li>
+                           <li><i class="fas fa-check"></i> Threat Modeling</li>
+                        </ul>
+                        <a href="{{ urlPrefix }}/solucoes/secure-code/" class="about-pillar-link">View solutions <i class="fas fa-arrow-right"></i></a>
+                        {% else %}
+                        <p class="about-pillar-desc">Segurança integrada ao pipeline de desenvolvimento, do design à produção.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> DevSecOps</li>
+                           <li><i class="fas fa-check"></i> SAST / DAST / SCA</li>
+                           <li><i class="fas fa-check"></i> Dev Seguro Gerenciado</li>
+                           <li><i class="fas fa-check"></i> Modelagem de Ameaças</li>
+                        </ul>
+                        <a href="/solucoes/secure-code/" class="about-pillar-link">Ver soluções <i class="fas fa-arrow-right"></i></a>
+                        {% endif %}
                      </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-sm-4 text-center">
-                        <div class="Cyber-Security-left-card-con">
-                           <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-lgpd-fines.png" alt="" class="img-fluid" loading="lazy"></figure>
-                           </div>
-                           <div class="Cyber-Security-left-card-title">
-                              <h3>{{ "about.security_cards.card2.title" | t }}</h3>
-                              <p class="mb-0">{{ "about.security_cards.card2.desc" | t | safe }}</p>
-                           </div>
-                        </div>
+
+                     <div class="about-pillar-card wow fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Data Shield</h3>
+                        {% if lang == 'en' %}
+                        <p class="about-pillar-desc">Protection and governance of sensitive data in hybrid and multi-cloud environments.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> Data Discovery</li>
+                           <li><i class="fas fa-check"></i> DSPM</li>
+                           <li><i class="fas fa-check"></i> DLP</li>
+                           <li><i class="fas fa-check"></i> Encryption / KMS / HSM</li>
+                        </ul>
+                        <a href="{{ urlPrefix }}/solucoes/data-shield/" class="about-pillar-link">View solutions <i class="fas fa-arrow-right"></i></a>
+                        {% else %}
+                        <p class="about-pillar-desc">Proteção e governança de dados sensíveis em ambientes híbridos e multi-cloud.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> Data Discovery</li>
+                           <li><i class="fas fa-check"></i> DSPM</li>
+                           <li><i class="fas fa-check"></i> DLP</li>
+                           <li><i class="fas fa-check"></i> Criptografia / KMS / HSM</li>
+                        </ul>
+                        <a href="/solucoes/data-shield/" class="about-pillar-link">Ver soluções <i class="fas fa-arrow-right"></i></a>
+                        {% endif %}
                      </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <div class="Cyber-Security-left-card-con">
-                           <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-security-roi.png" alt="" class="img-fluid" loading="lazy"></figure>
-                           </div>
-                           <div class="Cyber-Security-left-card-title">
-                              <h3>{{ "about.security_cards.card3.title" | t }}</h3>
-                              <p class="mb-0">{{ "about.security_cards.card3.desc" | t }}</p>
-                           </div>
-                        </div>
+
+                     <div class="about-pillar-card wow fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-award"></i></div>
+                        <h3>Assurance</h3>
+                        {% if lang == 'en' %}
+                        <p class="about-pillar-desc">Independent validation of security, compliance, and maturity.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> Pentest & Red Team</li>
+                           <li><i class="fas fa-check"></i> Maturity Assessment</li>
+                           <li><i class="fas fa-check"></i> GRC</li>
+                           <li><i class="fas fa-check"></i> ISO 27001 / LGPD / PCI DSS</li>
+                        </ul>
+                        <a href="{{ urlPrefix }}/solucoes/assurance/" class="about-pillar-link">View solutions <i class="fas fa-arrow-right"></i></a>
+                        {% else %}
+                        <p class="about-pillar-desc">Validação independente de segurança, compliance e maturidade.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> Pentest & Red Team</li>
+                           <li><i class="fas fa-check"></i> Assessment de Maturidade</li>
+                           <li><i class="fas fa-check"></i> GRC</li>
+                           <li><i class="fas fa-check"></i> ISO 27001 / LGPD / PCI DSS</li>
+                        </ul>
+                        <a href="/solucoes/assurance/" class="about-pillar-link">Ver soluções <i class="fas fa-arrow-right"></i></a>
+                        {% endif %}
                      </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <div class="Cyber-Security-left-card-con mb-0">
-                           <div class="Cyber-Security-left-card-img">
-                              <figure><img src="/assets/image/service/stats-intrusion-attempts.png" alt="" class="img-fluid" loading="lazy"></figure>
-                           </div>
-                           <div class="Cyber-Security-left-card-title d-inline-block position-relative">
-                              <h3>{{ "about.security_cards.card4.title" | t }}</h3>
-                              <p class="mb-0">{{ "about.security_cards.card4.desc" | t }}</p>
-                           </div>
-                        </div>
+
+                     <div class="about-pillar-card wow fadeInUp">
+                        <div class="about-card-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Managed Ops</h3>
+                        {% if lang == 'en' %}
+                        <p class="about-pillar-desc">Continuous security with dedicated specialists and defined SLAs.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> SOC / Monitoring</li>
+                           <li><i class="fas fa-check"></i> Managed Services</li>
+                           <li><i class="fas fa-check"></i> Incident Response</li>
+                           <li><i class="fas fa-check"></i> Vulnerability Management</li>
+                        </ul>
+                        <a href="{{ urlPrefix }}/solucoes/managed-ops/" class="about-pillar-link">View solutions <i class="fas fa-arrow-right"></i></a>
+                        {% else %}
+                        <p class="about-pillar-desc">Segurança contínua com especialistas dedicados e SLAs definidos.</p>
+                        <ul class="about-pillar-list">
+                           <li><i class="fas fa-check"></i> SOC / Monitoramento</li>
+                           <li><i class="fas fa-check"></i> Serviços Gerenciados</li>
+                           <li><i class="fas fa-check"></i> Resposta a Incidentes</li>
+                           <li><i class="fas fa-check"></i> Gestão de Vulnerabilidades</li>
+                        </ul>
+                        <a href="/solucoes/managed-ops/" class="about-pillar-link">Ver soluções <i class="fas fa-arrow-right"></i></a>
+                        {% endif %}
                      </div>
-                     <div class="about-page-Cyber-Security-link ml-auto mr-auto">
-                        <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ "about.security_cards.btn" | t }}</a>
-                     </div>
+
+                  </div>
+                  <div class="text-center mt-5">
+                     <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ "about.security_cards.btn" | t }}</a>
                   </div>
                </div>
             </div>

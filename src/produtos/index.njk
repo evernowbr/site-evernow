@@ -1,0 +1,132 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/products/{% else %}/produtos/{% endif %}"
+pageMeta: produtos-index
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/produtos/" %}
+{% set langEnUrl = "/en/products/" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Portfolio" if lang == "en" else "Portfólio") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-11">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Portfolio{% else %}Portfólio{% endif %}</p>
+              <h1>{% if lang == "en" %}Everything Evernow delivers{% else %}Tudo que a Evernow entrega{% endif %}</h1>
+              <p class="ev-hero__sub">{% if lang == "en" %}{{ solutions | length }} pillars. 26 specialized services. One single partner for your cybersecurity program, from code to SOC.{% else %}{{ solutions | length }} pilares. 26 serviços especializados. Um único parceiro para o seu programa de cibersegurança, do código ao SOC.{% endif %}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# ── Índice rápido de pilares ── #}
+  <section style="border-bottom:1px solid rgba(255,255,255,.07);padding:28px 0;">
+    <div class="container overlay-content">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+        {%- for sol in solutions -%}
+        <a href="#pilar-{{ sol.slug }}"
+           style="display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid rgba(255,255,255,.15);border-radius:24px;color:rgba(255,255,255,.75);text-decoration:none;font-size:.85rem;font-weight:600;transition:border-color .2s,color .2s;"
+           onmouseover="this.style.borderColor='#00e0a3';this.style.color='#00e0a3';"
+           onmouseout="this.style.borderColor='rgba(255,255,255,.15)';this.style.color='rgba(255,255,255,.75)';">
+          {%- if sol.slug == 'secure-code' -%}<i class="fas fa-code" style="color:#00e0a3;font-size:.8rem;"></i>
+          {%- elif sol.slug == 'data-shield' -%}<i class="fas fa-shield-alt" style="color:#00e0a3;font-size:.8rem;"></i>
+          {%- elif sol.slug == 'assurance' -%}<i class="fas fa-check-double" style="color:#00e0a3;font-size:.8rem;"></i>
+          {%- else -%}<i class="fas fa-cogs" style="color:#00e0a3;font-size:.8rem;"></i>
+          {%- endif -%}
+          {{ sol.titulo }}
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# ── Um bloco por pilar ── #}
+  {%- for sol in solutions -%}
+  <section id="pilar-{{ sol.slug }}" class="ev-section {% if loop.index is odd %}bg-overly-img{% else %}ev-section--alt{% endif %}">
+    <div class="container overlay-content">
+
+      {# Use EN data when available #}
+      {%- set solData = sol.en if lang == "en" and sol.en else sol -%}
+
+      {# Cabeçalho do pilar #}
+      <div class="ev-products-pilar-header wow fadeInUp">
+        <div class="ev-products-pilar-header__left">
+          <a href="{{ urlPrefix }}/solucoes/{{ sol.slug }}/" class="ev-products-pilar__link">
+            {%- if sol.slug == 'secure-code' -%}<i class="fas fa-code"></i>
+            {%- elif sol.slug == 'data-shield' -%}<i class="fas fa-shield-alt"></i>
+            {%- elif sol.slug == 'assurance' -%}<i class="fas fa-check-double"></i>
+            {%- else -%}<i class="fas fa-cogs"></i>
+            {%- endif -%}
+            {{ sol.titulo }}
+          </a>
+          <h2 class="ev-products-pilar__title">{{ solData.tagline }}</h2>
+          <p class="ev-products-pilar__desc">{{ solData.descricao }}</p>
+        </div>
+        <a href="{{ urlPrefix }}/solucoes/{{ sol.slug }}/" class="ev-products-pilar__cta-link">
+          {% if lang == "en" %}View full solution{% else %}Ver solução completa{% endif %} <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      {# Grade de produtos do pilar #}
+      <div class="ev-pilar-product-grid">
+        {%- for prod in solData.produtos -%}
+        {%- set ptProd = sol.produtos | selectattr("slug", "equalto", prod.slug) | first -%}
+        <a href="{{ urlPrefix }}/{% if lang == 'en' %}products/{{ enSlugs.products[prod.slug] or prod.slug }}{% else %}produtos/{{ prod.slug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ ptProd.icon if ptProd.icon else 'fas fa-shield-alt' }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ prod.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ prod.tagline }}</p>
+            <ul class="ev-pilar-product__features">
+              {%- for feat in prod.features -%}
+              <li><i class="fas fa-check"></i> {{ feat }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <span class="ev-pilar-product__cta">{% if lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </section>
+  {%- endfor -%}
+
+  {# ── CTA Final ── #}
+  {% set ctaTitle = ("Don't know where to start?" if lang == "en" else "Não sabe por onde começar?") %}
+  {% set ctaSubtitle = ("Our assessment maps gaps, prioritizes risks, and defines the right roadmap for your company." if lang == "en" else "Nosso assessment mapeia lacunas, prioriza riscos e define o roadmap certo para sua empresa.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the free assessment" if lang == "en" else "Fazer o assessment gratuito") %}
+  {% include "components/cta-final.njk" %}
+
+</main>

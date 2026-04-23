@@ -1,0 +1,41 @@
+{%- if faqItems and faqItems.length -%}
+<section class="ev-faq bg-overly-img py-5" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="container overlay-content">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4 wow fadeInLeft">
+        <h6 style="color:#00e0a3;">{{ faqTag if faqTag else "Perguntas frequentes" }}</h6>
+        <h2 class="mt-2" style="font-size:1.6rem;">{{ faqTitle if faqTitle else "Tire suas dúvidas" }}</h2>
+      </div>
+      <div class="col-lg-8 col-md-12 wow fadeInRight">
+        <div class="accordion" id="faqAccordionMain">
+          {%- for item in faqItems -%}
+          <div class="card bg-transparent border-0 mb-2"
+               style="border-bottom:1px solid rgba(255,255,255,0.08) !important;"
+               itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <div class="card-header bg-transparent border-0 p-0" id="faqH{{ loop.index }}">
+              <h3 class="mb-0">
+                <button class="btn btn-link btn-block text-left text-white text-decoration-none shadow-none d-flex justify-content-between align-items-center py-3 px-0 {% if loop.index > 1 %}collapsed{% endif %}"
+                        type="button" data-toggle="collapse" data-target="#faqC{{ loop.index }}"
+                        aria-expanded="{{ 'true' if loop.index == 1 else 'false' }}"
+                        aria-controls="faqC{{ loop.index }}"
+                        itemprop="name">
+                  <span style="font-size:1.05rem;font-weight:600;">{{ item.q }}</span>
+                  <i class="fas fa-chevron-down" style="color:#00e0a3;font-size:.8rem;flex-shrink:0;margin-left:12px;"></i>
+                </button>
+              </h3>
+            </div>
+            <div id="faqC{{ loop.index }}" class="collapse {% if loop.index == 1 %}show{% endif %}"
+                 aria-labelledby="faqH{{ loop.index }}" data-parent="#faqAccordionMain"
+                 itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="card-body text-white-50 px-0 pt-0 pb-4" itemprop="text">
+                <p>{{ item.a }}</p>
+              </div>
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%- endif -%}

@@ -1,0 +1,98 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}cases.html"
+pageMeta: cases
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Case Studies" if lang == "en" else "Cases") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="col-lg-7 p-0 wow slideInLeft">
+          <h1>{% if lang == "en" %}Case Studies and Results{% else %}Cases e resultados{% endif %}</h1>
+          <p class="ev-hero__sub">{% if lang == "en" %}Real projects with real metrics. See how Evernow helped companies build and evolve their cybersecurity programs.{% else %}Projetos reais com métricas reais. Veja como a Evernow ajudou empresas a estruturar e evoluir seus programas de cibersegurança.{% endif %}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      {% set partnersTagKey = ("Companies that trust Evernow" if lang == "en" else "Empresas que confiam na Evernow") %}
+      {% include "components/partners-grid.njk" %}
+
+      <div class="row mt-5 g-4">
+        <!-- Case 1 -->
+        <div class="col-lg-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:12px;">Financeiro · AppSec</p>
+            <h3>Programa de DevSecOps em instituição financeira</h3>
+            <p>Implantação de programa de segurança em aplicações com SAST, SCA e treinamento para time de 80 desenvolvedores. Redução de 68% de vulnerabilidades críticas em produção nos primeiros 90 dias.</p>
+            <div class="ev-metrics mt-3" style="grid-template-columns:1fr 1fr;">
+              <div class="ev-metric"><span class="ev-metric__value">-68%</span><p class="ev-metric__desc">Vulns críticas em prod.</p></div>
+              <div class="ev-metric"><span class="ev-metric__value">90 dias</span><p class="ev-metric__desc">Tempo para resultado</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="col-lg-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:12px;">Saúde · LGPD</p>
+            <h3>Adequação LGPD em grupo hospitalar</h3>
+            <p>Mapeamento de dados pessoais de pacientes, implementação de portal de titulares com Securiti e estruturação do programa de privacidade. Conformidade operacional em 4 meses.</p>
+            <div class="ev-metrics mt-3" style="grid-template-columns:1fr 1fr;">
+              <div class="ev-metric"><span class="ev-metric__value">4 meses</span><p class="ev-metric__desc">Para conformidade LGPD</p></div>
+              <div class="ev-metric"><span class="ev-metric__value">100%</span><p class="ev-metric__desc">DSR automatizados</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="col-lg-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:12px;">Varejo · Pentest</p>
+            <h3>Pentest em plataforma de e-commerce</h3>
+            <p>Execução de pentest em APIs de pagamento, aplicação web e app mobile. Identificação de 3 vulnerabilidades críticas de injeção e bypass de autenticação antes do lançamento da nova versão.</p>
+            <div class="ev-metrics mt-3" style="grid-template-columns:1fr 1fr;">
+              <div class="ev-metric"><span class="ev-metric__value">3</span><p class="ev-metric__desc">Críticos identificados</p></div>
+              <div class="ev-metric"><span class="ev-metric__value">Pré-prod</span><p class="ev-metric__desc">Antes do go-live</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="col-lg-6 wow fadeInUp">
+          <div class="ev-resource-card h-100">
+            <p style="color:#00e0a3;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:12px;">Tecnologia · ISO 27001</p>
+            <h3>Certificação ISO 27001 em scale-up SaaS</h3>
+            <p>Gap analysis, estruturação do SGSI e preparação completa para auditoria de certificação. Empresa obteve certificação ISO 27001:2022 e conseguiu fechar contrato com cliente enterprise exigente.</p>
+            <div class="ev-metrics mt-3" style="grid-template-columns:1fr 1fr;">
+              <div class="ev-metric"><span class="ev-metric__value">✓</span><p class="ev-metric__desc">Certificação obtida</p></div>
+              <div class="ev-metric"><span class="ev-metric__value">8 meses</span><p class="ev-metric__desc">Do diagnóstico à cert.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Your case starts here" if lang == "en" else "Seu case começa aqui") %}
+  {% set ctaSubtitle = ("Talk to a specialist and understand how Evernow can deliver concrete results for your security program." if lang == "en" else "Fale com um especialista e entenda como a Evernow pode gerar resultados concretos para o seu programa de segurança.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the assessment" if lang == "en" else "Fazer o assessment") %}
+  {% include "components/cta-final.njk" %}
+</main>

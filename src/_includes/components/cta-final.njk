@@ -1,0 +1,30 @@
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+<section class="ev-cta-final">
+  <div class="form-main-con dots-left-img">
+    <div class="container overlay-content">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+          <h2 style="font-size:1.8rem;font-weight:700;">{{ ctaTitle if ctaTitle else ("Ready to move forward?" if lang == "en" else "Pronto para avançar?") }}</h2>
+          <p class="mt-3" style="color:rgba(255,255,255,0.75);font-size:1.05rem;">
+            {{ ctaSubtitle if ctaSubtitle else ("Talk to an Evernow specialist and define the next step clearly." if lang == "en" else "Fale com um especialista da Evernow e defina o próximo passo com clareza.") }}
+          </p>
+          {%- if ctaSecondary -%}
+          <a href="{{ urlPrefix }}/assessment.html" class="btn mt-3"
+             style="border:1px solid #00e0a3;color:#00e0a3;padding:10px 24px;border-radius:4px;font-weight:600;text-decoration:none;">
+            {{ ctaSecondary }}
+          </a>
+          {%- endif -%}
+        </div>
+        <div class="col-lg-4 col-md-12 text-lg-right">
+          <a href="{{ urlPrefix }}/contact.html" class="contact-btn" style="font-size:1rem;">
+            {{ ctaPrimary if ctaPrimary else ("Talk to a specialist" if lang == "en" else "Fale com um especialista") }}
+          </a>
+        </div>
+      </div>
+      <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+      <div class="hs-form-frame" data-region="na1"
+           data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9"
+           data-portal-id="49406327"></div>
+    </div>
+  </div>
+</section>

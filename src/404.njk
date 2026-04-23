@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}404.html"
+pageMeta: "404"
+noIndex: true
+eleventyExcludeFromCollections: true
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+<div class="header-and-banner-con w-100">
+   <div class="header-and-banner-inner-con overlay-content">
+      {% include "components/header.njk" %}
+
+      <section class="banner-main-con about-page-main-banner-con">
+         <div class="container">
+            <div class="banner-con about-page-banner-con text-center">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="about-page-banner-title">
+                        <h1>
+                           {% if lang == 'en' %}Page not found{% else %}Página não encontrada{% endif %}
+                        </h1>
+                        <p class="mb-0">
+                           {% if lang == 'en' %}
+                              The page you are looking for does not exist or has been moved.
+                           {% else %}
+                              A página que você está procurando não existe ou foi movida.
+                           {% endif %}
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+<main>
+   <section>
+      <div class="Effective-con w-100" style="padding: 80px 0 100px;">
+         <div class="container text-center">
+            <div style="font-size: 7rem; font-weight: 800; color: #00e0a3; line-height: 1; margin-bottom: 16px;">404</div>
+            <h2 style="margin-bottom: 16px;">
+               {% if lang == 'en' %}Oops — we can't find that page{% else %}Ops — não encontramos essa página{% endif %}
+            </h2>
+            <p style="max-width: 480px; margin: 0 auto 32px; opacity: .75;">
+               {% if lang == 'en' %}
+                  Try going back to the homepage or explore our cybersecurity solutions.
+               {% else %}
+                  Tente voltar à página inicial ou explore nossas soluções de cibersegurança.
+               {% endif %}
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+               <a href="{{ urlPrefix }}/" class="contact-btn">
+                  {% if lang == 'en' %}Back to home{% else %}Voltar ao início{% endif %}
+               </a>
+               <a href="{{ urlPrefix }}/contact.html" class="contact-btn" style="background: transparent; border: 2px solid #00e0a3; color: #00e0a3;">
+                  {% if lang == 'en' %}Talk to a specialist{% else %}Fale com um especialista{% endif %}
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>

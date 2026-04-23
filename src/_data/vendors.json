@@ -1,0 +1,3407 @@
+[
+  {
+    "slug": "fortify",
+    "nome": "Fortify by OpenText",
+    "logo": "/assets/image/vendor/fortify.svg",
+    "categoria": "AppSec & DevSecOps",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "SAST líder de mercado: encontre vulnerabilidades antes que cheguem à produção",
+    "heroTitle": "Fortify by OpenText: SAST enterprise para código seguro em escala",
+    "heroSubtitle": "Analise código em mais de 30 linguagens, integre ao CI/CD e elimine vulnerabilidades críticas antes do deploy. Com a Evernow, você tem implementação completa, tuning de regras e operação gerenciada da plataforma.",
+    "sobre": "Fortify by OpenText é a plataforma de SAST mais completa para grandes empresas. Ela identifica SQL Injection, XSS, SSRF e falhas criptográficas no código-fonte antes do build, com suporte a mais de 30 linguagens e integração nativa a qualquer pipeline CI/CD. Corrigir vulnerabilidades antes do deploy custa até 100x menos do que em produção.",
+    "oqueFaz": [
+      {
+        "titulo": "Análise estática em 30+ linguagens",
+        "desc": "Escaneia código-fonte, bytecode e binários detectando CWE/OWASP Top 10 com baixo índice de falsos positivos e feedback direto ao desenvolvedor."
+      },
+      {
+        "titulo": "Integração nativa ao CI/CD",
+        "desc": "Plugins para Jenkins, GitHub Actions, Azure DevOps e GitLab, bloqueando builds com vulnerabilidades críticas automaticamente no pipeline."
+      },
+      {
+        "titulo": "Priorização por risco de negócio",
+        "desc": "Motor de correlação que rankeia vulnerabilidades pelo impacto real ao negócio, não apenas pela severidade técnica, focando o time no que importa."
+      },
+      {
+        "titulo": "Relatórios para compliance",
+        "desc": "Evidências mapeadas para PCI DSS, LGPD e ISO 27001 prontas para auditorias, pentest e due diligence."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Primeiro scan em repositório real do cliente, com relatório de achados e análise de ROI."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração CI/CD",
+        "desc": "Instalação, configuração do SSC, tuning de regras por linguagem e integração ao pipeline e ferramentas de ticketing."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento & Secure Coding",
+        "desc": "Capacitação para desenvolvedores (como corrigir achados) e equipe de segurança (triagem, auditoria e operação)."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação Gerenciada",
+        "desc": "Monitoramento dos scans, atualização de rulepacks, triagem de achados e relatórios executivos mensais com KPIs de segurança."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico Certificado",
+        "desc": "Engenheiros certificados Fortify com resposta em SLA definido, sem depender de chamados ao fabricante."
+      }
+    ],
+    "produtosRelacionados": [
+      "sast-dast-sca",
+      "devsecops",
+      "desenvolvimento-seguro-gerenciado"
+    ],
+    "faq": [
+      {
+        "q": "Fortify funciona com microserviços e contêineres?",
+        "a": "Sim. O Fortify analisa repositórios Git e se integra a pipelines Docker/Kubernetes, escaneando o código antes do build de imagem."
+      },
+      {
+        "q": "Qual a diferença entre Fortify On-Demand e On-Premise?",
+        "a": "On-Demand é o modelo SaaS gerenciado pela OpenText. On-Premise é instalado no ambiente do cliente, indicado para restrições de soberania de código. A Evernow opera as duas modalidades."
+      },
+      {
+        "q": "A Evernow faz o licenciamento ou apenas a implementação?",
+        "a": "As duas coisas. Como parceira autorizada da OpenText, oferecemos melhores condições de licenciamento e também a implementação e operação completa."
+      },
+      {
+        "q": "Qual o preço do Fortify no Brasil?",
+        "a": "O licenciamento é negociado por volume de código (linhas) e quantidade de usuários. Para um ambiente enterprise típico (milhões de linhas, 10+ devs), o TCO costuma ficar entre R$ 120k e R$ 450k/ano incluindo licença, implementação e operação gerenciada. A Evernow faz a cotação junto à OpenText com condições de parceiro."
+      },
+      {
+        "q": "Como funciona a POC do Fortify com a Evernow?",
+        "a": "A POC leva 10 dias corridos: instalação, scan em 1-2 repositórios reais, tuning inicial, relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e a implantação em produção começam na semana seguinte sem perder o trabalho feito."
+      },
+      {
+        "q": "Fortify vs Veracode vs SonarQube: qual escolher?",
+        "a": "Fortify é forte em Java/.NET/C/C++ enterprise, deep analysis e compliance rigoroso (PCI, DoD). Veracode é SaaS puro, bom para AppSec como plataforma. SonarQube é dev-first e excelente para equipes de engenharia com foco em qualidade + segurança. A Evernow ajuda a escolher pelo contexto técnico e regulatório do cliente."
+      }
+    ],
+    "en": {
+      "heroTitle": "Fortify by OpenText: Enterprise SAST for Secure Code at Scale",
+      "heroSubtitle": "Analyze code in 30+ languages, integrate into CI/CD, and eliminate critical vulnerabilities before deployment. With Evernow, you get full implementation, rule tuning, and managed platform operations.",
+      "sobre": "Fortify by OpenText is the most comprehensive SAST platform for large enterprises. It identifies SQL Injection, XSS, SSRF, and cryptographic flaws in source code before the build, with support for 30+ languages and native integration to any CI/CD pipeline. Fixing vulnerabilities before deployment costs up to 100x less than in production.",
+      "oqueFaz": [
+        {
+          "titulo": "Static analysis in 30+ languages",
+          "desc": "Scans source code, bytecode, and binaries detecting CWE/OWASP Top 10 with low false-positive rates and direct developer feedback."
+        },
+        {
+          "titulo": "Native CI/CD integration",
+          "desc": "Plugins for Jenkins, GitHub Actions, Azure DevOps, and GitLab, automatically blocking builds with critical vulnerabilities in the pipeline."
+        },
+        {
+          "titulo": "Business-risk prioritization",
+          "desc": "Correlation engine that ranks vulnerabilities by real business impact, not just technical severity, keeping the team focused on what matters."
+        },
+        {
+          "titulo": "Compliance reports",
+          "desc": "Evidence mapped to PCI DSS, LGPD, and ISO 27001, ready for audits, pentests, and due diligence."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "First scan on the client's real repository, with findings report and ROI analysis."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & CI/CD Integration",
+          "desc": "Installation, SSC configuration, per-language rule tuning, and integration into the pipeline and ticketing tools."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training & Secure Coding",
+          "desc": "Technical training for developers (how to fix findings) and security teams (triage, audit, and operations)."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed Operations",
+          "desc": "Scan monitoring, rulepack updates, findings triage, and monthly executive reports with security KPIs."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Certified Technical Support",
+          "desc": "Fortify-certified engineers with defined SLA response, without depending on vendor tickets."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Fortify work with microservices and containers?",
+          "a": "Yes. Fortify analyzes Git repositories and integrates with Docker/Kubernetes pipelines, scanning code before the image build."
+        },
+        {
+          "q": "What is the difference between Fortify On-Demand and On-Premise?",
+          "a": "On-Demand is the SaaS model managed by OpenText. On-Premise is installed in the client's environment, recommended for code sovereignty restrictions. Evernow operates both modalities."
+        },
+        {
+          "q": "Does Evernow handle licensing or just implementation?",
+          "a": "Both. As an authorized OpenText partner, we offer better licensing terms and also full implementation and operations."
+        }
+      ]
+    },
+    "seoTitle": "Parceiro Fortify Brasil: SAST Enterprise com Implementação e Operação | Evernow",
+    "seoDescription": "Evernow é parceira certificada Fortify by OpenText no Brasil. POC, licenciamento, integração CI/CD, tuning de regras e operação gerenciada da plataforma SAST enterprise.",
+    "seoKeywords": "parceiro fortify brasil, fortify sast, fortify opentext, consultoria fortify, implementação fortify, fortify on demand, fortify on premise, licenciamento fortify"
+  },
+  {
+    "slug": "sonarqube",
+    "nome": "SonarQube",
+    "logo": "/assets/image/vendor/sonarqube.svg",
+    "categoria": "AppSec & DevSecOps",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "Qualidade e segurança de código em tempo real para times ágeis",
+    "heroTitle": "SonarQube: Análise contínua de qualidade e segurança no ciclo de desenvolvimento",
+    "heroSubtitle": "Detecte bugs, vulnerabilidades e dívida técnica diretamente no fluxo do desenvolvedor. Com a Evernow, você tem a plataforma configurada, integrada ao seu pipeline e suas equipes treinadas para agir sobre os dados.",
+    "sobre": "SonarQube é a plataforma de análise de código mais adotada do mercado, combinando detecção de bugs, vulnerabilidades de segurança e dívida técnica em um único painel. Funciona como um 'quality gate' que bloqueia código inseguro antes de chegar ao repositório principal.",
+    "oqueFaz": [
+      {
+        "titulo": "Análise de segurança e bugs",
+        "desc": "Detecta vulnerabilidades OWASP, injeções, exposição de credenciais e bugs críticos em mais de 30 linguagens de programação."
+      },
+      {
+        "titulo": "Quality Gates configuráveis",
+        "desc": "Define critérios de qualidade e segurança que bloqueiam merges e deploys automaticamente quando não atendidos."
+      },
+      {
+        "titulo": "Integração ao IDE",
+        "desc": "SonarLint devolve feedback ao desenvolvedor em tempo real dentro do VS Code, IntelliJ e Eclipse, antes mesmo do commit."
+      },
+      {
+        "titulo": "Dashboards e métricas",
+        "desc": "Visibilidade completa da evolução da qualidade do código por projeto, equipe e linguagem ao longo do tempo."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Configuramos o SonarQube e rodamos análise nos repositórios do cliente em até 3 dias, com relatório de achados e prioridades."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração",
+        "desc": "Instalação on-premise ou SaaS (SonarCloud), integração ao CI/CD e configuração de quality gates por projeto."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento de Times",
+        "desc": "Capacitação para desenvolvedores interpretarem e corrigirem os achados e para líderes acompanharem métricas de evolução."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação Gerenciada",
+        "desc": "Gestão contínua da plataforma, atualização de regras, monitoramento de quality gates e relatórios executivos."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado para integrações, falhas e otimização de performance, sem fila de chamado com o fabricante."
+      }
+    ],
+    "produtosRelacionados": [
+      "sast-dast-sca",
+      "devsecops",
+      "revisao-codigo"
+    ],
+    "faq": [
+      {
+        "q": "SonarQube substitui o Fortify?",
+        "a": "Não necessariamente, são complementares. O SonarQube é forte em qualidade de código e detecção de vulnerabilidades no fluxo de desenvolvimento. O Fortify é mais aprofundado em análise de segurança enterprise. A Evernow ajuda a definir a combinação certa para cada contexto."
+      },
+      {
+        "q": "Qual a diferença entre SonarQube Community e Enterprise?",
+        "a": "A versão Community é gratuita e cobre análise básica. As edições Developer e Enterprise adicionam análise de branches, segurança avançada e relatórios corporativos. A Evernow fornece as edições pagas com melhores condições."
+      },
+      {
+        "q": "Funciona com monorepos?",
+        "a": "Sim. O SonarQube suporta monorepos com análise por projeto e configurações independentes de quality gate por módulo."
+      },
+      {
+        "q": "SonarQube Community, Developer, Enterprise ou Data Center: qual escolher?",
+        "a": "Community é gratuito mas sem SAST taint analysis — serve só para qualidade de código. Developer Edition adiciona SAST real e vale a partir de 3-4 devs sérios. Enterprise é obrigatório para portfolios &gt; 500k LOC, branches, portfolio management e perfis customizados. Data Center é para alta disponibilidade e escala extrema. A Evernow dimensiona por headcount de dev e LOC."
+      },
+      {
+        "q": "SonarQube vs Semgrep: qual é melhor?",
+        "a": "SonarQube é plataforma completa com UI, quality gates, portfolio e histórico de branches — ideal para integração cultural dev. Semgrep é CLI-first, rápido para custom rules e melhor para security team escrever regras próprias. Muitos clientes da Evernow usam SonarQube para qualidade + SAST básico e Semgrep para regras custom de security. Combinam bem."
+      },
+      {
+        "q": "Como a Evernow configura quality gates e rulesets customizados?",
+        "a": "No onboarding definimos quality gate por linguagem (mínimo de coverage, 0 bugs críticos, 0 vulnerabilidades novas, dívida técnica &lt; X%) e custom rules específicas do seu contexto (ex: proibir chamadas diretas ao banco, forçar uso de biblioteca de cripto interna). Tudo versionado em git e aplicado automaticamente aos projetos novos."
+      }
+    ],
+    "en": {
+      "heroTitle": "SonarQube: Continuous Code Quality and Security Analysis in the Development Cycle",
+      "heroSubtitle": "Detect bugs, vulnerabilities, and technical debt directly in the developer workflow. With Evernow, you get the platform configured, integrated into your pipeline, and your teams trained to act on the data.",
+      "sobre": "SonarQube is the most widely adopted code analysis platform on the market, combining bug detection, security vulnerabilities, and technical debt in a single dashboard. It acts as a quality gate that blocks insecure code before it reaches the main repository.",
+      "oqueFaz": [
+        {
+          "titulo": "Security and bug analysis",
+          "desc": "Detects OWASP vulnerabilities, injections, credential exposure, and critical bugs in 30+ programming languages."
+        },
+        {
+          "titulo": "Configurable Quality Gates",
+          "desc": "Defines quality and security criteria that automatically block merges and deployments when not met."
+        },
+        {
+          "titulo": "IDE integration",
+          "desc": "SonarLint provides real-time feedback to developers inside VS Code, IntelliJ, and Eclipse, before the commit."
+        },
+        {
+          "titulo": "Dashboards and metrics",
+          "desc": "Full visibility into code quality evolution by project, team, and language over time."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We configure SonarQube and run analysis on the client's repositories within 3 days, with a findings and priorities report."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Integration",
+          "desc": "On-premise or SaaS installation (SonarCloud), CI/CD integration, and quality gate configuration per project."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Team Training",
+          "desc": "Training for developers to interpret and fix findings, and for leads to track quality evolution metrics."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed Operations",
+          "desc": "Continuous platform management, rule updates, quality gate monitoring, and executive reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized support for integrations, failures, and performance optimization, without waiting in vendor queues."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does SonarQube replace Fortify?",
+          "a": "Not necessarily, they are complementary. SonarQube excels at code quality and vulnerability detection in the development flow. Fortify provides deeper enterprise security analysis. Evernow helps define the right combination for each context."
+        },
+        {
+          "q": "What is the difference between SonarQube Community and Enterprise?",
+          "a": "The Community edition is free and covers basic analysis. Developer and Enterprise editions add branch analysis, advanced security, and corporate reporting. Evernow supplies paid editions with better terms."
+        },
+        {
+          "q": "Does it work with monorepos?",
+          "a": "Yes. SonarQube supports monorepos with per-project analysis and independent quality gate configurations per module."
+        }
+      ]
+    },
+    "seoTitle": "Parceiro SonarQube Brasil: Qualidade e Segurança no Fluxo do Dev | Evernow",
+    "seoDescription": "Evernow implementa SonarQube no Brasil com plugins CI/CD, quality gates, custom rules e integração ao fluxo de PR. Edição Developer, Enterprise e Data Center.",
+    "seoKeywords": "parceiro sonarqube brasil, sonarqube enterprise, consultoria sonarqube, implementação sonarqube, sonarqube vs sonarcloud, sonarqube saas brasil, quality gate sonar"
+  },
+  {
+    "slug": "sonatype",
+    "nome": "Sonatype Nexus",
+    "logo": "/assets/image/vendor/sonatype.svg",
+    "categoria": "Software Supply Chain",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "Segurança da cadeia de suprimentos de software: controle cada dependência open source",
+    "heroTitle": "Sonatype Nexus: SCA e governança da cadeia de suprimentos de software",
+    "heroSubtitle": "Identifique componentes open source vulneráveis antes que entrem no build. Com a Evernow, você implementa o Nexus Lifecycle no pipeline e garante que nenhuma dependência comprometida chegue à produção.",
+    "sobre": "Sonatype é a plataforma líder em Software Composition Analysis (SCA). Ela monitora as dependências open source utilizadas no código, identifica vulnerabilidades conhecidas (CVEs), licenças incompatíveis e componentes maliciosos antes que entrem no build. É a resposta ao risco de supply chain como SolarWinds e Log4Shell.",
+    "oqueFaz": [
+      {
+        "titulo": "SCA: Análise de Composição de Software",
+        "desc": "Mapeia todos os componentes open source utilizados e identifica CVEs, versões desatualizadas e dependências transitivas vulneráveis."
+      },
+      {
+        "titulo": "Bloqueio no pipeline",
+        "desc": "Nexus Lifecycle bloqueia builds automaticamente quando detecta componentes com vulnerabilidades críticas ou licenças proibidas pela política da empresa."
+      },
+      {
+        "titulo": "Repositório seguro de artefatos",
+        "desc": "Nexus Repository funciona como proxy e cache de dependências, garantindo que apenas componentes aprovados sejam utilizados pelos times."
+      },
+      {
+        "titulo": "Governança de licenças",
+        "desc": "Detecta uso de licenças GPL, AGPL e outras incompatíveis com software proprietário antes que gerem risco legal."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Análise do inventário atual de dependências open source do cliente, com relatório de CVEs e licenças de risco."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração",
+        "desc": "Instalação do Nexus IQ e Repository, definição de políticas e integração ao pipeline Maven, npm, Gradle e outros."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para desenvolvedores entenderem o risco de dependências e para a equipe de segurança gerenciar políticas."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Gestão de Políticas",
+        "desc": "Definição e manutenção de políticas de componentes, whitelists e alertas de novas vulnerabilidades em componentes já aprovados."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado para integrações e falsos positivos, com SLA definido e engenheiro dedicado."
+      }
+    ],
+    "produtosRelacionados": [
+      "sast-dast-sca",
+      "devsecops",
+      "desenvolvimento-seguro-gerenciado"
+    ],
+    "faq": [
+      {
+        "q": "O Sonatype cobre dependências transitivas?",
+        "a": "Sim. O Nexus Lifecycle mapeia toda a árvore de dependências, incluindo as transitivas (dependências das dependências), que são a principal fonte de vulnerabilidades de supply chain."
+      },
+      {
+        "q": "Como o Sonatype se diferencia do OWASP Dependency-Check?",
+        "a": "O Dependency-Check é uma ferramenta open source básica. O Sonatype oferece base de dados proprietária com mais CVEs, inteligência de exploitabilidade, integração enterprise e suporte comercial."
+      },
+      {
+        "q": "A Evernow auxilia na definição das políticas de componentes?",
+        "a": "Sim. Parte do nosso trabalho de implementação inclui definir junto com o cliente as políticas de severidade, licenças permitidas e ações automáticas no pipeline."
+      }
+    ],
+    "en": {
+      "heroTitle": "Sonatype Nexus: SCA and Software Supply Chain Governance",
+      "heroSubtitle": "Identify vulnerable open source components before they enter the build. With Evernow, you implement Nexus Lifecycle in the pipeline and ensure no compromised dependency reaches production.",
+      "sobre": "Sonatype is the leading Software Composition Analysis (SCA) platform. It monitors open source dependencies used in the code, identifies known vulnerabilities (CVEs), incompatible licenses, and malicious components before they enter the build. It is the answer to supply chain risk events like SolarWinds and Log4Shell.",
+      "oqueFaz": [
+        {
+          "titulo": "SCA: Software Composition Analysis",
+          "desc": "Maps all open source components in use and identifies CVEs, outdated versions, and vulnerable transitive dependencies."
+        },
+        {
+          "titulo": "Pipeline blocking",
+          "desc": "Nexus Lifecycle automatically blocks builds when it detects components with critical vulnerabilities or licenses prohibited by company policy."
+        },
+        {
+          "titulo": "Secure artifact repository",
+          "desc": "Nexus Repository acts as a proxy and dependency cache, ensuring only approved components are used by development teams."
+        },
+        {
+          "titulo": "License governance",
+          "desc": "Detects use of GPL, AGPL, and other licenses incompatible with proprietary software before they create legal risk."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "Analysis of the client's current open source dependency inventory, with a report of CVEs and risky licenses."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Integration",
+          "desc": "Installation of Nexus IQ and Repository, policy definition, and integration into Maven, npm, Gradle, and other pipelines."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for developers to understand dependency risk and for security teams to manage policies."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Policy Management",
+          "desc": "Definition and maintenance of component policies, whitelists, and alerts for new vulnerabilities in already-approved components."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized support for integrations and false positives, with defined SLA and a dedicated engineer."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Sonatype cover transitive dependencies?",
+          "a": "Yes. Nexus Lifecycle maps the entire dependency tree, including transitive dependencies (dependencies of dependencies), which are the primary source of supply chain vulnerabilities."
+        },
+        {
+          "q": "How does Sonatype differ from OWASP Dependency-Check?",
+          "a": "Dependency-Check is a basic open source tool. Sonatype offers a proprietary database with more CVEs, exploitability intelligence, enterprise integration, and commercial support."
+        },
+        {
+          "q": "Does Evernow help define component policies?",
+          "a": "Yes. Part of our implementation work includes defining together with the client the severity policies, permitted licenses, and automatic pipeline actions."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "semgrep",
+    "nome": "Semgrep",
+    "logo": "/assets/image/vendor/semgrep.svg",
+    "categoria": "AppSec & DevSecOps",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "SAST rápido e customizável, regras de segurança no ritmo do desenvolvimento ágil",
+    "heroTitle": "Semgrep: Análise estática leve, rápida e altamente customizável para DevSecOps",
+    "heroSubtitle": "Escreva regras de segurança em minutos, integre ao PR e devolva feedback ao desenvolvedor em segundos. Com a Evernow, você tem regras customizadas para o contexto do seu negócio e integração completa ao pipeline.",
+    "sobre": "Semgrep é um engine de análise estática de código projetado para velocidade e customização. Diferente de ferramentas tradicionais de SAST, permite criar regras específicas para os padrões de código da empresa em poucos minutos, rodando diretamente no PR em segundos. É a escolha para times que adotaram DevSecOps e precisam de segurança sem atrito.",
+    "oqueFaz": [
+      {
+        "titulo": "Regras customizáveis em YAML",
+        "desc": "Crie regras de segurança específicas para o contexto do negócio, padrões internos proibidos, APIs inseguras, vazamentos de dados, em minutos."
+      },
+      {
+        "titulo": "Análise em segundos no PR",
+        "desc": "Roda análise em segundos diretamente no pull request, devolvendo comentários de segurança ao desenvolvedor antes do merge."
+      },
+      {
+        "titulo": "Biblioteca de regras da comunidade",
+        "desc": "Acesso a centenas de regras prontas para OWASP, CWE, frameworks específicos (Django, Spring, React) e provedores cloud."
+      },
+      {
+        "titulo": "Secrets detection",
+        "desc": "Detecta credenciais, tokens e chaves de API acidentalmente commitadas no código antes de chegarem ao repositório."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Rodamos o Semgrep no repositório do cliente e apresentamos achados em até 2 dias, incluindo regras customizadas para o stack tecnológico."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Regras Customizadas",
+        "desc": "Integração ao GitHub/GitLab/Bitbucket, seleção de regras relevantes e desenvolvimento de regras específicas para o contexto da empresa."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para que a equipe interna escreva e mantenha suas próprias regras Semgrep ao longo do tempo."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Gestão de Regras",
+        "desc": "Manutenção e evolução do conjunto de regras, análise de falsos positivos e relatórios de cobertura de segurança."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para integrações, tuning de regras e análise de achados complexos com engenheiro especializado."
+      }
+    ],
+    "produtosRelacionados": [
+      "sast-dast-sca",
+      "devsecops",
+      "treinamento-devsecops"
+    ],
+    "faq": [
+      {
+        "q": "Semgrep substitui ferramentas de SAST tradicionais como Fortify?",
+        "a": "São complementares. O Semgrep é excelente para regras customizadas e velocidade no PR. O Fortify oferece análise mais profunda e relatórios enterprise. A Evernow ajuda a definir qual faz sentido para cada estágio de maturidade."
+      },
+      {
+        "q": "Semgrep funciona com linguagens mobile?",
+        "a": "Sim, suporta Java/Kotlin para Android e Swift/Objective-C para iOS, além de frameworks como React Native e Flutter."
+      },
+      {
+        "q": "É possível criar regras para APIs internas da empresa?",
+        "a": "Sim, e essa é uma das principais vantagens do Semgrep. A Evernow cria regras específicas para os padrões internos de desenvolvimento, garantindo que práticas inseguras da empresa sejam detectadas automaticamente."
+      }
+    ],
+    "en": {
+      "heroTitle": "Semgrep: Lightweight, Fast, and Highly Customizable Static Analysis for DevSecOps",
+      "heroSubtitle": "Write security rules in minutes, integrate into pull requests, and deliver feedback to developers in seconds. With Evernow, you get custom rules tailored to your business context and full pipeline integration.",
+      "sobre": "Semgrep is a static code analysis engine designed for speed and customization. Unlike traditional SAST tools, it allows you to create rules specific to your company's code patterns in just minutes, running directly on pull requests in seconds. It is the choice for teams that have adopted DevSecOps and need friction-free security.",
+      "oqueFaz": [
+        {
+          "titulo": "Customizable rules in YAML",
+          "desc": "Create security rules specific to your business context, forbidden internal patterns, insecure APIs, and data leaks in minutes."
+        },
+        {
+          "titulo": "Analysis in seconds on the PR",
+          "desc": "Runs analysis in seconds directly on pull requests, returning security comments to the developer before the merge."
+        },
+        {
+          "titulo": "Community rule library",
+          "desc": "Access to hundreds of ready-made rules for OWASP, CWE, specific frameworks (Django, Spring, React), and cloud providers."
+        },
+        {
+          "titulo": "Secrets detection",
+          "desc": "Detects credentials, tokens, and API keys accidentally committed to code before they reach the repository."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We run Semgrep on the client's repository and present findings within 2 days, including custom rules for the technology stack."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Custom Rules",
+          "desc": "Integration with GitHub/GitLab/Bitbucket, selection of relevant rules, and development of company-specific rules."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for the internal team to write and maintain their own Semgrep rules over time."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Rule Management",
+          "desc": "Maintenance and evolution of the rule set, false positive analysis, and security coverage reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for integrations, rule tuning, and analysis of complex findings with a specialized engineer."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Semgrep replace traditional SAST tools like Fortify?",
+          "a": "They are complementary. Semgrep excels at custom rules and PR speed. Fortify provides deeper analysis and enterprise reports. Evernow helps determine which makes sense for each maturity stage."
+        },
+        {
+          "q": "Does Semgrep work with mobile languages?",
+          "a": "Yes, it supports Java/Kotlin for Android and Swift/Objective-C for iOS, plus frameworks like React Native and Flutter."
+        },
+        {
+          "q": "Is it possible to create rules for internal company APIs?",
+          "a": "Yes, and this is one of Semgrep's main advantages. Evernow creates rules specific to internal development patterns, ensuring that company-specific insecure practices are detected automatically."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "veracode",
+    "nome": "Veracode",
+    "logo": "/assets/image/vendor/veracode.svg",
+    "categoria": "AppSec & DevSecOps",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "Plataforma SaaS de AppSec com SAST, DAST, SCA e treinamento em uma única solução",
+    "heroTitle": "Veracode: AppSec como plataforma com SAST, DAST, SCA e treinamento integrados",
+    "heroSubtitle": "Cubra todo o ciclo de segurança de aplicações em uma única plataforma SaaS, sem infraestrutura para gerenciar. Com a Evernow, você implementa e opera o Veracode com integração ao seu pipeline e capacitação dos times.",
+    "sobre": "Veracode é a plataforma SaaS de Application Security Testing mais completa do mercado, integrando SAST (análise estática), DAST (análise dinâmica), SCA (componentes open source) e treinamento em secure coding em um único console. Por ser 100% SaaS, não requer infraestrutura própria e escala com o portfólio de aplicações.",
+    "oqueFaz": [
+      {
+        "titulo": "SAST: Análise Estática",
+        "desc": "Analisa código binário sem acesso ao fonte, permitindo testar aplicações de terceiros e fornecedores além das internas."
+      },
+      {
+        "titulo": "DAST: Análise Dinâmica",
+        "desc": "Testa aplicações web em execução simulando ataques reais, identificando vulnerabilidades que só aparecem em runtime."
+      },
+      {
+        "titulo": "SCA: Componentes Open Source",
+        "desc": "Identifica dependências vulneráveis e licenças incompatíveis no código-fonte e nos builds."
+      },
+      {
+        "titulo": "Security Labs: Treinamento",
+        "desc": "Plataforma de treinamento gamificado em secure coding para desenvolvedores, com trilhas por linguagem e framework."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Configuramos uma aplicação representativa na plataforma Veracode e apresentamos achados comparando SAST, DAST e SCA em até 5 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração",
+        "desc": "Onboarding de todas as aplicações na plataforma, integração ao CI/CD e configuração de políticas de segurança por aplicação."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento & Security Labs",
+        "desc": "Ativação e gestão do programa Security Labs para os times de desenvolvimento, com trilhas personalizadas por stack."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação Gerenciada",
+        "desc": "Gestão do programa de AppSec, triagem de achados, acompanhamento de SLA de correção e relatórios executivos."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Engenheiros com certificação Veracode disponíveis para dúvidas técnicas, integrações e análise de achados complexos."
+      }
+    ],
+    "produtosRelacionados": [
+      "sast-dast-sca",
+      "devsecops",
+      "desenvolvimento-seguro-gerenciado"
+    ],
+    "faq": [
+      {
+        "q": "Veracode exige acesso ao código-fonte?",
+        "a": "Para SAST, o Veracode analisa binários (JAR, WAR, DLL, APK), sem precisar do código-fonte. Isso permite testar aplicações de fornecedores e terceiros."
+      },
+      {
+        "q": "Como o Veracode trata aplicações legadas?",
+        "a": "Muito bem. Justamente por analisar binários, o Veracode é indicado para aplicações legadas sem código-fonte acessível ou em linguagens antigas como COBOL e VB6."
+      },
+      {
+        "q": "A Evernow faz o onboarding de todas as aplicações?",
+        "a": "Sim. O onboarding é parte do nosso serviço de implementação, onde catalogamos o portfólio de aplicações, priorizamos por risco e configuramos a plataforma para cada uma."
+      },
+      {
+        "q": "Quanto custa o Veracode no Brasil?",
+        "a": "O Veracode é licenciado por aplicação + número de scans/ano + módulos (SAST, DAST, SCA, Pipeline Scan). Para um portfolio típico (15-30 apps), o investimento anual total costuma ficar entre R$ 180k e R$ 500k incluindo licença, onboarding e operação gerenciada pela Evernow."
+      },
+      {
+        "q": "Veracode ou Fortify: qual tem menos falso-positivo?",
+        "a": "Em testes reais da Evernow em ambientes enterprise, o Veracode costuma entregar menor taxa de falso-positivo por usar máquina de correlação própria e baseline por aplicação, enquanto o Fortify é mais conservador e requer tuning inicial mais pesado. Ambos chegam a &lt; 10% após 3-4 semanas de ajuste fino pela Evernow."
+      },
+      {
+        "q": "Veracode integra com GitHub Actions e Azure DevOps?",
+        "a": "Sim. A Evernow implementa o plugin oficial no seu pipeline (GitHub Actions, Azure DevOps, GitLab CI ou Jenkins) com Pipeline Scan em PR (feedback &lt; 3 min) e Policy Scan no merge para main. Resultados viram tickets automáticos no Jira/ClickUp com prioridade."
+      }
+    ],
+    "en": {
+      "heroTitle": "Veracode: AppSec Platform with Integrated SAST, DAST, SCA, and Training",
+      "heroSubtitle": "Cover the entire application security lifecycle in a single SaaS platform, with no infrastructure to manage. With Evernow, you implement and operate Veracode with pipeline integration and team enablement.",
+      "sobre": "Veracode is the most complete SaaS Application Security Testing platform on the market, integrating SAST (static analysis), DAST (dynamic analysis), SCA (open source components), and secure coding training in a single console. Being 100% SaaS, it requires no infrastructure and scales with the application portfolio.",
+      "oqueFaz": [
+        {
+          "titulo": "SAST: Static Analysis",
+          "desc": "Analyzes binaries (JAR, WAR, DLL, APK) without needing source code, enabling testing of third-party and vendor applications alongside internal ones."
+        },
+        {
+          "titulo": "DAST: Dynamic Analysis",
+          "desc": "Tests running web applications by simulating real attacks, identifying vulnerabilities that only appear at runtime."
+        },
+        {
+          "titulo": "SCA: Open Source Components",
+          "desc": "Identifies vulnerable dependencies and incompatible licenses in source code and builds."
+        },
+        {
+          "titulo": "Security Labs: Training",
+          "desc": "Gamified secure coding training platform for developers, with tracks by language and framework."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We configure a representative application on the Veracode platform and present findings comparing SAST, DAST, and SCA within 5 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Integration",
+          "desc": "Onboarding of all applications to the platform, CI/CD integration, and security policy configuration per application."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training & Security Labs",
+          "desc": "Activation and management of the Security Labs program for development teams, with customized tracks per technology stack."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed Operations",
+          "desc": "AppSec program management, findings triage, remediation SLA tracking, and executive reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Veracode-certified engineers available for technical questions, integrations, and complex findings analysis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Veracode require access to source code?",
+          "a": "For SAST, Veracode analyzes binaries (JAR, WAR, DLL, APK), without needing source code. This allows testing of vendor and third-party applications."
+        },
+        {
+          "q": "How does Veracode handle legacy applications?",
+          "a": "Very well. Because it analyzes binaries, Veracode is recommended for legacy applications without accessible source code or written in older languages like COBOL and VB6."
+        },
+        {
+          "q": "Does Evernow handle the onboarding of all applications?",
+          "a": "Yes. Onboarding is part of our implementation service, where we catalog the application portfolio, prioritize by risk, and configure the platform for each one."
+        }
+      ]
+    },
+    "seoTitle": "Parceiro Veracode Brasil: Plataforma AppSec SaaS com Implementação | Evernow",
+    "seoDescription": "Evernow é parceira Veracode no Brasil. SAST, DAST, SCA e treinamento de devs em uma plataforma SaaS. POC, licenciamento, integração ao CI/CD e operação com SLA.",
+    "seoKeywords": "parceiro veracode brasil, veracode appsec, consultoria veracode, implementação veracode, licenciamento veracode, veracode saas, veracode sast"
+  },
+  {
+    "slug": "qualys",
+    "nome": "Qualys VMDR",
+    "logo": "/assets/image/vendor/qualys.svg",
+    "categoria": "Gestão de Vulnerabilidades",
+    "pilarSlug": "assurance",
+    "pilarNome": "Assurance",
+    "tagline": "Visibilidade completa de ativos e vulnerabilidades em cloud e on-premise",
+    "heroTitle": "Qualys VMDR: Gestão de vulnerabilidades, detecção e resposta em uma plataforma",
+    "heroSubtitle": "Descubra todos os ativos, detecte vulnerabilidades com contexto de risco e priorize as correções que mais importam. Com a Evernow, você implanta o Qualys e mantém o programa de gestão de vulnerabilidades operando continuamente.",
+    "sobre": "Qualys VMDR (Vulnerability Management, Detection and Response) é uma plataforma cloud-native que combina inventário de ativos, gestão de vulnerabilidades, detecção de ameaças e orquestração de resposta em um único console. Com sensores leves para cloud, containers, endpoints e OT, oferece visibilidade de 360° do ambiente.",
+    "oqueFaz": [
+      {
+        "titulo": "Inventário contínuo de ativos",
+        "desc": "Descoberta automática de todos os ativos: servidores, endpoints, cloud instances, containers e OT, com classificação por criticidade."
+      },
+      {
+        "titulo": "Detecção com contexto de risco",
+        "desc": "QDS (Qualys Detection Score) prioriza vulnerabilidades pelo risco real combinando CVSS, exploitabilidade e exposição do ativo."
+      },
+      {
+        "titulo": "Patch Management integrado",
+        "desc": "Identifica e implementa patches automaticamente nos ativos vulneráveis, fechando o ciclo de detecção-correção sem ferramentas adicionais."
+      },
+      {
+        "titulo": "Compliance e relatórios",
+        "desc": "Mapeamento automático para PCI DSS, ISO 27001, LGPD, CIS Benchmarks e NIST, com relatórios prontos para auditorias."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Instalamos sensores no ambiente e entregamos o primeiro relatório de vulnerabilidades e inventário de ativos em até 5 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação",
+        "desc": "Deploy de sensores cloud e on-premise, integração com CMDB, ITSM (ServiceNow, Jira) e configuração de dashboards executivos."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para a equipe de segurança operar a plataforma, interpretar o QDS e priorizar corretamente as remediações."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação Gerenciada de Vulnerabilidades",
+        "desc": "Execução contínua do programa, varreduras, triagem, acompanhamento de remediação e relatórios executivos mensais."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado para tuning de políticas de scan, falsos positivos e integrações com o ecossistema de segurança."
+      }
+    ],
+    "produtosRelacionados": [
+      "gestao-vulnerabilidades",
+      "assessment-maturidade",
+      "cspm"
+    ],
+    "faq": [
+      {
+        "q": "O Qualys funciona em ambientes OT/ICS?",
+        "a": "Sim. O Qualys tem sensores passivos para ambientes OT que não causam impacto nos sistemas industriais, identificando vulnerabilidades sem varreduras ativas."
+      },
+      {
+        "q": "Qual a diferença entre Qualys e Tenable?",
+        "a": "Ambos são líderes em gestão de vulnerabilidades. O Qualys é mais forte em cloud e patch management integrado; o Tenable (Nessus) tem cobertura mais ampla de plugins e é o padrão em muitos pentests. A Evernow trabalha com os dois e ajuda a definir a melhor escolha."
+      },
+      {
+        "q": "O Qualys pode ser integrado ao ServiceNow?",
+        "a": "Sim. A integração nativa com ServiceNow automatiza a criação de tickets de remediação diretamente a partir dos achados do Qualys, com prioridade baseada no QDS."
+      }
+    ],
+    "en": {
+      "heroTitle": "Qualys VMDR: Vulnerability Management, Detection, and Response in One Platform",
+      "heroSubtitle": "Discover all assets, detect vulnerabilities with risk context, and prioritize the remediations that matter most. With Evernow, you deploy Qualys and keep the vulnerability management program running continuously.",
+      "sobre": "Qualys VMDR (Vulnerability Management, Detection and Response) is a cloud-native platform that combines asset inventory, vulnerability management, threat detection, and response orchestration in a single console. With lightweight sensors for cloud, containers, endpoints, and OT, it offers 360-degree visibility across the environment.",
+      "oqueFaz": [
+        {
+          "titulo": "Continuous asset inventory",
+          "desc": "Automatic discovery of all assets: servers, endpoints, cloud instances, containers, and OT, with classification by criticality."
+        },
+        {
+          "titulo": "Detection with risk context",
+          "desc": "QDS (Qualys Detection Score) prioritizes vulnerabilities by real risk, combining CVSS, exploitability, and asset exposure."
+        },
+        {
+          "titulo": "Integrated Patch Management",
+          "desc": "Identifies and automatically implements patches on vulnerable assets, closing the detection-to-remediation loop without additional tools."
+        },
+        {
+          "titulo": "Compliance and reporting",
+          "desc": "Automatic mapping to PCI DSS, ISO 27001, LGPD, CIS Benchmarks, and NIST, with reports ready for audits."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We install sensors in the environment and deliver the first vulnerability and asset inventory report within 5 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation",
+          "desc": "Deployment of cloud and on-premise sensors, CMDB and ITSM integration (ServiceNow, Jira), and executive dashboard configuration."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for the security team to operate the platform, interpret the QDS, and correctly prioritize remediations."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed Vulnerability Operations",
+          "desc": "Continuous program execution, scans, triage, remediation tracking, and monthly executive reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized support for scan policy tuning, false positives, and integrations with the security ecosystem."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Qualys work in OT/ICS environments?",
+          "a": "Yes. Qualys has passive sensors for OT environments that cause no impact on industrial systems, identifying vulnerabilities without active scans."
+        },
+        {
+          "q": "What is the difference between Qualys and Tenable?",
+          "a": "Both are leaders in vulnerability management. Qualys is stronger in cloud and integrated patch management; Tenable (Nessus) has broader plugin coverage and is the standard in many pentests. Evernow works with both and helps determine the best choice."
+        },
+        {
+          "q": "Can Qualys be integrated with ServiceNow?",
+          "a": "Yes. The native ServiceNow integration automates the creation of remediation tickets directly from Qualys findings, with priority based on the QDS."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "tenable",
+    "nome": "Tenable.io",
+    "logo": "/assets/image/vendor/tenable.svg",
+    "categoria": "Gestão de Vulnerabilidades",
+    "pilarSlug": "assurance",
+    "pilarNome": "Assurance",
+    "tagline": "O padrão da indústria em gestão de vulnerabilidades, com o motor Nessus em escala enterprise",
+    "heroTitle": "Tenable.io: Gestão de vulnerabilidades e exposição com o motor Nessus",
+    "heroSubtitle": "Visibilidade completa de vulnerabilidades em cloud, on-premise e containers com o motor de detecção mais utilizado do mundo. Com a Evernow, você tem o Tenable implementado, integrado e um programa de gestão de vulnerabilidades rodando.",
+    "sobre": "Tenable.io é a plataforma cloud de gestão de vulnerabilidades baseada no motor Nessus, o scanner de vulnerabilidades mais amplamente utilizado no mundo, com mais de 185.000 plugins. Oferece visibilidade contínua de exposições em ambientes híbridos, cloud e containers, com priorização por risco baseada em inteligência de ameaças.",
+    "oqueFaz": [
+      {
+        "titulo": "Scanner Nessus: maior base de plugins",
+        "desc": "Mais de 185.000 plugins para detecção de CVEs, misconfigurations, credenciais padrão e conformidade em qualquer tecnologia."
+      },
+      {
+        "titulo": "Vulnerability Priority Rating (VPR)",
+        "desc": "Priorização inteligente que combina CVSS com dados de exploitabilidade real e ameaças ativas, focando a equipe no 3% que realmente importa."
+      },
+      {
+        "titulo": "Visibilidade em cloud e containers",
+        "desc": "Agentes leves para endpoints, sensores para cloud (AWS, Azure, GCP) e integração com registros de containers Docker e Kubernetes."
+      },
+      {
+        "titulo": "Lumin: Análise de Exposição",
+        "desc": "Tenable Lumin calcula o Cyber Exposure Score comparando a maturidade de segurança com pares de mercado do mesmo setor."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Primeiro scan com Nessus no ambiente do cliente em até 3 dias, com relatório de vulnerabilidades priorizadas por VPR."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação",
+        "desc": "Deploy de sensores e agentes, configuração de políticas de scan por segmento de rede e integração com ITSM e SIEM."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para a equipe interpretar o VPR, gerenciar o programa de remediação e gerar evidências para compliance."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Programa de Gestão de Vulnerabilidades",
+        "desc": "Execução do programa completo, varreduras contínuas, triagem, SLA de correção e dashboards executivos mensais."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Engenheiros certificados Tenable para dúvidas técnicas, tuning de políticas e análise de achados críticos."
+      }
+    ],
+    "produtosRelacionados": [
+      "gestao-vulnerabilidades",
+      "pentest",
+      "assessment-maturidade"
+    ],
+    "faq": [
+      {
+        "q": "Qual a diferença entre Nessus Professional e Tenable.io?",
+        "a": "Nessus Professional é uma ferramenta pontual para pentests e varreduras avulsas. Tenable.io é a plataforma enterprise para gestão contínua de vulnerabilidades em escala, com histórico, dashboards e integrações."
+      },
+      {
+        "q": "O Tenable cobre ativos em cloud pública?",
+        "a": "Sim. O Tenable.io tem conectores nativos para AWS, Azure e GCP que descobrem e avaliam todos os ativos cloud sem necessidade de agentes."
+      },
+      {
+        "q": "A Evernow usa o Tenable nos serviços de pentest?",
+        "a": "O Tenable/Nessus faz parte do toolkit utilizado nos nossos serviços de pentest e gestão de vulnerabilidades, combinado com análise manual pelos especialistas."
+      }
+    ],
+    "en": {
+      "heroTitle": "Tenable.io: Vulnerability Management and Exposure with the Nessus Engine",
+      "heroSubtitle": "Full vulnerability visibility across cloud, on-premise, and containers with the world's most widely used detection engine. With Evernow, you get Tenable implemented, integrated, and a vulnerability management program running.",
+      "sobre": "Tenable.io is the cloud vulnerability management platform built on the Nessus engine, the most widely used vulnerability scanner in the world, with over 185,000 plugins. It provides continuous exposure visibility across hybrid, cloud, and container environments, with risk prioritization based on threat intelligence.",
+      "oqueFaz": [
+        {
+          "titulo": "Nessus scanner: largest plugin base",
+          "desc": "Over 185,000 plugins for detecting CVEs, misconfigurations, default credentials, and compliance across any technology."
+        },
+        {
+          "titulo": "Vulnerability Priority Rating (VPR)",
+          "desc": "Intelligent prioritization that combines CVSS with real exploitability data and active threat intelligence, focusing the team on the 3% that truly matters."
+        },
+        {
+          "titulo": "Cloud and container visibility",
+          "desc": "Lightweight agents for endpoints, sensors for cloud (AWS, Azure, GCP), and integration with Docker and Kubernetes container registries."
+        },
+        {
+          "titulo": "Lumin: Exposure Analysis",
+          "desc": "Tenable Lumin calculates the Cyber Exposure Score, comparing security maturity against industry peers in the same sector."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "First Nessus scan in the client's environment within 3 days, with a vulnerability report prioritized by VPR."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation",
+          "desc": "Sensor and agent deployment, scan policy configuration by network segment, and integration with ITSM and SIEM."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for the team to interpret the VPR, manage the remediation program, and generate compliance evidence."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Vulnerability Management Program",
+          "desc": "Full program execution, continuous scans, triage, remediation SLA, and monthly executive dashboards."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Tenable-certified engineers for technical questions, policy tuning, and critical findings analysis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the difference between Nessus Professional and Tenable.io?",
+          "a": "Nessus Professional is a point tool for pentests and one-off scans. Tenable.io is the enterprise platform for continuous vulnerability management at scale, with history, dashboards, and integrations."
+        },
+        {
+          "q": "Does Tenable cover public cloud assets?",
+          "a": "Yes. Tenable.io has native connectors for AWS, Azure, and GCP that discover and assess all cloud assets without needing agents."
+        },
+        {
+          "q": "Does Evernow use Tenable in pentest services?",
+          "a": "Tenable/Nessus is part of the toolkit used in our pentest and vulnerability management services, combined with manual analysis by specialists."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "sentinelone",
+    "nome": "SentinelOne",
+    "logo": "/assets/image/vendor/sentinelone.svg",
+    "categoria": "EDR / XDR",
+    "pilarSlug": "managed-ops",
+    "pilarNome": "Managed Ops",
+    "tagline": "Proteção autônoma de endpoints, detecção e resposta sem dependência humana constante",
+    "heroTitle": "SentinelOne: EDR/XDR com IA para proteção autônoma de endpoints e cloud",
+    "heroSubtitle": "Detecte, contenha e remedeie ameaças em endpoints, servidores e cloud em milissegundos, sem depender de assinaturas. Com a Evernow, você tem o SentinelOne implementado, tuned e integrado ao seu SOC.",
+    "sobre": "SentinelOne é a plataforma de EDR/XDR líder que usa inteligência artificial para detectar e responder a ameaças em endpoints, servidores e ambientes cloud de forma autônoma, sem depender de assinaturas tradicionais ou intervenção humana imediata. Sua IA comportamental detecta ransomware, fileless malware e ataques zero-day em milissegundos.",
+    "oqueFaz": [
+      {
+        "titulo": "Detecção comportamental com IA",
+        "desc": "Analisa o comportamento de processos em tempo real, detectando ameaças desconhecidas como ransomware e fileless malware sem depender de assinaturas."
+      },
+      {
+        "titulo": "Resposta autônoma",
+        "desc": "Isola endpoints, mata processos, faz rollback de arquivos criptografados pelo ransomware e remedia automaticamente sem intervenção humana."
+      },
+      {
+        "titulo": "XDR: Visibilidade unificada",
+        "desc": "Correlaciona dados de endpoints, rede, cloud e identidade em um único painel para investigações mais rápidas e completas."
+      },
+      {
+        "titulo": "Ranger: Descoberta de ativos",
+        "desc": "Descobre dispositivos não gerenciados na rede usando os próprios agentes implantados, sem infraestrutura adicional."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Deploy em grupo piloto de endpoints, simulação de ameaças e apresentação das capacidades de detecção e resposta autônoma."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração",
+        "desc": "Deploy do agente em toda a frota, configuração de políticas por grupo de ativos e integração com SIEM e SOAR."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento SOC",
+        "desc": "Capacitação do time de SOC para operar a plataforma, investigar alertas, fazer threat hunting e usar o console Singularity."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "MDR: Detecção e Resposta Gerenciada",
+        "desc": "Monitoramento 24x7 dos alertas do SentinelOne com triagem, resposta e relatórios mensais de incidentes."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Engenheiros certificados SentinelOne para tuning de políticas, análise de falsos positivos e resolução de incidentes complexos."
+      }
+    ],
+    "produtosRelacionados": [
+      "soc-monitoramento",
+      "servicos-gerenciados",
+      "resposta-incidentes"
+    ],
+    "faq": [
+      {
+        "q": "O SentinelOne substitui o antivírus tradicional?",
+        "a": "Sim. O SentinelOne substitui completamente o antivírus tradicional e adiciona capacidades de EDR/XDR, detecção comportamental, resposta autônoma e visibilidade forense."
+      },
+      {
+        "q": "Como funciona o rollback de ransomware?",
+        "a": "O agente SentinelOne monitora todas as operações de arquivo. Ao detectar ransomware, isola o endpoint, mata o processo e reverte os arquivos criptografados para o estado anterior usando snapshots, tudo em segundos."
+      },
+      {
+        "q": "A Evernow oferece monitoramento 24x7 do SentinelOne?",
+        "a": "Sim. Oferecemos o serviço de MDR (Managed Detection and Response) onde nossa equipe monitora os alertas 24x7, tria os incidentes e responde conforme os playbooks definidos com o cliente."
+      }
+    ],
+    "en": {
+      "heroTitle": "SentinelOne: EDR/XDR with AI for Autonomous Endpoint and Cloud Protection",
+      "heroSubtitle": "Detect, contain, and remediate threats on endpoints, servers, and cloud in milliseconds, without relying on signatures. With Evernow, you get SentinelOne implemented, tuned, and integrated into your SOC.",
+      "sobre": "SentinelOne is the leading EDR/XDR platform that uses artificial intelligence to autonomously detect and respond to threats on endpoints, servers, and cloud environments, without relying on traditional signatures or immediate human intervention. Its behavioral AI detects ransomware, fileless malware, and zero-day attacks in milliseconds.",
+      "oqueFaz": [
+        {
+          "titulo": "Behavioral detection with AI",
+          "desc": "Analyzes process behavior in real time, detecting unknown threats like ransomware and fileless malware without relying on signatures."
+        },
+        {
+          "titulo": "Autonomous response",
+          "desc": "Isolates endpoints, kills processes, rolls back ransomware-encrypted files, and remediates automatically without human intervention."
+        },
+        {
+          "titulo": "XDR: Unified visibility",
+          "desc": "Correlates data from endpoints, network, cloud, and identity in a single pane for faster, more complete investigations."
+        },
+        {
+          "titulo": "Ranger: Asset discovery",
+          "desc": "Discovers unmanaged devices on the network using deployed agents, with no additional infrastructure."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "Deployment on a pilot group of endpoints, threat simulation, and presentation of autonomous detection and response capabilities."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Integration",
+          "desc": "Agent deployment across the entire fleet, policy configuration by asset group, and integration with SIEM and SOAR."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "SOC Training",
+          "desc": "Training for the SOC team to operate the platform, investigate alerts, perform threat hunting, and use the Singularity console."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "MDR: Managed Detection and Response",
+          "desc": "24x7 monitoring of SentinelOne alerts with triage, response, and monthly incident reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "SentinelOne-certified engineers for policy tuning, false positive analysis, and complex incident resolution."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does SentinelOne replace traditional antivirus?",
+          "a": "Yes. SentinelOne completely replaces traditional antivirus and adds EDR/XDR capabilities, behavioral detection, autonomous response, and forensic visibility."
+        },
+        {
+          "q": "How does ransomware rollback work?",
+          "a": "The SentinelOne agent monitors all file operations. Upon detecting ransomware, it isolates the endpoint, kills the process, and reverts encrypted files to their previous state using snapshots, all within seconds."
+        },
+        {
+          "q": "Does Evernow offer 24x7 monitoring of SentinelOne?",
+          "a": "Yes. We offer MDR (Managed Detection and Response) service where our team monitors alerts 24x7, triages incidents, and responds according to the playbooks defined with the client."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "darktrace",
+    "nome": "Darktrace",
+    "logo": "/assets/image/vendor/darktrace.svg",
+    "categoria": "NDR / AI Security",
+    "pilarSlug": "managed-ops",
+    "pilarNome": "Managed Ops",
+    "tagline": "IA que aprende o normal para detectar o anormal, defesa autônoma em tempo real",
+    "heroTitle": "Darktrace: Detecção e resposta a ameaças com IA autoaprendida",
+    "heroSubtitle": "Detecte ataques internos, movimentação lateral e ameaças desconhecidas que escapam de regras estáticas. Com a Evernow, você tem o Darktrace configurado para o seu ambiente e integrado à operação de segurança.",
+    "sobre": "Darktrace usa inteligência artificial autoaprendida para construir um modelo do comportamento normal de cada usuário, dispositivo e rede, detectando anomalias sutis que indicam ataques antes que causem dano. Diferente de soluções baseadas em regras, o Darktrace detecta ameaças desconhecidas e ataques internos sem precisar de assinaturas.",
+    "oqueFaz": [
+      {
+        "titulo": "IA autoaprendida",
+        "desc": "Aprende o padrão de comportamento normal de cada entidade na rede em 1-3 semanas e detecta qualquer desvio, incluindo ameaças internas e zero-days."
+      },
+      {
+        "titulo": "NDR: Detecção em rede",
+        "desc": "Analisa o tráfego de rede em tempo real, detectando movimentação lateral, exfiltração de dados, C2 e ataques cifrados sem descriptografar o tráfego."
+      },
+      {
+        "titulo": "Antigena: Resposta Autônoma",
+        "desc": "Interrompe ataques automaticamente no menor nível de intervenção possível, bloqueando conexões específicas sem derrubar usuários legítimos."
+      },
+      {
+        "titulo": "Cobertura multi-vetor",
+        "desc": "Cobre email (Darktrace Email), endpoints, cloud (AWS/Azure/GCP), SaaS e ambientes OT/ICS em uma única plataforma de IA."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Instalamos o probe na rede do cliente em modo de observação por 2 semanas e apresentamos um relatório de anomalias detectadas."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração",
+        "desc": "Configuração dos probes, ajuste do modelo de IA para o ambiente específico e integração com SIEM e ferramentas de ticketing."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento SOC",
+        "desc": "Capacitação para o time de SOC interpretar os alertas da IA, investigar incidentes e configurar a Antigena de forma segura."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Monitoramento Gerenciado",
+        "desc": "Acompanhamento contínuo dos alertas Darktrace com triagem, análise de anomalias críticas e relatórios de ameaças mensais."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado para tuning do modelo de IA, redução de falsos positivos e análise de ameaças complexas."
+      }
+    ],
+    "produtosRelacionados": [
+      "soc-monitoramento",
+      "resposta-incidentes",
+      "servicos-gerenciados"
+    ],
+    "faq": [
+      {
+        "q": "Quanto tempo o Darktrace leva para aprender o ambiente?",
+        "a": "O modelo de IA leva de 1 a 3 semanas para construir a linha de base comportamental. A Evernow acompanha esse período de aprendizado para ajustar os parâmetros e reduzir o ruído."
+      },
+      {
+        "q": "O Darktrace consegue detectar ataques internos?",
+        "a": "Sim, é uma das principais vantagens. Como a IA aprende o comportamento individual de cada usuário, detecta quando um funcionário começa a agir de forma anômala (download incomum, acesso a sistemas nunca acessados) antes de qualquer exfiltração."
+      },
+      {
+        "q": "A Antigena pode bloquear conexões legítimas por engano?",
+        "a": "O Darktrace aplica o princípio do menor nível de intervenção, bloqueando apenas conexões específicas anômalas, não o usuário inteiro. A Evernow configura os thresholds da Antigena de forma conservadora durante o período inicial."
+      }
+    ],
+    "en": {
+      "heroTitle": "Darktrace: Threat Detection and Response with Self-Learning AI",
+      "heroSubtitle": "Detect insider attacks, lateral movement, and unknown threats that evade static rules. With Evernow, you get Darktrace configured for your environment and integrated into security operations.",
+      "sobre": "Darktrace uses self-learning artificial intelligence to build a model of the normal behavior of every user, device, and network, detecting subtle anomalies that indicate attacks before damage occurs. Unlike rule-based solutions, Darktrace detects unknown threats and insider attacks without needing signatures.",
+      "oqueFaz": [
+        {
+          "titulo": "Self-learning AI",
+          "desc": "Learns the normal behavior pattern of every entity on the network in 1-3 weeks and detects any deviation, including insider threats and zero-days."
+        },
+        {
+          "titulo": "NDR: Network detection",
+          "desc": "Analyzes network traffic in real time, detecting lateral movement, data exfiltration, C2, and encrypted attacks without decrypting traffic."
+        },
+        {
+          "titulo": "Antigena: Autonomous Response",
+          "desc": "Interrupts attacks automatically at the minimum level of intervention possible, blocking specific connections without taking down legitimate users."
+        },
+        {
+          "titulo": "Multi-vector coverage",
+          "desc": "Covers email (Darktrace Email), endpoints, cloud (AWS/Azure/GCP), SaaS, and OT/ICS environments in a single AI platform."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We install the probe on the client's network in observation mode for 2 weeks and present a report of detected anomalies."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Integration",
+          "desc": "Probe configuration, AI model tuning for the specific environment, and integration with SIEM and ticketing tools."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "SOC Training",
+          "desc": "Training for the SOC team to interpret AI alerts, investigate incidents, and configure Antigena safely."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed Monitoring",
+          "desc": "Continuous monitoring of Darktrace alerts with triage, critical anomaly analysis, and monthly threat reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized support for AI model tuning, false positive reduction, and complex threat analysis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "How long does Darktrace take to learn the environment?",
+          "a": "The AI model takes 1 to 3 weeks to build the behavioral baseline. Evernow monitors this learning period to adjust parameters and reduce noise."
+        },
+        {
+          "q": "Can Darktrace detect insider attacks?",
+          "a": "Yes, this is one of its main advantages. Because the AI learns each user's individual behavior, it detects when an employee starts acting anomalously (unusual downloads, access to never-visited systems) before any exfiltration."
+        },
+        {
+          "q": "Can Antigena accidentally block legitimate connections?",
+          "a": "Darktrace applies the principle of minimum intervention, blocking only specific anomalous connections rather than the entire user session. Evernow configures Antigena thresholds conservatively during the initial period."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "orca-security",
+    "nome": "Orca Security",
+    "logo": "/assets/image/vendor/orca.svg",
+    "categoria": "CSPM / Cloud Security",
+    "pilarSlug": "data-shield",
+    "pilarNome": "Data Shield",
+    "tagline": "Segurança cloud sem agentes, visibilidade completa em AWS, Azure e GCP em minutos",
+    "heroTitle": "Orca Security: CSPM e proteção cloud agentless com contexto de risco",
+    "heroSubtitle": "Descubra riscos em cloud em minutos sem instalar agentes, misconfigurations, dados expostos, vulnerabilidades e movimentação lateral. Com a Evernow, você tem o Orca integrado ao seu ambiente cloud e um programa de Cloud Security operando.",
+    "sobre": "Orca Security é a plataforma de Cloud Security Posture Management (CSPM) agentless que conecta diretamente às APIs cloud (AWS, Azure, GCP) para detectar misconfigurations, vulnerabilidades, dados expostos e riscos de movimentação lateral sem instalar nenhum agente, obtendo visibilidade completa em minutos.",
+    "oqueFaz": [
+      {
+        "titulo": "CSPM sem agentes",
+        "desc": "Conecta via API às contas cloud e detecta misconfigurations, permissões excessivas, buckets públicos e não-conformidades com CIS Benchmarks em minutos."
+      },
+      {
+        "titulo": "Visualização de attack paths",
+        "desc": "Mapeia caminhos de ataque combinando vulnerabilidades, misconfigurations e identidades para priorizar os riscos com maior impacto potencial."
+      },
+      {
+        "titulo": "Data Security Posture",
+        "desc": "Descobre dados sensíveis (PII, credenciais, dados financeiros) armazenados em buckets, bancos e volumes cloud expostos ou mal configurados."
+      },
+      {
+        "titulo": "Shift-left com IaC Security",
+        "desc": "Detecta misconfigurations em templates Terraform, CloudFormation e ARM antes do deploy, integrando ao pipeline de IaC."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Conectamos o Orca à conta cloud do cliente e entregamos o primeiro relatório de riscos com attack paths em até 1 dia."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração",
+        "desc": "Onboarding de todas as contas cloud, configuração de alertas, integração com Jira/Slack e definição de políticas de conformidade."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para a equipe de cloud e segurança interpretar attack paths, priorizar remediações e gerenciar políticas."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Programa de Cloud Security",
+        "desc": "Monitoramento contínuo da postura cloud, acompanhamento de remediações e relatórios de compliance mensais."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para integrações multi-cloud, análise de attack paths complexos e customização de políticas de segurança."
+      }
+    ],
+    "produtosRelacionados": [
+      "cspm",
+      "dspm",
+      "gestao-vulnerabilidades"
+    ],
+    "faq": [
+      {
+        "q": "Por que sem agentes é uma vantagem?",
+        "a": "Agentes exigem processo de aprovação, manutenção e podem causar impacto em produção. O Orca obtém visibilidade completa lendo snapshots dos discos via API cloud, sem overhead operacional e sem ponto cego."
+      },
+      {
+        "q": "O Orca cobre multi-cloud e multi-account?",
+        "a": "Sim. O Orca suporta AWS, Azure, GCP, Oracle Cloud e Alibaba Cloud, com suporte a múltiplas contas e organizações em um único console."
+      },
+      {
+        "q": "O Orca detecta dados sensíveis em buckets S3?",
+        "a": "Sim. O módulo de Data Security do Orca escaneia o conteúdo dos objetos armazenados para identificar PII, credenciais e dados financeiros, correlacionando com as configurações de acesso para identificar dados expostos."
+      }
+    ],
+    "en": {
+      "heroTitle": "Orca Security: Agentless CSPM and Cloud Protection with Risk Context",
+      "heroSubtitle": "Discover cloud risks in minutes without installing agents: misconfigurations, exposed data, vulnerabilities, and lateral movement. With Evernow, you get Orca integrated into your cloud environment and a Cloud Security program running.",
+      "sobre": "Orca Security is the agentless Cloud Security Posture Management (CSPM) platform that connects directly to cloud APIs (AWS, Azure, GCP) to detect misconfigurations, vulnerabilities, exposed data, and lateral movement risks without installing any agent, achieving full visibility in minutes.",
+      "oqueFaz": [
+        {
+          "titulo": "Agentless CSPM",
+          "desc": "Connects via API to cloud accounts and detects misconfigurations, excessive permissions, public buckets, and CIS Benchmark non-compliance in minutes."
+        },
+        {
+          "titulo": "Attack path visualization",
+          "desc": "Maps attack paths by combining vulnerabilities, misconfigurations, and identities to prioritize risks with the greatest potential impact."
+        },
+        {
+          "titulo": "Data Security Posture",
+          "desc": "Discovers sensitive data (PII, credentials, financial data) stored in exposed or misconfigured cloud buckets, databases, and volumes."
+        },
+        {
+          "titulo": "Shift-left with IaC Security",
+          "desc": "Detects misconfigurations in Terraform, CloudFormation, and ARM templates before deployment, integrating into the IaC pipeline."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We connect Orca to the client's cloud account and deliver the first risk report with attack paths within 1 day."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Integration",
+          "desc": "Onboarding of all cloud accounts, alert configuration, integration with Jira/Slack, and compliance policy definition."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for cloud and security teams to interpret attack paths, prioritize remediations, and manage policies."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Cloud Security Program",
+          "desc": "Continuous cloud posture monitoring, remediation tracking, and monthly compliance reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for multi-cloud integrations, complex attack path analysis, and security policy customization."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Why is agentless an advantage?",
+          "a": "Agents require approval processes, maintenance, and can cause production impact. Orca achieves full visibility by reading disk snapshots via cloud API, with no operational overhead and no blind spots."
+        },
+        {
+          "q": "Does Orca cover multi-cloud and multi-account?",
+          "a": "Yes. Orca supports AWS, Azure, GCP, Oracle Cloud, and Alibaba Cloud, with support for multiple accounts and organizations in a single console."
+        },
+        {
+          "q": "Does Orca detect sensitive data in S3 buckets?",
+          "a": "Yes. Orca's Data Security module scans stored object content to identify PII, credentials, and financial data, correlating with access configurations to identify exposed data."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "jscrambler",
+    "nome": "JScrambler",
+    "logo": "/assets/image/vendor/jscrambler.svg",
+    "categoria": "Code Protection",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "Proteção de JavaScript client-side, ofuscação e RASP para aplicações web e mobile",
+    "heroTitle": "JScrambler: Proteção de código JavaScript contra engenharia reversa e manipulação",
+    "heroSubtitle": "Proteja o código JavaScript da sua aplicação web e mobile contra cópia, engenharia reversa e manipulação client-side. Com a Evernow, você integra o JScrambler ao pipeline e garante que seu código nunca seja lido ou adulterado.",
+    "sobre": "JScrambler é a plataforma líder em proteção de código JavaScript. Combina ofuscação avançada, anti-tampering e RASP (Runtime Application Self-Protection) para garantir que o código client-side não seja lido, copiado ou manipulado. Indispensável para aplicações financeiras, e-commerce e qualquer sistema com lógica de negócio exposta no browser.",
+    "oqueFaz": [
+      {
+        "titulo": "Ofuscação JavaScript avançada",
+        "desc": "Transforma o código JavaScript em uma versão ilegível e funcionalmente equivalente, impossível de reverter mesmo com deobfuscators automáticos."
+      },
+      {
+        "titulo": "Anti-tampering e auto-defesa",
+        "desc": "Detecta e reage a qualquer tentativa de modificação do código em runtime, injetando código defensivo que torna o app inutilizável se adulterado."
+      },
+      {
+        "titulo": "RASP: Runtime Application Self-Protection",
+        "desc": "Monitora o comportamento da aplicação em tempo real, detectando e bloqueando ataques como injeção de scripts maliciosos e hooking."
+      },
+      {
+        "titulo": "Proteção de mobile (React Native)",
+        "desc": "Protege aplicações React Native e JavaScript mobile contra engenharia reversa em Android e iOS."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Avaliação",
+        "desc": "Aplicamos a proteção JScrambler em uma build do cliente e demonstramos a diferença antes/depois, com análise de impacto em performance."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração CI/CD",
+        "desc": "Integração do JScrambler ao pipeline de build, configuração das políticas de proteção e teste de regressão funcional."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para a equipe de frontend configurar e manter as políticas de proteção conforme o código evolui."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Monitoramento de Integridade",
+        "desc": "Configuração e acompanhamento dos alertas de tentativas de tampering detectadas em produção."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para ajuste fino de ofuscação, análise de impacto em performance e resolução de incompatibilidades com frameworks."
+      }
+    ],
+    "produtosRelacionados": [
+      "code-protection",
+      "sast-dast-sca",
+      "devsecops"
+    ],
+    "faq": [
+      {
+        "q": "A ofuscação afeta a performance da aplicação?",
+        "a": "O impacto médio é de 2-5% em tempo de execução, aceitável para a grande maioria das aplicações. A Evernow realiza testes de performance como parte da implementação para garantir que os thresholds do cliente sejam respeitados."
+      },
+      {
+        "q": "JScrambler protege contra bots e web scraping?",
+        "a": "Sim. O JScrambler tem módulo específico de proteção contra bots, web scrapers e automações maliciosas que abusam de APIs client-side."
+      },
+      {
+        "q": "Funciona com frameworks como Angular e Vue?",
+        "a": "Sim. JScrambler suporta todos os frameworks JavaScript modernos, como React, Angular, Vue, Next.js e Nuxt, com integração via webpack, Vite e CLI."
+      }
+    ],
+    "en": {
+      "heroTitle": "JScrambler: JavaScript Code Protection Against Reverse Engineering and Tampering",
+      "heroSubtitle": "Protect your web and mobile application's JavaScript code against copying, reverse engineering, and client-side manipulation. With Evernow, you integrate JScrambler into the pipeline and ensure your code is never read or tampered with.",
+      "sobre": "JScrambler is the leading JavaScript code protection platform. It combines advanced obfuscation, anti-tampering, and RASP (Runtime Application Self-Protection) to ensure that client-side code cannot be read, copied, or manipulated. Essential for financial applications, e-commerce, and any system with business logic exposed in the browser.",
+      "oqueFaz": [
+        {
+          "titulo": "Advanced JavaScript obfuscation",
+          "desc": "Transforms JavaScript code into an unreadable, functionally equivalent version, impossible to reverse even with automatic deobfuscators."
+        },
+        {
+          "titulo": "Anti-tampering and self-defense",
+          "desc": "Detects and reacts to any attempt to modify the code at runtime, injecting defensive code that renders the app unusable if tampered with."
+        },
+        {
+          "titulo": "RASP: Runtime Application Self-Protection",
+          "desc": "Monitors application behavior in real time, detecting and blocking attacks such as malicious script injection and hooking."
+        },
+        {
+          "titulo": "Mobile protection (React Native)",
+          "desc": "Protects React Native and JavaScript mobile applications against reverse engineering on Android and iOS."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Assessment",
+          "desc": "We apply JScrambler protection to a client build and demonstrate the before/after difference, with performance impact analysis."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & CI/CD Integration",
+          "desc": "JScrambler integration into the build pipeline, protection policy configuration, and functional regression testing."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for the frontend team to configure and maintain protection policies as the code evolves."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Integrity Monitoring",
+          "desc": "Configuration and monitoring of tampering attempt alerts detected in production."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for obfuscation fine-tuning, performance impact analysis, and resolving incompatibilities with frameworks."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does obfuscation affect application performance?",
+          "a": "The average impact is 2-5% in execution time, acceptable for the vast majority of applications. Evernow runs performance tests as part of the implementation to ensure the client's thresholds are respected."
+        },
+        {
+          "q": "Does JScrambler protect against bots and web scraping?",
+          "a": "Yes. JScrambler has a specific protection module against bots, web scrapers, and malicious automations that abuse client-side APIs."
+        },
+        {
+          "q": "Does it work with frameworks like Angular and Vue?",
+          "a": "Yes. JScrambler supports all modern JavaScript frameworks, such as React, Angular, Vue, Next.js, and Nuxt, with integration via webpack, Vite, and CLI."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "securiti",
+    "nome": "Securiti.ai",
+    "logo": "/assets/image/vendor/securiti.svg",
+    "categoria": "Data Security & Privacy",
+    "pilarSlug": "data-shield",
+    "pilarNome": "Data Shield",
+    "tagline": "Automação de privacidade e segurança de dados, LGPD, GDPR e além em uma plataforma",
+    "heroTitle": "Securiti.ai: Plataforma unificada de segurança de dados, privacidade e compliance",
+    "heroSubtitle": "Descubra, classifique e proteja dados pessoais em todos os sistemas, automatizando LGPD, GDPR e DSR. Com a Evernow, você implementa o Securiti e opera seu programa de privacidade de dados com governança completa.",
+    "sobre": "Securiti.ai é a plataforma de Data Security & Privacy mais completa do mercado. Combina descoberta automatizada de dados pessoais, classificação com IA, gestão de consentimento, automação de DSR (Data Subject Rights) e monitoramento de postura de segurança de dados em um único console, cobrindo ambientes on-premise, cloud e SaaS.",
+    "oqueFaz": [
+      {
+        "titulo": "Descoberta automática de dados pessoais",
+        "desc": "Escaneia bancos de dados, data lakes, SaaS e filesystems para mapear onde estão dados pessoais, financeiros e sensíveis com classificação por IA."
+      },
+      {
+        "titulo": "Automação de DSR: Direitos dos Titulares",
+        "desc": "Automatiza o atendimento a solicitações de acesso, exclusão e portabilidade de dados (LGPD Art. 18) com workflows integrados aos sistemas."
+      },
+      {
+        "titulo": "Gestão de consentimento e cookies",
+        "desc": "Central de consentimento com banner configurável, gestão de preferências e prova de consentimento com trilha de auditoria."
+      },
+      {
+        "titulo": "DSPM: Postura de Segurança de Dados",
+        "desc": "Monitora continuamente o acesso, compartilhamento e exposição de dados sensíveis, identificando riscos de violação antes que ocorram."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Mapeamento Inicial",
+        "desc": "Conectamos o Securiti aos principais sistemas e entregamos o primeiro mapa de dados pessoais com classificação em até 5 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação do Programa de Privacidade",
+        "desc": "Configuração completa da plataforma, implementação do banner de consentimento, criação dos workflows de DSR e integração com sistemas."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento DPO e Equipes",
+        "desc": "Capacitação do DPO e equipes jurídica e técnica para operar a plataforma e atender às obrigações da LGPD."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação do Programa de Privacidade",
+        "desc": "Gestão contínua do programa, atendimento de DSRs, atualização do mapa de dados e relatórios para o DPO e conselho."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para integrações com sistemas legados, análise de classificações incorretas e evolução das políticas de privacidade."
+      }
+    ],
+    "produtosRelacionados": [
+      "data-discovery",
+      "consentimento-lgpd",
+      "lgpd"
+    ],
+    "faq": [
+      {
+        "q": "O Securiti funciona com sistemas legados on-premise?",
+        "a": "Sim. O Securiti tem conectores para bancos de dados relacionais, mainframes, filesystems e APIs customizadas, além de conectores prontos para mais de 200 aplicações SaaS."
+      },
+      {
+        "q": "O Securiti ajuda a responder auditorias da ANPD?",
+        "a": "Sim. A plataforma mantém toda a documentação necessária, como RIPD, trilha de consentimentos, registro de DSRs e inventário de dados, para responder auditorias da ANPD com evidências prontas."
+      },
+      {
+        "q": "A Evernow pode operar o programa de privacidade no modelo gerenciado?",
+        "a": "Sim. Oferecemos o serviço de DPO as a Service com operação Securiti, onde a Evernow assume a gestão completa do programa de privacidade incluindo o atendimento de DSRs."
+      }
+    ],
+    "en": {
+      "heroTitle": "Securiti.ai: Unified Data Security, Privacy, and Compliance Platform",
+      "heroSubtitle": "Discover, classify, and protect personal data across all systems, automating LGPD, GDPR, and DSR workflows. With Evernow, you implement Securiti and operate your data privacy program with full governance.",
+      "sobre": "Securiti.ai is the most complete Data Security and Privacy platform on the market. It combines automated personal data discovery, AI-based classification, consent management, DSR (Data Subject Rights) automation, and data security posture monitoring in a single console, covering on-premise, cloud, and SaaS environments.",
+      "oqueFaz": [
+        {
+          "titulo": "Automatic personal data discovery",
+          "desc": "Scans databases, data lakes, SaaS, and filesystems to map where personal, financial, and sensitive data resides, with AI classification."
+        },
+        {
+          "titulo": "DSR automation: Data Subject Rights",
+          "desc": "Automates responses to access, deletion, and portability requests (LGPD Art. 18) with workflows integrated into systems."
+        },
+        {
+          "titulo": "Consent and cookie management",
+          "desc": "Consent center with configurable banner, preference management, and proof of consent with an audit trail."
+        },
+        {
+          "titulo": "DSPM: Data Security Posture Management",
+          "desc": "Continuously monitors access, sharing, and exposure of sensitive data, identifying violation risks before they occur."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Initial Mapping",
+          "desc": "We connect Securiti to the main systems and deliver the first personal data map with classification within 5 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Privacy Program Implementation",
+          "desc": "Full platform configuration, consent banner implementation, DSR workflow creation, and system integration."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "DPO and Team Training",
+          "desc": "Training for the DPO and legal and technical teams to operate the platform and meet LGPD obligations."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Privacy Program Operations",
+          "desc": "Continuous program management, DSR handling, data map updates, and reports for the DPO and board."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for legacy system integrations, incorrect classification analysis, and privacy policy evolution."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Securiti work with on-premise legacy systems?",
+          "a": "Yes. Securiti has connectors for relational databases, mainframes, filesystems, and custom APIs, plus ready-made connectors for over 200 SaaS applications."
+        },
+        {
+          "q": "Does Securiti help respond to ANPD audits?",
+          "a": "Yes. The platform maintains all necessary documentation, such as DPIA, consent trail, DSR registry, and data inventory, to respond to ANPD audits with ready evidence."
+        },
+        {
+          "q": "Can Evernow operate the privacy program as a managed service?",
+          "a": "Yes. We offer DPO as a Service with Securiti operations, where Evernow takes full management of the privacy program including DSR handling."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "security-scorecard",
+    "nome": "SecurityScorecard",
+    "logo": "/assets/image/vendor/security-scorecard.svg",
+    "categoria": "Third-Party Risk",
+    "pilarSlug": "assurance",
+    "pilarNome": "Assurance",
+    "tagline": "Visibilidade do risco de terceiros, monitore a postura de segurança dos seus fornecedores",
+    "heroTitle": "SecurityScorecard: Gestão de risco de terceiros com ratings de segurança contínuos",
+    "heroSubtitle": "Avalie e monitore a postura de segurança de fornecedores, parceiros e da sua própria cadeia de suprimentos sem solicitar questionários. Com a Evernow, você implementa um programa de gestão de risco de terceiros baseado em evidências.",
+    "sobre": "SecurityScorecard atribui ratings de segurança (A a F) para qualquer empresa do mundo com base em dados externos observáveis: vulnerabilidades expostas, reputação de IP, vazamentos de credenciais, configuração DNS e mais, sem precisar de acesso aos sistemas internos. É a forma mais eficiente de monitorar o risco de segurança de toda a cadeia de fornecedores.",
+    "oqueFaz": [
+      {
+        "titulo": "Rating de segurança externo",
+        "desc": "Score de A a F calculado continuamente a partir de dados externos, sem acesso interno, sem questionários, disponível para qualquer empresa."
+      },
+      {
+        "titulo": "Monitoramento contínuo de fornecedores",
+        "desc": "Alertas automáticos quando o score de um fornecedor cai ou quando são detectadas novas vulnerabilidades ou vazamentos de credenciais."
+      },
+      {
+        "titulo": "Due diligence de segurança",
+        "desc": "Relatórios detalhados para suportar due diligence de M&A, onboarding de fornecedores e avaliações de risco de terceiros."
+      },
+      {
+        "titulo": "Gestão do próprio score",
+        "desc": "Identifica as fraquezas externas da própria organização que impactam negativamente o rating, mostrando a visão do atacante antes do ataque."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Análise de Fornecedores",
+        "desc": "Análise dos 10 principais fornecedores críticos com relatório de rating e principais riscos identificados em até 3 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação do Programa TPRM",
+        "desc": "Configuração da plataforma, onboarding do portfólio de fornecedores, definição de thresholds de alerta e integração com GRC."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento de Equipe de Risco",
+        "desc": "Capacitação para a equipe de gestão de risco e procurement interpretar os ratings e incluir segurança nos contratos de fornecedores."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Monitoramento Contínuo",
+        "desc": "Acompanhamento mensal do score dos fornecedores críticos, análise de quedas e relatórios para o CISO e comitê de risco."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para disputa de fatores incorretos no score, análise de incidentes e customização de alertas por categoria de risco."
+      }
+    ],
+    "produtosRelacionados": [
+      "assessment-maturidade",
+      "grc",
+      "pci-dss"
+    ],
+    "faq": [
+      {
+        "q": "O SecurityScorecard acessa os sistemas internos dos fornecedores?",
+        "a": "Não. O SecurityScorecard usa apenas dados publicamente observáveis: varreduras externas, feeds de inteligência de ameaças e dados de reputação. Os fornecedores não precisam instalar nada nem conceder acesso."
+      },
+      {
+        "q": "Como reagir se um fornecedor crítico tiver score baixo?",
+        "a": "A Evernow ajuda a criar o processo de remediação, com notificação formal ao fornecedor, prazo de correção, re-avaliação e escalação contratual se necessário. O SecurityScorecard rastreia a evolução do score do fornecedor ao longo do tempo."
+      },
+      {
+        "q": "O rating pode ser usado em contratos com fornecedores?",
+        "a": "Sim. Muitas empresas já incluem cláusulas contratuais exigindo score mínimo (ex: B ou superior) e o direito de rescindir se o fornecedor cair abaixo do threshold."
+      }
+    ],
+    "en": {
+      "heroTitle": "SecurityScorecard: Third-Party Risk Management with Continuous Security Ratings",
+      "heroSubtitle": "Evaluate and monitor the security posture of vendors, partners, and your supply chain without requesting questionnaires. With Evernow, you implement a third-party risk management program based on evidence.",
+      "sobre": "SecurityScorecard assigns security ratings (A to F) to any company in the world based on externally observable data: exposed vulnerabilities, IP reputation, credential leaks, DNS configuration, and more, without needing access to internal systems. It is the most efficient way to monitor the security risk of the entire supplier chain.",
+      "oqueFaz": [
+        {
+          "titulo": "External security rating",
+          "desc": "A-to-F score calculated continuously from external data, without internal access, without questionnaires, available for any company."
+        },
+        {
+          "titulo": "Continuous vendor monitoring",
+          "desc": "Automatic alerts when a vendor's score drops or when new vulnerabilities or credential leaks are detected."
+        },
+        {
+          "titulo": "Security due diligence",
+          "desc": "Detailed reports to support M&A due diligence, vendor onboarding, and third-party risk assessments."
+        },
+        {
+          "titulo": "Own score management",
+          "desc": "Identifies the organization's own external weaknesses that negatively impact the rating, showing the attacker's view before an attack."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Vendor Analysis",
+          "desc": "Analysis of the 10 most critical vendors with a rating report and key identified risks within 3 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "TPRM Program Implementation",
+          "desc": "Platform configuration, vendor portfolio onboarding, alert threshold definition, and GRC integration."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Risk Team Training",
+          "desc": "Training for the risk management and procurement teams to interpret ratings and include security in vendor contracts."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Continuous Monitoring",
+          "desc": "Monthly tracking of critical vendor scores, drop analysis, and reports for the CISO and risk committee."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for disputing incorrect score factors, incident analysis, and alert customization by risk category."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does SecurityScorecard access vendors' internal systems?",
+          "a": "No. SecurityScorecard uses only publicly observable data: external scans, threat intelligence feeds, and reputation data. Vendors do not need to install anything or grant access."
+        },
+        {
+          "q": "How should we respond if a critical vendor has a low score?",
+          "a": "Evernow helps create the remediation process, with formal vendor notification, correction timeline, re-evaluation, and contractual escalation if necessary. SecurityScorecard tracks the vendor's score evolution over time."
+        },
+        {
+          "q": "Can the rating be used in vendor contracts?",
+          "a": "Yes. Many companies already include contractual clauses requiring a minimum score (e.g., B or above) and the right to terminate if the vendor falls below the threshold."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ridge-security",
+    "nome": "Ridge Security",
+    "logo": "/assets/image/vendor/ridge.svg",
+    "categoria": "Pentest Automatizado",
+    "pilarSlug": "assurance",
+    "pilarNome": "Assurance",
+    "tagline": "Pentest contínuo e automatizado, encontre brechas antes que o atacante encontre",
+    "heroTitle": "Ridge Security: Pentest automatizado e contínuo para empresas que não podem esperar",
+    "heroSubtitle": "Execute pentests completos de forma automatizada e contínua, sem esperar pelo ciclo anual. Com a Evernow, você tem o RidgeBot configurado para o seu ambiente e um programa de pentest contínuo operando.",
+    "sobre": "Ridge Security é a plataforma de pentest automatizado que usa IA para conduzir testes de invasão completos de forma contínua: descoberta de ativos, exploração de vulnerabilidades, movimentação lateral e geração de relatório, tudo automatizado. Permite que empresas realizem pentests com a frequência de um programa de bug bounty sem o custo proporcional.",
+    "oqueFaz": [
+      {
+        "titulo": "Pentest automatizado completo",
+        "desc": "RidgeBot executa o ciclo completo de pentest, reconhecimento, varredura, exploração e pós-exploração, de forma autônoma em horas."
+      },
+      {
+        "titulo": "Descoberta e exploração",
+        "desc": "Identifica superfície de ataque, testa credenciais padrão, explora CVEs conhecidos e testa configurações inseguras de forma automatizada."
+      },
+      {
+        "titulo": "Teste de movimentação lateral",
+        "desc": "Simula como um atacante se moveria pela rede após o comprometimento inicial, mapeando o blast radius de cada vulnerabilidade."
+      },
+      {
+        "titulo": "Relatórios de evidência",
+        "desc": "Gera relatórios completos com evidências de exploração, capturas de tela e trilha de ataque, prontos para remediação e compliance."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Primeiro Pentest",
+        "desc": "Configuramos o RidgeBot e rodamos o primeiro pentest automatizado no ambiente do cliente, entregando relatório de achados em até 48h."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Escopo",
+        "desc": "Configuração do escopo de teste, integração com o inventário de ativos e definição da cadência de execução dos pentests."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para a equipe interpretar os relatórios, priorizar remediações e utilizar o painel de evolução de segurança."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Programa de Pentest Contínuo",
+        "desc": "Execução de pentests automatizados em cadência definida (semanal, mensal), triagem de achados e relatórios de evolução."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Pentest Manual Complementar",
+        "desc": "Complementamos o pentest automatizado com análise manual para achados complexos que exigem criatividade humana."
+      }
+    ],
+    "produtosRelacionados": [
+      "pentest",
+      "gestao-vulnerabilidades",
+      "assessment-maturidade"
+    ],
+    "faq": [
+      {
+        "q": "O pentest automatizado substitui o pentest manual?",
+        "a": "Complementa, não substitui completamente. O pentest automatizado cobre amplitude, testando continuamente toda a superfície de ataque. O pentest manual tem profundidade, explorando lógica de negócio, encadeamentos complexos e vulnerabilidades que exigem criatividade. A Evernow combina os dois."
+      },
+      {
+        "q": "O RidgeBot pode ser usado em produção?",
+        "a": "Sim, com as devidas cautelas. O RidgeBot tem modo de teste não-destrutivo para ambientes de produção. A Evernow configura o escopo e os limites de exploração para evitar impacto em produção."
+      },
+      {
+        "q": "Com que frequência o pentest automatizado deve ser executado?",
+        "a": "Recomendamos ao menos mensal para ambientes que sofrem mudanças frequentes, e semanal para aplicações críticas. A vantagem do pentest automatizado é exatamente a possibilidade de aumentar a frequência sem aumento proporcional de custo."
+      }
+    ],
+    "en": {
+      "heroTitle": "Ridge Security: Automated and Continuous Pentest for Organizations That Cannot Wait",
+      "heroSubtitle": "Run comprehensive pentests in an automated and continuous manner, without waiting for the annual cycle. With Evernow, you get RidgeBot configured for your environment and a continuous pentest program running.",
+      "sobre": "Ridge Security is the automated pentest platform that uses AI to conduct comprehensive penetration tests continuously: asset discovery, vulnerability exploitation, lateral movement, and report generation, all automated. It enables organizations to run pentests with the frequency of a bug bounty program without the proportional cost.",
+      "oqueFaz": [
+        {
+          "titulo": "Fully automated pentest",
+          "desc": "RidgeBot executes the complete pentest cycle, reconnaissance, scanning, exploitation, and post-exploitation, autonomously in hours."
+        },
+        {
+          "titulo": "Discovery and exploitation",
+          "desc": "Identifies the attack surface, tests default credentials, exploits known CVEs, and tests insecure configurations in an automated way."
+        },
+        {
+          "titulo": "Lateral movement testing",
+          "desc": "Simulates how an attacker would move through the network after initial compromise, mapping the blast radius of each vulnerability."
+        },
+        {
+          "titulo": "Evidence reports",
+          "desc": "Generates complete reports with exploitation evidence, screenshots, and attack trails, ready for remediation and compliance."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & First Pentest",
+          "desc": "We configure RidgeBot and run the first automated pentest in the client's environment, delivering a findings report within 48 hours."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Scope",
+          "desc": "Test scope configuration, integration with the asset inventory, and definition of pentest execution cadence."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for the team to interpret reports, prioritize remediations, and use the security evolution dashboard."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Continuous Pentest Program",
+          "desc": "Automated pentests on a defined cadence (weekly, monthly), findings triage, and evolution reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Complementary Manual Pentest",
+          "desc": "We complement automated pentests with manual analysis for complex findings that require human creativity."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does automated pentest replace manual pentest?",
+          "a": "It complements, but does not fully replace. Automated pentest covers breadth, continuously testing the entire attack surface. Manual pentest has depth, exploring business logic, complex chaining, and vulnerabilities that require creativity. Evernow combines both."
+        },
+        {
+          "q": "Can RidgeBot be used in production?",
+          "a": "Yes, with appropriate precautions. RidgeBot has a non-destructive test mode for production environments. Evernow configures scope and exploitation limits to avoid production impact."
+        },
+        {
+          "q": "How frequently should automated pentests be run?",
+          "a": "We recommend at least monthly for environments that change frequently, and weekly for critical applications. The advantage of automated pentest is precisely the ability to increase frequency without a proportional cost increase."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "senhasegura",
+    "nome": "senhasegura",
+    "logo": "/assets/image/vendor/senhasegura.svg",
+    "categoria": "PAM: Gestão de Acesso Privilegiado",
+    "pilarSlug": "managed-ops",
+    "pilarNome": "Managed Ops",
+    "tagline": "Controle total sobre contas privilegiadas, o vetor mais explorado em ataques avançados",
+    "heroTitle": "senhasegura: PAM enterprise para controle e auditoria de acessos privilegiados",
+    "heroSubtitle": "Gerencie, controle e audite todos os acessos privilegiados: senhas de root, chaves SSH, contas de serviço e acessos de terceiros. Com a Evernow, você implementa o senhasegura e opera o programa de PAM com as melhores práticas.",
+    "sobre": "senhasegura é a plataforma de Privileged Access Management (PAM) líder na América Latina. Gerencia e audita o acesso a contas privilegiadas em servidores, bancos de dados, dispositivos de rede e aplicações. Com cofre de senhas, gravação de sessões e controle just-in-time, elimina o uso de credenciais compartilhadas e garante rastreabilidade completa.",
+    "oqueFaz": [
+      {
+        "titulo": "Cofre de credenciais privilegiadas",
+        "desc": "Armazena e rotaciona automaticamente senhas de root, contas de serviço, chaves SSH e API keys, eliminando credenciais hardcoded e compartilhadas."
+      },
+      {
+        "titulo": "Gravação e auditoria de sessões",
+        "desc": "Grava todas as sessões privilegiadas (RDP, SSH, web) com busca full-text no conteúdo digitado, evidência forense completa para qualquer incidente."
+      },
+      {
+        "titulo": "Acesso just-in-time",
+        "desc": "Concede acesso privilegiado apenas quando necessário, pelo tempo mínimo requerido, com aprovação de workflow, eliminando acesso permanente."
+      },
+      {
+        "titulo": "PAM para DevOps e cloud",
+        "desc": "Gestão de secrets para pipelines CI/CD, integração com Kubernetes e proteção de credenciais em ambientes cloud e containers."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Inventário de Credenciais",
+        "desc": "Mapeamos as credenciais privilegiadas do ambiente e demonstramos o cofre e a gravação de sessões em até 5 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Onboarding",
+        "desc": "Instalação da plataforma, onboarding de todos os sistemas críticos, configuração de cofre, rotação automática e políticas de acesso."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para administradores operarem o PAM, para gestores aprovarem solicitações e para auditores consultarem as gravações."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação Gerenciada de PAM",
+        "desc": "Gestão contínua do programa, onboarding de novos sistemas, resposta a violações de política e relatórios de acesso privilegiado."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado em senhasegura para integrações com AD/LDAP, configurações de proxy e resolução de falhas críticas."
+      }
+    ],
+    "produtosRelacionados": [
+      "pam",
+      "grc",
+      "iso-27001"
+    ],
+    "faq": [
+      {
+        "q": "O senhasegura funciona com sistemas legados e mainframes?",
+        "a": "Sim. O senhasegura tem conectores para sistemas legados, mainframes IBM e dispositivos de rede de diferentes fabricantes, além de suporte a protocolos como Telnet e protocolos proprietários."
+      },
+      {
+        "q": "O PAM é exigido pelo PCI DSS?",
+        "a": "Sim. O PCI DSS exige controle de acesso privilegiado (Req. 7 e 8), trilha de auditoria de ações administrativas (Req. 10) e rotação de senhas. O senhasegura atende a todos esses requisitos com evidências automáticas."
+      },
+      {
+        "q": "A Evernow oferece PAM como serviço gerenciado?",
+        "a": "Sim. Oferecemos o serviço de PAM Gerenciado onde a Evernow opera o senhasegura, faz o onboarding de novos sistemas, monitora violações de política e entrega relatórios mensais ao CISO."
+      }
+    ],
+    "en": {
+      "heroTitle": "senhasegura: Enterprise PAM for Privileged Access Control and Audit",
+      "heroSubtitle": "Manage, control, and audit all privileged access: root passwords, SSH keys, service accounts, and third-party access. With Evernow, you implement senhasegura and operate the PAM program with best practices.",
+      "sobre": "senhasegura is the leading Privileged Access Management (PAM) platform in Latin America. It manages and audits access to privileged accounts on servers, databases, network devices, and applications. With a credential vault, session recording, and just-in-time access control, it eliminates shared credentials and ensures full traceability.",
+      "oqueFaz": [
+        {
+          "titulo": "Privileged credential vault",
+          "desc": "Stores and automatically rotates root passwords, service accounts, SSH keys, and API keys, eliminating hardcoded and shared credentials."
+        },
+        {
+          "titulo": "Session recording and audit",
+          "desc": "Records all privileged sessions (RDP, SSH, web) with full-text search of typed content, providing complete forensic evidence for any incident."
+        },
+        {
+          "titulo": "Just-in-time access",
+          "desc": "Grants privileged access only when needed, for the minimum required duration, with workflow approval, eliminating permanent access."
+        },
+        {
+          "titulo": "PAM for DevOps and cloud",
+          "desc": "Secrets management for CI/CD pipelines, Kubernetes integration, and credential protection in cloud and container environments."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Credential Inventory",
+          "desc": "We map privileged credentials in the environment and demonstrate the vault and session recording within 5 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Onboarding",
+          "desc": "Platform installation, onboarding of all critical systems, vault configuration, automatic rotation, and access policies."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for administrators to operate PAM, for managers to approve requests, and for auditors to review recordings."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed PAM Operations",
+          "desc": "Continuous program management, new system onboarding, policy violation response, and privileged access reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized senhasegura support for AD/LDAP integrations, proxy configurations, and critical failure resolution."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does senhasegura work with legacy systems and mainframes?",
+          "a": "Yes. senhasegura has connectors for legacy systems, IBM mainframes, and network devices from different manufacturers, plus support for protocols like Telnet and proprietary protocols."
+        },
+        {
+          "q": "Is PAM required by PCI DSS?",
+          "a": "Yes. PCI DSS requires privileged access control (Req. 7 and 8), audit trail of administrative actions (Req. 10), and password rotation. senhasegura meets all these requirements with automatic evidence."
+        },
+        {
+          "q": "Does Evernow offer PAM as a managed service?",
+          "a": "Yes. We offer Managed PAM service where Evernow operates senhasegura, onboards new systems, monitors policy violations, and delivers monthly reports to the CISO."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "aws-kms",
+    "nome": "AWS Key Management Service",
+    "logo": "/assets/image/vendor/aws-kms.svg",
+    "categoria": "Criptografia & KMS",
+    "pilarSlug": "data-shield",
+    "pilarNome": "Data Shield",
+    "tagline": "Gestão centralizada de chaves criptográficas na AWS com controle de acesso granular",
+    "heroTitle": "AWS KMS: Criptografia e gestão de chaves para dados em repouso e em trânsito na AWS",
+    "heroSubtitle": "Proteja dados sensíveis com criptografia gerenciada centralmente, integrada a todos os serviços AWS. Com a Evernow, você define a arquitetura de chaves correta, implementa o KMS e garante conformidade com LGPD, PCI DSS e ISO 27001.",
+    "sobre": "AWS Key Management Service (KMS) é o serviço da Amazon para criação, controle e auditoria de chaves criptográficas utilizadas para proteger dados em serviços AWS como S3, RDS, EBS, Lambda e outros. Integrado ao CloudTrail, fornece trilha de auditoria completa de cada uso de chave, o que é necessário para compliance com LGPD e PCI DSS.",
+    "oqueFaz": [
+      {
+        "titulo": "Gestão centralizada de chaves",
+        "desc": "Criação, rotação automática e revogação de chaves simétricas e assimétricas com controle de acesso via IAM policies granulares."
+      },
+      {
+        "titulo": "Criptografia nativa de serviços AWS",
+        "desc": "Integração nativa com S3, RDS, EBS, DynamoDB, SQS, SNS e mais de 100 serviços AWS para criptografar dados em repouso com um clique."
+      },
+      {
+        "titulo": "Customer Managed Keys (CMK)",
+        "desc": "Chaves gerenciadas pelo cliente para controle total sobre o ciclo de vida criptográfico, incluindo opção de HSM dedicado (CloudHSM)."
+      },
+      {
+        "titulo": "Auditoria via CloudTrail",
+        "desc": "Cada operação criptográfica é registrada no CloudTrail, mostrando quem usou qual chave, quando e em qual serviço, para evidência de compliance."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "Avaliação de Arquitetura",
+        "desc": "Análise do estado atual de criptografia no ambiente AWS e recomendação de arquitetura de chaves alinhada ao LGPD e PCI DSS."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Configuração",
+        "desc": "Criação da hierarquia de chaves, configuração de políticas de acesso, ativação de rotação automática e criptografia de serviços existentes."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento DevOps & Segurança",
+        "desc": "Capacitação para as equipes de cloud e desenvolvimento implementarem criptografia corretamente em novos serviços e aplicações."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Gestão de Conformidade",
+        "desc": "Revisão periódica das políticas de chaves, verificação de conformidade e geração de evidências para auditorias."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para arquitetura de KMS multi-região, integração com on-premise via External Key Store e resolução de falhas de acesso."
+      }
+    ],
+    "produtosRelacionados": [
+      "criptografia-kms-hsm",
+      "data-discovery",
+      "pci-dss"
+    ],
+    "faq": [
+      {
+        "q": "Qual a diferença entre AWS KMS e CloudHSM?",
+        "a": "O KMS é o serviço gerenciado padrão, compartilhado, mas com chaves isoladas por cliente. O CloudHSM é um HSM físico dedicado para clientes que exigem controle exclusivo do hardware criptográfico (regulações FIPS 140-2 Level 3)."
+      },
+      {
+        "q": "O AWS KMS atende os requisitos de LGPD para pseudonimização?",
+        "a": "Sim. O KMS suporta criptografia e tokenização que, quando implementados corretamente, atendem aos requisitos de pseudonimização da LGPD e proteção de dados do PCI DSS."
+      },
+      {
+        "q": "A Evernow auxilia na implementação em ambientes multi-conta AWS?",
+        "a": "Sim. Configuramos políticas de KMS para compartilhamento seguro de chaves entre contas AWS de uma organização, com os controles de acesso corretos e sem exposição indevida."
+      }
+    ],
+    "en": {
+      "heroTitle": "AWS KMS: Encryption and Key Management for Data at Rest and in Transit on AWS",
+      "heroSubtitle": "Protect sensitive data with centrally managed encryption, integrated across all AWS services. With Evernow, you define the right key architecture, implement KMS, and ensure compliance with LGPD, PCI DSS, and ISO 27001.",
+      "sobre": "AWS Key Management Service (KMS) is Amazon's service for creating, controlling, and auditing cryptographic keys used to protect data in AWS services such as S3, RDS, EBS, Lambda, and others. Integrated with CloudTrail, it provides a complete audit trail of every key use, which is required for compliance with LGPD and PCI DSS.",
+      "oqueFaz": [
+        {
+          "titulo": "Centralized key management",
+          "desc": "Creation, automatic rotation, and revocation of symmetric and asymmetric keys with granular IAM policy-based access control."
+        },
+        {
+          "titulo": "Native AWS service encryption",
+          "desc": "Native integration with S3, RDS, EBS, DynamoDB, SQS, SNS, and over 100 AWS services to encrypt data at rest with a single click."
+        },
+        {
+          "titulo": "Customer Managed Keys (CMK)",
+          "desc": "Customer-managed keys for full control over the cryptographic lifecycle, including the option for a dedicated HSM (CloudHSM)."
+        },
+        {
+          "titulo": "Audit via CloudTrail",
+          "desc": "Every cryptographic operation is logged in CloudTrail, showing who used which key, when, and in which service, as compliance evidence."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "Architecture Assessment",
+          "desc": "Analysis of the current encryption state in the AWS environment and key architecture recommendation aligned with LGPD and PCI DSS."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Configuration",
+          "desc": "Key hierarchy creation, access policy configuration, automatic rotation activation, and encryption of existing services."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "DevOps & Security Training",
+          "desc": "Training for cloud and development teams to correctly implement encryption in new services and applications."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Compliance Management",
+          "desc": "Periodic review of key policies, compliance verification, and evidence generation for audits."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for multi-region KMS architecture, on-premise integration via External Key Store, and access failure resolution."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the difference between AWS KMS and CloudHSM?",
+          "a": "KMS is the standard managed service, shared but with customer-isolated keys. CloudHSM is a dedicated physical HSM for clients requiring exclusive control of cryptographic hardware (FIPS 140-2 Level 3 regulations)."
+        },
+        {
+          "q": "Does AWS KMS meet LGPD requirements for pseudonymization?",
+          "a": "Yes. KMS supports encryption and tokenization that, when implemented correctly, meet LGPD pseudonymization requirements and PCI DSS data protection."
+        },
+        {
+          "q": "Does Evernow assist with implementation in multi-account AWS environments?",
+          "a": "Yes. We configure KMS policies for secure key sharing between AWS accounts in an organization, with the correct access controls and without undue exposure."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "aws-security-hub",
+    "nome": "AWS Security Hub",
+    "logo": "/assets/image/vendor/aws-security-hub.svg",
+    "categoria": "Cloud Security Posture",
+    "pilarSlug": "managed-ops",
+    "pilarNome": "Managed Ops",
+    "tagline": "Visão unificada de segurança na AWS, agregue alertas de todas as ferramentas em um único painel",
+    "heroTitle": "AWS Security Hub: Central de segurança AWS com achados unificados e postura de conformidade",
+    "heroSubtitle": "Consolide achados de GuardDuty, Inspector, Macie e ferramentas de terceiros em um painel único, com score de conformidade automático para CIS e PCI DSS. Com a Evernow, você ativa e opera o Security Hub integrado ao seu SOC.",
+    "sobre": "AWS Security Hub é o serviço nativo de agregação e análise de segurança da AWS. Centraliza achados do GuardDuty (detecção de ameaças), Inspector (vulnerabilidades), Macie (dados sensíveis), IAM Access Analyzer e ferramentas de terceiros em um único console, com score automático de conformidade para CIS AWS Foundations, PCI DSS e NIST.",
+    "oqueFaz": [
+      {
+        "titulo": "Agregação de achados multi-serviço",
+        "desc": "Coleta e normaliza achados do GuardDuty, Inspector, Macie, IAM Access Analyzer e mais de 60 integrações de terceiros em um formato único (ASFF)."
+      },
+      {
+        "titulo": "Score de conformidade automático",
+        "desc": "Avalia continuamente o ambiente contra CIS AWS Foundations Benchmark, PCI DSS e NIST 800-53, com score por controle e por conta."
+      },
+      {
+        "titulo": "Automação com EventBridge",
+        "desc": "Dispara automatizações (Lambda, SSM) baseadas em achados, com remediação automática de misconfigurations críticas sem intervenção manual."
+      },
+      {
+        "titulo": "Visão multi-conta e multi-região",
+        "desc": "Consolida achados de todas as contas de uma AWS Organization em uma conta de segurança centralizada para visão holística."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "Avaliação & Ativação",
+        "desc": "Ativamos o Security Hub em todas as contas e regiões, configuramos integrações e entregamos o primeiro relatório de postura em 2 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Automações",
+        "desc": "Configuração de delegated admin, habilitação de standards de conformidade, criação de automações de remediação e integração ao SIEM."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento SOC & Cloud",
+        "desc": "Capacitação para as equipes de cloud e SOC operarem o Security Hub, investigarem achados e gerenciarem supressões."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Monitoramento de Postura AWS",
+        "desc": "Acompanhamento contínuo do score de conformidade, triagem de achados críticos e relatórios mensais de postura de segurança AWS."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para configuração multi-conta, criação de custom findings e integração com ferramentas externas de SIEM e ticketing."
+      }
+    ],
+    "produtosRelacionados": [
+      "soc-monitoramento",
+      "cspm",
+      "gestao-vulnerabilidades"
+    ],
+    "faq": [
+      {
+        "q": "O Security Hub substitui um SIEM?",
+        "a": "Não substitui completamente, é complementar. O Security Hub agrega achados de segurança AWS de forma nativa e gratuita, enquanto um SIEM como o Microsoft Sentinel agrega logs de múltiplas fontes (on-premise, outros clouds, SaaS). A Evernow integra os dois para máxima visibilidade."
+      },
+      {
+        "q": "Tem custo adicional habilitar o Security Hub?",
+        "a": "O Security Hub tem custo baseado em número de achados processados. A Evernow otimiza os filtros e supressões para minimizar o custo enquanto mantém cobertura completa de segurança."
+      },
+      {
+        "q": "O Security Hub cobre ambientes multi-cloud?",
+        "a": "O Security Hub é específico para AWS, mas integra com soluções de terceiros que cobrem outros clouds. Para visibilidade multi-cloud nativa, o Orca Security ou o Microsoft Defender for Cloud são as opções recomendadas."
+      }
+    ],
+    "en": {
+      "heroTitle": "AWS Security Hub: AWS Security Center with Unified Findings and Compliance Posture",
+      "heroSubtitle": "Consolidate findings from GuardDuty, Inspector, Macie, and third-party tools in a single dashboard, with automatic compliance scoring for CIS and PCI DSS. With Evernow, you activate and operate Security Hub integrated into your SOC.",
+      "sobre": "AWS Security Hub is AWS's native security aggregation and analysis service. It centralizes findings from GuardDuty (threat detection), Inspector (vulnerabilities), Macie (sensitive data), IAM Access Analyzer, and third-party tools in a single console, with automatic compliance scoring for CIS AWS Foundations, PCI DSS, and NIST.",
+      "oqueFaz": [
+        {
+          "titulo": "Multi-service findings aggregation",
+          "desc": "Collects and normalizes findings from GuardDuty, Inspector, Macie, IAM Access Analyzer, and over 60 third-party integrations into a single format (ASFF)."
+        },
+        {
+          "titulo": "Automatic compliance scoring",
+          "desc": "Continuously evaluates the environment against CIS AWS Foundations Benchmark, PCI DSS, and NIST 800-53, with score per control and per account."
+        },
+        {
+          "titulo": "Automation with EventBridge",
+          "desc": "Triggers automations (Lambda, SSM) based on findings, with automatic remediation of critical misconfigurations without manual intervention."
+        },
+        {
+          "titulo": "Multi-account and multi-region view",
+          "desc": "Consolidates findings from all accounts of an AWS Organization into a centralized security account for holistic visibility."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "Assessment & Activation",
+          "desc": "We activate Security Hub across all accounts and regions, configure integrations, and deliver the first posture report within 2 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Automations",
+          "desc": "Delegated admin configuration, compliance standards enablement, remediation automation creation, and SIEM integration."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "SOC & Cloud Training",
+          "desc": "Training for cloud and SOC teams to operate Security Hub, investigate findings, and manage suppressions."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "AWS Posture Monitoring",
+          "desc": "Continuous compliance score monitoring, critical findings triage, and monthly AWS security posture reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for multi-account configuration, custom findings creation, and integration with external SIEM and ticketing tools."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Security Hub replace a SIEM?",
+          "a": "It does not fully replace, it is complementary. Security Hub natively aggregates AWS security findings at no additional cost, while a SIEM like Microsoft Sentinel aggregates logs from multiple sources (on-premise, other clouds, SaaS). Evernow integrates both for maximum visibility."
+        },
+        {
+          "q": "Is there an additional cost to enable Security Hub?",
+          "a": "Security Hub has a cost based on the number of findings processed. Evernow optimizes filters and suppressions to minimize cost while maintaining complete security coverage."
+        },
+        {
+          "q": "Does Security Hub cover multi-cloud environments?",
+          "a": "Security Hub is specific to AWS, but integrates with third-party solutions covering other clouds. For native multi-cloud visibility, Orca Security or Microsoft Defender for Cloud are the recommended options."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "azure-key-vault",
+    "nome": "Azure Key Vault",
+    "logo": "/assets/image/vendor/azure-kv.svg",
+    "categoria": "Criptografia & Secrets",
+    "pilarSlug": "data-shield",
+    "pilarNome": "Data Shield",
+    "tagline": "Proteção centralizada de chaves, secrets e certificados no ecossistema Microsoft Azure",
+    "heroTitle": "Azure Key Vault: Gerenciamento seguro de chaves, secrets e certificados no Azure",
+    "heroSubtitle": "Elimine credenciais hardcoded e proteja chaves criptográficas com hardware HSM no Azure. Com a Evernow, você implementa o Key Vault corretamente e garante que nenhuma secret fique exposta em código ou configuração.",
+    "sobre": "Azure Key Vault é o serviço da Microsoft para armazenar e controlar o acesso a segredos, chaves criptográficas e certificados usados por aplicações e serviços Azure. Com suporte a HSM, integração com Azure AD e auditoria via Monitor, é a base para qualquer arquitetura segura na nuvem Microsoft.",
+    "oqueFaz": [
+      {
+        "titulo": "Cofre de secrets e credenciais",
+        "desc": "Armazena connection strings, API keys, senhas e tokens de forma segura, acessíveis via Managed Identity sem expor credenciais no código."
+      },
+      {
+        "titulo": "Gestão de chaves criptográficas",
+        "desc": "Cria, importa e controla chaves para criptografar dados em repouso em Azure Storage, SQL Database, Cosmos DB e outros serviços."
+      },
+      {
+        "titulo": "Gestão de certificados TLS/SSL",
+        "desc": "Provisionamento, renovação automática e distribuição de certificados TLS/SSL para aplicações Azure sem gestão manual."
+      },
+      {
+        "titulo": "HSM dedicado (Premium)",
+        "desc": "Opção Premium com chaves protegidas por módulo HSM certificado FIPS 140-2 Level 2 para requisitos regulatórios mais rigorosos."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "Avaliação de Secrets Expostos",
+        "desc": "Análise do ambiente Azure para identificar credenciais hardcoded em código, pipelines e configurações, com relatório de riscos."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Migração",
+        "desc": "Criação da hierarquia de Key Vaults, migração de secrets existentes e refactoring das aplicações para usar Managed Identity."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento DevOps",
+        "desc": "Capacitação para times de desenvolvimento e DevOps usarem o Key Vault corretamente em novos projetos e pipelines Azure DevOps."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Gestão de Conformidade",
+        "desc": "Revisão periódica de políticas de acesso, rotação de secrets críticos e geração de evidências de controle para compliance."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para integração com AKS, App Service, Functions e ambientes on-premise via Azure Arc."
+      }
+    ],
+    "produtosRelacionados": [
+      "criptografia-kms-hsm",
+      "devsecops",
+      "pci-dss"
+    ],
+    "faq": [
+      {
+        "q": "O Azure Key Vault substitui um HSM on-premise?",
+        "a": "Para a maioria dos casos, sim, especialmente com o plano Premium que usa HSM físico. Para requisitos muito específicos de soberania de hardware (FIPS 140-2 Level 3), a opção é o Azure Dedicated HSM."
+      },
+      {
+        "q": "Como o Key Vault se integra a pipelines de CI/CD?",
+        "a": "O Key Vault integra nativamente com Azure DevOps, GitHub Actions e Terraform para injetar secrets no pipeline sem expô-los em variáveis de ambiente ou arquivos de configuração."
+      },
+      {
+        "q": "A Evernow ajuda a migrar credenciais hardcoded no código legado?",
+        "a": "Sim. Fazemos o processo de identificação (usando Semgrep e ferramentas de secrets scanning) e refactoring para usar Managed Identity e Key Vault, sem interromper as aplicações."
+      }
+    ],
+    "en": {
+      "heroTitle": "Azure Key Vault: Secure Management of Keys, Secrets, and Certificates in Azure",
+      "heroSubtitle": "Eliminate hardcoded credentials and protect cryptographic keys with HSM hardware in Azure. With Evernow, you implement Key Vault correctly and ensure no secret is exposed in code or configuration.",
+      "sobre": "Azure Key Vault is Microsoft's service for storing and controlling access to secrets, cryptographic keys, and certificates used by Azure applications and services. With HSM support, Azure AD integration, and auditing via Monitor, it is the foundation for any secure architecture in the Microsoft cloud.",
+      "oqueFaz": [
+        {
+          "titulo": "Secrets and credential vault",
+          "desc": "Stores connection strings, API keys, passwords, and tokens securely, accessible via Managed Identity without exposing credentials in code."
+        },
+        {
+          "titulo": "Cryptographic key management",
+          "desc": "Creates, imports, and controls keys for encrypting data at rest in Azure Storage, SQL Database, Cosmos DB, and other services."
+        },
+        {
+          "titulo": "TLS/SSL certificate management",
+          "desc": "Provisioning, automatic renewal, and distribution of TLS/SSL certificates for Azure applications without manual management."
+        },
+        {
+          "titulo": "Dedicated HSM (Premium)",
+          "desc": "Premium option with keys protected by an FIPS 140-2 Level 2 certified HSM module for more stringent regulatory requirements."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "Exposed Secrets Assessment",
+          "desc": "Analysis of the Azure environment to identify hardcoded credentials in code, pipelines, and configurations, with a risk report."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Migration",
+          "desc": "Key Vault hierarchy creation, migration of existing secrets, and application refactoring to use Managed Identity."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "DevOps Training",
+          "desc": "Training for development and DevOps teams to use Key Vault correctly in new projects and Azure DevOps pipelines."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Compliance Management",
+          "desc": "Periodic review of access policies, rotation of critical secrets, and control evidence generation for compliance."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for integration with AKS, App Service, Functions, and on-premise environments via Azure Arc."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Azure Key Vault replace an on-premise HSM?",
+          "a": "For most cases, yes, especially with the Premium plan that uses a physical HSM. For very specific hardware sovereignty requirements (FIPS 140-2 Level 3), the option is Azure Dedicated HSM."
+        },
+        {
+          "q": "How does Key Vault integrate with CI/CD pipelines?",
+          "a": "Key Vault integrates natively with Azure DevOps, GitHub Actions, and Terraform to inject secrets into the pipeline without exposing them in environment variables or configuration files."
+        },
+        {
+          "q": "Does Evernow help migrate hardcoded credentials in legacy code?",
+          "a": "Yes. We perform the identification process (using Semgrep and secrets scanning tools) and refactoring to use Managed Identity and Key Vault, without interrupting applications."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "microsoft-sentinel",
+    "nome": "Microsoft Sentinel",
+    "logo": "/assets/image/vendor/ms-sentinel.svg",
+    "categoria": "SIEM / SOAR",
+    "pilarSlug": "managed-ops",
+    "pilarNome": "Managed Ops",
+    "tagline": "SIEM cloud-native com IA, detecção, investigação e resposta unificadas no Microsoft Azure",
+    "heroTitle": "Microsoft Sentinel: SIEM/SOAR cloud-native para operações de segurança modernas",
+    "heroSubtitle": "Ingira logs de toda a infraestrutura, detecte ameaças com IA e automatize respostas, tudo no Azure sem infraestrutura de SIEM para gerenciar. Com a Evernow, você tem o Sentinel implementado, tuned e um SOC operando sobre ele.",
+    "sobre": "Microsoft Sentinel é o SIEM/SOAR cloud-native da Microsoft. Ingere logs de qualquer fonte (Microsoft 365, Azure, AWS, on-premise, SaaS), usa IA e Machine Learning para detectar ameaças sofisticadas e permite automatizar respostas com playbooks Logic Apps. Por ser serverless, escala ilimitadamente sem custo de infraestrutura.",
+    "oqueFaz": [
+      {
+        "titulo": "Ingestão de dados multi-fonte",
+        "desc": "Conectores nativos para Microsoft 365, Azure, AWS, GCP, firewalls, endpoints e mais de 200 soluções de terceiros, com logs centralizados em um único workspace."
+      },
+      {
+        "titulo": "Detecção com IA e ML",
+        "desc": "Regras analíticas prontas para centenas de cenários de ataque (MITRE ATT&CK), detecção de anomalias com ML e correlação multi-sinal."
+      },
+      {
+        "titulo": "SOAR: Automação de resposta",
+        "desc": "Playbooks em Logic Apps que automatizam a resposta a incidentes, isolamento de endpoints, bloqueio de contas, notificações, sem código."
+      },
+      {
+        "titulo": "Threat Intelligence integrada",
+        "desc": "Feeds de inteligência de ameaças da Microsoft (trilhões de sinais diários) integrados nativamente para enriquecer alertas."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "Avaliação & Arquitetura",
+        "desc": "Definição da arquitetura de ingestão, estimativa de custos e demonstração com as fontes de dados prioritárias do cliente."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Onboarding de Fontes",
+        "desc": "Configuração do workspace, onboarding de todas as fontes de log, criação de regras analíticas e dashboards de operação."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento SOC",
+        "desc": "Capacitação para analistas de SOC investigarem incidentes, fazerem threat hunting e criarem novas regras no Sentinel."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "SOC Gerenciado sobre Sentinel",
+        "desc": "Monitoramento 24x7 dos alertas, investigação de incidentes, resposta via playbooks e relatórios mensais de operação de segurança."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Engenheiros certificados em Microsoft Sentinel para tuning de regras, otimização de custos de ingestão e análise de incidentes complexos."
+      }
+    ],
+    "produtosRelacionados": [
+      "soc-monitoramento",
+      "resposta-incidentes",
+      "servicos-gerenciados"
+    ],
+    "faq": [
+      {
+        "q": "O Sentinel é mais caro que SIEMs tradicionais?",
+        "a": "Depende do volume de dados. Para ambientes Microsoft-centric, o Sentinel é muito competitivo. O Microsoft 365 E5 já inclui ingestão gratuita de logs Office 365, Azure AD e Defender. A Evernow faz a análise de custo comparativo antes da implementação."
+      },
+      {
+        "q": "O Sentinel funciona para ambientes não-Microsoft?",
+        "a": "Sim. O Sentinel tem conectores para AWS, GCP, Linux, firewalls (Fortinet, Palo Alto, Check Point), SIEMs legados e qualquer fonte via Syslog/CEF. É um SIEM multi-cloud e multi-plataforma."
+      },
+      {
+        "q": "A Evernow faz a migração de um SIEM legado para o Sentinel?",
+        "a": "Sim. Conduzimos migrações de QRadar, Splunk e ArcSight para o Sentinel, com tradução de regras, migração de dados históricos e treinamento da equipe."
+      }
+    ],
+    "en": {
+      "heroTitle": "Microsoft Sentinel: Cloud-Native SIEM/SOAR for Modern Security Operations",
+      "heroSubtitle": "Ingest logs from your entire infrastructure, detect threats with AI, and automate responses, all in Azure with no SIEM infrastructure to manage. With Evernow, you get Sentinel implemented, tuned, and a SOC operating on top of it.",
+      "sobre": "Microsoft Sentinel is Microsoft's cloud-native SIEM/SOAR. It ingests logs from any source (Microsoft 365, Azure, AWS, on-premise, SaaS), uses AI and Machine Learning to detect sophisticated threats, and enables automated responses with Logic Apps playbooks. Being serverless, it scales unlimited without infrastructure cost.",
+      "oqueFaz": [
+        {
+          "titulo": "Multi-source data ingestion",
+          "desc": "Native connectors for Microsoft 365, Azure, AWS, GCP, firewalls, endpoints, and over 200 third-party solutions, with logs centralized in a single workspace."
+        },
+        {
+          "titulo": "Detection with AI and ML",
+          "desc": "Analytics rules ready for hundreds of attack scenarios (MITRE ATT&CK), anomaly detection with ML, and multi-signal correlation."
+        },
+        {
+          "titulo": "SOAR: Response automation",
+          "desc": "Logic Apps playbooks that automate incident response, endpoint isolation, account blocking, and notifications, without code."
+        },
+        {
+          "titulo": "Integrated Threat Intelligence",
+          "desc": "Microsoft threat intelligence feeds (trillions of daily signals) natively integrated to enrich alerts."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "Assessment & Architecture",
+          "desc": "Ingestion architecture definition, cost estimation, and demonstration with the client's priority data sources."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Source Onboarding",
+          "desc": "Workspace configuration, all log source onboarding, analytics rules creation, and operational dashboards."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "SOC Training",
+          "desc": "Training for SOC analysts to investigate incidents, perform threat hunting, and create new Sentinel rules."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Managed SOC on Sentinel",
+          "desc": "24x7 alert monitoring, incident investigation, playbook-based response, and monthly security operations reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Microsoft Sentinel-certified engineers for rule tuning, ingestion cost optimization, and complex incident analysis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Sentinel more expensive than traditional SIEMs?",
+          "a": "It depends on data volume. For Microsoft-centric environments, Sentinel is very competitive. Microsoft 365 E5 already includes free ingestion of Office 365, Azure AD, and Defender logs. Evernow provides a comparative cost analysis before implementation."
+        },
+        {
+          "q": "Does Sentinel work for non-Microsoft environments?",
+          "a": "Yes. Sentinel has connectors for AWS, GCP, Linux, firewalls (Fortinet, Palo Alto, Check Point), legacy SIEMs, and any source via Syslog/CEF. It is a multi-cloud, multi-platform SIEM."
+        },
+        {
+          "q": "Does Evernow migrate from a legacy SIEM to Sentinel?",
+          "a": "Yes. We conduct migrations from QRadar, Splunk, and ArcSight to Sentinel, with rule translation, historical data migration, and team training."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "microsoft-purview",
+    "nome": "Microsoft Purview",
+    "logo": "/assets/image/vendor/purview.svg",
+    "categoria": "Data Governance",
+    "pilarSlug": "data-shield",
+    "pilarNome": "Data Shield",
+    "tagline": "Governança unificada de dados e conformidade para o ecossistema Microsoft 365 e Azure",
+    "heroTitle": "Microsoft Purview: Governança de dados, DLP e compliance no universo Microsoft",
+    "heroSubtitle": "Descubra, classifique e proteja dados sensíveis em Microsoft 365, Azure e além, com DLP, Information Protection e conformidade com LGPD. Com a Evernow, você implementa o Purview e opera seu programa de proteção de informações.",
+    "sobre": "Microsoft Purview (anteriormente Microsoft Information Protection + Compliance Center) é a solução unificada de governança de dados, DLP e compliance da Microsoft. Classifica e protege documentos, emails e dados em SharePoint, Teams, Exchange e Azure, com controles de conformidade para LGPD, ISO 27001 e PCI DSS.",
+    "oqueFaz": [
+      {
+        "titulo": "Classificação e rotulagem de informações",
+        "desc": "Sensitivity Labels aplicadas automaticamente (com ML) ou manualmente pelos usuários em documentos e emails, controlando permissões e criptografia."
+      },
+      {
+        "titulo": "DLP: Prevenção de Vazamento de Dados",
+        "desc": "Políticas que detectam e bloqueiam o compartilhamento de CPFs, cartões de crédito, dados de saúde e informações confidenciais por email, Teams e SharePoint."
+      },
+      {
+        "titulo": "Insider Risk Management",
+        "desc": "Detecta comportamentos de risco interno, download massivo, envio para pessoal externo, uso de dispositivos USB, antes da exfiltração."
+      },
+      {
+        "titulo": "Audit & eDiscovery",
+        "desc": "Trilha de auditoria imutável de todas as atividades de usuários e administradores para resposta a incidentes e investigações jurídicas."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "Avaliação & Diagnóstico",
+        "desc": "Análise do ambiente Microsoft 365 atual e recomendação de taxonomia de classificação alinhada às necessidades de LGPD da empresa."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação de MIP e DLP",
+        "desc": "Criação da taxonomia de labels, configuração de políticas DLP, ativação do scanner on-premise e integração com sistemas externos."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento de Usuários e Admins",
+        "desc": "Capacitação para usuários finais usarem labels corretamente e para administradores gerenciarem políticas e investigarem alertas DLP."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Operação do Programa de DLP",
+        "desc": "Gestão contínua de políticas, análise de violações, ajuste de falsos positivos e relatórios de conformidade para o DPO."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para integrações com sistemas não-Microsoft, análise de incidentes DLP e atualização de políticas conforme a legislação evolui."
+      }
+    ],
+    "produtosRelacionados": [
+      "dlp",
+      "data-discovery",
+      "lgpd"
+    ],
+    "faq": [
+      {
+        "q": "O Purview funciona para dados fora do Microsoft 365?",
+        "a": "Sim. O Purview tem scanner on-premise para SharePoint Server, file shares, SQL Server e integração com AWS S3 e Google Drive via conectores de terceiros."
+      },
+      {
+        "q": "As Sensitivity Labels impedem que o usuário compartilhe arquivos externamente?",
+        "a": "Depende da configuração. Labels com proteção RMS podem bloquear o compartilhamento externo, a cópia e o encaminhamento, mesmo que o arquivo seja extraído do ambiente Microsoft."
+      },
+      {
+        "q": "O Purview ajuda a cumprir o Art. 18 da LGPD (direitos dos titulares)?",
+        "a": "O Purview contribui com a identificação e classificação de dados pessoais, mas para automação de DSR completa, recomendamos combinar com o Securiti.ai para cobertura de sistemas não-Microsoft."
+      }
+    ],
+    "en": {
+      "heroTitle": "Microsoft Purview: Data Governance, DLP, and Compliance in the Microsoft Universe",
+      "heroSubtitle": "Discover, classify, and protect sensitive data in Microsoft 365, Azure, and beyond, with DLP, Information Protection, and LGPD compliance. With Evernow, you implement Purview and operate your information protection program.",
+      "sobre": "Microsoft Purview (formerly Microsoft Information Protection and Compliance Center) is Microsoft's unified data governance, DLP, and compliance solution. It classifies and protects documents, emails, and data in SharePoint, Teams, Exchange, and Azure, with compliance controls for LGPD, ISO 27001, and PCI DSS.",
+      "oqueFaz": [
+        {
+          "titulo": "Information classification and labeling",
+          "desc": "Sensitivity Labels applied automatically (with ML) or manually by users on documents and emails, controlling permissions and encryption."
+        },
+        {
+          "titulo": "DLP: Data Loss Prevention",
+          "desc": "Policies that detect and block sharing of tax IDs, credit card numbers, health data, and confidential information via email, Teams, and SharePoint."
+        },
+        {
+          "titulo": "Insider Risk Management",
+          "desc": "Detects risky insider behavior, bulk downloads, sending to external parties, USB device use, before exfiltration occurs."
+        },
+        {
+          "titulo": "Audit & eDiscovery",
+          "desc": "Immutable audit trail of all user and administrator activities for incident response and legal investigations."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "Assessment & Diagnostics",
+          "desc": "Analysis of the current Microsoft 365 environment and classification taxonomy recommendation aligned with the company's LGPD requirements."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "MIP and DLP Implementation",
+          "desc": "Label taxonomy creation, DLP policy configuration, on-premise scanner activation, and external system integration."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "User and Admin Training",
+          "desc": "Training for end users to use labels correctly and for administrators to manage policies and investigate DLP alerts."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "DLP Program Operations",
+          "desc": "Continuous policy management, violation analysis, false positive tuning, and compliance reports for the DPO."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for non-Microsoft system integrations, DLP incident analysis, and policy updates as legislation evolves."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does Purview work for data outside Microsoft 365?",
+          "a": "Yes. Purview has an on-premise scanner for SharePoint Server, file shares, SQL Server, and integration with AWS S3 and Google Drive via third-party connectors."
+        },
+        {
+          "q": "Do Sensitivity Labels prevent users from sharing files externally?",
+          "a": "It depends on the configuration. Labels with RMS protection can block external sharing, copying, and forwarding, even if the file is extracted from the Microsoft environment."
+        },
+        {
+          "q": "Does Purview help comply with LGPD Art. 18 (data subject rights)?",
+          "a": "Purview contributes to the identification and classification of personal data, but for full DSR automation, we recommend combining it with Securiti.ai to cover non-Microsoft systems."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "opentext-voltage",
+    "nome": "OpenText Voltage SecureData",
+    "logo": "/assets/image/vendor/voltage.svg",
+    "categoria": "Data-Centric Encryption",
+    "pilarSlug": "data-shield",
+    "pilarNome": "Data Shield",
+    "tagline": "Criptografia centrada em dados, proteja o dado, não apenas o perímetro",
+    "heroTitle": "OpenText Voltage SecureData: Criptografia centrada em dados para PCI DSS e LGPD",
+    "heroSubtitle": "Tokenize e criptografe dados sensíveis onde quer que estejam, em bancos de dados, arquivos, aplicações e big data, sem mudar a estrutura dos sistemas. Com a Evernow, você implementa o Voltage alinhado aos requisitos de PCI DSS e LGPD.",
+    "sobre": "OpenText Voltage SecureData é a plataforma de criptografia centrada em dados líder para ambientes enterprise. Tokeniza e criptografa dados sensíveis como números de cartão (PAN), CPF, dados de saúde e informações financeiras em qualquer sistema sem alterar a estrutura de dados ou exigir refactoring das aplicações.",
+    "oqueFaz": [
+      {
+        "titulo": "Tokenização e Format-Preserving Encryption",
+        "desc": "Substitui dados sensíveis por tokens que preservam o formato original. Um PAN de 16 dígitos vira um token de 16 dígitos, sem alterar bancos de dados ou aplicações."
+      },
+      {
+        "titulo": "Criptografia de big data",
+        "desc": "Protege dados sensíveis em Hadoop, Spark, Kafka e plataformas de analytics sem impacto nas queries e pipelines existentes."
+      },
+      {
+        "titulo": "Proteção em estruturado e não-estruturado",
+        "desc": "Criptografa dados em bancos relacionais, arquivos, emails, PDFs e planilhas de forma consistente em todo o ambiente."
+      },
+      {
+        "titulo": "Redução do escopo PCI DSS",
+        "desc": "Tokenização de PANs reduz drasticamente o escopo do ambiente PCI DSS, eliminando a necessidade de controles em sistemas que recebem apenas tokens."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "Avaliação de Escopo",
+        "desc": "Mapeamento dos dados sensíveis que precisam de proteção e análise do impacto da tokenização no escopo PCI DSS ou LGPD."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação",
+        "desc": "Instalação da plataforma Voltage, configuração de políticas de tokenização/criptografia e integração com as aplicações e bancos de dados."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento",
+        "desc": "Capacitação para arquitetos e desenvolvedores integrarem o Voltage corretamente em novas aplicações e pipelines de dados."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Gestão de Chaves e Conformidade",
+        "desc": "Operação do ciclo de vida de chaves criptográficas e geração de evidências de conformidade para auditorias PCI QSA e LGPD."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado para integrações com sistemas legados, otimização de performance e análise de impacto de novas implementações."
+      }
+    ],
+    "produtosRelacionados": [
+      "criptografia-kms-hsm",
+      "pci-dss",
+      "data-discovery"
+    ],
+    "faq": [
+      {
+        "q": "Tokenização e criptografia são a mesma coisa?",
+        "a": "Não. A criptografia transforma o dado usando uma chave e pode ser revertida. A tokenização substitui o dado por um token aleatório sem relação matemática com o original, com o dado real ficando em um vault seguro. Para PCI DSS, a tokenização elimina o dado do escopo de forma mais efetiva."
+      },
+      {
+        "q": "O Voltage impacta a performance das aplicações?",
+        "a": "O impacto é mínimo. O Voltage foi projetado para alto volume de transações em ambientes financeiros com milhões de operações por segundo. A Evernow valida a performance durante a POC com carga representativa do ambiente do cliente."
+      },
+      {
+        "q": "A tokenização do Voltage é reversível?",
+        "a": "Depende da configuração. Tokens podem ser de uso único (irreversíveis) ou reutilizáveis (o mesmo dado sempre gera o mesmo token). A escolha depende do caso de uso. Para PCI DSS, ambas as modalidades são aceitas."
+      }
+    ],
+    "en": {
+      "heroTitle": "OpenText Voltage SecureData: Data-Centric Encryption for PCI DSS and LGPD",
+      "heroSubtitle": "Tokenize and encrypt sensitive data wherever it lives, in databases, files, applications, and big data, without changing system structure. With Evernow, you implement Voltage aligned with PCI DSS and LGPD requirements.",
+      "sobre": "OpenText Voltage SecureData is the leading data-centric encryption platform for enterprise environments. It tokenizes and encrypts sensitive data such as card numbers (PAN), tax IDs, health data, and financial information in any system without altering data structure or requiring application refactoring.",
+      "oqueFaz": [
+        {
+          "titulo": "Tokenization and Format-Preserving Encryption",
+          "desc": "Replaces sensitive data with tokens that preserve the original format. A 16-digit PAN becomes a 16-digit token, without altering databases or applications."
+        },
+        {
+          "titulo": "Big data encryption",
+          "desc": "Protects sensitive data in Hadoop, Spark, Kafka, and analytics platforms without impacting existing queries and pipelines."
+        },
+        {
+          "titulo": "Structured and unstructured protection",
+          "desc": "Encrypts data in relational databases, files, emails, PDFs, and spreadsheets consistently across the entire environment."
+        },
+        {
+          "titulo": "PCI DSS scope reduction",
+          "desc": "PAN tokenization drastically reduces the PCI DSS environment scope, eliminating the need for controls in systems that receive only tokens."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "Scope Assessment",
+          "desc": "Mapping of sensitive data that needs protection and analysis of tokenization impact on PCI DSS or LGPD scope."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation",
+          "desc": "Voltage platform installation, tokenization/encryption policy configuration, and integration with applications and databases."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Training",
+          "desc": "Training for architects and developers to correctly integrate Voltage into new applications and data pipelines."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Key Management and Compliance",
+          "desc": "Cryptographic key lifecycle operations and compliance evidence generation for PCI QSA and LGPD audits."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized support for legacy system integrations, performance optimization, and impact analysis of new implementations."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Are tokenization and encryption the same thing?",
+          "a": "No. Encryption transforms data using a key and can be reversed. Tokenization replaces data with a random token with no mathematical relationship to the original, with the real data stored in a secure vault. For PCI DSS, tokenization removes data from scope more effectively."
+        },
+        {
+          "q": "Does Voltage impact application performance?",
+          "a": "The impact is minimal. Voltage was designed for high transaction volumes in financial environments handling millions of operations per second. Evernow validates performance during the POC with representative load from the client's environment."
+        },
+        {
+          "q": "Is Voltage tokenization reversible?",
+          "a": "It depends on the configuration. Tokens can be single-use (irreversible) or reusable (the same data always generates the same token). The choice depends on the use case. For PCI DSS, both modalities are accepted."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "security-compass",
+    "nome": "Security Compass SD Elements",
+    "logo": "/assets/image/vendor/security-compass.svg",
+    "categoria": "Threat Modeling",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "Requisitos de segurança automáticos desde o design, shift-left real no ciclo de desenvolvimento",
+    "heroTitle": "Security Compass SD Elements: Segurança desde o design com requisitos automáticos por risco",
+    "heroSubtitle": "Gere automaticamente requisitos de segurança e compliance para cada projeto de software com base no perfil de risco, sem depender de consultores em cada sprint. Com a Evernow, você implementa o SD Elements integrado ao seu SDLC.",
+    "sobre": "Security Compass SD Elements é a plataforma de Security Requirements Management que automatiza a geração de requisitos de segurança e compliance para cada projeto de software com base em suas características de risco: tecnologia, dados manipulados, contexto regulatório. Integrado ao Jira, cria tarefas de segurança diretamente no backlog do time.",
+    "oqueFaz": [
+      {
+        "titulo": "Requisitos de segurança automáticos",
+        "desc": "Com base no perfil do projeto (linguagem, dados, regulações), gera automaticamente os requisitos de segurança aplicáveis, como OWASP, PCI, LGPD, HIPAA."
+      },
+      {
+        "titulo": "Integração com Jira e ADO",
+        "desc": "Cria tarefas de segurança diretamente no backlog do time de desenvolvimento no Jira ou Azure DevOps, vinculando segurança ao sprint."
+      },
+      {
+        "titulo": "Modelagem de ameaças guiada",
+        "desc": "Processo estruturado de threat modeling que guia arquitetos e desenvolvedores sem exigir expertise avançada em segurança."
+      },
+      {
+        "titulo": "Rastreabilidade de compliance",
+        "desc": "Vincula cada requisito de segurança ao controle de compliance correspondente (PCI DSS, ISO 27001, LGPD) para evidência de auditoria."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Projeto Piloto",
+        "desc": "Configuramos o SD Elements para um projeto real do cliente e demonstramos a geração de requisitos e integração ao Jira em 3 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração SDLC",
+        "desc": "Configuração da plataforma, customização de surveys e requisitos para o contexto da empresa e integração com Jira/Azure DevOps."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento de Times de Produto",
+        "desc": "Capacitação para Product Owners, arquitetos e desenvolvedores usarem o SD Elements no dia a dia sem dependência de especialistas."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Gestão do Programa",
+        "desc": "Acompanhamento da adoção, evolução das métricas de requisitos atendidos e relatórios de maturidade para o CISO."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para customização de requisitos, integrações e análise de lacunas de cobertura de segurança."
+      }
+    ],
+    "produtosRelacionados": [
+      "modelagem-ameacas",
+      "devsecops",
+      "treinamento-devsecops"
+    ],
+    "faq": [
+      {
+        "q": "SD Elements substitui o processo de threat modeling manual?",
+        "a": "Complementa e escala. O threat modeling manual é valioso para projetos de altíssimo risco com arquitetos sênior. O SD Elements escala o processo para todos os projetos sem expertise especializada em cada sprint."
+      },
+      {
+        "q": "Os requisitos do SD Elements são customizáveis?",
+        "a": "Sim. A Evernow customiza a biblioteca de requisitos para incluir os padrões internos da empresa, frameworks regulatórios específicos do setor e regras de arquitetura proprietárias."
+      },
+      {
+        "q": "Como o SD Elements se integra ao ciclo ágil?",
+        "a": "A integração com Jira/Azure DevOps cria automaticamente as tarefas de segurança no backlog no início de cada projeto ou sprint. O time as trata como qualquer outra tarefa técnica, sem processo paralelo."
+      }
+    ],
+    "en": {
+      "heroTitle": "Security Compass SD Elements: Security by Design with Automatic Risk-Based Requirements",
+      "heroSubtitle": "Automatically generate security and compliance requirements for each software project based on its risk profile, without relying on consultants in every sprint. With Evernow, you implement SD Elements integrated into your SDLC.",
+      "sobre": "Security Compass SD Elements is the Security Requirements Management platform that automates the generation of security and compliance requirements for each software project based on its risk characteristics: technology, data handled, and regulatory context. Integrated with Jira, it creates security tasks directly in the development team's backlog.",
+      "oqueFaz": [
+        {
+          "titulo": "Automatic security requirements",
+          "desc": "Based on the project profile (language, data, regulations), automatically generates applicable security requirements such as OWASP, PCI, LGPD, and HIPAA."
+        },
+        {
+          "titulo": "Integration with Jira and ADO",
+          "desc": "Creates security tasks directly in the development team's backlog in Jira or Azure DevOps, linking security to the sprint."
+        },
+        {
+          "titulo": "Guided threat modeling",
+          "desc": "Structured threat modeling process that guides architects and developers without requiring advanced security expertise."
+        },
+        {
+          "titulo": "Compliance traceability",
+          "desc": "Links each security requirement to the corresponding compliance control (PCI DSS, ISO 27001, LGPD) for audit evidence."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Pilot Project",
+          "desc": "We configure SD Elements for a real client project and demonstrate requirements generation and Jira integration within 3 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & SDLC Integration",
+          "desc": "Platform configuration, survey and requirements customization for the company context, and Jira/Azure DevOps integration."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Product Team Training",
+          "desc": "Training for Product Owners, architects, and developers to use SD Elements daily without depending on specialists."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Program Management",
+          "desc": "Adoption tracking, evolution of met requirements metrics, and maturity reports for the CISO."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for requirements customization, integrations, and security coverage gap analysis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does SD Elements replace the manual threat modeling process?",
+          "a": "It complements and scales it. Manual threat modeling is valuable for very high-risk projects with senior architects. SD Elements scales the process to all projects without specialized expertise in every sprint."
+        },
+        {
+          "q": "Are SD Elements requirements customizable?",
+          "a": "Yes. Evernow customizes the requirements library to include the company's internal standards, sector-specific regulatory frameworks, and proprietary architecture rules."
+        },
+        {
+          "q": "How does SD Elements integrate with the agile cycle?",
+          "a": "The Jira/Azure DevOps integration automatically creates security tasks in the backlog at the start of each project or sprint. The team treats them like any other technical task, without a parallel process."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "rainforest",
+    "nome": "Rainforest",
+    "logo": "/assets/image/vendor/rainforest.svg",
+    "categoria": "Security Testing & QA Automation",
+    "pilarSlug": "assurance",
+    "pilarNome": "Assurance",
+    "tagline": "Testes de segurança automatizados integrados ao seu pipeline de desenvolvimento",
+    "heroTitle": "Rainforest: Automação de testes de segurança e qualidade no ciclo de desenvolvimento",
+    "heroSubtitle": "Execute testes de segurança funcionais de forma automatizada e contínua, sem fricção para os times de desenvolvimento. Com a Evernow, você integra o Rainforest ao seu pipeline e garante que cada release passe pelos controles de qualidade e segurança definidos.",
+    "sobre": "Rainforest é a plataforma de automação de testes que combina inteligência artificial com testes funcionais e de segurança integrados ao ciclo de desenvolvimento. Permite que times de engenharia e segurança criem, executem e monitorem testes de forma contínua no pipeline de CI/CD, sem depender de scripts complexos ou ambientes frágeis de QA.",
+    "oqueFaz": [
+      {
+        "titulo": "Automação de testes no pipeline",
+        "desc": "Cria e executa testes funcionais e de segurança automaticamente a cada pull request e deploy, bloqueando releases que falhem nos critérios definidos."
+      },
+      {
+        "titulo": "Testes de regressão contínuos",
+        "desc": "Valida que novas funcionalidades não quebram comportamentos de segurança existentes, detectando regressões antes que cheguem à produção."
+      },
+      {
+        "titulo": "Testes de API e web end-to-end",
+        "desc": "Cobre fluxos críticos de negócio, autenticação, autorização e validação de dados com testes end-to-end reproduzíveis e mantidos automaticamente."
+      },
+      {
+        "titulo": "Relatórios de cobertura e evidência",
+        "desc": "Gera evidências de execução de testes para compliance, mostrando quais controles foram testados, quando e com qual resultado."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Mapeamento de Testes",
+        "desc": "Identificamos os fluxos críticos de segurança e demonstramos a automação no ambiente do cliente em até 5 dias."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & Integração CI/CD",
+        "desc": "Configuração da plataforma, integração ao pipeline CI/CD existente (GitHub Actions, GitLab, Jenkins) e criação dos primeiros casos de teste."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento de Times",
+        "desc": "Capacitação para as equipes de desenvolvimento e segurança criarem e manterem os casos de teste com autonomia."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Programa de Testes Contínuos",
+        "desc": "Expansão progressiva da cobertura de testes, monitoramento de resultados e relatórios mensais de qualidade e segurança."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte especializado para integrações, resolução de testes instáveis e otimização da suite de testes."
+      }
+    ],
+    "produtosRelacionados": [
+      "pentest",
+      "devsecops",
+      "sast-dast-sca"
+    ],
+    "faq": [
+      {
+        "q": "Qual a diferença entre o Rainforest e ferramentas de SAST/DAST?",
+        "a": "SAST e DAST analisam código e endpoints em busca de vulnerabilidades técnicas. O Rainforest testa o comportamento funcional e de segurança da aplicação de ponta a ponta, validando que os controles implementados funcionam corretamente em fluxos reais do usuário. As duas abordagens se complementam."
+      },
+      {
+        "q": "O Rainforest exige conhecimento em programação para criar testes?",
+        "a": "Não necessariamente. A plataforma tem recursos de criação de testes acessíveis para times sem experiência em automação, além de suporte a código para casos mais complexos. A Evernow auxilia na criação e manutenção dos casos de teste."
+      },
+      {
+        "q": "O Rainforest pode ser usado como evidência para auditorias de compliance?",
+        "a": "Sim. Os relatórios de execução de testes do Rainforest documentam quais controles foram testados, com qual frequência e resultado, servindo como evidência para PCI DSS, ISO 27001 e outras normas que exigem testes regulares de segurança."
+      }
+    ],
+    "en": {
+      "heroTitle": "Rainforest: Security and Quality Test Automation in the Development Cycle",
+      "heroSubtitle": "Run functional and security tests in an automated and continuous manner, without friction for development teams. With Evernow, you integrate Rainforest into your pipeline and ensure every release passes the defined quality and security controls.",
+      "sobre": "Rainforest is the test automation platform that combines artificial intelligence with functional and security tests integrated into the development cycle. It enables engineering and security teams to create, run, and monitor tests continuously in the CI/CD pipeline, without relying on complex scripts or fragile QA environments.",
+      "oqueFaz": [
+        {
+          "titulo": "Pipeline test automation",
+          "desc": "Creates and runs functional and security tests automatically on every pull request and deployment, blocking releases that fail defined criteria."
+        },
+        {
+          "titulo": "Continuous regression testing",
+          "desc": "Validates that new features do not break existing security behaviors, detecting regressions before they reach production."
+        },
+        {
+          "titulo": "API and web end-to-end testing",
+          "desc": "Covers critical business flows, authentication, authorization, and data validation with reproducible, automatically maintained end-to-end tests."
+        },
+        {
+          "titulo": "Coverage and evidence reports",
+          "desc": "Generates test execution evidence for compliance, showing which controls were tested, when, and with what result."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Test Mapping",
+          "desc": "We identify critical security flows and demonstrate automation in the client's environment within 5 days."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & CI/CD Integration",
+          "desc": "Platform configuration, integration into the existing CI/CD pipeline (GitHub Actions, GitLab, Jenkins), and creation of initial test cases."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Team Training",
+          "desc": "Training for development and security teams to create and maintain test cases autonomously."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Continuous Testing Program",
+          "desc": "Progressive expansion of test coverage, results monitoring, and monthly quality and security reports."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Specialized support for integrations, unstable test resolution, and test suite optimization."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the difference between Rainforest and SAST/DAST tools?",
+          "a": "SAST and DAST analyze code and endpoints for technical vulnerabilities. Rainforest tests the functional and security behavior of the application end-to-end, validating that implemented controls work correctly in real user flows. Both approaches complement each other."
+        },
+        {
+          "q": "Does Rainforest require programming knowledge to create tests?",
+          "a": "Not necessarily. The platform has test creation features accessible to teams without automation experience, plus code support for more complex cases. Evernow assists in creating and maintaining test cases."
+        },
+        {
+          "q": "Can Rainforest be used as evidence for compliance audits?",
+          "a": "Yes. Rainforest test execution reports document which controls were tested, with what frequency and result, serving as evidence for PCI DSS, ISO 27001, and other standards requiring regular security testing."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "guardsquare",
+    "nome": "Guardsquare",
+    "logo": "/assets/image/vendor/guardsquare.svg",
+    "categoria": "Mobile App Protection",
+    "pilarSlug": "secure-code",
+    "pilarNome": "Secure Code",
+    "tagline": "Proteção enterprise para aplicativos mobile Android e iOS, RASP e ofuscação avançada",
+    "heroTitle": "Guardsquare: Proteção completa de aplicativos mobile contra engenharia reversa e manipulação",
+    "heroSubtitle": "Proteja seu aplicativo Android e iOS contra repackaging, engenharia reversa e fraudes em tempo real. Com a Evernow, você integra o Guardsquare ao pipeline mobile e garante a proteção de cada release.",
+    "sobre": "Guardsquare é a plataforma líder em proteção de aplicações mobile. Combina ofuscação avançada (ProGuard/DexGuard para Android, iXGuard para iOS), RASP (Runtime Application Self-Protection) e detecção de ambiente comprometido (root/jailbreak, emuladores, hooking). É o padrão para apps de bancos, fintechs e saúde que precisam de conformidade com PCI DSS e BACEN.",
+    "oqueFaz": [
+      {
+        "titulo": "Ofuscação e hardening Android/iOS",
+        "desc": "DexGuard (Android) e iXGuard (iOS) transformam o app em código ilegível, impossível de reverter, protegendo a propriedade intelectual e a lógica de negócio."
+      },
+      {
+        "titulo": "RASP: Proteção em Runtime",
+        "desc": "Detecta e reage a ambientes comprometidos (root, jailbreak), hooking de frameworks (Frida, Xposed), emuladores e depuradores em produção."
+      },
+      {
+        "titulo": "Detecção de repackaging e clones",
+        "desc": "Verifica a integridade do app em runtime, detectando versões modificadas, clones e apps falsificados que tentam enganar usuários."
+      },
+      {
+        "titulo": "Relatórios de ameaças em produção",
+        "desc": "Dashboard com telemetria de ameaças detectadas em produção, mostrando quais dispositivos tentaram atacar o app e quais técnicas foram usadas."
+      }
+    ],
+    "evernowServicos": [
+      {
+        "icon": "fas fa-flask",
+        "titulo": "POC & Análise de Risco Mobile",
+        "desc": "Análise de segurança do app atual (engenharia reversa controlada) e demonstração da proteção Guardsquare em build de teste."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "titulo": "Implementação & CI/CD Mobile",
+        "desc": "Integração do DexGuard/iXGuard ao pipeline de build mobile (Gradle, Fastlane, Bitrise), configuração de regras e validação de releases."
+      },
+      {
+        "icon": "fas fa-graduation-cap",
+        "titulo": "Treinamento Mobile Security",
+        "desc": "Capacitação para a equipe mobile configurar e manter a proteção, interpretar os relatórios de ameaças e responder a incidentes."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "titulo": "Monitoramento de Ameaças Mobile",
+        "desc": "Acompanhamento dos relatórios de ameaças em produção, análise de padrões de ataque e recomendações de ajuste de proteção."
+      },
+      {
+        "icon": "fas fa-headset",
+        "titulo": "Suporte Técnico",
+        "desc": "Suporte para resolução de conflitos de ofuscação, otimização de regras de proteção e análise de crashes relacionados à proteção."
+      }
+    ],
+    "produtosRelacionados": [
+      "code-protection",
+      "sast-dast-sca",
+      "pentest"
+    ],
+    "faq": [
+      {
+        "q": "O Guardsquare é exigido pelo BACEN para apps de banco?",
+        "a": "O BACEN e as diretrizes de open banking recomendam proteção de apps mobile incluindo ofuscação e RASP. O Guardsquare atende essas recomendações e é amplamente utilizado por bancos e fintechs brasileiras."
+      },
+      {
+        "q": "A ofuscação afeta o desempenho do app?",
+        "a": "O impacto em performance é mínimo (geralmente menor que 3%) e imperceptível para o usuário final. O RASP tem impacto maior em dispositivos muito antigos, o que a Evernow analisa durante a POC."
+      },
+      {
+        "q": "O Guardsquare protege contra o Frida (tool de hooking)?",
+        "a": "Sim. A detecção de Frida é uma das principais proteções RASP do Guardsquare. Ele detecta a presença do Frida server e reage conforme a política configurada (aviso, log ou bloqueio do app)."
+      }
+    ],
+    "en": {
+      "heroTitle": "Guardsquare: Complete Mobile App Protection Against Reverse Engineering and Tampering",
+      "heroSubtitle": "Protect your Android and iOS app against repackaging, reverse engineering, and real-time fraud. With Evernow, you integrate Guardsquare into the mobile pipeline and ensure protection for every release.",
+      "sobre": "Guardsquare is the leading mobile application protection platform. It combines advanced obfuscation (ProGuard/DexGuard for Android, iXGuard for iOS), RASP (Runtime Application Self-Protection), and compromised environment detection (root/jailbreak, emulators, hooking). It is the standard for banking, fintech, and healthcare apps requiring PCI DSS and BACEN compliance.",
+      "oqueFaz": [
+        {
+          "titulo": "Android/iOS obfuscation and hardening",
+          "desc": "DexGuard (Android) and iXGuard (iOS) transform the app into unreadable code, impossible to reverse, protecting intellectual property and business logic."
+        },
+        {
+          "titulo": "RASP: Runtime Protection",
+          "desc": "Detects and reacts to compromised environments (root, jailbreak), framework hooking (Frida, Xposed), emulators, and debuggers in production."
+        },
+        {
+          "titulo": "Repackaging and clone detection",
+          "desc": "Verifies app integrity at runtime, detecting modified versions, clones, and fake apps attempting to deceive users."
+        },
+        {
+          "titulo": "Production threat reports",
+          "desc": "Dashboard with threat telemetry detected in production, showing which devices attempted to attack the app and which techniques were used."
+        }
+      ],
+      "evernowServicos": [
+        {
+          "icon": "fas fa-flask",
+          "titulo": "POC & Mobile Risk Analysis",
+          "desc": "Security analysis of the current app (controlled reverse engineering) and demonstration of Guardsquare protection in a test build."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "titulo": "Implementation & Mobile CI/CD",
+          "desc": "DexGuard/iXGuard integration into the mobile build pipeline (Gradle, Fastlane, Bitrise), rule configuration, and release validation."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "titulo": "Mobile Security Training",
+          "desc": "Training for the mobile team to configure and maintain protection, interpret threat reports, and respond to incidents."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "titulo": "Mobile Threat Monitoring",
+          "desc": "Monitoring of production threat reports, attack pattern analysis, and protection tuning recommendations."
+        },
+        {
+          "icon": "fas fa-headset",
+          "titulo": "Technical Support",
+          "desc": "Support for resolving obfuscation conflicts, protection rule optimization, and protection-related crash analysis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Guardsquare required by BACEN for banking apps?",
+          "a": "BACEN and open banking guidelines recommend mobile app protection including obfuscation and RASP. Guardsquare meets these recommendations and is widely used by Brazilian banks and fintechs."
+        },
+        {
+          "q": "Does obfuscation affect app performance?",
+          "a": "The performance impact is minimal (generally less than 3%) and imperceptible to the end user. RASP has a greater impact on very old devices, which Evernow analyzes during the POC."
+        },
+        {
+          "q": "Does Guardsquare protect against Frida (hooking tool)?",
+          "a": "Yes. Frida detection is one of Guardsquare's main RASP protections. It detects the presence of the Frida server and reacts according to the configured policy (warning, log, or app block)."
+        }
+      ]
+    }
+  }
+]

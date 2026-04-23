@@ -1,0 +1,276 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: productPages
+  size: 1
+  alias: product
+permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[product.slug] or product.slug }}/{% else %}/produtos/{{ product.slug }}/{% endif %}"
+---
+{% set prod_lang = product.lang %}
+{% set lang = prod_lang %}
+{% set urlPrefix = "" if prod_lang == "pt" else "/en" %}
+{% set langPtUrl = "/produtos/" + product.slug + "/" %}
+{% set langEnUrl = "/en/products/" + (enSlugs.products[product.slug] or product.slug) + "/" %}
+{% if prod_lang == "en" and product.en %}
+  {% set prodData = product.en %}
+{% else %}
+  {% set prodData = product %}
+{% endif %}
+{% set breadcrumbs = [
+  { label: ("Home" if prod_lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Portfolio" if prod_lang == "en" else "Portfólio"), url: urlPrefix + ("/products/" if prod_lang == "en" else "/produtos/") },
+  { label: product.pilarNome, url: urlPrefix + "/solucoes/" + product.pilar + "/" },
+  { label: product.titulo }
+] %}
+
+{# Ícones de entrega por produto — fallback genérico se não definido #}
+{% set deliveryIconMap = {
+  "devsecops":                    ["fas fa-search-plus","fas fa-code-branch","fas fa-tasks","fas fa-chart-bar","fas fa-graduation-cap"],
+  "sast-dast-sca":                ["fas fa-microscope","fas fa-vial","fas fa-cubes","fas fa-filter","fas fa-file-alt"],
+  "desenvolvimento-seguro-gerenciado": ["fas fa-tasks","fas fa-bell","fas fa-chart-line","fas fa-calendar-check","fas fa-user-tie"],
+  "modelagem-ameacas":            ["fas fa-sitemap","fas fa-shield-virus","fas fa-clipboard-list","fas fa-code-branch","fas fa-handshake"],
+  "revisao-codigo":               ["fas fa-code","fas fa-bug","fas fa-file-signature","fas fa-redo","fas fa-check-double"],
+  "treinamento-devsecops":        ["fas fa-graduation-cap","fas fa-laptop-code","fas fa-flask","fas fa-users","fas fa-certificate"],
+  "code-protection":              ["fas fa-mobile-alt","fas fa-lock","fas fa-random","fas fa-eye-slash","fas fa-shield-alt"],
+  "data-discovery":               ["fas fa-map-marked-alt","fas fa-tags","fas fa-balance-scale","fas fa-file-contract","fas fa-chart-pie"],
+  "dspm":                         ["fas fa-tachometer-alt","fas fa-cloud","fas fa-bell","fas fa-chart-bar","fas fa-key"],
+  "criptografia-kms-hsm":         ["fas fa-lock","fas fa-key","fas fa-exchange-alt","fas fa-industry","fas fa-shield-alt"],
+  "dlp":                          ["fas fa-filter","fas fa-envelope","fas fa-cloud-upload-alt","fas fa-exclamation-circle","fas fa-file-alt"],
+  "consentimento-lgpd":           ["fas fa-file-signature","fas fa-user-check","fas fa-bell","fas fa-database","fas fa-history"],
+  "cspm":                         ["fas fa-cloud","fas fa-search","fas fa-bell","fas fa-tasks","fas fa-balance-scale"],
+  "pentest":                      ["fas fa-crosshairs","fas fa-network-wired","fas fa-mobile-alt","fas fa-file-alt","fas fa-redo"],
+  "red-team":                     ["fas fa-chess","fas fa-route","fas fa-trophy","fas fa-file-alt","fas fa-users"],
+  "assessment-maturidade":        ["fas fa-clipboard-list","fas fa-chart-bar","fas fa-road","fas fa-balance-scale","fas fa-handshake"],
+  "grc":                          ["fas fa-sitemap","fas fa-gavel","fas fa-tasks","fas fa-chart-line","fas fa-file-contract"],
+  "iso-27001":                    ["fas fa-award","fas fa-tasks","fas fa-shield-alt","fas fa-chalkboard-teacher","fas fa-certificate"],
+  "lgpd":                         ["fas fa-gavel","fas fa-map","fas fa-file-contract","fas fa-user-shield","fas fa-bell"],
+  "pci-dss":                      ["fas fa-credit-card","fas fa-shield-alt","fas fa-file-alt","fas fa-users-cog","fas fa-certificate"],
+  "servicos-gerenciados":         ["fas fa-cogs","fas fa-chart-line","fas fa-bell","fas fa-file-alt","fas fa-headset"],
+  "soc-monitoramento":            ["fas fa-desktop","fas fa-bell","fas fa-search","fas fa-ambulance","fas fa-chart-bar"],
+  "resposta-incidentes":          ["fas fa-ambulance","fas fa-fire-extinguisher","fas fa-search","fas fa-redo","fas fa-book"],
+  "gestao-vulnerabilidades":      ["fas fa-search","fas fa-tasks","fas fa-redo","fas fa-chart-bar","fas fa-file-alt"],
+  "selecao-ferramentas":          ["fas fa-clipboard-list","fas fa-vials","fas fa-wrench","fas fa-chalkboard-teacher","fas fa-headset"],
+  "pam":                          ["fas fa-user-lock","fas fa-history","fas fa-bell","fas fa-key","fas fa-shield-alt"]
+} %}
+{% set dIcons = deliveryIconMap[product.slug] if deliveryIconMap[product.slug] else [] %}
+
+{# Monta vendorsList resolvendo nomes de string → {name, logo} via vendorMap #}
+{%- set vendorsList = [] -%}
+{%- for vname in product.vendors -%}
+  {%- if vname is string and vendorMap[vname] -%}
+    {%- set vendorsList = vendorsList.concat([{name: vname, logo: vendorMap[vname], slug: vendorSlugMap[vname]}]) -%}
+  {%- elif vname.logo -%}
+    {%- set vendorsList = vendorsList.concat([vname]) -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con ev-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-11">
+            <div class="banner-left-con wow slideInLeft">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
+                <a href="{{ urlPrefix }}/solucoes/{{ product.pilar }}/" style="color:#00e0a3;text-decoration:none;">{{ product.pilarNome }}</a>
+                <span style="opacity:.4;margin:0 6px;">/</span>{{ product.categoria }}
+              </p>
+              <h1>{{ prodData.heroTitle }}</h1>
+              <p class="ev-hero__sub">{{ prodData.heroSubtitle }}</p>
+              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
+                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") }}</a>
+                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{{ prodData.ctaSecundario if prodData.ctaSecundario else ("Take the assessment" if prod_lang == "en" else "Fazer o assessment") }}</a>
+              </div>
+              <div class="ev-hero__trust mt-4">
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  {# 1. Dores #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}The problem{% else %}O problema{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}Why does your company need this now?{% else %}Por que sua empresa precisa disso agora?{% endif %}</h2>
+      <div class="ev-pain-grid">
+        {%- set painIcons = ["fas fa-exclamation-triangle","fas fa-clock","fas fa-lock-open","fas fa-clipboard-list"] -%}
+        {%- for dor in prodData.dores -%}
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon">
+            <i class="{{ painIcons[loop.index0] if painIcons[loop.index0] else 'fas fa-exclamation-triangle' }}"></i>
+          </div>
+          <p>{{ dor }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 2. Entregas — com ícones #}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}How Evernow solves it{% else %}Como a Evernow resolve{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}What we deliver{% else %}O que entregamos{% endif %}</h2>
+      <div class="ev-delivery-grid">
+        {%- for entrega in prodData.entregas -%}
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon">
+            <i class="{{ dIcons[loop.index0] if dIcons[loop.index0] else 'fas fa-check-double' }}"></i>
+          </div>
+          <h4>{{ entrega.titulo }}</h4>
+          <p>{{ entrega.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 3. Metodologia #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}Methodology{% else %}Metodologia{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}How it works in practice{% else %}Como funciona na prática{% endif %}</h2>
+      <div class="ev-method">
+        {%- for etapa in prodData.metodologia -%}
+        <div class="ev-method-step wow fadeInUp">
+          <h4>{{ etapa.etapa }}</h4>
+          <p>{{ etapa.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {# 4. Métricas #}
+  {%- if prodData.metricas and prodData.metricas.length -%}
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}Expected results{% else %}Resultados esperados{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}What you gain from this{% else %}O que você ganha com isso{% endif %}</h2>
+      <div class="ev-metrics">
+        {%- for metrica in prodData.metricas -%}
+        <div class="ev-metric wow fadeInUp">
+          <span class="ev-metric__value">{{ metrica.valor }}</span>
+          <p class="ev-metric__desc">{{ metrica.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  {# 5. Plataformas / vendors — grid estático (sem carrossel) #}
+  {%- if vendorsList and vendorsList.length -%}
+  <section class="ev-section ev-section--alt" style="padding:40px 0;">
+    <div class="container overlay-content">
+      <p class="ev-vendors-carousel__title">{% if prod_lang == "en" %}Platforms and vendors we use{% else %}Plataformas e fabricantes que utilizamos{% endif %}</p>
+      <div class="ev-vendor-static-grid">
+        {%- for vendor in vendorsList -%}
+        {%- if vendor.slug -%}
+        <a href="{{ urlPrefix }}/{% if prod_lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vendor.slug }}/" class="ev-vendor-static-item" title="{% if prod_lang == 'en' %}View{% else %}Ver página{% endif %} {{ vendor.name }}">
+          <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async">
+        </a>
+        {%- else -%}
+        <div class="ev-vendor-static-item">
+          <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async">
+        </div>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  {# 6. Parceiros #}
+  {% set partnersTagKey = ("Clients who trust Evernow" if prod_lang == "en" else "Clientes que confiam na Evernow") %}
+  {% set partnersContainerClass = "border-bottom pb-5" %}
+  {% include "components/partners-grid.njk" %}
+
+  {# 7. FAQ #}
+  {% set faqItems = prodData.faq %}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about " if prod_lang == "en" else "Perguntas frequentes sobre ") + product.titulo %}
+  {% include "components/faq-section.njk" %}
+
+  {# 8. Produtos relacionados — lookup via productCardsBySlug (evita bug do selectattr em templates paginados) #}
+  {%- if product.relacionados and product.relacionados.length -%}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}See also{% else %}Veja também{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}Complementary services{% else %}Serviços complementares{% endif %}</h2>
+      <div class="ev-pilar-product-grid">
+        {%- for relSlug in product.relacionados -%}
+        {%- set relCard = productCardsBySlug[relSlug] -%}
+        {%- if relCard -%}
+        {%- set relCardData = relCard.en if prod_lang == "en" and relCard.en else relCard -%}
+        <a href="{{ urlPrefix }}/{% if prod_lang == 'en' %}products/{{ enSlugs.products[relSlug] or relSlug }}{% else %}produtos/{{ relSlug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ relCard.icon }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ relCardData.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ relCardData.tagline }}</p>
+            {%- if relCardData.features -%}
+            <ul class="ev-pilar-product__features">
+              {%- for feat in relCardData.features -%}
+              <li><i class="fas fa-check"></i> {{ feat }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
+          <span class="ev-pilar-product__cta">{% if prod_lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  {# 9. CTA Final #}
+  {% set ctaTitle = ("Want to move forward with " if prod_lang == "en" else "Quer avançar com ") + product.titulo + "?" %}
+  {% set ctaSubtitle = ("Talk to an Evernow specialist and define the next step clearly." if prod_lang == "en" else "Fale com um especialista da Evernow e defina o próximo passo com clareza.") %}
+  {% set ctaPrimary = prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = prodData.ctaSecundario if prodData.ctaSecundario else ("Take the assessment" if prod_lang == "en" else "Fazer o assessment") %}
+  {% include "components/cta-final.njk" %}
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "{{ product.titulo }} | Evernow",
+      "description": "{{ product.en.metaDescription if prod_lang == 'en' and product.en else product.metaDescription }}",
+      "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+      "areaServed": "BR",
+      "url": "https://evernow.com.br{% if prod_lang == 'en' %}/en/products/{{ enSlugs.products[product.slug] or product.slug }}{% else %}/produtos/{{ product.slug }}{% endif %}/"
+    }
+    {%- set _faqData = prodData.faq if prodData.faq else product.faq -%}
+    {%- if _faqData and _faqData.length -%}
+    ,{
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in _faqData -%}
+        { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+        {%- endfor -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>

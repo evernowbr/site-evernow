@@ -1,4 +1,4 @@
-<section>
+<section{% if partnersSectionStyle %} style="{{ partnersSectionStyle }}"{% endif %}>
    <div class="slider-con{% if partnersSliderExtraClass %} {{ partnersSliderExtraClass }}{% endif %} w-100">
       <div class="container{% if partnersContainerClass %} {{ partnersContainerClass }}{% endif %}">
          <div class="slider-heading text-center">
@@ -12,7 +12,7 @@
             <div class="col-lg-2 col-md-4 col-6">
                <div class="partner-box text-center mb-lg-0 mb-4">
                   <figure class="mb-0">
-                     <img src="/assets/image/empresa-{{ i }}.png" alt="" class="img-fluid" loading="lazy">
+                     <img src="/assets/image/empresa-{{ i }}.png" alt="Logo de cliente Evernow" class="img-fluid" loading="lazy">
                   </figure>
                </div>
             </div>

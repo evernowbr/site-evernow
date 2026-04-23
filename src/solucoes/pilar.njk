@@ -1,0 +1,169 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: solutionPages
+  size: 1
+  alias: solution
+permalink: "{% if solution.lang == 'en' %}/en{% endif %}/solucoes/{{ solution.slug }}/"
+---
+{% set sol_lang = solution.lang %}
+{% set lang = sol_lang %}
+{% set urlPrefix = "" if sol_lang == "pt" else "/en" %}
+{% set langPtUrl = "/solucoes/" + solution.slug + "/" %}
+{% set langEnUrl = "/en/solucoes/" + solution.slug + "/" %}
+{% if sol_lang == "en" and solution.en %}
+  {% set solData = solution.en %}
+{% else %}
+  {% set solData = solution %}
+{% endif %}
+{% set breadcrumbs = [
+  { label: ("Home" if sol_lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Solutions" if sol_lang == "en" else "Soluções"), url: urlPrefix + "/solucoes/" },
+  { label: solution.titulo }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-md-7 col-sm-12 d-flex justify-content-center flex-column banner-main-left-con">
+              <div class="banner-left-con wow slideInLeft">
+                <div class="banner-heading">
+                  <p style="color:#00e0a3;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if sol_lang == "en" %}Solution{% else %}Solução{% endif %}</p>
+                  <h1>{{ solution.titulo }}</h1>
+                </div>
+                <div class="banner-content">
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.8);">{{ solData.tagline }}</p>
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7;margin-top:8px;">{{ solData.descricao }}</p>
+                </div>
+                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if sol_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if sol_lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
+                </div>
+                <div class="ev-hero__trust mt-4">
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if sol_lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if sol_lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if sol_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 mt-4 mt-md-0 d-flex align-items-center">
+              <div class="wow slideInRight w-100">
+                <div class="ev-hero-img-frame">
+                  <img src="{{ solution.heroImage }}" alt="{{ solution.titulo }}" class="img-fluid w-100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <!-- Principais dores -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if sol_lang == "en" %}Challenges{% else %}Desafios{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if sol_lang == "en" %}Why does this remain a problem?{% else %}Por que isso continua sendo um problema?{% endif %}</h2>
+      <div class="ev-pain-grid">
+        {%- for dor in solData.dores -%}
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon">
+            <i class="{{ solution.doreIcons[loop.index0] if solution.doreIcons[loop.index0] else 'fas fa-exclamation-triangle' }}"></i>
+          </div>
+          <p>{{ dor }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Evernow -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if sol_lang == "en" %}How Evernow solves it{% else %}Como a Evernow resolve{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if sol_lang == "en" %}Our approach to{% else %}Nossa abordagem para{% endif %} {{ solution.titulo }}</h2>
+      <div class="ev-delivery-grid">
+        {%- for dif in solData.diferenciais -%}
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon">
+            <i class="{{ solution.difIcons[loop.index0] if solution.difIcons[loop.index0] else 'fas fa-check' }}"></i>
+          </div>
+          <h4>{{ dif.titulo }}</h4>
+          <p>{{ dif.desc }}</p>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos do pilar -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if sol_lang == "en" %}Portfolio{% else %}Portfólio{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if sol_lang == "en" %}Offerings within{% else %}Ofertas dentro de{% endif %} {{ solution.titulo }}</h2>
+      <p class="ev-section__desc wow fadeInUp">{% if sol_lang == "en" %}Each service can be contracted independently or as part of a structured program.{% else %}Cada produto pode ser contratado de forma independente ou como parte de um programa estruturado.{% endif %}</p>
+      <div class="ev-pilar-product-grid mt-4">
+        {%- for prod in solData.produtos -%}
+        {%- set ptProd = solution.produtos | selectattr("slug", "equalto", prod.slug) | first -%}
+        <a href="{{ urlPrefix }}/{% if sol_lang == 'en' %}products/{{ enSlugs.products[prod.slug] or prod.slug }}{% else %}produtos/{{ prod.slug }}{% endif %}/" class="ev-pilar-product wow fadeInUp">
+          <div class="ev-pilar-product__icon">
+            <i class="{{ ptProd.icon if ptProd.icon else 'fas fa-shield-alt' }}"></i>
+          </div>
+          <div class="ev-pilar-product__body">
+            <h5>{{ prod.titulo }}</h5>
+            <p class="ev-pilar-product__tagline">{{ prod.tagline }}</p>
+            <ul class="ev-pilar-product__features">
+              {%- for feat in prod.features -%}
+              <li><i class="fas fa-check"></i> {{ feat }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <span class="ev-pilar-product__cta">{% if sol_lang == "en" %}View details{% else %}Ver detalhes{% endif %} <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- Plataformas e fabricantes -->
+  {% set vendorsList = solution.vendors %}
+  {% set vendorsTitle = ("Platforms we work with" if sol_lang == "en" else "Plataformas com que trabalhamos") %}
+  {% include "components/vendors-section.njk" %}
+
+  <!-- Parceiros/clientes -->
+  {% set partnersTagKey = ("Companies that trust Evernow" if sol_lang == "en" else "Empresas que confiam na Evernow") %}
+  {% include "components/partners-grid.njk" %}
+
+  <!-- CTA Final -->
+  {% set ctaTitle = ("Ready to build " if sol_lang == "en" else "Pronto para estruturar ") + solution.titulo + ("?" if sol_lang == "en" else "?") %}
+  {% set ctaSubtitle = ("Talk to a specialist and define the next step, from the assessment to the operational program." if sol_lang == "en" else "Fale com um especialista e defina o próximo passo, do assessment ao programa operacional.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if sol_lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the free assessment" if sol_lang == "en" else "Fazer o assessment gratuito") %}
+  {% include "components/cta-final.njk" %}
+</main>
+
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ solution.titulo }} | Evernow",
+  "description": "{{ solution.en.metaDescription if sol_lang == 'en' and solution.en else solution.metaDescription }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Evernow",
+    "url": "https://evernow.com.br"
+  },
+  "areaServed": "BR",
+  "url": "https://evernow.com.br{% if sol_lang == 'en' %}/en{% endif %}/solucoes/{{ solution.slug }}/"
+}
+</script>

@@ -2,14 +2,17 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
-  // Configuro a cópia estática dos assets
+  // Arquivos raiz (robots.txt, etc.)
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/llms.txt": "llms.txt" });
+
   // Configuro a cópia estática dos assets
   eleventyConfig.addPassthroughCopy("src/assets", {
     expand: true,
     filter: (path) => {
       // Ignore raw files that are now part of main.min.css/js
       // We keep the image directory and dist bundles
-      if (path.includes('css/') && !path.endsWith('main.min.css')) return false;
+      if (path.includes('css/') && !path.endsWith('main.min.css') && !path.endsWith('custom-style.css')) return false;
       if (path.includes('js/') && !path.endsWith('main.min.js')) return false;
       if (path.includes('bootstrap/')) return false;
       if (path.includes('fonts/')) return false;

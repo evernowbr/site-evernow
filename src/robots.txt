@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Páginas sem valor de indexação
+Disallow: /404.html
+Disallow: /en/404.html
+
+# AI crawlers — explicit permission for citation and training
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://evernow.com.br/sitemap.xml

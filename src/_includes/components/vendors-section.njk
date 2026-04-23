@@ -1,0 +1,26 @@
+{%- if vendorsList and vendorsList.length -%}
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+<section class="ev-vendors-carousel" style="border-top:1px solid rgba(255,255,255,0.07);padding:48px 0;">
+  <div class="container overlay-content">
+    <p class="ev-vendors-carousel__title">
+      {{ vendorsTitle if vendorsTitle else ("Platforms we work with" if lang == "en" else "Plataformas com que trabalhamos") }}
+    </p>
+  </div>
+  <div class="ev-vendor-scroller" aria-label="Vendor logos">
+    <div class="ev-vendor-track">
+      {%- for vendor in vendorsList -%}
+      {%- set vslug = vendorSlugMap[vendor.name] -%}
+      <a href="{% if vslug %}{{ urlPrefix }}/{% if lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vslug }}/{% else %}#{% endif %}" class="ev-vendor-item{% if not vslug %} ev-vendor-item--nolink{% endif %}" title="{{ vendor.name }}">
+        <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async">
+      </a>
+      {%- endfor -%}
+      {%- for vendor in vendorsList -%}
+      {%- set vslug = vendorSlugMap[vendor.name] -%}
+      <a href="{% if vslug %}{{ urlPrefix }}/{% if lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vslug }}/{% else %}#{% endif %}" class="ev-vendor-item{% if not vslug %} ev-vendor-item--nolink{% endif %}" aria-hidden="true" tabindex="-1">
+        <img src="{{ vendor.logo }}" alt="" loading="lazy" decoding="async">
+      </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}

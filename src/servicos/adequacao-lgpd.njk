@@ -1,0 +1,210 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/services/lgpd-compliance/{% else %}/servicos/adequacao-lgpd/{% endif %}"
+seoTitle: "Adequação LGPD para Empresas | Roadmap em 120 Dias | Evernow"
+seoDescription: "Consultoria completa de adequação LGPD: data mapping, DPIA, políticas, DPO as a Service e evidências para ANPD. Roadmap em 120 dias com entregáveis semanais."
+seoKeywords: "adequação lgpd, consultoria lgpd, implantação lgpd, lgpd empresa, dpo as a service, projeto lgpd, conformidade lgpd"
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/servicos/adequacao-lgpd/" %}
+{% set langEnUrl = "/en/services/lgpd-compliance/" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Services" if lang == "en" else "Serviços"), url: urlPrefix + "/servicos/" },
+  { label: ("LGPD compliance" if lang == "en" else "Adequação LGPD") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-7 banner-main-left-con">
+              <div class="banner-left-con wow slideInLeft">
+                <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Service · Data Protection{% else %}Serviço · Proteção de Dados{% endif %}</p>
+                <div class="banner-heading">
+                  <h1>{% if lang == "en" %}End-to-end LGPD compliance{% else %}Adequação LGPD de ponta a ponta{% endif %}</h1>
+                </div>
+                <div class="banner-content">
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.85);">
+                    {% if lang == "en" %}From data mapping to ANPD-ready evidence. Roadmap in 120 days, DPO as a Service and ongoing operation — with KPIs the board can read.{% else %}Do inventário de dados às evidências prontas para a ANPD. Roadmap em 120 dias, DPO as a Service e operação contínua — com KPIs que o board entende.{% endif %}
+                  </p>
+                </div>
+                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Request LGPD diagnosis{% else %}Solicitar diagnóstico LGPD{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}Free assessment{% else %}Assessment gratuito{% endif %}</a>
+                </div>
+                <div class="ev-hero__trust mt-4">
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}DPO certified team{% else %}Equipe com DPO certificado{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}120-day roadmap{% else %}Roadmap em 120 dias{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}ANPD-ready evidence{% else %}Evidências prontas para ANPD{% endif %}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <!-- Dores -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}The real problem{% else %}O problema real{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Why LGPD projects stall{% else %}Por que projetos de LGPD travam{% endif %}</h2>
+      <div class="ev-pain-grid">
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon"><i class="fas fa-file-alt"></i></div>
+          <p>{% if lang == "en" %}Policies-only approach: 200-page PDF with no operational impact.{% else %}Abordagem "só política": PDF de 200 páginas sem reflexo operacional.{% endif %}</p>
+        </div>
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon"><i class="fas fa-database"></i></div>
+          <p>{% if lang == "en" %}Outdated or non-existent data mapping — the foundation of the whole program.{% else %}Inventário de dados desatualizado ou inexistente — base de todo o programa.{% endif %}</p>
+        </div>
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon"><i class="fas fa-users-cog"></i></div>
+          <p>{% if lang == "en" %}Data subject rights (access, deletion, portability) solved manually by tickets.{% else %}Direitos do titular (acesso, exclusão, portabilidade) resolvidos manualmente por ticket.{% endif %}</p>
+        </div>
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon"><i class="fas fa-search"></i></div>
+          <p>{% if lang == "en" %}Shadow data: personal data in SaaS, spreadsheets and repositories without control.{% else %}Dados sombra: informação pessoal em SaaS, planilhas e repositórios sem controle.{% endif %}</p>
+        </div>
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <p>{% if lang == "en" %}Incident response without defined flow for ANPD notification (72h).{% else %}Resposta a incidentes sem fluxo definido para notificação ANPD (72h).{% endif %}</p>
+        </div>
+        <div class="ev-pain-card wow fadeInUp">
+          <div class="ev-pain-card__icon"><i class="fas fa-chart-bar"></i></div>
+          <p>{% if lang == "en" %}No KPIs to show the executive board. Compliance feels like a cost center.{% else %}Sem KPIs para o board. Compliance vira centro de custo sem narrativa.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap 120 dias -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Delivery{% else %}Entrega{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}The Evernow 120-day roadmap{% else %}Roadmap Evernow em 120 dias{% endif %}</h2>
+      <div class="ev-delivery-grid">
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-search"></i></div>
+          <h4>{% if lang == "en" %}Days 1–30: Discovery & Gap{% else %}Dias 1–30: Discovery & Gap{% endif %}</h4>
+          <p>{% if lang == "en" %}Automated personal data discovery (Securiti / Purview), interviews with 6–10 areas, legal-basis matrix and gap vs. LGPD / ANPD.{% else %}Descoberta automatizada de dados pessoais (Securiti / Purview), entrevistas com 6–10 áreas, matriz de bases legais e gap vs. LGPD / ANPD.{% endif %}</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-tasks"></i></div>
+          <h4>{% if lang == "en" %}Days 31–60: Foundations{% else %}Dias 31–60: Fundações{% endif %}</h4>
+          <p>{% if lang == "en" %}ROPA (data inventory) live in a platform, DPIA on critical flows, privacy notice, contracts with operators, retention policy.{% else %}RoPA (inventário) vivo em plataforma, DPIA nos fluxos críticos, aviso de privacidade, contratos com operadores, política de retenção.{% endif %}</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>{% if lang == "en" %}Days 61–90: Controls{% else %}Dias 61–90: Controles{% endif %}</h4>
+          <p>{% if lang == "en" %}Consent management, data-subject-request portal, DLP on critical flows, pseudonymization/encryption on sensitive datasets, cookie banner at ANPD standard.{% else %}Gestão de consentimento, portal de direitos do titular, DLP em fluxos críticos, pseudonimização/cripto em datasets sensíveis, cookie banner no padrão ANPD.{% endif %}</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-file-signature"></i></div>
+          <h4>{% if lang == "en" %}Days 91–120: Evidence & Governance{% else %}Dias 91–120: Evidências & Governança{% endif %}</h4>
+          <p>{% if lang == "en" %}Incident playbook with 72h ANPD flow, indicator dashboard, internal training, first privacy committee, ready evidence binder.{% else %}Playbook de incidentes com fluxo 72h ANPD, dashboard de indicadores, treinamento interno, primeiro comitê de privacidade, pasta de evidências pronta.{% endif %}</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-user-tie"></i></div>
+          <h4>{% if lang == "en" %}Ongoing: DPO as a Service{% else %}Contínuo: DPO as a Service{% endif %}</h4>
+          <p>{% if lang == "en" %}Certified DPO on retainer, monthly follow-ups, ANPD response, audit support, continuous improvement.{% else %}DPO certificado em retainer, acompanhamentos mensais, resposta à ANPD, suporte em auditorias, melhoria contínua.{% endif %}</p>
+        </div>
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-chart-line"></i></div>
+          <h4>{% if lang == "en" %}Executive KPIs{% else %}KPIs executivos{% endif %}</h4>
+          <p>{% if lang == "en" %}% mapped data assets, % flows with legal basis, MTTR for data-subject requests, open DPIAs, residual risk score.{% else %}% de ativos de dados mapeados, % de fluxos com base legal, MTTR de direitos do titular, DPIAs em aberto, risco residual.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entregáveis -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}What you receive{% else %}O que você recebe{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}14 concrete deliverables (not slides){% else %}14 entregáveis concretos (não slides){% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-lg-6 mb-3">
+          <ul style="list-style:none;padding:0;">
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Live RoPA (data inventory) in platform{% else %}RoPA (inventário) vivo em plataforma{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}DPIA on the top-10 critical flows{% else %}DPIA nos 10 fluxos mais críticos{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Privacy Notice (public){% else %}Aviso de Privacidade (público){% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Internal Data Protection Policy{% else %}Política Interna de Proteção de Dados{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Data Retention Policy per asset{% else %}Política de Retenção por ativo{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Supplier/operator contracts (template + playbook){% else %}Contratos com operadores (template + playbook){% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}International transfer matrix{% else %}Matriz de transferência internacional{% endif %}</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <ul style="list-style:none;padding:0;">
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Consent management + cookie banner (ANPD standard){% else %}Gestão de consentimento + cookie banner (padrão ANPD){% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Data Subject Request portal (access, deletion, portability){% else %}Portal de Direitos do Titular (acesso, exclusão, portabilidade){% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Incident playbook with 72h ANPD notification flow{% else %}Playbook de incidentes com fluxo 72h ANPD{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Training (C-level + operational + developers){% else %}Treinamento (C-level + operacional + devs){% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Privacy governance committee charter{% else %}Termo do Comitê de Privacidade{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Executive KPI dashboard{% else %}Dashboard executivo de KPIs{% endif %}</li>
+            <li style="padding:10px 0;"><i class="fas fa-check" style="color:#00e0a3;margin-right:10px;"></i>{% if lang == "en" %}Audit-ready evidence binder{% else %}Pasta de evidências pronta para auditoria{% endif %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vendors -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Platforms{% else %}Plataformas{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Platforms we deploy for LGPD{% else %}Plataformas que implantamos para LGPD{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/securiti/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Securiti.ai</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Discovery, DSR, consent and DSPM unified.{% else %}Discovery, direitos do titular, consentimento e DSPM unificados.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/microsoft-purview/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Microsoft Purview</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Classification and DLP native in Microsoft 365 environments.{% else %}Classificação e DLP nativos em ambientes Microsoft 365.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/opentext-voltage/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">OpenText Voltage</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Format-preserving encryption for sensitive datasets.{% else %}Criptografia preservando formato para datasets sensíveis.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interlinking -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Related{% else %}Relacionado{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Continue exploring{% else %}Continue explorando{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/solucoes/data-shield/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">Data Shield</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Data protection pillar: discovery, DSPM, encryption, DLP.{% else %}Pilar de proteção de dados: discovery, DSPM, cripto, DLP.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/consentimento-lgpd/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}Consent & Privacy Ops{% else %}Consentimento & Privacy Ops{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Turn-key consent and DSR operation.{% else %}Operação turn-key de consentimento e direitos do titular.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/dspm/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">DSPM</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Continuous visibility over personal data posture.{% else %}Visibilidade contínua sobre postura de dados pessoais.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Ready to kick off your LGPD program?" if lang == "en" else "Pronto para destravar seu programa de LGPD?") %}
+  {% set ctaSubtitle = ("Free 30-minute diagnosis with a certified DPO. Walk out with priorities and a realistic roadmap." if lang == "en" else "Diagnóstico gratuito de 30 min com DPO certificado. Sai com prioridades e roadmap realista.") %}
+  {% set ctaPrimary = ("Request diagnosis" if lang == "en" else "Solicitar diagnóstico") %}
+  {% set ctaSecondary = ("Take the free assessment" if lang == "en" else "Fazer assessment gratuito") %}
+  {% include "components/cta-final.njk" %}
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "LGPD Compliance Consulting",
+  "name": "{% if lang == 'en' %}LGPD Compliance | Evernow{% else %}Adequação LGPD | Evernow{% endif %}",
+  "description": "{% if lang == 'en' %}End-to-end LGPD program: data mapping, DPIA, policies, consent, DPO as a Service and ANPD-ready evidence.{% else %}Programa LGPD ponta a ponta: inventário, DPIA, políticas, consentimento, DPO as a Service e evidências prontas para ANPD.{% endif %}",
+  "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+  "areaServed": { "@type": "Country", "name": "BR" },
+  "url": "https://evernow.com.br{% if lang == 'en' %}/en/services/lgpd-compliance/{% else %}/servicos/adequacao-lgpd/{% endif %}"
+}
+</script>
