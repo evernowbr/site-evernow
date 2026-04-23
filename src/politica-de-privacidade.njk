@@ -1,0 +1,132 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}politica-de-privacidade.html"
+seoTitle: "Política de Privacidade | Evernow"
+seoDescription: "Saiba como a Evernow coleta, utiliza e protege seus dados pessoais em conformidade com a LGPD."
+noIndex: false
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    <section class="banner-main-con ev-hero" style="padding:60px 0 40px;">
+      <div class="container">
+        <h1 style="font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;">
+          {% if lang == "en" %}Privacy Policy{% else %}Política de Privacidade{% endif %}
+        </h1>
+        <p style="color:rgba(255,255,255,.6);margin-top:10px;font-size:.9rem;">
+          {% if lang == "en" %}Last updated: April 2026{% else %}Última atualização: Abril de 2026{% endif %}
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-9" style="color:rgba(255,255,255,.8);line-height:1.8;font-size:.97rem;">
+
+          {% if lang == "en" %}
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">1. Who we are</h2>
+          <p>Evernow Consultoria em Cibersegurança Ltda., registered under CNPJ 37.126.698/0001-64, headquartered at Rua Irmã Gabriela, 51, São Paulo/SP, is the controller of the personal data collected through this website.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">2. What data we collect</h2>
+          <p>We may collect the following personal data when you interact with our website, contact forms, or marketing materials:</p>
+          <ul style="padding-left:20px;margin-top:8px;">
+            <li>Full name and job title</li>
+            <li>Corporate email address and phone number</li>
+            <li>Company name and industry segment</li>
+            <li>IP address, browser type, and browsing behavior (via cookies)</li>
+            <li>Any information you voluntarily provide via forms or email</li>
+          </ul>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">3. How we use your data</h2>
+          <p>Your data is used exclusively for the following purposes:</p>
+          <ul style="padding-left:20px;margin-top:8px;">
+            <li>Responding to inquiries and sending requested commercial proposals</li>
+            <li>Sending relevant content, webinars, and security updates (with consent)</li>
+            <li>Improving website experience and marketing campaigns</li>
+            <li>Compliance with legal and regulatory obligations</li>
+          </ul>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">4. Legal bases (LGPD)</h2>
+          <p>Processing is based on: (a) consent, (b) legitimate interest in providing requested services, and (c) compliance with legal obligations, as per Articles 7 and 11 of Brazil's Lei Geral de Proteção de Dados (LGPD – Law 13.709/2018).</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">5. Data sharing</h2>
+          <p>We do not sell personal data. We may share data with trusted service providers (CRM, email marketing, analytics) under data processing agreements that ensure the same level of protection.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">6. Data retention</h2>
+          <p>Data is retained for as long as necessary for the stated purpose, or as required by applicable law. You may request deletion at any time.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">7. Your rights</h2>
+          <p>Under the LGPD you have the right to: access, correct, delete, port, and restrict processing of your data; revoke consent; and lodge a complaint with the national authority (ANPD). To exercise your rights, contact <a href="mailto:privacidade@evernow.com.br" style="color:#00e0a3;">privacidade@evernow.com.br</a>.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">8. Cookies</h2>
+          <p>We use essential, analytical, and marketing cookies. You can manage preferences via the cookie consent banner displayed on your first visit.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">9. Changes to this policy</h2>
+          <p>We may update this policy periodically. Material changes will be communicated via the website or email. Continued use of the site after updates constitutes acceptance.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">10. Contact</h2>
+          <p>Questions about this policy: <a href="mailto:privacidade@evernow.com.br" style="color:#00e0a3;">privacidade@evernow.com.br</a> | DPO: Evernow Legal Team.</p>
+
+          {% else %}
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">1. Quem somos</h2>
+          <p>A Evernow Consultoria em Cibersegurança Ltda., inscrita sob o CNPJ 37.126.698/0001-64, com sede na Rua Irmã Gabriela, 51, São Paulo/SP, é a controladora dos dados pessoais coletados por meio deste website.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">2. Quais dados coletamos</h2>
+          <p>Podemos coletar os seguintes dados pessoais quando você interage com nosso site, formulários de contato ou materiais de marketing:</p>
+          <ul style="padding-left:20px;margin-top:8px;">
+            <li>Nome completo e cargo</li>
+            <li>Endereço de e-mail corporativo e telefone</li>
+            <li>Nome da empresa e segmento de atuação</li>
+            <li>Endereço IP, tipo de navegador e comportamento de navegação (via cookies)</li>
+            <li>Qualquer informação fornecida voluntariamente por meio de formulários ou e-mail</li>
+          </ul>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">3. Como utilizamos seus dados</h2>
+          <p>Seus dados são utilizados exclusivamente para as seguintes finalidades:</p>
+          <ul style="padding-left:20px;margin-top:8px;">
+            <li>Responder a solicitações e enviar propostas comerciais requisitadas</li>
+            <li>Enviar conteúdos relevantes, webinars e atualizações de segurança (mediante consentimento)</li>
+            <li>Melhorar a experiência no site e as campanhas de marketing</li>
+            <li>Cumprimento de obrigações legais e regulatórias</li>
+          </ul>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">4. Bases legais (LGPD)</h2>
+          <p>O tratamento é fundamentado em: (a) consentimento, (b) legítimo interesse na prestação dos serviços solicitados e (c) cumprimento de obrigação legal, conforme os Artigos 7º e 11 da Lei Geral de Proteção de Dados (LGPD — Lei 13.709/2018).</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">5. Compartilhamento de dados</h2>
+          <p>Não vendemos dados pessoais. Podemos compartilhar dados com prestadores de serviços de confiança (CRM, e-mail marketing, analytics) sob acordos de processamento de dados que garantem o mesmo nível de proteção.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">6. Retenção de dados</h2>
+          <p>Os dados são retidos pelo tempo necessário para a finalidade declarada ou conforme exigido por lei. Você pode solicitar a exclusão a qualquer momento.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">7. Seus direitos</h2>
+          <p>Conforme a LGPD, você tem direito a: acessar, corrigir, excluir, portar e restringir o tratamento de seus dados; revogar o consentimento; e apresentar reclamação à autoridade nacional (ANPD). Para exercer seus direitos, entre em contato pelo e-mail <a href="mailto:privacidade@evernow.com.br" style="color:#00e0a3;">privacidade@evernow.com.br</a>.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">8. Cookies</h2>
+          <p>Utilizamos cookies essenciais, analíticos e de marketing. Você pode gerenciar suas preferências por meio do banner de consentimento exibido na primeira visita ao site.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">9. Alterações nesta política</h2>
+          <p>Esta política pode ser atualizada periodicamente. Mudanças relevantes serão comunicadas pelo site ou por e-mail. O uso continuado do site após as atualizações implica aceitação.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">10. Contato</h2>
+          <p>Dúvidas sobre esta política: <a href="mailto:privacidade@evernow.com.br" style="color:#00e0a3;">privacidade@evernow.com.br</a> | DPO: Equipe Jurídica Evernow.</p>
+
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

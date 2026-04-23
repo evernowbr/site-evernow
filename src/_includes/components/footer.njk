@@ -79,11 +79,20 @@
 
     <div class="footer-con" style="border-top:1px solid rgba(255,255,255,0.07);margin-top:40px;">
       <div class="container overlay-content">
-        <div class="row py-3">
-          <div class="col-lg-12 text-center">
+        <div class="row py-3 align-items-center">
+          <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
             <p style="font-size:.82rem;color:rgba(255,255,255,0.4);margin:0;">
               {% if lang == "en" %}Copyright Evernow © 2026. All rights reserved.{% else %}Copyright Evernow © 2026. Todos os direitos reservados.{% endif %}
             </p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-right">
+            <nav style="font-size:.82rem;">
+              <a href="{{ urlPrefix }}/politica-de-privacidade.html" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 10px;" onmouseover="this.style.color='#00e0a3'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">{% if lang == "en" %}Privacy Policy{% else %}Política de Privacidade{% endif %}</a>
+              <span style="color:rgba(255,255,255,0.2);">·</span>
+              <a href="{{ urlPrefix }}/termos-de-uso.html" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 10px;" onmouseover="this.style.color='#00e0a3'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">{% if lang == "en" %}Terms of Use{% else %}Termos de Uso{% endif %}</a>
+              <span style="color:rgba(255,255,255,0.2);">·</span>
+              <a href="/sitemap.xml" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 10px;" onmouseover="this.style.color='#00e0a3'" onmouseout="this.style.color='rgba(255,255,255,0.4)'" target="_blank">Sitemap</a>
+            </nav>
           </div>
         </div>
       </div>

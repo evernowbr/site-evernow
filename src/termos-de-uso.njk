@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/{% endif %}termos-de-uso.html"
+seoTitle: "Termos de Uso | Evernow"
+seoDescription: "Termos e condições de uso do site e dos serviços da Evernow Consultoria em Cibersegurança."
+noIndex: false
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    <section class="banner-main-con ev-hero" style="padding:60px 0 40px;">
+      <div class="container">
+        <h1 style="font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;">
+          {% if lang == "en" %}Terms of Use{% else %}Termos de Uso{% endif %}
+        </h1>
+        <p style="color:rgba(255,255,255,.6);margin-top:10px;font-size:.9rem;">
+          {% if lang == "en" %}Last updated: April 2026{% else %}Última atualização: Abril de 2026{% endif %}
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-9" style="color:rgba(255,255,255,.8);line-height:1.8;font-size:.97rem;">
+
+          {% if lang == "en" %}
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">1. Acceptance</h2>
+          <p>By accessing and using this website, you agree to these Terms of Use. If you do not agree, please discontinue use immediately.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">2. About the site</h2>
+          <p>This website is owned and operated by Evernow Consultoria em Cibersegurança Ltda. (CNPJ 37.126.698/0001-64), headquartered at Rua Irmã Gabriela, 51, São Paulo/SP. It provides institutional information, educational content, and channels to request cybersecurity services.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">3. Permitted use</h2>
+          <p>Content on this site (texts, images, logos, methodologies) is protected by copyright. You may view and share content for non-commercial, informational purposes, provided you credit Evernow. Reproduction or commercial use without written authorization is prohibited.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">4. Limitation of liability</h2>
+          <p>Evernow is not liable for damages resulting from: (a) misuse of the site; (b) temporary unavailability of the site; (c) decisions made based solely on site content without professional consultation.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">5. External links</h2>
+          <p>This site may contain links to third-party websites. Evernow has no control over and assumes no responsibility for their content or privacy practices.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">6. Modifications</h2>
+          <p>Evernow reserves the right to modify these terms at any time. Updates take effect upon publication on this page. Continued use of the site implies acceptance of the updated terms.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">7. Governing law</h2>
+          <p>These terms are governed by Brazilian law. Any disputes shall be resolved in the courts of the city of São Paulo, SP, Brazil.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">8. Contact</h2>
+          <p>Questions: <a href="mailto:contato@evernow.com.br" style="color:#00e0a3;">contato@evernow.com.br</a></p>
+
+          {% else %}
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">1. Aceitação</h2>
+          <p>Ao acessar e utilizar este website, você concorda com estes Termos de Uso. Caso não concorde, interrompa o uso imediatamente.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">2. Sobre o site</h2>
+          <p>Este website é de propriedade e operado pela Evernow Consultoria em Cibersegurança Ltda. (CNPJ 37.126.698/0001-64), com sede na Rua Irmã Gabriela, 51, São Paulo/SP. Ele fornece informações institucionais, conteúdo educacional e canais para solicitação de serviços de cibersegurança.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">3. Uso permitido</h2>
+          <p>O conteúdo deste site (textos, imagens, logotipos, metodologias) é protegido por direitos autorais. Você pode visualizar e compartilhar o conteúdo para fins informativos não comerciais, desde que credite a Evernow. É proibida a reprodução ou uso comercial sem autorização prévia por escrito.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">4. Limitação de responsabilidade</h2>
+          <p>A Evernow não se responsabiliza por danos decorrentes de: (a) uso indevido do site; (b) indisponibilidade temporária do site; (c) decisões tomadas com base exclusivamente no conteúdo do site, sem consulta profissional.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">5. Links externos</h2>
+          <p>Este site pode conter links para websites de terceiros. A Evernow não tem controle e não assume responsabilidade pelo conteúdo ou práticas de privacidade desses sites.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">6. Modificações</h2>
+          <p>A Evernow reserva-se o direito de modificar estes termos a qualquer momento. As atualizações entram em vigor na data de publicação nesta página. O uso continuado do site implica aceitação dos termos atualizados.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">7. Lei aplicável</h2>
+          <p>Estes termos são regidos pela legislação brasileira. Qualquer disputa será resolvida no foro da comarca de São Paulo/SP.</p>
+
+          <h2 style="color:#fff;font-size:1.2rem;font-weight:700;margin:32px 0 10px;">8. Contato</h2>
+          <p>Dúvidas: <a href="mailto:contato@evernow.com.br" style="color:#00e0a3;">contato@evernow.com.br</a></p>
+
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
