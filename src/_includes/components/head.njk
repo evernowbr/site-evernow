@@ -87,6 +87,11 @@
 <meta name="twitter:image"       content="{{ _ogImage }}" />
 <meta name="twitter:image:alt"   content="{{ _ogTitle }}" />
 
+<!-- Preload LCP image (homepage only) -->
+{%- if pageMeta == 'home' -%}
+<link rel="preload" as="image" href="/assets/image/hero/main.png" fetchpriority="high">
+{%- endif -%}
+
 <!-- Preconnect a origens críticas (PageSpeed) -->
 <link rel="preconnect" href="https://pro.fontawesome.com" crossorigin />
 <link rel="preconnect" href="https://www.googletagmanager.com" />

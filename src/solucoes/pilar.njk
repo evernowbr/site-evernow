@@ -54,9 +54,13 @@ permalink: "{% if solution.lang == 'en' %}/en{% endif %}/solucoes/{{ solution.sl
               </div>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-12 mt-4 mt-md-0 d-flex align-items-center">
-              <div class="wow slideInRight w-100">
+              <div class="w-100">
                 <div class="ev-hero-img-frame">
-                  <img src="{{ solution.heroImage }}" alt="{{ solution.titulo }}" class="img-fluid w-100">
+                  <img src="{{ solution.heroImage }}" alt="{{ solution.titulo }}"
+                       class="img-fluid w-100"
+                       fetchpriority="high"
+                       loading="eager"
+                       decoding="async">
                 </div>
               </div>
             </div>
