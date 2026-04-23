@@ -1,0 +1,132 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/services/iso-27001-consulting/{% else %}/servicos/consultoria-iso-27001/{% endif %}"
+seoTitle: "Consultoria ISO 27001: Certificação em 8 Meses | Evernow"
+seoDescription: "Implementação e manutenção do SGSI ISO/IEC 27001:2022. Gap analysis, 93 controles do Anexo A, SoA, auditoria e preparação para certificação. Plano de 8 meses."
+seoKeywords: "consultoria iso 27001, certificação iso 27001, implantação iso 27001, iso 27001 2022, sgsi, consultoria sgsi, iso 27001 empresa"
+langPtUrl: "/servicos/consultoria-iso-27001/"
+langEnUrl: "/en/services/iso-27001-consulting/"
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Services" if lang == "en" else "Serviços"), url: urlPrefix + "/servicos/" },
+  { label: ("ISO 27001 consulting" if lang == "en" else "Consultoria ISO 27001") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-7 banner-main-left-con">
+              <div class="banner-left-con wow slideInLeft">
+                <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Service · Compliance{% else %}Serviço · Compliance{% endif %}</p>
+                <div class="banner-heading">
+                  <h1>{% if lang == "en" %}ISO/IEC 27001 consulting: certification in 8 months{% else %}Consultoria ISO/IEC 27001: certificação em 8 meses{% endif %}</h1>
+                </div>
+                <div class="banner-content">
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.85);">
+                    {% if lang == "en" %}We build your ISMS with the 93 Annex A controls of ISO 27001:2022, we run the gap and stage 1/2 audits with an accredited certification body, and we operate the ISMS continuously.{% else %}Construímos seu SGSI com os 93 controles do Anexo A da ISO 27001:2022, conduzimos auditoria stage 1/2 com certificadora acreditada e operamos o sistema continuamente.{% endif %}
+                  </p>
+                </div>
+                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Request proposal{% else %}Solicitar proposta{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}Free gap analysis{% else %}Gap analysis gratuito{% endif %}</a>
+                </div>
+                <div class="ev-hero__trust mt-4">
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Lead Auditor ISO 27001 team{% else %}Time Lead Auditor ISO 27001{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}100% first-time certification{% else %}100% certificação na primeira tentativa{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Full operation after certificate{% else %}Operação contínua após certificado{% endif %}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Why ISO 27001 matters{% else %}Por que a ISO 27001 importa{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}It is the de-facto language of enterprise trust{% else %}É a linguagem de-facto de confiança corporativa{% endif %}</h2>
+      <div class="ev-pain-grid">
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-handshake"></i></div><p>{% if lang == "en" %}Required by banks, insurers and enterprise buyers in security questionnaires.{% else %}Exigida por bancos, seguradoras e compradores enterprise em questionários de segurança.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-globe"></i></div><p>{% if lang == "en" %}Opens access to international contracts and multinationals with mandatory certification clauses.{% else %}Abre acesso a contratos internacionais e multinacionais com cláusulas mandatórias.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-balance-scale"></i></div><p>{% if lang == "en" %}Accelerates LGPD, NIST 2.0 and SOC 2 alignment — they share 60–80% of controls.{% else %}Acelera LGPD, NIST 2.0 e SOC 2 — compartilham 60–80% dos controles.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-rocket"></i></div><p>{% if lang == "en" %}Turns security into a sales argument, not a cost center.{% else %}Transforma segurança em argumento comercial, não em centro de custo.{% endif %}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Delivery{% else %}Entrega{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}8-month plan to certification{% else %}Plano de 8 meses até a certificação{% endif %}</h2>
+      <div class="ev-delivery-grid">
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-map"></i></div><h4>{% if lang == "en" %}Month 1 · Kickoff & Gap{% else %}Mês 1 · Kickoff & Gap{% endif %}</h4><p>{% if lang == "en" %}Scope, interested parties, risk appetite, gap vs. 27001:2022 and Annex A, business case.{% else %}Escopo, partes interessadas, apetite a risco, gap vs. 27001:2022 e Anexo A, business case.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-search-plus"></i></div><h4>{% if lang == "en" %}Month 2 · Risk Assessment{% else %}Mês 2 · Análise de Risco{% endif %}</h4><p>{% if lang == "en" %}Asset inventory, threat modeling, risk matrix, treatment plan and draft Statement of Applicability (SoA).{% else %}Inventário de ativos, modelagem de ameaças, matriz de risco, plano de tratamento e SoA inicial.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-file-alt"></i></div><h4>{% if lang == "en" %}Months 3–4 · Documentation{% else %}Meses 3–4 · Documentação{% endif %}</h4><p>{% if lang == "en" %}Corporate security policies, specific procedures, records, KPIs and RACI matrix per control.{% else %}Políticas corporativas, procedimentos específicos, registros, KPIs e matriz RACI por controle.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-tools"></i></div><h4>{% if lang == "en" %}Months 5–6 · Controls in place{% else %}Meses 5–6 · Controles em pé{% endif %}</h4><p>{% if lang == "en" %}Implementation of technical controls (IAM, logging, backup, vulnerability management, cryptography, supplier security).{% else %}Implementação de controles técnicos (IAM, logging, backup, gestão de vulnerabilidades, criptografia, segurança de fornecedores).{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-clipboard-check"></i></div><h4>{% if lang == "en" %}Month 7 · Internal audit{% else %}Mês 7 · Auditoria interna{% endif %}</h4><p>{% if lang == "en" %}Full internal audit, management review meeting, corrective action plan, mock stage 1 simulation.{% else %}Auditoria interna completa, reunião de análise crítica pela direção, plano de ações corretivas, simulação stage 1.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-award"></i></div><h4>{% if lang == "en" %}Month 8 · Stage 1 + Stage 2{% else %}Mês 8 · Stage 1 + Stage 2{% endif %}</h4><p>{% if lang == "en" %}External audit with accredited body, certification support, findings closeout. Issued certificate.{% else %}Auditoria externa com certificadora acreditada, acompanhamento, fechamento de achados. Certificado emitido.{% endif %}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Coverage{% else %}Cobertura{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}93 Annex A controls of ISO 27001:2022{% else %}93 controles do Anexo A da ISO 27001:2022{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-3 mb-3"><div style="background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.25);border-radius:10px;padding:20px;"><h5 style="color:#00e0a3;">37</h5><p style="margin:0;font-size:.9rem;">{% if lang == "en" %}Organizational controls{% else %}Controles organizacionais{% endif %}</p></div></div>
+        <div class="col-md-3 mb-3"><div style="background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.25);border-radius:10px;padding:20px;"><h5 style="color:#00e0a3;">8</h5><p style="margin:0;font-size:.9rem;">{% if lang == "en" %}People controls{% else %}Controles de pessoas{% endif %}</p></div></div>
+        <div class="col-md-3 mb-3"><div style="background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.25);border-radius:10px;padding:20px;"><h5 style="color:#00e0a3;">14</h5><p style="margin:0;font-size:.9rem;">{% if lang == "en" %}Physical controls{% else %}Controles físicos{% endif %}</p></div></div>
+        <div class="col-md-3 mb-3"><div style="background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.25);border-radius:10px;padding:20px;"><h5 style="color:#00e0a3;">34</h5><p style="margin:0;font-size:.9rem;">{% if lang == "en" %}Technological controls{% else %}Controles tecnológicos{% endif %}</p></div></div>
+      </div>
+      <p style="margin-top:22px;">{% if lang == "en" %}The Evernow method produces a live Statement of Applicability (not a frozen Excel), control-evidence traceability and a risk matrix ingested from the SIEM/SOC — no parallel worlds.{% else %}O método Evernow produz SoA vivo (não Excel congelado), rastreabilidade controle-evidência e matriz de risco alimentada pelo SIEM/SOC — sem mundos paralelos.{% endif %}</p>
+    </div>
+  </section>
+
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Related{% else %}Relacionado{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Continue exploring{% else %}Continue explorando{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/solucoes/assurance/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">Assurance</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Full pillar: pentest, compliance and maturity.{% else %}Pilar completo: pentest, compliance e maturidade.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/iso-27001/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}ISO 27001 service{% else %}Produto ISO 27001{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Technical scope details and deliverables.{% else %}Detalhes técnicos de escopo e entregáveis.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/assessment-maturidade/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}Maturity Assessment{% else %}Assessment de Maturidade{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Start with a serious current-state diagnosis.{% else %}Comece com diagnóstico sério de estado atual.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Plan your certification with a real partner" if lang == "en" else "Planeje sua certificação com um parceiro de verdade") %}
+  {% set ctaSubtitle = ("Free gap analysis: we show exactly how far you are from ISO 27001 and the shortest path to certificate." if lang == "en" else "Gap analysis gratuito: mostramos exatamente a distância até a ISO 27001 e o caminho mais curto para certificar.") %}
+  {% set ctaPrimary = ("Request gap analysis" if lang == "en" else "Solicitar gap analysis") %}
+  {% set ctaSecondary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% include "components/cta-final.njk" %}
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "ISO 27001 Consulting",
+  "name": "{% if lang == 'en' %}ISO 27001 Consulting | Evernow{% else %}Consultoria ISO 27001 | Evernow{% endif %}",
+  "description": "{% if lang == 'en' %}End-to-end ISMS implementation per ISO/IEC 27001:2022: gap, risk, Statement of Applicability, 93 Annex A controls and certification.{% else %}Implementação ponta a ponta do SGSI conforme ISO/IEC 27001:2022: gap, risco, SoA, 93 controles do Anexo A e certificação.{% endif %}",
+  "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+  "areaServed": { "@type": "Country", "name": "BR" },
+  "url": "https://evernow.com.br{% if lang == 'en' %}/en/services/iso-27001-consulting/{% else %}/servicos/consultoria-iso-27001/{% endif %}"
+}
+</script>

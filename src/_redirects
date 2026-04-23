@@ -1,0 +1,53 @@
+# Cloudflare Pages redirects
+# Doc: https://developers.cloudflare.com/pages/configuration/redirects/
+# Formato: [FROM] [TO] [STATUS]
+# IMPORTANT: ordem importa — primeira regra que bater vence
+
+# ─── WORDPRESS LEGADO → 11ty (301 permanente) ─────────────────────────────────
+# Preserve SEO (backlinks + ranking) ao migrar do WP para o 11ty.
+# TODO: completar esta lista com o crawl do WP atual via Screaming Frog.
+
+# Pentest (WP trailing slash → 11ty .html)
+/pentest/ /pentest.html 301
+/en/pentest/ /en/pentest.html 301
+
+# Blog posts no root do WP → /blog/slug.html
+/rasp-waf-waap-quando-usar/ /blog/rasp-waf-waap-quando-usar.html 301
+/mitm-prevenindo-ataques-man-in-the-middle-em-2024/ /blog/mitm-prevenindo-ataques-man-in-the-middle-em-2024.html 301
+/despedida-do-pci-dss-3-2-1-e-boas-vindas-ao-pci-dss-4-0/ /blog/despedida-do-pci-dss-3-2-1-e-boas-vindas-ao-pci-dss-4-0.html 301
+/secret-scanning-prevencao-crises/ /blog/secret-scanning-prevencao-crises.html 301
+/ataques-a-aplicacoes-e-a-importancia-da-owasp-top-10/ /blog/ataques-a-aplicacoes-e-a-importancia-da-owasp-top-10.html 301
+
+# Paginação de clientes WP → página de cases
+/clientes /cases.html 301
+/clientes/* /cases.html 301
+
+# Tags WP (se existirem /tag/xxx) → blog
+/tag/* /blog.html 301
+
+# ─── Normalização de trailing slash em páginas estáticas .html ────────────────
+/about/ /about.html 301
+/contact/ /contact.html 301
+/cases/ /cases.html 301
+/blog/ /blog.html 301
+/ebooks/ /ebooks.html 301
+/webinars/ /webinars.html 301
+/assessment/ /assessment.html 301
+
+# ─── EN mirrors ───────────────────────────────────────────────────────────────
+/en/about/ /en/about.html 301
+/en/contact/ /en/contact.html 301
+/en/cases/ /en/cases.html 301
+/en/blog/ /en/blog.html 301
+
+# ─── ALIAS amigáveis para entrar direto em páginas-chave (sem 301, 200 rewrite) ─
+# /pentest-preco → /guias/quanto-custa-pentest/ (bom para email/LinkedIn)
+/pentest-preco /guias/quanto-custa-pentest/ 301
+/lgpd /servicos/adequacao-lgpd/ 301
+/iso-27001 /servicos/consultoria-iso-27001/ 301
+/soc /servicos/soc-como-servico/ 301
+/devsecops /guias/devsecops/ 301
+/cspm /guias/cspm-o-que-e/ 301
+
+# ─── 404 fallback (se nenhuma regra bater) ────────────────────────────────────
+/* /404.html 404

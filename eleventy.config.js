@@ -2,9 +2,11 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
-  // Arquivos raiz (robots.txt, etc.)
+  // Arquivos raiz (robots.txt, _headers, _redirects, llms.txt)
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/llms.txt": "llms.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   // Configuro a cópia estática dos assets
   eleventyConfig.addPassthroughCopy("src/assets", {
