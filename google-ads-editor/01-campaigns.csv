@@ -1,0 +1,4 @@
+Campaign,Budget,Budget type,Status,Campaign type,Networks,Languages,Locations,Bid Strategy Type,Target CPA,Ad rotation,Ad Schedule,Device targeting
+Pentest - Preco e Compra,33.33,Daily,Paused,Search,Google search,"Portuguese;English","Brazil (country)",Manual CPC (enhanced),,Optimize: Clicks,"Mon-Fri: 08:00-20:00",Desktop 0%; Tablet -100%; Mobile -60%
+Pentest - Compliance,20.00,Daily,Paused,Search,Google search,"Portuguese;English","Brazil (country)",Manual CPC (enhanced),,Optimize: Clicks,"Mon-Fri: 08:00-20:00",Desktop 0%; Tablet -100%; Mobile -60%
+DevSecOps - BOFU,13.33,Daily,Paused,Search,Google search,"Portuguese;English","Brazil (country)",Manual CPC (enhanced),,Optimize: Clicks,"Mon-Fri: 08:00-20:00",Desktop 0%; Tablet -100%; Mobile -60%

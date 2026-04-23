@@ -7,6 +7,8 @@
   # SEO — default: indexable, modern hints
   X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
   # Security hardening (B2B cibersegurança: lidera pelo exemplo)
+  # NOTA HSTS: Cloudflare Pages sobrescreve esse header com max-age=0 por default.
+  # Ativar HSTS manualmente no dashboard: SSL/TLS → Edge Certificates → HSTS
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
@@ -14,6 +16,9 @@
   Permissions-Policy: accelerometer=(), autoplay=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), payment=(), usb=()
   Cross-Origin-Opener-Policy: same-origin
   X-XSS-Protection: 1; mode=block
+  # CSP em modo Report-Only por 30 dias → depois trocar para Content-Security-Policy (enforcement)
+  # Allowlist dos scripts externos em uso: GTM, HubSpot, LinkedIn, Securiti, FontAwesome Pro
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://js.hs-scripts.com https://js.hsforms.net https://js.hubspot.com https://forms.hsforms.com https://snap.licdn.com https://px.ads.linkedin.com https://cdn-prod.securiti.ai https://app.securiti.ai; style-src 'self' 'unsafe-inline' https://pro.fontawesome.com https://fonts.googleapis.com; font-src 'self' data: https://pro.fontawesome.com https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.hubspot.com https://*.hsforms.com https://*.hubapi.com https://*.licdn.com https://*.securiti.ai; frame-src 'self' https://*.googletagmanager.com https://*.hubspot.com https://*.hsforms.com https://*.youtube.com https://*.securiti.ai; media-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'self' https://*.hubspot.com https://*.hsforms.com; frame-ancestors 'self'; upgrade-insecure-requests
   # Cache rápido para HTML (revalidação automática)
   Cache-Control: public, max-age=300, must-revalidate
 
