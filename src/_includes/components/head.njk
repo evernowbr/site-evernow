@@ -106,32 +106,7 @@
 <link rel="preload" as="style" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"></noscript>
 
-<!-- Language auto-detection: Brazil (pt-BR) → PT, rest of world → EN -->
-<script>
-(function () {
-  try {
-    var saved = localStorage.getItem('evernow-lang');
-    var path   = window.location.pathname;
-    var isEn   = path.startsWith('/en');
-    var target;
-
-    if (saved) {
-      target = saved;
-    } else {
-      var bl = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
-      target = bl.startsWith('pt') ? 'pt' : 'en';
-      localStorage.setItem('evernow-lang', target);
-    }
-
-    if (target === 'en' && !isEn) {
-      window.location.replace('/en' + path);
-    } else if (target === 'pt' && isEn) {
-      var ptPath = path.replace(/^\/en/, '') || '/';
-      window.location.replace(ptPath);
-    }
-  } catch (e) {}
-})();
-</script>
+<!-- Language preference is saved on manual switch (see scripts.njk) -->
 
 <!-- Securiti (consent SDK — diferido) -->
 <script>
