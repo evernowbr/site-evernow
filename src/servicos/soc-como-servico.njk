@@ -1,0 +1,213 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/services/soc-as-a-service/{% else %}/servicos/soc-como-servico/{% endif %}"
+seoTitle: "SOC como Serviço 24x7 | MSSP Brasileiro com SLA Real | Evernow"
+seoDescription: "SOC gerenciado 24x7 em português, com SIEM, EDR/XDR, threat intel, resposta a incidentes e SLA contratual. MSSP nacional com onboarding em 30 dias."
+seoKeywords: "soc como serviço, mssp brasil, soc gerenciado, soc 24x7, siem gerenciado, detecção resposta, xdr gerenciado, threat intelligence brasil, soc terceirizado"
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/servicos/soc-como-servico/" %}
+{% set langEnUrl = "/en/services/soc-as-a-service/" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Services" if lang == "en" else "Serviços"), url: urlPrefix + "/servicos/" },
+  { label: ("SOC as a Service" if lang == "en" else "SOC como Serviço") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-7 banner-main-left-con">
+              <div class="banner-left-con wow slideInLeft">
+                <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Service · Managed Ops{% else %}Serviço · Managed Ops{% endif %}</p>
+                <div class="banner-heading">
+                  <h1>{% if lang == "en" %}SOC as a Service 24x7{% else %}SOC como Serviço 24x7{% endif %}</h1>
+                </div>
+                <div class="banner-content">
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.85);">
+                    {% if lang == "en" %}MSSP with native-Portuguese analysts, contractual SLA, detection in minutes, weekly tuning and a real runbook. Onboarding in 30 days, not 9 months.{% else %}MSSP com analistas em português nativo, SLA contratual, detecção em minutos, tuning semanal e runbook de verdade. Onboarding em 30 dias, não 9 meses.{% endif %}
+                  </p>
+                </div>
+                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Request SOC proposal{% else %}Solicitar proposta SOC{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}SOC maturity assessment{% else %}Assessment de maturidade SOC{% endif %}</a>
+                </div>
+                <div class="ev-hero__trust mt-4">
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Brazilian analysts in PT/EN{% else %}Analistas brasileiros em PT/EN{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Contractual SLA{% else %}SLA contratual{% endif %}</span>
+                  <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}30-day onboarding{% else %}Onboarding em 30 dias{% endif %}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <!-- Dores reais -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}The real problem{% else %}O problema real{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Why 80% of Brazilian SOCs don't deliver{% else %}Por que 80% dos SOCs no Brasil não entregam{% endif %}</h2>
+      <div class="ev-pain-grid">
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-bell-slash"></i></div><p>{% if lang == "en" %}SIEM producing thousands of alerts/day; 90% are noise; real incident arrives in the mail.{% else %}SIEM produzindo milhares de alertas/dia; 90% é ruído; incidente de verdade chega por e-mail.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-language"></i></div><p>{% if lang == "en" %}Offshore SOC in a time zone that doesn't match your night, and operators who don't know your apps.{% else %}SOC offshore em fuso que não cobre sua madrugada e operadores que não conhecem suas apps.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-file-contract"></i></div><p>{% if lang == "en" %}"SLA of 4h" that starts counting from ticket acknowledgement — meaning actual response is 8h+.{% else %}"SLA de 4h" que começa a contar do ack do ticket — tempo real de resposta passa de 8h.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-random"></i></div><p>{% if lang == "en" %}No runbook by play; incident response improvised — lateral movement time exceeds detection time.{% else %}Sem runbook por play; resposta improvisada — tempo de movimentação lateral supera o de detecção.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-eye-slash"></i></div><p>{% if lang == "en" %}No real visibility into cloud (AWS/Azure/GCP), Kubernetes and SaaS — only endpoint and network.{% else %}Sem visibilidade real em cloud (AWS/Azure/GCP), Kubernetes e SaaS — só endpoint e rede.{% endif %}</p></div>
+        <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-chart-line"></i></div><p>{% if lang == "en" %}No executive reporting with MTTD, MTTR, incident volume and trend — the board doesn't know if it's working.{% else %}Sem reporte executivo com MTTD, MTTR, volume de incidente e tendência — board não sabe se está funcionando.{% endif %}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Evernow resolve -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}How Evernow solves it{% else %}Como a Evernow resolve{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}SOC as a Service the Evernow way{% else %}SOC como Serviço no jeito Evernow{% endif %}</h2>
+      <div class="ev-delivery-grid">
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-user-shield"></i></div><h4>{% if lang == "en" %}Brazilian analysts 24x7{% else %}Analistas brasileiros 24x7{% endif %}</h4><p>{% if lang == "en" %}Tier 1, Tier 2 and Tier 3 in São Paulo and Rio, with L2+ certifications (GCIA, GCIH, CHFI). Handoff in Portuguese, escalation in English when needed.{% else %}Tier 1, Tier 2 e Tier 3 em São Paulo e Rio, com certificações L2+ (GCIA, GCIH, CHFI). Handoff em português, escalonamento em inglês quando necessário.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-stopwatch"></i></div><h4>{% if lang == "en" %}Contractual SLA with teeth{% else %}SLA contratual com dente{% endif %}</h4><p>{% if lang == "en" %}Critical: first response in 15 min, containment in 60 min. High: 30/120 min. Medium/Low: 4h/8h. Miss → financial penalty.{% else %}Crítico: 1ª resposta 15 min, contenção 60 min. Alto: 30/120 min. Médio/baixo: 4h/8h. Descumpriu: penalidade financeira.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-cloud"></i></div><h4>{% if lang == "en" %}Cloud-native coverage{% else %}Cobertura cloud-native{% endif %}</h4><p>{% if lang == "en" %}AWS GuardDuty, Azure Sentinel, GCP Chronicle, Kubernetes runtime, SaaS APIs (M365, Google Workspace, Okta). Not just endpoint.{% else %}AWS GuardDuty, Azure Sentinel, GCP Chronicle, Kubernetes runtime, APIs SaaS (M365, Workspace, Okta). Não é só endpoint.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-book-open"></i></div><h4>{% if lang == "en" %}Runbook by play (MITRE ATT&CK){% else %}Runbook por play (MITRE ATT&CK){% endif %}</h4><p>{% if lang == "en" %}For each ATT&CK TTP relevant to your context, there is a specific runbook with actions, approvers, forensic evidence and report.{% else %}Para cada TTP do ATT&CK relevante ao seu contexto, existe runbook específico com ações, aprovadores, evidência forense e relatório.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-sliders-h"></i></div><h4>{% if lang == "en" %}Weekly tuning, not "set and forget"{% else %}Tuning semanal, não "instala e esquece"{% endif %}</h4><p>{% if lang == "en" %}Weekly review to add detections, retire noisy rules and calibrate thresholds. False-positive rate drops 60% in 90 days.{% else %}Revisão semanal para adicionar detecções, aposentar regras ruidosas e calibrar thresholds. Falso-positivo cai 60% em 90 dias.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-chart-bar"></i></div><h4>{% if lang == "en" %}Monthly executive report{% else %}Reporte executivo mensal{% endif %}</h4><p>{% if lang == "en" %}MTTD, MTTR, volume by severity, top attackers, biggest risks and roadmap of next detections to implement.{% else %}MTTD, MTTR, volume por severidade, top atacantes, maiores riscos e roadmap das próximas detecções a implementar.{% endif %}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLAs -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Numbers{% else %}Números{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}SLA matrix by severity{% else %}Matriz de SLA por severidade{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-lg-10 mx-auto">
+          <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;background:rgba(255,255,255,.03);">
+              <thead>
+                <tr style="background:rgba(0,224,163,.1);">
+                  <th style="padding:14px;text-align:left;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">{% if lang == "en" %}Severity{% else %}Severidade{% endif %}</th>
+                  <th style="padding:14px;text-align:center;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">{% if lang == "en" %}First response{% else %}Primeira resposta{% endif %}</th>
+                  <th style="padding:14px;text-align:center;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">{% if lang == "en" %}Containment{% else %}Contenção{% endif %}</th>
+                  <th style="padding:14px;text-align:center;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">{% if lang == "en" %}Closure report{% else %}Relatório de encerramento{% endif %}</th>
+                </tr>
+              </thead>
+              <tbody style="color:rgba(255,255,255,.85);">
+                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);"><strong style="color:#ff5a5a;">Crítico</strong></td><td style="text-align:center;">15 min</td><td style="text-align:center;">60 min</td><td style="text-align:center;">24 h</td></tr>
+                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);"><strong style="color:#ffa726;">Alto</strong></td><td style="text-align:center;">30 min</td><td style="text-align:center;">2 h</td><td style="text-align:center;">48 h</td></tr>
+                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);"><strong style="color:#ffd54f;">Médio</strong></td><td style="text-align:center;">2 h</td><td style="text-align:center;">8 h</td><td style="text-align:center;">5 {% if lang == "en" %}business days{% else %}dias úteis{% endif %}</td></tr>
+                <tr><td style="padding:12px;"><strong style="color:#81c784;">Baixo</strong></td><td style="text-align:center;">8 h</td><td style="text-align:center;">3 {% if lang == "en" %}business days{% else %}dias úteis{% endif %}</td><td style="text-align:center;">10 {% if lang == "en" %}business days{% else %}dias úteis{% endif %}</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-top:14px;">{% if lang == "en" %}SLA with contractual penalties applied to the monthly fee. Detailed in the master contract, not on the commercial slide.{% else %}SLA com penalidades contratuais aplicadas à fatura mensal. Detalhado em contrato mestre, não em slide comercial.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Onboarding -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Onboarding{% else %}Onboarding{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Live in 30 days, not 9 months{% else %}No ar em 30 dias, não 9 meses{% endif %}</h2>
+      <div class="ev-delivery-grid">
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-plug"></i></div><h4>{% if lang == "en" %}Days 1-7: Connectors{% else %}Dias 1-7: Conectores{% endif %}</h4><p>{% if lang == "en" %}Integration with EDR/XDR, cloud, identity, network and critical apps. Standard connectors: CrowdStrike, SentinelOne, Darktrace, Sentinel, Defender, Okta, Zscaler.{% else %}Integração com EDR/XDR, cloud, identidade, rede e apps críticas. Conectores padrão: CrowdStrike, SentinelOne, Darktrace, Sentinel, Defender, Okta, Zscaler.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-cogs"></i></div><h4>{% if lang == "en" %}Days 8-14: Use cases{% else %}Dias 8-14: Use cases{% endif %}</h4><p>{% if lang == "en" %}Top 20 detections by MITRE ATT&CK mapped to your stack (e.g., impossible-travel on Okta, suspicious PS on CrowdStrike, exfil on Zscaler).{% else %}Top 20 detecções por MITRE ATT&CK mapeadas ao seu stack (ex: impossible-travel em Okta, PowerShell suspeito em CrowdStrike, exfiltração em Zscaler).{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-play-circle"></i></div><h4>{% if lang == "en" %}Days 15-21: Parallel run{% else %}Dias 15-21: Paralelo{% endif %}</h4><p>{% if lang == "en" %}SOC operates in shadow-mode with your current team, validating playbooks and minimizing false positives before taking over.{% else %}SOC opera em sombra com seu time atual, validando playbooks e minimizando falso-positivo antes de assumir.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-rocket"></i></div><h4>{% if lang == "en" %}Days 22-30: Go-live{% else %}Dias 22-30: Go-live{% endif %}</h4><p>{% if lang == "en" %}Full cutover with SLA active, handoff documentation, escalation matrix approved, quarterly tabletop exercise scheduled.{% else %}Cutover completo com SLA ativo, documentação de handoff, matriz de escalonamento aprovada, tabletop trimestral agendado.{% endif %}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack de plataformas -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}We operate with your stack{% else %}Operamos com seu stack{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/microsoft-sentinel/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Microsoft Sentinel</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Cloud-native SIEM with Azure integration.{% else %}SIEM cloud-native com integração Azure.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/sentinelone/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">SentinelOne</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Autonomous EDR/XDR and automated response.{% else %}EDR/XDR autônomo e resposta automatizada.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/darktrace/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Darktrace</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Behavioral NDR based on self-learning AI.{% else %}NDR comportamental baseado em IA self-learning.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/aws-security-hub/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">AWS Security Hub</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Centralized findings across the AWS account.{% else %}Findings centralizados na conta AWS.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/orca-security/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Orca Security</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Agentless CNAPP for CSPM + CWPP + CIEM.{% else %}CNAPP sem agente para CSPM + CWPP + CIEM.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/produtos/soc-monitoramento/" style="display:block;background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.3);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#00e0a3;">{% if lang == "en" %}→ Technical product page{% else %}→ Página do produto técnico{% endif %}</h5><p style="color:rgba(255,255,255,.75);font-size:.88rem;">{% if lang == "en" %}Full technical scope of SOC / Monitoring.{% else %}Escopo técnico completo de SOC / Monitoramento.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">FAQ</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Frequent questions about SOC as a Service{% else %}Perguntas frequentes sobre SOC como Serviço{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-lg-10 mx-auto">
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}How much does a managed SOC cost in Brazil?{% else %}Quanto custa um SOC gerenciado no Brasil?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Investment ranges from R$ 35k/month (small environment, 500 endpoints, cloud light) to R$ 180k+/month (enterprise with hybrid multi-cloud, 5k+ endpoints, SaaS sprawl). Includes analysts, tuning, tooling license and executive reporting.{% else %}Investimento vai de R$ 35k/mês (ambiente pequeno, 500 endpoints, cloud light) a R$ 180k+/mês (enterprise com multi-cloud híbrido, 5k+ endpoints, SaaS espalhado). Inclui analistas, tuning, licenças de tooling e reporte executivo.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}What's the difference vs. a traditional MSSP?{% else %}Qual a diferença vs. MSSP tradicional?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Traditional MSSP opens ticket and passes back; Evernow acts — contains the incident, validates, and hands over only after resolved or escalated. We keep the same team assigned to you — no ticket roulette.{% else %}MSSP tradicional abre ticket e devolve; a Evernow age — contém o incidente, valida e entrega só quando resolvido ou escalado. Mantemos o mesmo time alocado a você — sem roleta de ticket.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}Can you use my existing SIEM/EDR?{% else %}Posso usar meu SIEM/EDR atual?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Yes, platform-agnostic. We operate with Sentinel, Splunk, Chronicle, QRadar, Sumo Logic; EDR with CrowdStrike, SentinelOne, Defender; cloud with native tooling. We also license when needed.{% else %}Sim, somos agnósticos. Operamos com Sentinel, Splunk, Chronicle, QRadar, Sumo Logic; EDR com CrowdStrike, SentinelOne, Defender; cloud com tooling nativo. Quando necessário, licenciamos também.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}Does it cover incident response on the ground?{% else %}Cobre resposta a incidentes no chão?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}The standard package covers remote response. For CSIRT-in-person (forensic imaging, in-office investigation, ANPD/authority communication) we activate the specialist response squad with separate SLA.{% else %}O pacote padrão cobre resposta remota. Para CSIRT presencial (imaging forense, investigação in-office, comunicação ANPD/autoridades) acionamos o squad de resposta especializada com SLA separado.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}Is there LGPD / ISO 27001 compliance in SOC operations?{% else %}Tem conformidade com LGPD / ISO 27001 na operação?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Yes. Evernow operates ISO 27001 certified environment, DPA contract with LGPD clauses, logging of each analyst action, evidence ready for audits and data-subject requests.{% else %}Sim. A Evernow opera ambiente certificado ISO 27001, contrato DPA com cláusulas LGPD, logging de cada ação do analista, evidências prontas para auditoria e direitos do titular.{% endif %}</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interlinking -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Related{% else %}Relacionado{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Continue exploring{% else %}Continue explorando{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/solucoes/managed-ops/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">Managed Ops</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Managed operations pillar: SOC, IR, VM, PAM.{% else %}Pilar completo de operações gerenciadas: SOC, IR, VM, PAM.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/resposta-incidentes/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}Incident Response{% else %}Resposta a Incidentes{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}CSIRT specialized in containment, forensics and authority communication.{% else %}CSIRT especializado em contenção, forense e comunicação à autoridade.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/gestao-vulnerabilidades/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}Vulnerability Management{% else %}Gestão de Vulnerabilidades{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Program with SLA per CVSS, prioritization and ticketing integration.{% else %}Programa com SLA por CVSS, priorização e integração a ticketing.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Want a SOC that acts — not just a ticket machine?" if lang == "en" else "Quer um SOC que age — não uma máquina de ticket?") %}
+  {% set ctaSubtitle = ("Free 30 minutes with the SOC director. Walk out with operational gap and realistic proposal." if lang == "en" else "30 min gratuitos com o diretor do SOC. Sai com gap operacional e proposta realista.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the assessment" if lang == "en" else "Fazer o assessment") %}
+  {% include "components/cta-final.njk" %}
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "serviceType": "Managed SOC / MSSP",
+      "name": "{% if lang == 'en' %}SOC as a Service 24x7 | Evernow{% else %}SOC como Serviço 24x7 | Evernow{% endif %}",
+      "description": "{% if lang == 'en' %}Managed SOC with Brazilian analysts, contractual SLA, SIEM/EDR/XDR integration, platform-agnostic, onboarding in 30 days.{% else %}SOC gerenciado com analistas brasileiros, SLA contratual, integração SIEM/EDR/XDR, agnóstico de plataforma, onboarding em 30 dias.{% endif %}",
+      "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+      "areaServed": { "@type": "Country", "name": "BR" },
+      "url": "https://evernow.com.br{% if lang == 'en' %}/en/services/soc-as-a-service/{% else %}/servicos/soc-como-servico/{% endif %}"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "{% if lang == 'en' %}How much does a managed SOC cost in Brazil?{% else %}Quanto custa um SOC gerenciado no Brasil?{% endif %}", "acceptedAnswer": { "@type": "Answer", "text": "{% if lang == 'en' %}From R$ 35k/month to R$ 180k+/month depending on environment size, endpoints and cloud footprint.{% else %}De R$ 35k/mês a R$ 180k+/mês dependendo de tamanho, endpoints e footprint cloud.{% endif %}" } },
+        { "@type": "Question", "name": "{% if lang == 'en' %}Difference vs. traditional MSSP?{% else %}Diferença vs. MSSP tradicional?{% endif %}", "acceptedAnswer": { "@type": "Answer", "text": "{% if lang == 'en' %}Evernow contains and resolves; traditional MSSP opens ticket and hands back.{% else %}A Evernow contém e resolve; MSSP tradicional abre ticket e devolve.{% endif %}" } },
+        { "@type": "Question", "name": "{% if lang == 'en' %}Can you use my existing SIEM/EDR?{% else %}Posso usar meu SIEM/EDR atual?{% endif %}", "acceptedAnswer": { "@type": "Answer", "text": "{% if lang == 'en' %}Yes, platform-agnostic. We operate Sentinel, Splunk, Chronicle, QRadar, Sumo Logic; EDR CrowdStrike, SentinelOne, Defender.{% else %}Sim, somos agnósticos. Operamos Sentinel, Splunk, Chronicle, QRadar, Sumo Logic; EDR CrowdStrike, SentinelOne, Defender.{% endif %}" } }
+      ]
+    }
+  ]
+}
+</script>

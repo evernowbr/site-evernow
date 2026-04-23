@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/guides/{% else %}/guias/{% endif %}"
+seoTitle: "Guias de Cibersegurança | DevSecOps, AppSec, Cloud | Evernow"
+seoDescription: "Guias técnicos e executivos sobre DevSecOps, AppSec, cloud security, proteção de dados e compliance — produzidos por especialistas sêniores da Evernow."
+seoKeywords: "guia devsecops, guia cibersegurança, guia appsec, guia lgpd, guia iso 27001"
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/guias/" %}
+{% set langEnUrl = "/en/guides/" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Guides" if lang == "en" else "Guias") }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-9">
+              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Knowledge hub{% else %}Hub de conhecimento{% endif %}</p>
+              <h1>{% if lang == "en" %}Cybersecurity guides{% else %}Guias de cibersegurança{% endif %}</h1>
+              <p style="color:rgba(255,255,255,.85);max-width:820px;">{% if lang == "en" %}Decision-ready content on DevSecOps, AppSec, cloud security, data protection and compliance — written by senior specialists, not marketers.{% else %}Conteúdo para decisão executiva e técnica sobre DevSecOps, AppSec, cloud security, proteção de dados e compliance — escrito por especialistas sêniores, não por marketing.{% endif %}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <section class="ev-section">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Latest guides{% else %}Guias recentes{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Pillar content{% else %}Conteúdo pilar{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="{{ urlPrefix }}/guias/devsecops/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px;text-decoration:none;height:100%;">
+            <p style="color:#00e0a3;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;">Secure Code</p>
+            <h4 style="color:#fff;">{% if lang == "en" %}DevSecOps: the complete 2026 guide{% else %}DevSecOps: o guia completo de 2026{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;">{% if lang == "en" %}CI/CD pipeline, tools, executive KPIs and the 4 mistakes that kill 80% of programs.{% else %}Pipeline CI/CD, ferramentas, KPIs executivos e os 4 erros que matam 80% dos programas.{% endif %}</p>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="{{ urlPrefix }}/guias/sast-vs-dast-vs-sca/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px;text-decoration:none;height:100%;">
+            <p style="color:#00e0a3;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;">AppSec</p>
+            <h4 style="color:#fff;">SAST vs DAST vs SCA</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;">{% if lang == "en" %}Differences, blind spots and how to combine the three layers in CI/CD.{% else %}Diferenças, pontos cegos e como combinar as três camadas no CI/CD.{% endif %}</p>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="{{ urlPrefix }}/guias/quanto-custa-pentest/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px;text-decoration:none;height:100%;">
+            <p style="color:#00e0a3;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;">Assurance</p>
+            <h4 style="color:#fff;">{% if lang == "en" %}How much does a pentest cost in 2026?{% else %}Quanto custa um pentest em 2026?{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;">{% if lang == "en" %}Real pricing ranges in Brazil, 7 variables that move the number and 8 items to check in any proposal.{% else %}Faixas reais de preço no Brasil, 7 variáveis que mudam o número e 8 itens para checar em qualquer proposta.{% endif %}</p>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <a href="{{ urlPrefix }}/guias/cspm-o-que-e/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px;text-decoration:none;height:100%;">
+            <p style="color:#00e0a3;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;">Cloud Security</p>
+            <h4 style="color:#fff;">{% if lang == "en" %}CSPM: what it is and how to implement{% else %}CSPM: o que é e como implementar{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;">{% if lang == "en" %}8 essential controls, CSPM vs CWPP vs CNAPP, prioritization and platform recommendation.{% else %}8 controles essenciais, CSPM vs CWPP vs CNAPP, priorização e recomendação de plataforma.{% endif %}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Ready to act on what you read?" if lang == "en" else "Pronto para agir com base no que leu?") %}
+  {% set ctaSubtitle = ("Talk to an Evernow specialist and map the next 90 days." if lang == "en" else "Fale com um especialista Evernow e mapeie os próximos 90 dias.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the free assessment" if lang == "en" else "Fazer assessment gratuito") %}
+  {% include "components/cta-final.njk" %}
+</main>

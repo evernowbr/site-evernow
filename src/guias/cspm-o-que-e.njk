@@ -1,0 +1,208 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{% if lang == 'en' %}/en/guides/cspm/{% else %}/guias/cspm-o-que-e/{% endif %}"
+seoTitle: "CSPM: O que é Cloud Security Posture Management e Como Implementar | Evernow"
+seoDescription: "Guia completo de CSPM em 2026: diferença de CSPM vs CNAPP vs CWPP, os 8 controles essenciais, integração AWS/Azure/GCP e como priorizar findings na prática."
+seoKeywords: "cspm, cloud security posture management, o que é cspm, cspm brasil, cspm vs cnapp, cspm vs cwpp, misconfiguração cloud, segurança aws azure gcp"
+---
+{% set urlPrefix = "" if lang == "pt" else "/en" %}
+{% set langPtUrl = "/guias/cspm-o-que-e/" %}
+{% set langEnUrl = "/en/guides/cspm/" %}
+{% set breadcrumbs = [
+  { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
+  { label: ("Guides" if lang == "en" else "Guias"), url: urlPrefix + "/guias/" },
+  { label: "CSPM" }
+] %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+    {% include "components/breadcrumbs.njk" %}
+
+    <section class="banner-main-con">
+      <div class="container">
+        <div class="banner-con">
+          <div class="row align-items-center">
+            <div class="col-lg-8 banner-main-left-con">
+              <div class="banner-left-con wow slideInLeft">
+                <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Guide · Cloud Security{% else %}Guia · Cloud Security{% endif %}</p>
+                <div class="banner-heading">
+                  <h1>{% if lang == "en" %}CSPM: what it is, when you need it, and how to implement it{% else %}CSPM: o que é, quando você precisa e como implementar{% endif %}</h1>
+                </div>
+                <div class="banner-content">
+                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.85);">
+                    {% if lang == "en" %}Cloud Security Posture Management explained without buzzword: 8 essential controls, difference vs CWPP and CNAPP, how to prioritize findings and turn noise into actionable tickets.{% else %}Cloud Security Posture Management explicado sem buzzword: 8 controles essenciais, diferença para CWPP e CNAPP, como priorizar achados e transformar ruído em ticket acionável.{% endif %}
+                  </p>
+                </div>
+                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
+                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a cloud specialist{% else %}Fale com especialista cloud{% endif %}</a>
+                  <a href="{{ urlPrefix }}/produtos/cspm/" class="ev-btn-outline">{% if lang == "en" %}See managed CSPM{% else %}Ver CSPM gerenciado{% endif %}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+  <!-- Definição -->
+  <section class="ev-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Definition{% else %}Definição{% endif %}</div>
+          <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}What is CSPM (without buzzword){% else %}O que é CSPM (sem buzzword){% endif %}</h2>
+          <p style="color:rgba(255,255,255,.85);font-size:1.05rem;line-height:1.7;">{% if lang == "en" %}CSPM (Cloud Security Posture Management) is a platform that continuously audits the configuration of your cloud accounts (AWS, Azure, GCP, OCI) against security benchmarks, finds misconfigurations, and prioritizes what to fix first.{% else %}CSPM (Cloud Security Posture Management) é uma plataforma que audita continuamente a configuração das suas contas cloud (AWS, Azure, GCP, OCI) contra benchmarks de segurança, encontra misconfigurations e prioriza o que corrigir primeiro.{% endif %}</p>
+          <p style="color:rgba(255,255,255,.75);margin-top:16px;">{% if lang == "en" %}In practice: "is this S3 bucket public? Does this security group have port 22 open to the internet? Is RDS encrypted? Is CloudTrail enabled in all regions?" Multiply by 12k+ resources in a typical environment and you understand why nobody checks manually.{% else %}Na prática: "esse bucket S3 está público? Esse security group tem porta 22 aberta pra internet? O RDS está criptografado? O CloudTrail está ativo em todas regiões?" Multiplique por 12k+ recursos de um ambiente típico e você entende por que ninguém checa na mão.{% endif %}</p>
+          <p style="color:rgba(255,255,255,.75);margin-top:16px;">{% if lang == "en" %}It is <strong>not</strong>: EDR, WAF, SIEM, DLP or code scanner. CSPM only looks at cloud control plane configuration. Stops where the workload starts.{% else %}Não é: EDR, WAF, SIEM, DLP nem code scanner. CSPM só olha a configuração do plano de controle cloud. Para onde começa o workload.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferença CSPM vs CWPP vs CNAPP -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Where it fits{% else %}Onde entra{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">CSPM vs CWPP vs CNAPP</h2>
+      <div class="row mt-4">
+        <div class="col-lg-4 mb-4">
+          <div style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.25);border-radius:12px;padding:28px;height:100%;">
+            <h4 style="color:#00e0a3;">CSPM</h4>
+            <p style="font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);">{% if lang == "en" %}Control plane{% else %}Plano de controle{% endif %}</p>
+            <p>{% if lang == "en" %}<strong>Configuration</strong> of the cloud account. Finds: public buckets, open ports, non-rotated keys, missing MFA, drift from benchmarks.{% else %}<strong>Configuração</strong> da conta cloud. Encontra: buckets públicos, portas abertas, chaves sem rotação, MFA ausente, drift de benchmark.{% endif %}</p>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:14px;"><strong>{% if lang == "en" %}Reads:{% else %}Lê:{% endif %}</strong> CloudTrail, Config, Azure Activity, GCP Audit</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.25);border-radius:12px;padding:28px;height:100%;">
+            <h4 style="color:#00e0a3;">CWPP</h4>
+            <p style="font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);">{% if lang == "en" %}Workload plane{% else %}Plano de workload{% endif %}</p>
+            <p>{% if lang == "en" %}<strong>Content</strong> of the workload. Finds: vulnerabilities in containers, malware in VMs, non-compliant runtime, dangerous processes.{% else %}<strong>Conteúdo</strong> do workload. Encontra: vulnerabilidades em contêineres, malware em VM, runtime não-conforme, processos perigosos.{% endif %}</p>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:14px;"><strong>{% if lang == "en" %}Reads:{% else %}Lê:{% endif %}</strong> {% if lang == "en" %}container images, VM processes, Kubernetes pods{% else %}imagens de contêiner, processos de VM, pods Kubernetes{% endif %}</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.25);border-radius:12px;padding:28px;height:100%;">
+            <h4 style="color:#00e0a3;">CNAPP</h4>
+            <p style="font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);">{% if lang == "en" %}Unified{% else %}Unificado{% endif %}</p>
+            <p>{% if lang == "en" %}Consolidation of CSPM + CWPP + CIEM + IaC scanning + Kubernetes security in a single platform. Trend since 2024.{% else %}Consolidação de CSPM + CWPP + CIEM + IaC scanning + Kubernetes security em plataforma única. Tendência desde 2024.{% endif %}</p>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:14px;"><strong>{% if lang == "en" %}Examples:{% else %}Exemplos:{% endif %}</strong> Orca, Wiz, Prisma Cloud, Defender CSPM</p>
+          </div>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,.7);margin-top:10px;">{% if lang == "en" %}Pragmatic recommendation for a medium-large environment: start with CSPM, add CWPP in 6 months, consolidate to CNAPP in year 2 if the budget allows.{% else %}Recomendação pragmática para ambiente médio-grande: comece por CSPM, some CWPP em 6 meses, consolide em CNAPP no ano 2 se orçamento permitir.{% endif %}</p>
+    </div>
+  </section>
+
+  <!-- 8 controles -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}What to monitor{% else %}O que monitorar{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}8 CSPM controls that matter (above the noise){% else %}8 controles CSPM que importam (acima do ruído){% endif %}</h2>
+      <div class="ev-delivery-grid">
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-unlock-alt"></i></div><h4>1. {% if lang == "en" %}Public data exposure{% else %}Exposição pública de dados{% endif %}</h4><p>{% if lang == "en" %}Public S3/Blob/GCS buckets, public RDS snapshots, anonymous access to storage, public Kubernetes dashboards.{% else %}Buckets S3/Blob/GCS públicos, snapshots RDS públicos, acesso anônimo a storage, dashboards Kubernetes públicos.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-network-wired"></i></div><h4>2. {% if lang == "en" %}Exposed network{% else %}Rede exposta{% endif %}</h4><p>{% if lang == "en" %}Security groups with 0.0.0.0/0 on sensitive ports (22, 3389, 3306, 5432, 6379, 27017, 9200).{% else %}Security groups com 0.0.0.0/0 em portas sensíveis (22, 3389, 3306, 5432, 6379, 27017, 9200).{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-key"></i></div><h4>3. IAM/CIEM</h4><p>{% if lang == "en" %}Root account without MFA, access keys older than 90 days, excessive permissions, wide wildcards, long-lived service accounts.{% else %}Root account sem MFA, access keys com mais de 90 dias, permissões excessivas, wildcards amplos, service accounts de longa duração.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-lock"></i></div><h4>4. {% if lang == "en" %}Encryption at rest / in transit{% else %}Criptografia em repouso / trânsito{% endif %}</h4><p>{% if lang == "en" %}EBS, RDS, S3, Blob without encryption, TLS &lt; 1.2, non-rotated KMS keys, insecure internal traffic.{% else %}EBS, RDS, S3, Blob sem criptografia, TLS &lt; 1.2, chaves KMS sem rotação, tráfego interno inseguro.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-history"></i></div><h4>5. {% if lang == "en" %}Audit logging{% else %}Logging de auditoria{% endif %}</h4><p>{% if lang == "en" %}CloudTrail / Activity Log / Audit Log off or sending to non-protected destination, log retention below compliance.{% else %}CloudTrail / Activity Log / Audit Log desligado ou enviando a destino sem proteção, retenção abaixo do compliance.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-cubes"></i></div><h4>6. Kubernetes</h4><p>{% if lang == "en" %}API Server exposed, no Pod Security Admission, open Tiller, privileged pods, Secrets as plaintext environment variables.{% else %}API Server exposto, sem Pod Security Admission, Tiller aberto, privileged pods, Secrets como env vars em texto puro.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-exclamation-circle"></i></div><h4>7. {% if lang == "en" %}Drift from benchmark{% else %}Drift de benchmark{% endif %}</h4><p>{% if lang == "en" %}Gap vs CIS AWS Foundations, Azure CIS, GCP CIS, NIST SP 800-53, PCI-DSS, LGPD, ISO 27001.{% else %}Distanciamento do CIS AWS Foundations, Azure CIS, GCP CIS, NIST SP 800-53, PCI-DSS, LGPD, ISO 27001.{% endif %}</p></div>
+        <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-file-code"></i></div><h4>8. IaC</h4><p>{% if lang == "en" %}Pre-deploy scan of Terraform / CloudFormation / ARM / Bicep / Pulumi with Checkov, tfsec, Terrascan to prevent misconfig from being born.{% else %}Scan pré-deploy de Terraform / CloudFormation / ARM / Bicep / Pulumi com Checkov, tfsec, Terrascan para impedir misconfig de nascer.{% endif %}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Priorização -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Fighting noise{% else %}Combatendo o ruído{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}How to prioritize 5,000 findings{% else %}Como priorizar 5.000 findings{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-lg-10 mx-auto">
+          <p>{% if lang == "en" %}Every modern CSPM returns thousands of findings in day 1. The mistake is opening all of them as tickets. The Evernow approach is a three-dimensional filter:{% else %}Todo CSPM moderno retorna milhares de findings no dia 1. O erro é abrir todos como ticket. A abordagem Evernow é um filtro tridimensional:{% endif %}</p>
+          <ul style="list-style:none;padding:0;margin-top:22px;">
+            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">{% if lang == "en" %}Dim 1 — Blast radius:{% else %}Dim 1 — Raio de explosão:{% endif %}</strong> {% if lang == "en" %}Does the misconfiguration allow reaching personal data (LGPD), money (payment systems), or the control plane (root)? Yes → critical regardless of CVSS.{% else %}A misconfiguração permite chegar a dado pessoal (LGPD), a dinheiro (sistemas de pagamento) ou ao plano de controle (root)? Sim → crítico independente de CVSS.{% endif %}</li>
+            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">{% if lang == "en" %}Dim 2 — Exploitable today:{% else %}Dim 2 — Explorável hoje:{% endif %}</strong> {% if lang == "en" %}Is it reachable from the internet and the exploit is public? Yes → highest priority.{% else %}Está alcançável da internet e o exploit é público? Sim → prioridade máxima.{% endif %}</li>
+            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">{% if lang == "en" %}Dim 3 — Effort:{% else %}Dim 3 — Esforço:{% endif %}</strong> {% if lang == "en" %}Is the fix an IaC PR of 3 lines or a data-level migration? Cluster similar fixes in the same sprint to optimize effort.{% else %}A correção é um PR de IaC de 3 linhas ou uma migração de dado? Agrupe correções similares no mesmo sprint para otimizar esforço.{% endif %}</li>
+            <li style="padding:14px 0;"><strong style="color:#00e0a3;">{% if lang == "en" %}Result:{% else %}Resultado:{% endif %}</strong> {% if lang == "en" %}5,000 findings become ~120 actionable tickets in week 1, 40 in week 3, &lt; 20 in week 6. Auto-suppression of findings in non-production environments.{% else %}5.000 findings viram ~120 tickets acionáveis na semana 1, 40 na semana 3, &lt; 20 na semana 6. Auto-supressão de findings em ambientes não-produtivos.{% endif %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plataformas recomendadas -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Tooling{% else %}Tooling{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Platforms Evernow deploys in production{% else %}Plataformas que a Evernow implanta em produção{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/orca-security/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Orca Security</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Agentless CNAPP with SideScanning: CSPM + CWPP + CIEM + IaC in one deploy.{% else %}CNAPP agentless com SideScanning: CSPM + CWPP + CIEM + IaC em um deploy.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/aws-security-hub/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">AWS Security Hub</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}Native CSPM for AWS only, fast ROI for all-AWS shops.{% else %}CSPM nativo só AWS, ROI rápido para ambientes all-AWS.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/parceiros/qualys/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#fff;">Qualys VMDR</h5><p style="color:rgba(255,255,255,.7);font-size:.88rem;">{% if lang == "en" %}VM + CSPM unified, strong for hybrid environments.{% else %}VM + CSPM unificado, forte em ambientes híbridos.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-3"><a href="{{ urlPrefix }}/produtos/cspm/" style="display:block;background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.3);border-radius:10px;padding:20px;text-decoration:none;"><h5 style="color:#00e0a3;">{% if lang == "en" %}→ Managed CSPM{% else %}→ CSPM gerenciado{% endif %}</h5><p style="color:rgba(255,255,255,.75);font-size:.88rem;">{% if lang == "en" %}Evernow implements, tunes and operates your CSPM.{% else %}A Evernow implanta, tuna e opera o seu CSPM.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">FAQ</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Frequent questions about CSPM{% else %}Perguntas frequentes sobre CSPM{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-lg-10 mx-auto">
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}Native CSPM (AWS Security Hub) or third-party (Orca, Wiz, Prisma)?{% else %}CSPM nativo (AWS Security Hub) ou terceiro (Orca, Wiz, Prisma)?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Native for single-cloud and tight budget. Third-party is mandatory for multi-cloud and when you need CIEM, CNAPP or cross-account correlation. Native tools do not talk to each other across clouds.{% else %}Nativo serve para single-cloud e orçamento apertado. Terceiro é obrigatório em multi-cloud e quando precisa de CIEM, CNAPP ou correlação cross-account. Nativos não conversam entre si entre clouds.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}How much does a CSPM cost for a 200-person engineering org?{% else %}Quanto custa um CSPM para engenharia de 200 pessoas?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Licenses are priced by number of cloud accounts or workloads. A typical environment (20-40 accounts, 3-5k workloads) is around USD 90-250k/year. Managed operation by Evernow adds R$ 25-60k/month depending on scope.{% else %}Licenças cobradas por número de contas cloud ou workloads. Ambiente típico (20-40 contas, 3-5k workloads) fica em USD 90-250k/ano. Operação gerenciada pela Evernow adiciona R$ 25-60k/mês conforme escopo.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:12px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}Will it break our CI/CD or DevOps workflow?{% else %}Vai quebrar nosso CI/CD ou workflow DevOps?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}Only if you turn on enforce-mode in week 1. The Evernow approach is: month 1 observability only, month 2 PR gating with override, month 3 hard gating for critical IaC rules. No delivery friction.{% else %}Só se ativar enforce-mode na semana 1. A abordagem Evernow é: mês 1 só observabilidade, mês 2 gating em PR com override, mês 3 hard gating em regras IaC críticas. Sem atrito com entrega.{% endif %}</p></details>
+          <details style="padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;"><summary style="cursor:pointer;font-weight:600;color:rgba(255,255,255,.9);">{% if lang == "en" %}Does CSPM replace pentest of the cloud environment?{% else %}CSPM substitui pentest do ambiente cloud?{% endif %}</summary><p style="margin-top:12px;color:rgba(255,255,255,.75);">{% if lang == "en" %}No. CSPM checks known misconfigurations against benchmarks. Pentest chains findings, exploits business logic, attacks CIEM/IAM boundaries, validates what is actually exploitable. They complement.{% else %}Não. CSPM checa misconfigurações conhecidas contra benchmark. Pentest encadeia achados, explora lógica de negócio, ataca limites de CIEM/IAM, valida o que é de fato explorável. Se complementam.{% endif %}</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interlinking -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Go deeper{% else %}Aprofunde{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Related content{% else %}Conteúdos relacionados{% endif %}</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/guias/devsecops/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">DevSecOps 2026</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Where CSPM fits in the CI/CD pipeline shift-left/shift-right.{% else %}Onde CSPM entra no pipeline CI/CD shift-left/shift-right.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/cspm/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}Managed CSPM{% else %}CSPM gerenciado{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Technical scope, deliverables and KPIs.{% else %}Escopo técnico, entregáveis e KPIs.{% endif %}</p></a></div>
+        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/servicos/soc-como-servico/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}SOC as a Service{% else %}SOC como Serviço{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}The SOC consumes CSPM alerts and turns them into resolved incidents.{% else %}O SOC consome alertas CSPM e transforma em incidentes resolvidos.{% endif %}</p></a></div>
+      </div>
+    </div>
+  </section>
+
+  {% set ctaTitle = ("Ready to turn cloud into a controlled surface?" if lang == "en" else "Pronto para transformar cloud em superfície controlada?") %}
+  {% set ctaSubtitle = ("Free 30-minute cloud diagnosis — we show the top-5 critical risks today in your environment." if lang == "en" else "30 min gratuitos de diagnóstico cloud — mostramos os 5 riscos críticos mais altos no seu ambiente hoje.") %}
+  {% set ctaPrimary = ("Request diagnosis" if lang == "en" else "Solicitar diagnóstico") %}
+  {% set ctaSecondary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% include "components/cta-final.njk" %}
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{% if lang == 'en' %}CSPM: what it is, when you need it, and how to implement it{% else %}CSPM: o que é, quando você precisa e como implementar{% endif %}",
+  "description": "{% if lang == 'en' %}Cloud Security Posture Management explained: controls, difference vs CWPP and CNAPP, prioritization, tooling and operation.{% else %}Cloud Security Posture Management explicado: controles, diferença para CWPP e CNAPP, priorização, tooling e operação.{% endif %}",
+  "author": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Evernow",
+    "logo": { "@type": "ImageObject", "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png" }
+  },
+  "datePublished": "2026-04-22",
+  "inLanguage": "{% if lang == 'en' %}en{% else %}pt-BR{% endif %}",
+  "mainEntityOfPage": "https://evernow.com.br{% if lang == 'en' %}/en/guides/cspm/{% else %}/guias/cspm-o-que-e/{% endif %}"
+}
+</script>

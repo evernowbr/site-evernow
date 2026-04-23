@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
     filter: (path) => {
       // Ignore raw files that are now part of main.min.css/js
       // We keep the image directory and dist bundles
-      if (path.includes('css/') && !path.endsWith('main.min.css')) return false;
+      if (path.includes('css/') && !path.endsWith('main.min.css') && !path.endsWith('custom-style.css')) return false;
       if (path.includes('js/') && !path.endsWith('main.min.js')) return false;
       if (path.includes('bootstrap/')) return false;
       if (path.includes('fonts/')) return false;
