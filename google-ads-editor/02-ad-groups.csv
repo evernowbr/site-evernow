@@ -1,0 +1,8 @@
+Campaign,Ad group,Status,Max CPC,Ad group type
+Pentest - Preco e Compra,AG - Preco Exact,Paused,30,Standard
+Pentest - Preco e Compra,AG - Contratar Phrase,Paused,25,Standard
+Pentest - Preco e Compra,AG - Tipos Phrase,Paused,22,Standard
+Pentest - Compliance,AG - PCI DSS,Paused,22,Standard
+Pentest - Compliance,AG - LGPD,Paused,20,Standard
+Pentest - Compliance,AG - ISO 27001,Paused,20,Standard
+DevSecOps - BOFU,AG - Consultoria BOFU,Paused,22,Standard

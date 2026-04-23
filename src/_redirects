@@ -8,37 +8,47 @@
 # TODO: completar esta lista com o crawl do WP atual via Screaming Frog.
 
 # Pentest (WP trailing slash → 11ty .html)
-/pentest/ /pentest.html 301
-/en/pentest/ /en/pentest.html 301
+/pentest/ /pentest 301
+/en/pentest/ /en/pentest 301
 
 # Blog posts no root do WP → /blog/slug.html
-/rasp-waf-waap-quando-usar/ /blog/rasp-waf-waap-quando-usar.html 301
-/mitm-prevenindo-ataques-man-in-the-middle-em-2024/ /blog/mitm-prevenindo-ataques-man-in-the-middle-em-2024.html 301
-/despedida-do-pci-dss-3-2-1-e-boas-vindas-ao-pci-dss-4-0/ /blog/despedida-do-pci-dss-3-2-1-e-boas-vindas-ao-pci-dss-4-0.html 301
-/secret-scanning-prevencao-crises/ /blog/secret-scanning-prevencao-crises.html 301
-/ataques-a-aplicacoes-e-a-importancia-da-owasp-top-10/ /blog/ataques-a-aplicacoes-e-a-importancia-da-owasp-top-10.html 301
+/rasp-waf-waap-quando-usar/ /blog/rasp-waf-waap-quando-usar 301
+/mitm-prevenindo-ataques-man-in-the-middle-em-2024/ /blog/mitm-prevenindo-ataques-man-in-the-middle-em-2024 301
+/despedida-do-pci-dss-3-2-1-e-boas-vindas-ao-pci-dss-4-0/ /blog/despedida-do-pci-dss-3-2-1-e-boas-vindas-ao-pci-dss-4-0 301
+/secret-scanning-prevencao-crises/ /blog/secret-scanning-prevencao-crises 301
+/ataques-a-aplicacoes-e-a-importancia-da-owasp-top-10/ /blog/ataques-a-aplicacoes-e-a-importancia-da-owasp-top-10 301
+
+# URLs de alto valor descobertas no SERP de 23/04/2026 — PRESERVAR BACKLINKS
+/custo-e-roi-do-pentest/ /guias/quanto-custa-pentest/ 301
+/introducao-ao-pentest-como-funciona-e-quando-fazer/ /blog/introducao-ao-pentest-como-funciona-e-quando-fazer 301
+/construindo-defesas-solidas-com-pentest/ /blog/construindo-defesas-solidas-com-pentest 301
+/compliance-em-cloud-com-lgpd-e-iso/ /blog/compliance-em-cloud-com-lgpd-e-iso 301
+
+# WordPress uploads (PDFs + mídia) — manter acessíveis pós-cutover
+# Apontar pra mesma URL garante que PDFs indexados continuem respondendo 200
+/wp-content/uploads/* /wp-content/uploads/:splat 200
 
 # Paginação de clientes WP → página de cases
-/clientes /cases.html 301
-/clientes/* /cases.html 301
+/clientes /cases 301
+/clientes/* /cases 301
 
 # Tags WP (se existirem /tag/xxx) → blog
-/tag/* /blog.html 301
+/tag/* /blog 301
 
 # ─── Normalização de trailing slash em páginas estáticas .html ────────────────
-/about/ /about.html 301
-/contact/ /contact.html 301
-/cases/ /cases.html 301
-/blog/ /blog.html 301
-/ebooks/ /ebooks.html 301
-/webinars/ /webinars.html 301
-/assessment/ /assessment.html 301
+/about/ /about 301
+/contact/ /contact 301
+/cases/ /cases 301
+/blog/ /blog 301
+/ebooks/ /ebooks 301
+/webinars/ /webinars 301
+/assessment/ /assessment 301
 
 # ─── EN mirrors ───────────────────────────────────────────────────────────────
-/en/about/ /en/about.html 301
-/en/contact/ /en/contact.html 301
-/en/cases/ /en/cases.html 301
-/en/blog/ /en/blog.html 301
+/en/about/ /en/about 301
+/en/contact/ /en/contact 301
+/en/cases/ /en/cases 301
+/en/blog/ /en/blog 301
 
 # ─── ALIAS amigáveis para entrar direto em páginas-chave (sem 301, 200 rewrite) ─
 # /pentest-preco → /guias/quanto-custa-pentest/ (bom para email/LinkedIn)

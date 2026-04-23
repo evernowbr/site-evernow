@@ -1,0 +1,30 @@
+Campaign,Ad group,Keyword,Match Type,Status,Max CPC,Final URL
+Pentest - Preco e Compra,AG - Preco Exact,quanto custa pentest,Exact,Paused,30,https://evernow.com.br/guias/quanto-custa-pentest/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=exact
+Pentest - Preco e Compra,AG - Preco Exact,pentest preco,Exact,Paused,30,https://evernow.com.br/guias/quanto-custa-pentest/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=exact
+Pentest - Preco e Compra,AG - Preco Exact,valor pentest,Exact,Paused,28,https://evernow.com.br/guias/quanto-custa-pentest/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=exact
+Pentest - Preco e Compra,AG - Preco Exact,preco pentest,Exact,Paused,28,https://evernow.com.br/guias/quanto-custa-pentest/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=exact
+Pentest - Preco e Compra,AG - Preco Exact,custo pentest,Exact,Paused,28,https://evernow.com.br/guias/quanto-custa-pentest/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=exact
+Pentest - Preco e Compra,AG - Contratar Phrase,"""contratar pentest""",Phrase,Paused,25,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=contratar
+Pentest - Preco e Compra,AG - Contratar Phrase,"""contratar empresa pentest""",Phrase,Paused,25,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=contratar
+Pentest - Preco e Compra,AG - Contratar Phrase,"""empresa de pentest""",Phrase,Paused,25,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=contratar
+Pentest - Preco e Compra,AG - Contratar Phrase,"""consultoria pentest""",Phrase,Paused,25,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=contratar
+Pentest - Preco e Compra,AG - Contratar Phrase,"""orcamento pentest""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=contratar
+Pentest - Preco e Compra,AG - Contratar Phrase,"""pentest para empresa""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=contratar
+Pentest - Preco e Compra,AG - Tipos Phrase,"""pentest web""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=tipos
+Pentest - Preco e Compra,AG - Tipos Phrase,"""pentest api""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=tipos
+Pentest - Preco e Compra,AG - Tipos Phrase,"""pentest mobile""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=tipos
+Pentest - Preco e Compra,AG - Tipos Phrase,"""pentest cloud""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_preco&utm_content=tipos
+Pentest - Compliance,AG - PCI DSS,"""pentest pci dss""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=pci
+Pentest - Compliance,AG - PCI DSS,"""pentest para pci""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=pci
+Pentest - Compliance,AG - PCI DSS,"""pentest adequacao pci""",Phrase,Paused,22,https://evernow.com.br/pentest?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=pci
+Pentest - Compliance,AG - LGPD,"""pentest lgpd""",Phrase,Paused,20,https://evernow.com.br/servicos/adequacao-lgpd/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=lgpd
+Pentest - Compliance,AG - LGPD,"""pentest para lgpd""",Phrase,Paused,20,https://evernow.com.br/servicos/adequacao-lgpd/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=lgpd
+Pentest - Compliance,AG - LGPD,"""pentest adequacao lgpd""",Phrase,Paused,20,https://evernow.com.br/servicos/adequacao-lgpd/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=lgpd
+Pentest - Compliance,AG - ISO 27001,"""pentest iso 27001""",Phrase,Paused,20,https://evernow.com.br/servicos/consultoria-iso-27001/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=iso
+Pentest - Compliance,AG - ISO 27001,"""pentest para iso 27001""",Phrase,Paused,20,https://evernow.com.br/servicos/consultoria-iso-27001/?utm_source=google&utm_medium=cpc&utm_campaign=pentest_compliance&utm_content=iso
+DevSecOps - BOFU,AG - Consultoria BOFU,consultoria devsecops,Exact,Paused,22,https://evernow.com.br/produtos/devsecops/?utm_source=google&utm_medium=cpc&utm_campaign=devsecops&utm_content=exact
+DevSecOps - BOFU,AG - Consultoria BOFU,implementacao devsecops,Exact,Paused,22,https://evernow.com.br/produtos/devsecops/?utm_source=google&utm_medium=cpc&utm_campaign=devsecops&utm_content=exact
+DevSecOps - BOFU,AG - Consultoria BOFU,devsecops gerenciado,Exact,Paused,20,https://evernow.com.br/produtos/devsecops/?utm_source=google&utm_medium=cpc&utm_campaign=devsecops&utm_content=exact
+DevSecOps - BOFU,AG - Consultoria BOFU,"""consultoria devsecops brasil""",Phrase,Paused,20,https://evernow.com.br/produtos/devsecops/?utm_source=google&utm_medium=cpc&utm_campaign=devsecops&utm_content=phrase
+DevSecOps - BOFU,AG - Consultoria BOFU,"""implantacao devsecops empresa""",Phrase,Paused,20,https://evernow.com.br/produtos/devsecops/?utm_source=google&utm_medium=cpc&utm_campaign=devsecops&utm_content=phrase
+DevSecOps - BOFU,AG - Consultoria BOFU,"""servico devsecops""",Phrase,Paused,18,https://evernow.com.br/produtos/devsecops/?utm_source=google&utm_medium=cpc&utm_campaign=devsecops&utm_content=phrase
