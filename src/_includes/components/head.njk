@@ -15,7 +15,20 @@
   <title>{{ "meta.defaultTitle" | t }}</title>
   <meta name="description" content="{{ "meta.defaultDescription" | t }}" />
 {% endif %}
-{% if seoKeywords %}<meta name="keywords" content="{{ seoKeywords }}" />{% endif %}
+{# Keywords: prioridade seoKeywords front-matter → meta.<pageMeta>.keywords no i18n → default #}
+{%- if seoKeywords -%}
+  <meta name="keywords" content="{{ seoKeywords }}" />
+{%- elif pageMeta -%}
+  {%- set _kwKey = "meta." + pageMeta + ".keywords" -%}
+  {%- set _kwValue = _kwKey | t -%}
+  {%- if _kwValue and _kwValue != _kwKey -%}
+  <meta name="keywords" content="{{ _kwValue }}" />
+  {%- else -%}
+  <meta name="keywords" content="{{ 'meta.defaultKeywords' | t }}" />
+  {%- endif -%}
+{%- else -%}
+  <meta name="keywords" content="{{ 'meta.defaultKeywords' | t }}" />
+{%- endif %}
 <meta name="robots" content="{{ 'noindex,nofollow' if noIndex else 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}" />
 <link rel="canonical" href="https://evernow.com.br{{ page.url }}" />
 

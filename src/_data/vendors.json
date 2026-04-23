@@ -148,10 +148,11 @@
           "q": "Does Evernow handle licensing or just implementation?",
           "a": "Both. As an authorized OpenText partner, we offer better licensing terms and also full implementation and operations."
         }
-      ]
+      ],
+      "seoDescription": "Analyze code in 30+ languages, integrate into CI/CD, and eliminate critical vulnerabilities before deployment. With Evernow, you get full implementation,"
     },
     "seoTitle": "Parceiro Fortify Brasil: SAST Enterprise com Implementação e Operação | Evernow",
-    "seoDescription": "Evernow é parceira certificada Fortify by OpenText no Brasil. POC, licenciamento, integração CI/CD, tuning de regras e operação gerenciada da plataforma SAST enterprise.",
+    "seoDescription": "Evernow é parceira certificada Fortify by OpenText no Brasil. POC, licenciamento, integração CI/CD, tuning de regras e operação gerenciada da plataforma SAST",
     "seoKeywords": "parceiro fortify brasil, fortify sast, fortify opentext, consultoria fortify, implementação fortify, fortify on demand, fortify on premise, licenciamento fortify"
   },
   {
@@ -303,7 +304,8 @@
           "q": "Does it work with monorepos?",
           "a": "Yes. SonarQube supports monorepos with per-project analysis and independent quality gate configurations per module."
         }
-      ]
+      ],
+      "seoDescription": "Detect bugs, vulnerabilities, and technical debt directly in the developer workflow. With Evernow, you get the platform configured, integrated into your"
     },
     "seoTitle": "Parceiro SonarQube Brasil: Qualidade e Segurança no Fluxo do Dev | Evernow",
     "seoDescription": "Evernow implementa SonarQube no Brasil com plugins CI/CD, quality gates, custom rules e integração ao fluxo de PR. Edição Developer, Enterprise e Data Center.",
@@ -382,6 +384,18 @@
       {
         "q": "A Evernow auxilia na definição das políticas de componentes?",
         "a": "Sim. Parte do nosso trabalho de implementação inclui definir junto com o cliente as políticas de severidade, licenças permitidas e ações automáticas no pipeline."
+      },
+      {
+        "q": "Qual o preço do Sonatype Nexus no Brasil?",
+        "a": "O licenciamento do Sonatype Nexus varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Sonatype Nexus com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Sonatype Nexus?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -446,8 +460,14 @@
           "q": "Does Evernow help define component policies?",
           "a": "Yes. Part of our implementation work includes defining together with the client the severity policies, permitted licenses, and automatic pipeline actions."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Identify vulnerable open source components before they enter the build. With Evernow, you implement Nexus Lifecycle in the pipeline and ensure no compromised",
+      "seoTitle": "Sonatype Nexus Partner Brazil: Software Supply Chain with Implementation | Evernow",
+      "seoKeywords": "sonatype nexus partner brazil, sonatype nexus, sonatype nexus consulting, sonatype nexus implementation, software supply chain, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Identifique componentes open source vulneráveis antes que entrem no build. Com a Evernow, você implementa o Nexus Lifecycle no pipeline e garante que nenhuma",
+    "seoTitle": "Parceiro Sonatype Nexus Brasil: Software Supply Chain com Implementação | Evernow",
+    "seoKeywords": "parceiro sonatype nexus brasil, sonatype nexus, consultoria sonatype nexus, implementação sonatype nexus, licenciamento sonatype nexus, software supply chain, secure code, cibersegurança brasil, evernow"
   },
   {
     "slug": "semgrep",
@@ -522,6 +542,18 @@
       {
         "q": "É possível criar regras para APIs internas da empresa?",
         "a": "Sim, e essa é uma das principais vantagens do Semgrep. A Evernow cria regras específicas para os padrões internos de desenvolvimento, garantindo que práticas inseguras da empresa sejam detectadas automaticamente."
+      },
+      {
+        "q": "Qual o preço do Semgrep no Brasil?",
+        "a": "O licenciamento do Semgrep varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Semgrep com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Semgrep?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -586,8 +618,14 @@
           "q": "Is it possible to create rules for internal company APIs?",
           "a": "Yes, and this is one of Semgrep's main advantages. Evernow creates rules specific to internal development patterns, ensuring that company-specific insecure practices are detected automatically."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Write security rules in minutes, integrate into pull requests, and deliver feedback to developers in seconds. With Evernow, you get custom rules tailored to",
+      "seoTitle": "Semgrep Partner Brazil: AppSec & DevSecOps with Implementation | Evernow",
+      "seoKeywords": "semgrep partner brazil, semgrep, semgrep consulting, semgrep implementation, appsec & devsecops, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Escreva regras de segurança em minutos, integre ao PR e devolva feedback ao desenvolvedor em segundos. Com a Evernow, você tem regras customizadas para o",
+    "seoTitle": "Parceiro Semgrep Brasil: AppSec & DevSecOps com Implementação | Evernow",
+    "seoKeywords": "parceiro semgrep brasil, semgrep, consultoria semgrep, implementação semgrep, licenciamento semgrep, appsec & devsecops, secure code, cibersegurança brasil, evernow"
   },
   {
     "slug": "veracode",
@@ -738,7 +776,8 @@
           "q": "Does Evernow handle the onboarding of all applications?",
           "a": "Yes. Onboarding is part of our implementation service, where we catalog the application portfolio, prioritize by risk, and configure the platform for each one."
         }
-      ]
+      ],
+      "seoDescription": "Cover the entire application security lifecycle in a single SaaS platform, with no infrastructure to manage. With Evernow, you implement and operate Veracode"
     },
     "seoTitle": "Parceiro Veracode Brasil: Plataforma AppSec SaaS com Implementação | Evernow",
     "seoDescription": "Evernow é parceira Veracode no Brasil. SAST, DAST, SCA e treinamento de devs em uma plataforma SaaS. POC, licenciamento, integração ao CI/CD e operação com SLA.",
@@ -817,6 +856,18 @@
       {
         "q": "O Qualys pode ser integrado ao ServiceNow?",
         "a": "Sim. A integração nativa com ServiceNow automatiza a criação de tickets de remediação diretamente a partir dos achados do Qualys, com prioridade baseada no QDS."
+      },
+      {
+        "q": "Qual o preço do Qualys VMDR no Brasil?",
+        "a": "O licenciamento do Qualys VMDR varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Qualys VMDR com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Qualys VMDR?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -881,8 +932,14 @@
           "q": "Can Qualys be integrated with ServiceNow?",
           "a": "Yes. The native ServiceNow integration automates the creation of remediation tickets directly from Qualys findings, with priority based on the QDS."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Discover all assets, detect vulnerabilities with risk context, and prioritize the remediations that matter most.",
+      "seoTitle": "Qualys VMDR Partner Brazil: Gestão de Vulnerabilidades with Implementation | Evernow",
+      "seoKeywords": "qualys vmdr partner brazil, qualys vmdr, qualys vmdr consulting, qualys vmdr implementation, gestão de vulnerabilidades, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Descubra todos os ativos, detecte vulnerabilidades com contexto de risco e priorize as correções que mais importam.",
+    "seoTitle": "Parceiro Qualys VMDR Brasil: Gestão de Vulnerabilidades com Implementação | Evernow",
+    "seoKeywords": "parceiro qualys vmdr brasil, qualys vmdr, consultoria qualys vmdr, implementação qualys vmdr, licenciamento qualys vmdr, gestão de vulnerabilidades, assurance, cibersegurança brasil, evernow"
   },
   {
     "slug": "tenable",
@@ -957,6 +1014,18 @@
       {
         "q": "A Evernow usa o Tenable nos serviços de pentest?",
         "a": "O Tenable/Nessus faz parte do toolkit utilizado nos nossos serviços de pentest e gestão de vulnerabilidades, combinado com análise manual pelos especialistas."
+      },
+      {
+        "q": "Qual o preço do Tenable.io no Brasil?",
+        "a": "O licenciamento do Tenable.io varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Tenable.io com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Tenable.io?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1021,8 +1090,14 @@
           "q": "Does Evernow use Tenable in pentest services?",
           "a": "Tenable/Nessus is part of the toolkit used in our pentest and vulnerability management services, combined with manual analysis by specialists."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Full vulnerability visibility across cloud, on-premise, and containers with the world's most widely used detection engine.",
+      "seoTitle": "Tenable.io Partner Brazil: Gestão de Vulnerabilidades with Implementation | Evernow",
+      "seoKeywords": "tenable.io partner brazil, tenable.io, tenable.io consulting, tenable.io implementation, gestão de vulnerabilidades, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Visibilidade completa de vulnerabilidades em cloud, on-premise e containers com o motor de detecção mais utilizado do mundo.",
+    "seoTitle": "Parceiro Tenable.io Brasil: Gestão de Vulnerabilidades com Implementação | Evernow",
+    "seoKeywords": "parceiro tenable.io brasil, tenable.io, consultoria tenable.io, implementação tenable.io, licenciamento tenable.io, gestão de vulnerabilidades, assurance, cibersegurança brasil, evernow"
   },
   {
     "slug": "sentinelone",
@@ -1097,6 +1172,18 @@
       {
         "q": "A Evernow oferece monitoramento 24x7 do SentinelOne?",
         "a": "Sim. Oferecemos o serviço de MDR (Managed Detection and Response) onde nossa equipe monitora os alertas 24x7, tria os incidentes e responde conforme os playbooks definidos com o cliente."
+      },
+      {
+        "q": "Qual o preço do SentinelOne no Brasil?",
+        "a": "O licenciamento do SentinelOne varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do SentinelOne com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o SentinelOne?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1161,8 +1248,14 @@
           "q": "Does Evernow offer 24x7 monitoring of SentinelOne?",
           "a": "Yes. We offer MDR (Managed Detection and Response) service where our team monitors alerts 24x7, triages incidents, and responds according to the playbooks defined with the client."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Detect, contain, and remediate threats on endpoints, servers, and cloud in milliseconds, without relying on signatures.",
+      "seoTitle": "SentinelOne Partner Brazil: EDR / XDR with Implementation | Evernow",
+      "seoKeywords": "sentinelone partner brazil, sentinelone, sentinelone consulting, sentinelone implementation, edr / xdr, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Detecte, contenha e remedeie ameaças em endpoints, servidores e cloud em milissegundos, sem depender de assinaturas.",
+    "seoTitle": "Parceiro SentinelOne Brasil: EDR / XDR com Implementação | Evernow",
+    "seoKeywords": "parceiro sentinelone brasil, sentinelone, consultoria sentinelone, implementação sentinelone, licenciamento sentinelone, edr / xdr, managed ops, cibersegurança brasil, evernow"
   },
   {
     "slug": "darktrace",
@@ -1237,6 +1330,18 @@
       {
         "q": "A Antigena pode bloquear conexões legítimas por engano?",
         "a": "O Darktrace aplica o princípio do menor nível de intervenção, bloqueando apenas conexões específicas anômalas, não o usuário inteiro. A Evernow configura os thresholds da Antigena de forma conservadora durante o período inicial."
+      },
+      {
+        "q": "Qual o preço do Darktrace no Brasil?",
+        "a": "O licenciamento do Darktrace varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Darktrace com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Darktrace?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1301,8 +1406,14 @@
           "q": "Can Antigena accidentally block legitimate connections?",
           "a": "Darktrace applies the principle of minimum intervention, blocking only specific anomalous connections rather than the entire user session. Evernow configures Antigena thresholds conservatively during the initial period."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Detect insider attacks, lateral movement, and unknown threats that evade static rules. With Evernow, you get Darktrace configured for your environment and",
+      "seoTitle": "Darktrace Partner Brazil: NDR / AI Security with Implementation | Evernow",
+      "seoKeywords": "darktrace partner brazil, darktrace, darktrace consulting, darktrace implementation, ndr / ai security, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Detecte ataques internos, movimentação lateral e ameaças desconhecidas que escapam de regras estáticas. Com a Evernow, você tem o Darktrace configurado para",
+    "seoTitle": "Parceiro Darktrace Brasil: NDR / AI Security com Implementação | Evernow",
+    "seoKeywords": "parceiro darktrace brasil, darktrace, consultoria darktrace, implementação darktrace, licenciamento darktrace, ndr / ai security, managed ops, cibersegurança brasil, evernow"
   },
   {
     "slug": "orca-security",
@@ -1377,6 +1488,18 @@
       {
         "q": "O Orca detecta dados sensíveis em buckets S3?",
         "a": "Sim. O módulo de Data Security do Orca escaneia o conteúdo dos objetos armazenados para identificar PII, credenciais e dados financeiros, correlacionando com as configurações de acesso para identificar dados expostos."
+      },
+      {
+        "q": "Qual o preço do Orca Security no Brasil?",
+        "a": "O licenciamento do Orca Security varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Orca Security com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Orca Security?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1441,8 +1564,14 @@
           "q": "Does Orca detect sensitive data in S3 buckets?",
           "a": "Yes. Orca's Data Security module scans stored object content to identify PII, credentials, and financial data, correlating with access configurations to identify exposed data."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Discover cloud risks in minutes without installing agents: misconfigurations, exposed data, vulnerabilities, and lateral movement.",
+      "seoTitle": "Orca Security Partner Brazil: CSPM / Cloud Security with Implementation | Evernow",
+      "seoKeywords": "orca security partner brazil, orca security, orca security consulting, orca security implementation, cspm / cloud security, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Descubra riscos em cloud em minutos sem instalar agentes, misconfigurations, dados expostos, vulnerabilidades e movimentação lateral.",
+    "seoTitle": "Parceiro Orca Security Brasil: CSPM / Cloud Security com Implementação | Evernow",
+    "seoKeywords": "parceiro orca security brasil, orca security, consultoria orca security, implementação orca security, licenciamento orca security, cspm / cloud security, data shield, cibersegurança brasil, evernow"
   },
   {
     "slug": "jscrambler",
@@ -1517,6 +1646,18 @@
       {
         "q": "Funciona com frameworks como Angular e Vue?",
         "a": "Sim. JScrambler suporta todos os frameworks JavaScript modernos, como React, Angular, Vue, Next.js e Nuxt, com integração via webpack, Vite e CLI."
+      },
+      {
+        "q": "Qual o preço do JScrambler no Brasil?",
+        "a": "O licenciamento do JScrambler varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do JScrambler com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o JScrambler?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1581,8 +1722,14 @@
           "q": "Does it work with frameworks like Angular and Vue?",
           "a": "Yes. JScrambler supports all modern JavaScript frameworks, such as React, Angular, Vue, Next.js, and Nuxt, with integration via webpack, Vite, and CLI."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Protect your web and mobile application's JavaScript code against copying, reverse engineering, and client-side manipulation.",
+      "seoTitle": "JScrambler Partner Brazil: Code Protection with Implementation | Evernow",
+      "seoKeywords": "jscrambler partner brazil, jscrambler, jscrambler consulting, jscrambler implementation, code protection, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Proteja o código JavaScript da sua aplicação web e mobile contra cópia, engenharia reversa e manipulação client-side.",
+    "seoTitle": "Parceiro JScrambler Brasil: Code Protection com Implementação | Evernow",
+    "seoKeywords": "parceiro jscrambler brasil, jscrambler, consultoria jscrambler, implementação jscrambler, licenciamento jscrambler, code protection, secure code, cibersegurança brasil, evernow"
   },
   {
     "slug": "securiti",
@@ -1657,6 +1804,18 @@
       {
         "q": "A Evernow pode operar o programa de privacidade no modelo gerenciado?",
         "a": "Sim. Oferecemos o serviço de DPO as a Service com operação Securiti, onde a Evernow assume a gestão completa do programa de privacidade incluindo o atendimento de DSRs."
+      },
+      {
+        "q": "Qual o preço do Securiti.ai no Brasil?",
+        "a": "O licenciamento do Securiti.ai varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Securiti.ai com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Securiti.ai?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1721,8 +1880,14 @@
           "q": "Can Evernow operate the privacy program as a managed service?",
           "a": "Yes. We offer DPO as a Service with Securiti operations, where Evernow takes full management of the privacy program including DSR handling."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Discover, classify, and protect personal data across all systems, automating LGPD, GDPR, and DSR workflows. With Evernow, you implement Securiti and operate",
+      "seoTitle": "Securiti.ai Partner Brazil: Data Security & Privacy with Implementation | Evernow",
+      "seoKeywords": "securiti.ai partner brazil, securiti.ai, securiti.ai consulting, securiti.ai implementation, data security & privacy, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Descubra, classifique e proteja dados pessoais em todos os sistemas, automatizando LGPD, GDPR e DSR. Com a Evernow, você implementa o Securiti e opera seu",
+    "seoTitle": "Parceiro Securiti.ai Brasil: Data Security & Privacy com Implementação | Evernow",
+    "seoKeywords": "parceiro securiti.ai brasil, securiti.ai, consultoria securiti.ai, implementação securiti.ai, licenciamento securiti.ai, data security & privacy, data shield, cibersegurança brasil, evernow"
   },
   {
     "slug": "security-scorecard",
@@ -1797,6 +1962,18 @@
       {
         "q": "O rating pode ser usado em contratos com fornecedores?",
         "a": "Sim. Muitas empresas já incluem cláusulas contratuais exigindo score mínimo (ex: B ou superior) e o direito de rescindir se o fornecedor cair abaixo do threshold."
+      },
+      {
+        "q": "Qual o preço do SecurityScorecard no Brasil?",
+        "a": "O licenciamento do SecurityScorecard varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do SecurityScorecard com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o SecurityScorecard?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -1861,8 +2038,14 @@
           "q": "Can the rating be used in vendor contracts?",
           "a": "Yes. Many companies already include contractual clauses requiring a minimum score (e.g., B or above) and the right to terminate if the vendor falls below the threshold."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Evaluate and monitor the security posture of vendors, partners, and your supply chain without requesting questionnaires.",
+      "seoTitle": "SecurityScorecard Partner Brazil: Third-Party Risk with Implementation | Evernow",
+      "seoKeywords": "securityscorecard partner brazil, securityscorecard, securityscorecard consulting, securityscorecard implementation, third-party risk, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Avalie e monitore a postura de segurança de fornecedores, parceiros e da sua própria cadeia de suprimentos sem solicitar questionários.",
+    "seoTitle": "Parceiro SecurityScorecard Brasil: Third-Party Risk com Implementação | Evernow",
+    "seoKeywords": "parceiro securityscorecard brasil, securityscorecard, consultoria securityscorecard, implementação securityscorecard, licenciamento securityscorecard, third-party risk, assurance, cibersegurança brasil, evernow"
   },
   {
     "slug": "ridge-security",
@@ -1937,6 +2120,18 @@
       {
         "q": "Com que frequência o pentest automatizado deve ser executado?",
         "a": "Recomendamos ao menos mensal para ambientes que sofrem mudanças frequentes, e semanal para aplicações críticas. A vantagem do pentest automatizado é exatamente a possibilidade de aumentar a frequência sem aumento proporcional de custo."
+      },
+      {
+        "q": "Qual o preço do Ridge Security no Brasil?",
+        "a": "O licenciamento do Ridge Security varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Ridge Security com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Ridge Security?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2001,8 +2196,14 @@
           "q": "How frequently should automated pentests be run?",
           "a": "We recommend at least monthly for environments that change frequently, and weekly for critical applications. The advantage of automated pentest is precisely the ability to increase frequency without a proportional cost increase."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Run comprehensive pentests in an automated and continuous manner, without waiting for the annual cycle. With Evernow, you get RidgeBot configured for your",
+      "seoTitle": "Ridge Security Partner Brazil: Pentest Automatizado with Implementation | Evernow",
+      "seoKeywords": "ridge security partner brazil, ridge security, ridge security consulting, ridge security implementation, pentest automatizado, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Execute pentests completos de forma automatizada e contínua, sem esperar pelo ciclo anual. Com a Evernow, você tem o RidgeBot configurado para o seu ambiente",
+    "seoTitle": "Parceiro Ridge Security Brasil: Pentest Automatizado com Implementação | Evernow",
+    "seoKeywords": "parceiro ridge security brasil, ridge security, consultoria ridge security, implementação ridge security, licenciamento ridge security, pentest automatizado, assurance, cibersegurança brasil, evernow"
   },
   {
     "slug": "senhasegura",
@@ -2077,6 +2278,18 @@
       {
         "q": "A Evernow oferece PAM como serviço gerenciado?",
         "a": "Sim. Oferecemos o serviço de PAM Gerenciado onde a Evernow opera o senhasegura, faz o onboarding de novos sistemas, monitora violações de política e entrega relatórios mensais ao CISO."
+      },
+      {
+        "q": "Qual o preço do senhasegura no Brasil?",
+        "a": "O licenciamento do senhasegura varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do senhasegura com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o senhasegura?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2141,8 +2354,14 @@
           "q": "Does Evernow offer PAM as a managed service?",
           "a": "Yes. We offer Managed PAM service where Evernow operates senhasegura, onboards new systems, monitors policy violations, and delivers monthly reports to the CISO."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Manage, control, and audit all privileged access: root passwords, SSH keys, service accounts, and third-party access.",
+      "seoTitle": "senhasegura Partner Brazil: PAM: Gestão de Acesso Privilegiado with Implementation | Evernow",
+      "seoKeywords": "senhasegura partner brazil, senhasegura, senhasegura consulting, senhasegura implementation, pam: gestão de acesso privilegiado, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Gerencie, controle e audite todos os acessos privilegiados: senhas de root, chaves SSH, contas de serviço e acessos de terceiros.",
+    "seoTitle": "Parceiro senhasegura Brasil: PAM: Gestão de Acesso Privilegiado com Implementação | Evernow",
+    "seoKeywords": "parceiro senhasegura brasil, senhasegura, consultoria senhasegura, implementação senhasegura, licenciamento senhasegura, pam: gestão de acesso privilegiado, managed ops, cibersegurança brasil, evernow"
   },
   {
     "slug": "aws-kms",
@@ -2217,6 +2436,18 @@
       {
         "q": "A Evernow auxilia na implementação em ambientes multi-conta AWS?",
         "a": "Sim. Configuramos políticas de KMS para compartilhamento seguro de chaves entre contas AWS de uma organização, com os controles de acesso corretos e sem exposição indevida."
+      },
+      {
+        "q": "Qual o preço do AWS Key Management Service no Brasil?",
+        "a": "O licenciamento do AWS Key Management Service varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do AWS Key Management Service com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o AWS Key Management Service?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2281,8 +2512,14 @@
           "q": "Does Evernow assist with implementation in multi-account AWS environments?",
           "a": "Yes. We configure KMS policies for secure key sharing between AWS accounts in an organization, with the correct access controls and without undue exposure."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Protect sensitive data with centrally managed encryption, integrated across all AWS services. With Evernow, you define the right key architecture, implement",
+      "seoTitle": "AWS Key Management Service Partner Brazil: Criptografia & KMS with Implementation | Evernow",
+      "seoKeywords": "aws key management service partner brazil, aws key management service, aws key management service consulting, aws key management service implementation, criptografia & kms, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Proteja dados sensíveis com criptografia gerenciada centralmente, integrada a todos os serviços AWS. Com a Evernow, você define a arquitetura de chaves",
+    "seoTitle": "Parceiro AWS Key Management Service Brasil: Criptografia & KMS com Implementação | Evernow",
+    "seoKeywords": "parceiro aws key management service brasil, aws key management service, consultoria aws key management service, implementação aws key management service, licenciamento aws key management service, criptografia & kms, data shield, cibersegurança brasil, evernow"
   },
   {
     "slug": "aws-security-hub",
@@ -2357,6 +2594,18 @@
       {
         "q": "O Security Hub cobre ambientes multi-cloud?",
         "a": "O Security Hub é específico para AWS, mas integra com soluções de terceiros que cobrem outros clouds. Para visibilidade multi-cloud nativa, o Orca Security ou o Microsoft Defender for Cloud são as opções recomendadas."
+      },
+      {
+        "q": "Qual o preço do AWS Security Hub no Brasil?",
+        "a": "O licenciamento do AWS Security Hub varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do AWS Security Hub com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o AWS Security Hub?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2421,8 +2670,14 @@
           "q": "Does Security Hub cover multi-cloud environments?",
           "a": "Security Hub is specific to AWS, but integrates with third-party solutions covering other clouds. For native multi-cloud visibility, Orca Security or Microsoft Defender for Cloud are the recommended options."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Consolidate findings from GuardDuty, Inspector, Macie, and third-party tools in a single dashboard, with automatic compliance scoring for CIS and PCI DSS.",
+      "seoTitle": "AWS Security Hub Partner Brazil: Cloud Security Posture with Implementation | Evernow",
+      "seoKeywords": "aws security hub partner brazil, aws security hub, aws security hub consulting, aws security hub implementation, cloud security posture, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Consolide achados de GuardDuty, Inspector, Macie e ferramentas de terceiros em um painel único, com score de conformidade automático para CIS e PCI DSS.",
+    "seoTitle": "Parceiro AWS Security Hub Brasil: Cloud Security Posture com Implementação | Evernow",
+    "seoKeywords": "parceiro aws security hub brasil, aws security hub, consultoria aws security hub, implementação aws security hub, licenciamento aws security hub, cloud security posture, managed ops, cibersegurança brasil, evernow"
   },
   {
     "slug": "azure-key-vault",
@@ -2497,6 +2752,18 @@
       {
         "q": "A Evernow ajuda a migrar credenciais hardcoded no código legado?",
         "a": "Sim. Fazemos o processo de identificação (usando Semgrep e ferramentas de secrets scanning) e refactoring para usar Managed Identity e Key Vault, sem interromper as aplicações."
+      },
+      {
+        "q": "Qual o preço do Azure Key Vault no Brasil?",
+        "a": "O licenciamento do Azure Key Vault varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Azure Key Vault com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Azure Key Vault?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2561,8 +2828,14 @@
           "q": "Does Evernow help migrate hardcoded credentials in legacy code?",
           "a": "Yes. We perform the identification process (using Semgrep and secrets scanning tools) and refactoring to use Managed Identity and Key Vault, without interrupting applications."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Eliminate hardcoded credentials and protect cryptographic keys with HSM hardware in Azure. With Evernow, you implement Key Vault correctly and ensure no",
+      "seoTitle": "Azure Key Vault Partner Brazil: Criptografia & Secrets with Implementation | Evernow",
+      "seoKeywords": "azure key vault partner brazil, azure key vault, azure key vault consulting, azure key vault implementation, criptografia & secrets, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Elimine credenciais hardcoded e proteja chaves criptográficas com hardware HSM no Azure. Com a Evernow, você implementa o Key Vault corretamente e garante",
+    "seoTitle": "Parceiro Azure Key Vault Brasil: Criptografia & Secrets com Implementação | Evernow",
+    "seoKeywords": "parceiro azure key vault brasil, azure key vault, consultoria azure key vault, implementação azure key vault, licenciamento azure key vault, criptografia & secrets, data shield, cibersegurança brasil, evernow"
   },
   {
     "slug": "microsoft-sentinel",
@@ -2637,6 +2910,18 @@
       {
         "q": "A Evernow faz a migração de um SIEM legado para o Sentinel?",
         "a": "Sim. Conduzimos migrações de QRadar, Splunk e ArcSight para o Sentinel, com tradução de regras, migração de dados históricos e treinamento da equipe."
+      },
+      {
+        "q": "Qual o preço do Microsoft Sentinel no Brasil?",
+        "a": "O licenciamento do Microsoft Sentinel varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Microsoft Sentinel com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Microsoft Sentinel?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2701,8 +2986,14 @@
           "q": "Does Evernow migrate from a legacy SIEM to Sentinel?",
           "a": "Yes. We conduct migrations from QRadar, Splunk, and ArcSight to Sentinel, with rule translation, historical data migration, and team training."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Ingest logs from your entire infrastructure, detect threats with AI, and automate responses, all in Azure with no SIEM infrastructure to manage.",
+      "seoTitle": "Microsoft Sentinel Partner Brazil: SIEM / SOAR with Implementation | Evernow",
+      "seoKeywords": "microsoft sentinel partner brazil, microsoft sentinel, microsoft sentinel consulting, microsoft sentinel implementation, siem / soar, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Ingira logs de toda a infraestrutura, detecte ameaças com IA e automatize respostas, tudo no Azure sem infraestrutura de SIEM para gerenciar.",
+    "seoTitle": "Parceiro Microsoft Sentinel Brasil: SIEM / SOAR com Implementação | Evernow",
+    "seoKeywords": "parceiro microsoft sentinel brasil, microsoft sentinel, consultoria microsoft sentinel, implementação microsoft sentinel, licenciamento microsoft sentinel, siem / soar, managed ops, cibersegurança brasil, evernow"
   },
   {
     "slug": "microsoft-purview",
@@ -2777,6 +3068,18 @@
       {
         "q": "O Purview ajuda a cumprir o Art. 18 da LGPD (direitos dos titulares)?",
         "a": "O Purview contribui com a identificação e classificação de dados pessoais, mas para automação de DSR completa, recomendamos combinar com o Securiti.ai para cobertura de sistemas não-Microsoft."
+      },
+      {
+        "q": "Qual o preço do Microsoft Purview no Brasil?",
+        "a": "O licenciamento do Microsoft Purview varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Microsoft Purview com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Microsoft Purview?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2841,8 +3144,14 @@
           "q": "Does Purview help comply with LGPD Art. 18 (data subject rights)?",
           "a": "Purview contributes to the identification and classification of personal data, but for full DSR automation, we recommend combining it with Securiti.ai to cover non-Microsoft systems."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Discover, classify, and protect sensitive data in Microsoft 365, Azure, and beyond, with DLP, Information Protection, and LGPD compliance.",
+      "seoTitle": "Microsoft Purview Partner Brazil: Data Governance with Implementation | Evernow",
+      "seoKeywords": "microsoft purview partner brazil, microsoft purview, microsoft purview consulting, microsoft purview implementation, data governance, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Descubra, classifique e proteja dados sensíveis em Microsoft 365, Azure e além, com DLP, Information Protection e conformidade com LGPD.",
+    "seoTitle": "Parceiro Microsoft Purview Brasil: Data Governance com Implementação | Evernow",
+    "seoKeywords": "parceiro microsoft purview brasil, microsoft purview, consultoria microsoft purview, implementação microsoft purview, licenciamento microsoft purview, data governance, data shield, cibersegurança brasil, evernow"
   },
   {
     "slug": "opentext-voltage",
@@ -2917,6 +3226,18 @@
       {
         "q": "A tokenização do Voltage é reversível?",
         "a": "Depende da configuração. Tokens podem ser de uso único (irreversíveis) ou reutilizáveis (o mesmo dado sempre gera o mesmo token). A escolha depende do caso de uso. Para PCI DSS, ambas as modalidades são aceitas."
+      },
+      {
+        "q": "Qual o preço do OpenText Voltage SecureData no Brasil?",
+        "a": "O licenciamento do OpenText Voltage SecureData varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do OpenText Voltage SecureData com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o OpenText Voltage SecureData?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -2981,8 +3302,14 @@
           "q": "Is Voltage tokenization reversible?",
           "a": "It depends on the configuration. Tokens can be single-use (irreversible) or reusable (the same data always generates the same token). The choice depends on the use case. For PCI DSS, both modalities are accepted."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Tokenize and encrypt sensitive data wherever it lives, in databases, files, applications, and big data, without changing system structure.",
+      "seoTitle": "OpenText Voltage SecureData Partner Brazil: Data-Centric Encryption with Implementation | Evernow",
+      "seoKeywords": "opentext voltage securedata partner brazil, opentext voltage securedata, opentext voltage securedata consulting, opentext voltage securedata implementation, data-centric encryption, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Tokenize e criptografe dados sensíveis onde quer que estejam, em bancos de dados, arquivos, aplicações e big data, sem mudar a estrutura dos sistemas.",
+    "seoTitle": "Parceiro OpenText Voltage SecureData Brasil: Data-Centric Encryption com Implementação | Evernow",
+    "seoKeywords": "parceiro opentext voltage securedata brasil, opentext voltage securedata, consultoria opentext voltage securedata, implementação opentext voltage securedata, licenciamento opentext voltage securedata, data-centric encryption, data shield, cibersegurança brasil, evernow"
   },
   {
     "slug": "security-compass",
@@ -3057,6 +3384,18 @@
       {
         "q": "Como o SD Elements se integra ao ciclo ágil?",
         "a": "A integração com Jira/Azure DevOps cria automaticamente as tarefas de segurança no backlog no início de cada projeto ou sprint. O time as trata como qualquer outra tarefa técnica, sem processo paralelo."
+      },
+      {
+        "q": "Qual o preço do Security Compass SD Elements no Brasil?",
+        "a": "O licenciamento do Security Compass SD Elements varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Security Compass SD Elements com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Security Compass SD Elements?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -3121,8 +3460,14 @@
           "q": "How does SD Elements integrate with the agile cycle?",
           "a": "The Jira/Azure DevOps integration automatically creates security tasks in the backlog at the start of each project or sprint. The team treats them like any other technical task, without a parallel process."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Automatically generate security and compliance requirements for each software project based on its risk profile, without relying on consultants in every",
+      "seoTitle": "Security Compass SD Elements Partner Brazil: Threat Modeling with Implementation | Evernow",
+      "seoKeywords": "security compass sd elements partner brazil, security compass sd elements, security compass sd elements consulting, security compass sd elements implementation, threat modeling, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Gere automaticamente requisitos de segurança e compliance para cada projeto de software com base no perfil de risco, sem depender de consultores em cada",
+    "seoTitle": "Parceiro Security Compass SD Elements Brasil: Threat Modeling com Implementação | Evernow",
+    "seoKeywords": "parceiro security compass sd elements brasil, security compass sd elements, consultoria security compass sd elements, implementação security compass sd elements, licenciamento security compass sd elements, threat modeling, secure code, cibersegurança brasil, evernow"
   },
   {
     "slug": "rainforest",
@@ -3197,6 +3542,18 @@
       {
         "q": "O Rainforest pode ser usado como evidência para auditorias de compliance?",
         "a": "Sim. Os relatórios de execução de testes do Rainforest documentam quais controles foram testados, com qual frequência e resultado, servindo como evidência para PCI DSS, ISO 27001 e outras normas que exigem testes regulares de segurança."
+      },
+      {
+        "q": "Qual o preço do Rainforest no Brasil?",
+        "a": "O licenciamento do Rainforest varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Rainforest com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Rainforest?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -3261,8 +3618,14 @@
           "q": "Can Rainforest be used as evidence for compliance audits?",
           "a": "Yes. Rainforest test execution reports document which controls were tested, with what frequency and result, serving as evidence for PCI DSS, ISO 27001, and other standards requiring regular security testing."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Run functional and security tests in an automated and continuous manner, without friction for development teams.",
+      "seoTitle": "Rainforest Partner Brazil: Security Testing & QA Automation with Implementation | Evernow",
+      "seoKeywords": "rainforest partner brazil, rainforest, rainforest consulting, rainforest implementation, security testing & qa automation, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Execute testes de segurança funcionais de forma automatizada e contínua, sem fricção para os times de desenvolvimento.",
+    "seoTitle": "Parceiro Rainforest Brasil: Security Testing & QA Automation com Implementação | Evernow",
+    "seoKeywords": "parceiro rainforest brasil, rainforest, consultoria rainforest, implementação rainforest, licenciamento rainforest, security testing & qa automation, assurance, cibersegurança brasil, evernow"
   },
   {
     "slug": "guardsquare",
@@ -3337,6 +3700,18 @@
       {
         "q": "O Guardsquare protege contra o Frida (tool de hooking)?",
         "a": "Sim. A detecção de Frida é uma das principais proteções RASP do Guardsquare. Ele detecta a presença do Frida server e reage conforme a política configurada (aviso, log ou bloqueio do app)."
+      },
+      {
+        "q": "Qual o preço do Guardsquare no Brasil?",
+        "a": "O licenciamento do Guardsquare varia por volume, módulos e ambiente. A Evernow cota junto ao fabricante com condições de parceiro, e dimensiona baseado em seus ativos. Solicite proposta com 48h de resposta."
+      },
+      {
+        "q": "Como funciona a POC do Guardsquare com a Evernow?",
+        "a": "A POC típica dura 10 dias: instalação, scan/configuração em ambiente real, tuning inicial e relatório executivo com achados priorizados e análise de ROI. Se aprovada, o licenciamento e produção começam na semana seguinte sem perda de trabalho."
+      },
+      {
+        "q": "A Evernow implanta e opera o Guardsquare?",
+        "a": "Sim. Como parceira certificada, a Evernow faz licenciamento, POC, implementação, integração ao seu stack (CI/CD, SIEM, ticketing), treinamento do seu time e operação gerenciada com SLA contratual e relatórios executivos mensais."
       }
     ],
     "en": {
@@ -3401,7 +3776,13 @@
           "q": "Does Guardsquare protect against Frida (hooking tool)?",
           "a": "Yes. Frida detection is one of Guardsquare's main RASP protections. It detects the presence of the Frida server and reacts according to the configured policy (warning, log, or app block)."
         }
-      ]
-    }
+      ],
+      "seoDescription": "Protect your Android and iOS app against repackaging, reverse engineering, and real-time fraud. With Evernow, you integrate Guardsquare into the mobile",
+      "seoTitle": "Guardsquare Partner Brazil: Mobile App Protection with Implementation | Evernow",
+      "seoKeywords": "guardsquare partner brazil, guardsquare, guardsquare consulting, guardsquare implementation, mobile app protection, cybersecurity brazil, evernow"
+    },
+    "seoDescription": "Proteja seu aplicativo Android e iOS contra repackaging, engenharia reversa e fraudes em tempo real. Com a Evernow, você integra o Guardsquare ao pipeline",
+    "seoTitle": "Parceiro Guardsquare Brasil: Mobile App Protection com Implementação | Evernow",
+    "seoKeywords": "parceiro guardsquare brasil, guardsquare, consultoria guardsquare, implementação guardsquare, licenciamento guardsquare, mobile app protection, secure code, cibersegurança brasil, evernow"
   }
 ]

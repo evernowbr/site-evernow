@@ -1,0 +1,56 @@
+# Cloudflare Pages headers
+# Doc: https://developers.cloudflare.com/pages/configuration/headers/
+# IMPORTANT: file must be copied to _site root via 11ty passthrough (see eleventy.config.js)
+
+# ─── GLOBAL (all routes) ──────────────────────────────────────────────────────
+/*
+  # SEO — default: indexable, modern hints
+  X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+  # Security hardening (B2B cibersegurança: lidera pelo exemplo)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), autoplay=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  X-XSS-Protection: 1; mode=block
+  # Cache rápido para HTML (revalidação automática)
+  Cache-Control: public, max-age=300, must-revalidate
+
+# ─── ASSETS com hash/imutáveis — cache agressivo ──────────────────────────────
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/image/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Robots-Tag: index, follow, max-image-preview:large
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─── PÁGINAS NÃO-INDEXÁVEIS ───────────────────────────────────────────────────
+# 404 nunca deve ser indexado
+/404.html
+  X-Robots-Tag: noindex, follow
+
+/en/404.html
+  X-Robots-Tag: noindex, follow
+
+# Páginas de confirmação/obrigado (se existirem no futuro)
+/thank-you*
+  X-Robots-Tag: noindex, nofollow
+
+# ─── ARQUIVOS TÉCNICOS ────────────────────────────────────────────────────────
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex, follow
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: index, follow

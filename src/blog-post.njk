@@ -16,7 +16,42 @@
   },
   eleventyComputed: {
     lang:  (data) => (data.postPage && data.postPage.lang)  || 'pt',
-    title: (data) =>  data.postPage && data.postPage.title
+    title: (data) =>  data.postPage && data.postPage.title,
+    // SEO: auto-generated from post metadata — covers 150+ legacy posts with zero manual work
+    seoTitle: (data) => {
+      const p = data.postPage;
+      if (!p || !p.title) return null;
+      const base = p.title.trim();
+      const isEn = p.lang === 'en';
+      const tail = isEn ? " | Evernow Cybersecurity Blog" : " | Blog Evernow";
+      // Keep total ≤ 60 chars where possible
+      const max = 60 - tail.length;
+      const shortBase = base.length > max ? base.substring(0, max).replace(/\s\S*$/, '') + "…" : base;
+      return shortBase + tail;
+    },
+    seoDescription: (data) => {
+      const p = data.postPage;
+      if (!p) return null;
+      const raw = (p.excerpt || '').replace(/\s+/g, ' ').trim();
+      if (!raw) return p.title || '';
+      if (raw.length <= 158) return raw;
+      const cut = raw.substring(0, 158);
+      const space = cut.lastIndexOf(' ');
+      return cut.substring(0, space > 100 ? space : 158).trim();
+    },
+    seoKeywords: (data) => {
+      const p = data.postPage;
+      if (!p) return null;
+      const tags = Array.isArray(p.tags) ? p.tags : [];
+      const cats = Array.isArray(p.categories) ? p.categories : [];
+      const base = p.lang === 'en'
+        ? ['cybersecurity', 'evernow', 'cybersecurity blog']
+        : ['cibersegurança', 'evernow', 'blog cibersegurança'];
+      const combined = [...tags, ...cats, ...base]
+        .map(s => String(s || '').trim().toLowerCase())
+        .filter(Boolean);
+      return [...new Set(combined)].slice(0, 12).join(', ');
+    }
   }
 }
 ---
@@ -139,3 +174,35 @@
       </div>
    </section>
 </main>
+
+{# Schema.org BlogPosting — auto-generated for every post #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ postPage.title | dump }},
+  "description": {{ (postPage.excerpt or postPage.title) | dump }},
+  "author": {
+    "@type": "Person",
+    "name": {{ (postPage.author or "Evernow") | dump }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Evernow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png"
+    }
+  },
+  "datePublished": {{ postPage.date | dump }},
+  "dateModified": {{ postPage.date | dump }},
+  {% if postPage.featuredImage %}"image": "{{ postPage.featuredImage if postPage.featuredImage.startsWith('http') else 'https://evernow.com.br' + postPage.featuredImage }}",{% endif %}
+  "inLanguage": "{% if lang == 'en' %}en{% else %}pt-BR{% endif %}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://evernow.com.br{% if lang == 'en' %}/en{% endif %}/blog/{{ postPage.slug }}.html"
+  },
+  "articleSection": {% if postPage.categories and postPage.categories.length %}{{ postPage.categories | dump }}{% else %}["Cibersegurança"]{% endif %},
+  "keywords": {% if postPage.tags and postPage.tags.length %}{{ postPage.tags | join(", ") | dump }}{% else %}"cibersegurança, evernow"{% endif %}
+}
+</script>

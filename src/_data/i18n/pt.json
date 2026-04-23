@@ -446,106 +446,121 @@
     }
   },
   "meta": {
+    "404": {
+      "title": "Página não encontrada | Evernow",
+      "description": "A página que você procura não existe. Explore nossas soluções de cibersegurança ou fale com um especialista.",
+      "ogTitle": "Página não encontrada | Evernow",
+      "ogDescription": "A página que você procura não existe. Explore nossas soluções de cibersegurança ou fale com um especialista.",
+      "keywords": "página não encontrada, evernow, cibersegurança"
+    },
     "defaultTitle": "Evernow | Empresa de Cibersegurança para Negócios",
-    "defaultDescription": "Reduza riscos e acelere a segurança digital do seu negócio. Especialistas em cibersegurança, DevSecOps e conformidade com LGPD, NIST e ISO 27001.",
+    "defaultDescription": "Reduza riscos e acelere a segurança digital. Especialistas em cibersegurança, DevSecOps e conformidade com LGPD, NIST e ISO 27001.",
     "solucoes-index": {
       "title": "Soluções de Cibersegurança em 4 Pilares | Evernow",
       "description": "Quatro pilares de segurança: Secure Code, Data Shield, Assurance e Managed Ops. A Evernow protege aplicações, dados e infraestrutura de ponta a ponta.",
       "ogTitle": "Soluções de Cibersegurança em 4 Pilares | Evernow",
-      "ogDescription": "Quatro pilares de segurança: Secure Code, Data Shield, Assurance e Managed Ops. A Evernow protege aplicações, dados e infraestrutura de ponta a ponta."
+      "ogDescription": "Quatro pilares de segurança: Secure Code, Data Shield, Assurance e Managed Ops. A Evernow protege aplicações, dados e infraestrutura de ponta a ponta.",
+      "keywords": "soluções cibersegurança, secure code, data shield, assurance, managed ops, pilares segurança"
     },
     "produtos-index": {
       "title": "Portfólio de Cibersegurança | 26 Serviços | Evernow",
       "description": "Conheça todo o portfólio da Evernow: 26 serviços de cibersegurança organizados em quatro pilares — Secure Code, Data Shield, Assurance e Managed Ops.",
       "ogTitle": "Portfólio de Cibersegurança | 26 Serviços | Evernow",
-      "ogDescription": "Conheça todo o portfólio da Evernow: 26 serviços de cibersegurança organizados em quatro pilares — Secure Code, Data Shield, Assurance e Managed Ops."
+      "ogDescription": "Conheça todo o portfólio da Evernow: 26 serviços de cibersegurança organizados em quatro pilares — Secure Code, Data Shield, Assurance e Managed Ops.",
+      "keywords": "produtos cibersegurança, portfólio serviços segurança, 26 serviços, devsecops, soc, pentest, lgpd"
     },
     "industrias-index": {
       "title": "Cibersegurança por Setor | Financeiro, Saúde e Tech | Evernow",
       "description": "Soluções de cibersegurança especializadas para financeiro, saúde, varejo, tecnologia e governo. A Evernow entende as ameaças e regulações de cada setor.",
       "ogTitle": "Cibersegurança por Setor | Financeiro, Saúde e Tech | Evernow",
-      "ogDescription": "Soluções de cibersegurança especializadas para financeiro, saúde, varejo, tecnologia e governo. A Evernow entende as ameaças e regulações de cada setor."
+      "ogDescription": "Soluções de cibersegurança especializadas para financeiro, saúde, varejo, tecnologia e governo. A Evernow entende as ameaças e regulações de cada setor.",
+      "keywords": "cibersegurança setor financeiro, cibersegurança saúde, cibersegurança varejo, cibersegurança tech, cibersegurança governo"
     },
     "parceiros-index": {
       "title": "Parceiros Certificados de Cibersegurança | Evernow",
       "description": "Evernow é parceira certificada das principais plataformas de cibersegurança. Implementação, POC, treinamento e operação gerenciada até a entrega.",
       "ogTitle": "Parceiros Certificados de Cibersegurança | Evernow",
-      "ogDescription": "A Evernow é parceira certificada das principais plataformas de cibersegurança do mercado. Implementação, POC, treinamento e operação gerenciada, do licenciamento à entrega."
+      "ogDescription": "A Evernow é parceira certificada das principais plataformas de cibersegurança do mercado. Implementação, POC, treinamento e operação gerenciada, do licenciamento à entrega.",
+      "keywords": "parceiros cibersegurança, fortify, veracode, sonarqube, sonatype, qualys, tenable, sentinelone, darktrace, orca, securiti"
     },
     "home": {
       "title": "Evernow | Cibersegurança Corporativa: AppSec, SOC e LGPD",
       "description": "Reduza riscos e acelere a segurança digital. Especialistas em DevSecOps, AppSec e compliance com LGPD, NIST e ISO 27001 — resultados em 90 dias.",
       "ogTitle": "Evernow | Cibersegurança que gera resultado para empresas",
-      "ogDescription": "DevSecOps, AppSec, GRC e proteção de dados. Especialistas com experiência em grandes empresas. Impacto comprovado em 90 dias."
+      "ogDescription": "DevSecOps, AppSec, GRC e proteção de dados. Especialistas com experiência em grandes empresas. Impacto comprovado em 90 dias.",
+      "keywords": "cibersegurança, consultoria cibersegurança, devsecops, appsec, lgpd, iso 27001, pentest, soc, evernow"
     },
     "about": {
       "title": "Sobre a Evernow | Empresa Brasileira de Cibersegurança",
       "description": "Conheça a Evernow: consultoria especializada em cibersegurança, DevSecOps e GRC. Metodologia ágil, KPIs claros e impacto mensurável em 90 dias.",
       "ogTitle": "Sobre a Evernow | Sua parceira em segurança digital",
-      "ogDescription": "DevSecOps, AppSec, GRC e conformidade. Trabalhamos lado a lado com seu time para gerar resultados reais e mensuráveis em cibersegurança."
+      "ogDescription": "DevSecOps, AppSec, GRC e conformidade. Trabalhamos lado a lado com seu time para gerar resultados reais e mensuráveis em cibersegurança.",
+      "keywords": "evernow, empresa cibersegurança brasil, consultoria cibersegurança, equipe especialistas, sobre evernow"
     },
     "services": {
       "title": "Serviços de Cibersegurança | DevSecOps e GRC | Evernow",
       "description": "Portfólio 360° em DevSecOps, AppSec, Pentest, Proteção de Dados e GRC. Implementação e operação com conformidade para LGPD, NIST, PCI e ISO 27001.",
       "ogTitle": "Serviços de Cibersegurança | Evernow – Da implantação ao resultado",
-      "ogDescription": "DevSecOps, Pentest, Proteção de Dados e GRC. Planos de 40h, 80h ou dedicado. Conformidade com LGPD, NIST, ISO 27001 e PCI."
+      "ogDescription": "DevSecOps, Pentest, Proteção de Dados e GRC. Planos de 40h, 80h ou dedicado. Conformidade com LGPD, NIST, ISO 27001 e PCI.",
+      "keywords": "serviços cibersegurança, consultoria devsecops, pentest, lgpd, iso 27001, pci dss, soc, evernow"
     },
     "solutions": {
       "title": "Soluções de Segurança | AppSec, Cloud e Compliance | Evernow",
       "description": "Implementamos ferramentas líderes: analisadores de código (SAST/DAST/SCA), pentest, segurança em nuvem (CSPM), DSPM e discovery de dados. Proteção end-to-end.",
       "ogTitle": "Soluções de Cibersegurança que protegem seu negócio | Evernow",
-      "ogDescription": "SAST, DAST, SCA, CSPM, DSPM e Data Discovery. Selecionamos, implementamos e operamos as ferramentas certas para a sua empresa."
+      "ogDescription": "SAST, DAST, SCA, CSPM, DSPM e Data Discovery. Selecionamos, implementamos e operamos as ferramentas certas para a sua empresa.",
+      "keywords": "soluções cibersegurança, secure code, data shield, assurance, managed ops, sast, dast, sca, cspm"
     },
     "contact": {
       "title": "Contato | Especialistas em Cibersegurança | Evernow",
       "description": "Entre em contato com os especialistas da Evernow. Solicite uma avaliação gratuita de cibersegurança para sua empresa. São Paulo/SP, atendimento nacional.",
       "ogTitle": "Fale com um Especialista em Cibersegurança | Evernow",
-      "ogDescription": "Solicite uma avaliação gratuita. Nossos especialistas estão prontos para ajudar sua empresa a crescer com segurança."
+      "ogDescription": "Solicite uma avaliação gratuita. Nossos especialistas estão prontos para ajudar sua empresa a crescer com segurança.",
+      "keywords": "contato evernow, falar com especialista cibersegurança, orçamento pentest, consultoria lgpd"
     },
     "pentest": {
       "title": "Pentest para Empresas | Teste de Invasão Manual | Evernow",
       "description": "Pentest manual e automatizado para apps, APIs, redes e cloud. Relatório detalhado, reteste incluído e conformidade com LGPD, PCI e ISO 27001.",
       "ogTitle": "Pentest da Evernow | Descubra vulnerabilidades antes do hacker",
-      "ogDescription": "Testes de intrusão profissionais para aplicações, infraestrutura e cloud. Relatório técnico e executivo, evidências e recomendações de correção."
+      "ogDescription": "Testes de intrusão profissionais para aplicações, infraestrutura e cloud. Relatório técnico e executivo, evidências e recomendações de correção.",
+      "keywords": "pentest, teste de invasão, empresa pentest brasil, pentest web, pentest api, pentest mobile, pentest cloud, pentest iso 27001, pentest pci"
     },
     "assessment": {
       "title": "Assessment de Cibersegurança Gratuito | Evernow",
       "description": "Diagnóstico executivo de cibersegurança em 30 minutos. Especialistas da Evernow avaliam seu programa e entregam recomendações priorizadas por impacto.",
       "ogTitle": "Assessment de Cibersegurança Gratuito | Evernow",
-      "ogDescription": "Descubra o estado real da segurança da sua empresa. Diagnóstico gratuito com especialistas sênior, sem compromisso de compra."
+      "ogDescription": "Descubra o estado real da segurança da sua empresa. Diagnóstico gratuito com especialistas sênior, sem compromisso de compra.",
+      "keywords": "assessment cibersegurança, diagnóstico segurança, avaliação maturidade, gap analysis, evernow"
     },
     "cases": {
       "title": "Cases de Cibersegurança | Resultados Reais | Evernow",
       "description": "Conheça os resultados que a Evernow entregou para empresas do setor financeiro, saúde, varejo e tecnologia em projetos de cibersegurança.",
       "ogTitle": "Cases e Resultados | Evernow",
-      "ogDescription": "Projetos reais com métricas reais. DevSecOps, LGPD, pentest e ISO 27001 em empresas como Bradesco, Cielo e DASA."
+      "ogDescription": "Projetos reais com métricas reais. DevSecOps, LGPD, pentest e ISO 27001 em empresas como Bradesco, Cielo e DASA.",
+      "keywords": "cases cibersegurança, resultados evernow, casos de sucesso, projetos segurança digital"
     },
     "ebooks": {
       "title": "Ebooks e Guias de Cibersegurança | Evernow",
       "description": "Guias práticos sobre DevSecOps, LGPD, pentest, ISO 27001 e gestão de vulnerabilidades produzidos por especialistas da Evernow.",
       "ogTitle": "Ebooks de Cibersegurança | Evernow",
-      "ogDescription": "Conteúdo técnico e executivo sobre DevSecOps, LGPD e pentest. Produzido por especialistas com experiência em grandes empresas."
+      "ogDescription": "Conteúdo técnico e executivo sobre DevSecOps, LGPD e pentest. Produzido por especialistas com experiência em grandes empresas.",
+      "keywords": "ebook cibersegurança, guia devsecops, guia lgpd, guia iso 27001, material cibersegurança gratuito"
     },
     "webinars": {
       "title": "Webinars de Cibersegurança | Evernow",
       "description": "Webinars ao vivo e gravados com especialistas da Evernow sobre DevSecOps, LGPD, pentest, cloud security e gestão de vulnerabilidades.",
       "ogTitle": "Webinars de Cibersegurança | Evernow",
-      "ogDescription": "Sessões ao vivo e gravações com especialistas sobre DevSecOps, LGPD, pentest e cloud security."
+      "ogDescription": "Sessões ao vivo e gravações com especialistas sobre DevSecOps, LGPD, pentest e cloud security.",
+      "keywords": "webinar cibersegurança, palestra devsecops, treinamento segurança, evento evernow"
     },
-    "defaultTitle": "Evernow | Empresa de Cibersegurança para Negócios",
-    "defaultDescription": "Reduza riscos e acelere a segurança digital. Especialistas em cibersegurança, DevSecOps e conformidade com LGPD, NIST e ISO 27001.",
     "blog": {
       "title": "Blog de Cibersegurança | AppSec, LGPD e Cloud | Evernow",
       "description": "Artigos e tendências em cibersegurança, DevSecOps, proteção de dados e LGPD. Conteúdo técnico e executivo dos especialistas da Evernow.",
       "ogTitle": "Blog Evernow | Cibersegurança na prática",
-      "ogDescription": "Artigos, guias e tendências em DevSecOps, AppSec, GRC e proteção de dados. Aprenda com quem atua nas maiores empresas do Brasil."
+      "ogDescription": "Artigos, guias e tendências em DevSecOps, AppSec, GRC e proteção de dados. Aprenda com quem atua nas maiores empresas do Brasil.",
+      "keywords": "blog cibersegurança, artigos devsecops, conteúdo appsec, notícias segurança digital, lgpd, pentest"
     },
-    "404": {
-      "title": "Página não encontrada | Evernow",
-      "description": "A página que você procura não existe. Explore nossas soluções de cibersegurança ou fale com um especialista.",
-      "ogTitle": "Página não encontrada | Evernow",
-      "ogDescription": "A página que você procura não existe. Explore nossas soluções de cibersegurança ou fale com um especialista."
-    }
+    "defaultKeywords": "cibersegurança, devsecops, appsec, lgpd, iso 27001, pentest, consultoria cibersegurança, evernow"
   },
   "aria": {
     "logoAlt": "Logotipo Evernow",
