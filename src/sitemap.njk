@@ -6,18 +6,22 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-{# ── Static pages ──────────────────────────────────────────── #}
+{# ── Static pages ────────────────────────────────────────────
+   IMPORTANTE: Cloudflare _redirects faz 308 de /pagina.html → /pagina
+   para o conjunto abaixo. URLs no sitemap DEVEM ser as canônicas (sem .html)
+   para evitar dispersão de PageRank e desperdício de crawl budget.
+#}
 {% set staticPages = [
-  { pt: "/",                en: "/en/",               prio: "1.0" },
-  { pt: "/about.html",      en: "/en/about.html",      prio: "0.7" },
-  { pt: "/services.html",   en: "/en/services.html",   prio: "0.7" },
-  { pt: "/contact.html",    en: "/en/contact.html",    prio: "0.7" },
-  { pt: "/pentest.html",    en: "/en/pentest.html",    prio: "0.8" },
-  { pt: "/assessment.html", en: "/en/assessment.html", prio: "0.7" },
-  { pt: "/parceiros.html",  en: "/en/parceiros.html",  prio: "0.6" },
-  { pt: "/solutions.html",  en: "/en/solutions.html",  prio: "0.6" },
-  { pt: "/cases.html",      en: "/en/cases.html",      prio: "0.6" },
-  { pt: "/blog.html",       en: "/en/blog.html",       prio: "0.7" },
+  { pt: "/",            en: "/en/",            prio: "1.0" },
+  { pt: "/about",       en: "/en/about",       prio: "0.7" },
+  { pt: "/services",    en: "/en/services",    prio: "0.7" },
+  { pt: "/contact",     en: "/en/contact",     prio: "0.7" },
+  { pt: "/pentest",     en: "/en/pentest",     prio: "0.9" },
+  { pt: "/assessment",  en: "/en/assessment",  prio: "0.7" },
+  { pt: "/parceiros",   en: "/en/parceiros",   prio: "0.6" },
+  { pt: "/solutions",   en: "/en/solutions",   prio: "0.6" },
+  { pt: "/cases",       en: "/en/cases",       prio: "0.6" },
+  { pt: "/blog",        en: "/en/blog",        prio: "0.7" },
   { pt: "/solucoes/",       en: "/en/solucoes/",       prio: "0.8" },
   { pt: "/produtos/",       en: "/en/products/",       prio: "0.8" },
   { pt: "/industrias/",     en: "/en/industries/",     prio: "0.7" },
@@ -28,6 +32,7 @@ eleventyExcludeFromCollections: true
   { pt: "/guias/cspm-o-que-e/",                 en: "/en/guides/cspm/",                        prio: "0.8" },
   { pt: "/servicos/",                           en: "/en/services/",                           prio: "0.7" },
   { pt: "/servicos/adequacao-lgpd/",            en: "/en/services/lgpd-compliance/",           prio: "0.9" },
+  { pt: "/servicos/consultoria-iso-27001/",     en: "/en/services/iso-27001-consulting/",      prio: "0.9" },
   { pt: "/servicos/soc-como-servico/",          en: "/en/services/soc-as-a-service/",          prio: "0.9" }
 ] %}
 {%- for p in staticPages -%}

@@ -30,18 +30,35 @@
   <meta name="keywords" content="{{ 'meta.defaultKeywords' | t }}" />
 {%- endif %}
 <meta name="robots" content="{{ 'noindex,nofollow' if noIndex else 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}" />
-<link rel="canonical" href="https://evernow.com.br{{ page.url }}" />
+{# ── Canonical normalization ───────────────────────────────────────────────
+   Cloudflare _redirects faz 308 de /pagina.html → /pagina (sem extensão)
+   para um conjunto de páginas-folha estáticas. Os permalinks 11ty geram
+   page.url = "/pagina.html" para essas páginas. Sem normalização, o canonical
+   apontaria para uma URL que redireciona — perda de equity. Strip ".html"
+   apenas para esse conjunto. /blog/<slug>.html PERMANECE com .html.
+#}
+{%- set _stripHtmlPaths = ["/pentest.html", "/about.html", "/services.html", "/solutions.html",
+                           "/contact.html", "/cases.html", "/parceiros.html", "/assessment.html",
+                           "/blog.html",
+                           "/en/pentest.html", "/en/about.html", "/en/services.html", "/en/solutions.html",
+                           "/en/contact.html", "/en/cases.html", "/en/parceiros.html", "/en/assessment.html",
+                           "/en/blog.html"] -%}
+{%- set _canonical = page.url -%}
+{%- if page.url in _stripHtmlPaths -%}
+  {%- set _canonical = page.url | replace(".html", "") -%}
+{%- endif -%}
+<link rel="canonical" href="https://evernow.com.br{{ _canonical }}" />
 
 <!-- hreflang (PT/EN bilíngue) -->
 {%- if lang == 'pt' -%}
-{%- set _hreflangEn = langEnUrl if langEnUrl else ('/en' + page.url) -%}
-<link rel="alternate" hreflang="pt-BR"    href="https://evernow.com.br{{ page.url }}" />
+{%- set _hreflangEn = langEnUrl if langEnUrl else ('/en' + _canonical) -%}
+<link rel="alternate" hreflang="pt-BR"    href="https://evernow.com.br{{ _canonical }}" />
 <link rel="alternate" hreflang="en"       href="https://evernow.com.br{{ _hreflangEn }}" />
-<link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ page.url }}" />
+<link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _canonical }}" />
 {%- elif lang == 'en' -%}
-{%- set _hreflangPt = langPtUrl if langPtUrl else (page.url | replace('/en/', '/')) -%}
+{%- set _hreflangPt = langPtUrl if langPtUrl else (_canonical | replace('/en/', '/')) -%}
 <link rel="alternate" hreflang="pt-BR"    href="https://evernow.com.br{{ _hreflangPt }}" />
-<link rel="alternate" hreflang="en"       href="https://evernow.com.br{{ page.url }}" />
+<link rel="alternate" hreflang="en"       href="https://evernow.com.br{{ _canonical }}" />
 <link rel="alternate" hreflang="x-default" href="https://evernow.com.br{{ _hreflangPt }}" />
 {%- endif -%}
 
@@ -71,7 +88,7 @@
 <meta property="og:locale"      content="{{ 'pt_BR' if lang == 'pt' else 'en_US' }}" />
 <meta property="og:type"        content="website" />
 <meta property="og:site_name"   content="Evernow" />
-<meta property="og:url"         content="https://evernow.com.br{{ page.url }}" />
+<meta property="og:url"         content="https://evernow.com.br{{ _canonical }}" />
 <meta property="og:title"       content="{{ _ogTitle }}" />
 <meta property="og:description" content="{{ _ogDesc }}" />
 <meta property="og:image"       content="{{ _ogImage }}" />
