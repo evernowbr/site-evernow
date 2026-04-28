@@ -50,6 +50,21 @@
 /en/cases/ /en/cases 301
 /en/blog/ /en/blog 301
 
+# ─── URLs legadas em PT (WordPress + sitelinks legacy do Google Ads) ──────────
+# Sitelinks antigos da conta do Ads ainda apontam para estas URLs PT.
+# Backlinks externos pré-migração também devem usá-las.
+/contato      /contact   301
+/contato/     /contact   301
+/fale-conosco /contact   301
+/fale-conosco/ /contact  301
+/sobre        /about     301
+/sobre/       /about     301
+/quem-somos   /about     301
+/quem-somos/  /about     301
+/nossos-parceiros  /parceiros 301
+/nossos-parceiros/ /parceiros 301
+# /servicos já é 308 → /servicos/ pelo Cloudflare por default
+
 # ─── ALIAS amigáveis para entrar direto em páginas-chave (sem 301, 200 rewrite) ─
 # /pentest-preco → /guias/quanto-custa-pentest/ (bom para email/LinkedIn)
 /pentest-preco /guias/quanto-custa-pentest/ 301
