@@ -1135,7 +1135,7 @@ a.item-link{margin-top: 20px; display: inline-block}
 /* ==========================================================
    Navbar logo & layout
    ========================================================== */
-.navbar-brand img { height: 56px; width: auto; }
+.navbar-brand img { height: 56px; width: auto; max-width: none; flex-shrink: 0; }
 .ev-contact-btn { font-size: .88rem !important; padding: 10px 22px !important; border-radius: 24px !important; white-space: nowrap; }
 
 /* ==========================================================
@@ -2230,4 +2230,23 @@ a.ev-vendor-all-item { text-decoration: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ev-vendor-track { animation: none; }
+}
+
+/* Banner hero: anula o right: 18% do style.css em resoluções < 1280px
+   para evitar que a imagem sobreponha o texto da coluna esquerda. */
+@media (max-width: 1279px) {
+  .banner-right-con {
+    right: 0;
+  }
+}
+
+/* Imagens da home: mantém proporção em qualquer resolução.
+   Os atributos HTML width/height definem o aspect-ratio para o browser (CLS),
+   mas sem height:auto o CSS que reduz a largura em mobile deixa a altura fixa
+   — causando imagem espremida. max-width:100% garante que nunca extrapolam o container. */
+.banner-right-con img,
+.banner-right-con figure img,
+.informationmainleft-sec-img img {
+  height: auto !important;
+  max-width: 100%;
 }

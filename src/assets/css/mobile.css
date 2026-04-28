@@ -116,6 +116,9 @@
     }
     .navbar-brand img{
         height: 48px;
+        width: auto;
+        max-width: none;
+        flex-shrink: 0;
     }
     .banner-main-con,
     .slider-con,
@@ -147,7 +150,7 @@
     }
    
     .banner-right-con{
-        right: 28%;
+        right: 0;
     }
     .navbar-toggler{
         border:none;

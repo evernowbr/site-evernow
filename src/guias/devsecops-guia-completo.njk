@@ -25,26 +25,42 @@ langEnUrl: "/en/guides/devsecops/"
     {% include "components/header.njk" %}
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="banner-main-con">
+    <section class="banner-main-con ev-hero" style="padding:60px 0 50px;">
       <div class="container">
-        <div class="banner-con">
-          <div class="row align-items-center">
-            <div class="col-lg-8 banner-main-left-con">
-              <div class="banner-left-con wow slideInLeft">
-                <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Pillar guide · Secure Code{% else %}Guia pilar · Secure Code{% endif %}</p>
-                <div class="banner-heading">
-                  <h1>{% if lang == "en" %}DevSecOps: the complete 2026 guide{% else %}DevSecOps: o guia completo de 2026{% endif %}</h1>
-                </div>
-                <div class="banner-content">
-                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.85);">
-                    {% if lang == "en" %}What DevSecOps really is, how to go from shift-left to shift-right, which tools enter the CI/CD pipeline, executive KPIs and the four mistakes that kill 80% of programs.{% else %}O que DevSecOps é de verdade, como sair do shift-left para o shift-right, quais ferramentas entram no pipeline CI/CD, KPIs executivos e os quatro erros que matam 80% dos programas.{% endif %}
-                  </p>
-                </div>
-                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
-                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a DevSecOps specialist{% else %}Fale com especialista DevSecOps{% endif %}</a>
-                  <a href="{{ urlPrefix }}/produtos/devsecops/" class="ev-btn-outline">{% if lang == "en" %}See managed service{% else %}Ver serviço gerenciado{% endif %}</a>
-                </div>
-              </div>
+        <div class="row align-items-center">
+          <div class="col-lg-7 wow slideInLeft">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px;">
+              <span style="background:rgba(0,224,163,.12);border:1px solid rgba(0,224,163,.3);color:#00e0a3;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:20px;">{% if lang == "en" %}Pillar guide · Secure Code{% else %}Guia pilar · Secure Code{% endif %}</span>
+              <span style="color:rgba(255,255,255,.4);font-size:.78rem;"><i class="fas fa-clock" style="margin-right:5px;"></i>{% if lang == "en" %}12 min read{% else %}12 min de leitura{% endif %}</span>
+              <span style="color:rgba(255,255,255,.4);font-size:.78rem;"><i class="fas fa-calendar-alt" style="margin-right:5px;"></i>{% if lang == "en" %}Updated Apr 2026{% else %}Atualizado Abr 2026{% endif %}</span>
+            </div>
+            <h1 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;line-height:1.15;">
+              {% if lang == "en" %}DevSecOps: the <span style="color:#00e0a3;">complete guide</span> 2026{% else %}DevSecOps: o <span style="color:#00e0a3;">guia completo</span> de 2026{% endif %}
+            </h1>
+            <p class="ev-hero__sub mt-3">
+              {% if lang == "en" %}What DevSecOps really is, how to go from shift-left to shift-right, which tools enter the CI/CD pipeline, executive KPIs and the four mistakes that kill 80% of programs.{% else %}O que DevSecOps é de verdade, como sair do shift-left para o shift-right, quais ferramentas entram no pipeline CI/CD, KPIs executivos e os quatro erros que matam 80% dos programas.{% endif %}
+            </p>
+            <div class="ev-hero__trust mt-4">
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Pipeline + tooling{% else %}Pipeline + tooling{% endif %}</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Executive KPIs{% else %}KPIs executivos{% endif %}</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Common mistakes{% else %}Erros comuns{% endif %}</span>
+            </div>
+            <div class="mt-4 d-flex flex-wrap" style="gap:14px;">
+              <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a DevSecOps specialist{% else %}Fale com especialista DevSecOps{% endif %}</a>
+              <a href="{{ urlPrefix }}/produtos/devsecops/" class="ev-btn-outline">{% if lang == "en" %}See managed service{% else %}Ver serviço gerenciado{% endif %}</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 wow slideInRight mt-5 mt-lg-0">
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(0,224,163,.2);border-radius:14px;padding:28px;">
+              <p style="color:#00e0a3;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;">{% if lang == "en" %}What you'll find here{% else %}O que você vai encontrar{% endif %}</p>
+              <ul class="list-unstyled" style="font-size:.9rem;color:rgba(255,255,255,.8);margin:0;">
+                <li class="mb-3"><i class="fas fa-arrow-right" style="color:#00e0a3;margin-right:10px;font-size:.75rem;"></i>{% if lang == "en" %}Definition beyond the buzzword{% else %}Definição além do buzzword{% endif %}</li>
+                <li class="mb-3"><i class="fas fa-arrow-right" style="color:#00e0a3;margin-right:10px;font-size:.75rem;"></i>{% if lang == "en" %}Shift-left vs shift-right model{% else %}Modelo shift-left vs shift-right{% endif %}</li>
+                <li class="mb-3"><i class="fas fa-arrow-right" style="color:#00e0a3;margin-right:10px;font-size:.75rem;"></i>{% if lang == "en" %}8-stage reference pipeline{% else %}Pipeline de referência em 8 estágios{% endif %}</li>
+                <li class="mb-3"><i class="fas fa-arrow-right" style="color:#00e0a3;margin-right:10px;font-size:.75rem;"></i>{% if lang == "en" %}7 KPIs the board understands{% else %}7 KPIs que o board entende{% endif %}</li>
+                <li><i class="fas fa-arrow-right" style="color:#00e0a3;margin-right:10px;font-size:.75rem;"></i>{% if lang == "en" %}4 mistakes that kill programs{% else %}4 erros que matam programas{% endif %}</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -54,49 +70,64 @@ langEnUrl: "/en/guides/devsecops/"
 </div>
 
 <main>
-  <!-- Definição -->
+
+  <!-- DEFINIÇÃO -->
   <section class="ev-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Definition{% else %}Definição{% endif %}</div>
           <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}What DevSecOps actually is{% else %}O que é DevSecOps de verdade{% endif %}</h2>
-          <p style="color:rgba(255,255,255,.85);font-size:1.05rem;line-height:1.7;">{% if lang == "en" %}DevSecOps is the <strong>culture, practices and automation</strong> that integrate security into every stage of the application lifecycle — from ideation to production operation — with <em>shared</em> responsibility between development, security and operations.{% else %}DevSecOps é a <strong>cultura, práticas e automação</strong> que integram segurança em todas as etapas do ciclo de vida da aplicação — da ideação à operação em produção — com responsabilidade <em>compartilhada</em> entre desenvolvimento, segurança e operações.{% endif %}</p>
-          <p style="color:rgba(255,255,255,.75);margin-top:16px;">{% if lang == "en" %}It is not "SAST inside GitHub Actions". That is a <strong>tactic</strong>. DevSecOps is the <strong>operating model</strong> that makes the tactic sustainable.{% else %}Não é "SAST dentro do GitHub Actions". Isso é <strong>tática</strong>. DevSecOps é o <strong>modelo operacional</strong> que torna a tática sustentável.{% endif %}</p>
+          <div style="background:rgba(0,224,163,.06);border-left:4px solid #00e0a3;border-radius:0 12px 12px 0;padding:24px 28px;margin:24px 0 20px;" class="wow fadeInUp">
+            <p style="font-size:1.08rem;color:rgba(255,255,255,.9);line-height:1.75;margin:0;">{% if lang == "en" %}DevSecOps is the <strong>culture, practices and automation</strong> that integrate security into every stage of the application lifecycle — from ideation to production operation — with <em>shared</em> responsibility between development, security and operations.{% else %}DevSecOps é a <strong>cultura, práticas e automação</strong> que integram segurança em todas as etapas do ciclo de vida da aplicação — da ideação à operação em produção — com responsabilidade <em>compartilhada</em> entre desenvolvimento, segurança e operações.{% endif %}</p>
+          </div>
+          <p style="color:rgba(255,255,255,.7);line-height:1.7;">{% if lang == "en" %}It is not "SAST inside GitHub Actions". That is a <strong>tactic</strong>. DevSecOps is the <strong>operating model</strong> that makes the tactic sustainable.{% else %}Não é "SAST dentro do GitHub Actions". Isso é <strong>tática</strong>. DevSecOps é o <strong>modelo operacional</strong> que torna a tática sustentável.{% endif %}</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Shift-left / shift-right -->
+  <!-- SHIFT-LEFT / SHIFT-RIGHT -->
   <section class="ev-section ev-section--alt">
     <div class="container">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Operating model{% else %}Modelo operacional{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Shift-left AND shift-right{% else %}Shift-left E shift-right{% endif %}</h2>
       <div class="row mt-4">
-        <div class="col-lg-6 mb-4">
-          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px;height:100%;">
-            <h4 style="color:#00e0a3;">Shift-Left</h4>
-            <p>{% if lang == "en" %}Move security to the earliest possible moment: IDE, pre-commit, pull request. Cost of correction grows 10× per phase, so the earlier, the cheaper.{% else %}Puxar segurança para o momento mais cedo possível: IDE, pré-commit, pull request. Custo de correção cresce 10× por fase, quanto antes, mais barato.{% endif %}</p>
-            <ul style="margin-top:14px;font-size:.92rem;">
-              <li>{% if lang == "en" %}Threat Modeling on the story{% else %}Threat Modeling na story{% endif %}</li>
-              <li>SAST + secret scanning pre-commit</li>
-              <li>SCA on every new dependency</li>
-              <li>{% if lang == "en" %}IaC Security (Checkov, tfsec){% else %}IaC Security (Checkov, tfsec){% endif %}</li>
-              <li>{% if lang == "en" %}Security tests in unit/integration suite{% else %}Testes de segurança no suite unit/integration{% endif %}</li>
+        <div class="col-lg-6 mb-4 wow fadeInLeft">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;height:100%;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:#00e0a3;border-radius:14px 0 0 14px;"></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+              <div style="width:40px;height:40px;background:rgba(0,224,163,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-arrow-left" style="color:#00e0a3;"></i>
+              </div>
+              <h4 style="color:#00e0a3;margin:0;">Shift-Left</h4>
+            </div>
+            <p style="color:rgba(255,255,255,.8);line-height:1.7;">{% if lang == "en" %}Move security to the earliest possible moment: IDE, pre-commit, pull request. Cost of correction grows 10× per phase, so the earlier, the cheaper.{% else %}Puxar segurança para o momento mais cedo possível: IDE, pré-commit, pull request. Custo de correção cresce 10× por fase, quanto antes, mais barato.{% endif %}</p>
+            <ul style="margin-top:14px;font-size:.9rem;color:rgba(255,255,255,.7);padding-left:0;list-style:none;">
+              <li class="mb-2"><i class="fas fa-check" style="color:#00e0a3;margin-right:8px;font-size:.8rem;"></i>{% if lang == "en" %}Threat Modeling on the story{% else %}Threat Modeling na story{% endif %}</li>
+              <li class="mb-2"><i class="fas fa-check" style="color:#00e0a3;margin-right:8px;font-size:.8rem;"></i>SAST + secret scanning pre-commit</li>
+              <li class="mb-2"><i class="fas fa-check" style="color:#00e0a3;margin-right:8px;font-size:.8rem;"></i>SCA on every new dependency</li>
+              <li class="mb-2"><i class="fas fa-check" style="color:#00e0a3;margin-right:8px;font-size:.8rem;"></i>IaC Security (Checkov, tfsec)</li>
+              <li><i class="fas fa-check" style="color:#00e0a3;margin-right:8px;font-size:.8rem;"></i>{% if lang == "en" %}Security tests in unit/integration suite{% else %}Testes de segurança no suite unit/integration{% endif %}</li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-6 mb-4">
-          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px;height:100%;">
-            <h4 style="color:#00e0a3;">Shift-Right</h4>
-            <p>{% if lang == "en" %}Security does not stop at deploy. Production behaves differently: real traffic, misconfiguration, drift, third-party risk. You need runtime observability.{% else %}Segurança não termina no deploy. Produção se comporta diferente: tráfego real, misconfig, drift, risco de terceiros. Precisa de observabilidade runtime.{% endif %}</p>
-            <ul style="margin-top:14px;font-size:.92rem;">
-              <li>{% if lang == "en" %}Runtime Application Self-Protection (RASP){% else %}Runtime Application Self-Protection (RASP){% endif %}</li>
-              <li>CSPM + CWPP + CNAPP</li>
-              <li>{% if lang == "en" %}Continuous external DAST{% else %}DAST externo contínuo{% endif %}</li>
-              <li>{% if lang == "en" %}Continuous attack surface management (ASM){% else %}Attack Surface Management (ASM){% endif %}</li>
-              <li>{% if lang == "en" %}Security chaos engineering{% else %}Security chaos engineering{% endif %}</li>
+        <div class="col-lg-6 mb-4 wow fadeInRight">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;height:100%;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:#5b8fff;border-radius:14px 0 0 14px;"></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+              <div style="width:40px;height:40px;background:rgba(91,143,255,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-arrow-right" style="color:#5b8fff;"></i>
+              </div>
+              <h4 style="color:#5b8fff;margin:0;">Shift-Right</h4>
+            </div>
+            <p style="color:rgba(255,255,255,.8);line-height:1.7;">{% if lang == "en" %}Security does not stop at deploy. Production behaves differently: real traffic, misconfiguration, drift, third-party risk. You need runtime observability.{% else %}Segurança não termina no deploy. Produção se comporta diferente: tráfego real, misconfig, drift, risco de terceiros. Precisa de observabilidade runtime.{% endif %}</p>
+            <ul style="margin-top:14px;font-size:.9rem;color:rgba(255,255,255,.7);padding-left:0;list-style:none;">
+              <li class="mb-2"><i class="fas fa-check" style="color:#5b8fff;margin-right:8px;font-size:.8rem;"></i>RASP (Runtime Application Self-Protection)</li>
+              <li class="mb-2"><i class="fas fa-check" style="color:#5b8fff;margin-right:8px;font-size:.8rem;"></i>CSPM + CWPP + CNAPP</li>
+              <li class="mb-2"><i class="fas fa-check" style="color:#5b8fff;margin-right:8px;font-size:.8rem;"></i>{% if lang == "en" %}Continuous external DAST{% else %}DAST externo contínuo{% endif %}</li>
+              <li class="mb-2"><i class="fas fa-check" style="color:#5b8fff;margin-right:8px;font-size:.8rem;"></i>Attack Surface Management (ASM)</li>
+              <li><i class="fas fa-check" style="color:#5b8fff;margin-right:8px;font-size:.8rem;"></i>Security chaos engineering</li>
             </ul>
           </div>
         </div>
@@ -104,11 +135,12 @@ langEnUrl: "/en/guides/devsecops/"
     </div>
   </section>
 
-  <!-- Pipeline visual -->
+  <!-- PIPELINE 8 ESTÁGIOS -->
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Reference pipeline{% else %}Pipeline de referência{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}DevSecOps pipeline in 8 stages{% else %}Pipeline DevSecOps em 8 estágios{% endif %}</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5">{% if lang == "en" %}From threat modeling on the story to runtime monitoring — security embedded at every gate.{% else %}Do threat modeling na story ao monitoramento runtime — segurança embutida em cada porta.{% endif %}</p>
       <div class="ev-delivery-grid">
         <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-drafting-compass"></i></div><h4>1. Plan</h4><p>Threat Modeling (STRIDE), abuse stories, data classification, privacy by design.</p></div>
         <div class="ev-delivery-card wow fadeInUp"><div class="ev-delivery-card__icon"><i class="fas fa-code"></i></div><h4>2. Code</h4><p>SAST in IDE, secret scanning, secure coding training, golden paths per language.</p></div>
@@ -122,33 +154,65 @@ langEnUrl: "/en/guides/devsecops/"
     </div>
   </section>
 
-  <!-- KPIs -->
-  <section class="ev-section ev-section--alt">
-    <div class="container">
-      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Measurement{% else %}Medição{% endif %}</div>
-      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}7 KPIs executives understand{% else %}7 KPIs que o board entende{% endif %}</h2>
-      <div class="row mt-4">
-        <div class="col-lg-10 mx-auto">
-          <ul style="list-style:none;padding:0;">
-            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">1. MTTR por severidade</strong> — {% if lang == "en" %}time to fix Critical / High / Medium / Low. Target: Critical &lt; 7 days.{% else %}tempo para corrigir Critical / High / Medium / Low. Meta: Crítico &lt; 7 dias.{% endif %}</li>
-            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">2. Escape rate</strong> — {% if lang == "en" %}% of vulnerabilities found in production that should have been caught earlier. Target: &lt; 10%.{% else %}% de vulnerabilidades encontradas em produção que deveriam ter sido pegas antes. Meta: &lt; 10%.{% endif %}</li>
-            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">3. Pipeline coverage</strong> — {% if lang == "en" %}% of repositories with SAST + SCA + secret scanning. Target: &gt; 90%.{% else %}% de repositórios com SAST + SCA + secret scanning. Meta: &gt; 90%.{% endif %}</li>
-            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">4. Vulnerability age</strong> — {% if lang == "en" %}average age of open critical findings. Target: &lt; 30 days.{% else %}idade média dos achados críticos abertos. Meta: &lt; 30 dias.{% endif %}</li>
-            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">5. Deploy frequency</strong> — {% if lang == "en" %}DORA metric: how often we deploy safely. DevSecOps should not slow delivery.{% else %}métrica DORA: frequência de deploy seguro. DevSecOps não pode travar entregas.{% endif %}</li>
-            <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);"><strong style="color:#00e0a3;">6. Change failure rate</strong> — {% if lang == "en" %}deploys that cause incidents. DORA + security.{% else %}deploys que causam incidentes. DORA + segurança.{% endif %}</li>
-            <li style="padding:14px 0;"><strong style="color:#00e0a3;">7. Dependency freshness</strong> — {% if lang == "en" %}% of dependencies within 6 months of latest. Target: &gt; 80%.{% else %}% de dependências dentro de 6 meses da mais recente. Meta: &gt; 80%.{% endif %}</li>
-          </ul>
+  <!-- MID-PAGE CTA -->
+  <section style="background:linear-gradient(90deg,rgba(0,224,163,.12) 0%,rgba(0,224,163,.03) 100%);border-top:1px solid rgba(0,224,163,.2);border-bottom:1px solid rgba(0,224,163,.2);padding:40px 0;">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:8px;color:#fff;">
+            {% if lang == "en" %}Want to implement this pipeline in your organization?{% else %}Quer implementar esse pipeline na sua organização?{% endif %}
+          </h3>
+          <p style="color:rgba(255,255,255,.7);margin:0;font-size:.95rem;">
+            {% if lang == "en" %}Free 30-minute conversation with a DevSecOps architect to map your current state.{% else %}30 min gratuitos com um arquiteto DevSecOps para mapear seu estado atual.{% endif %}
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-right">
+          <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 erros -->
+  <!-- 7 KPIs -->
+  <section class="ev-section ev-section--alt">
+    <div class="container">
+      <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Measurement{% else %}Medição{% endif %}</div>
+      <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}7 KPIs executives understand{% else %}7 KPIs que o board entende{% endif %}</h2>
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          {% set kpis = [
+            { name: "MTTR por severidade", name_en: "MTTR by severity", desc_pt: "Tempo para corrigir Critical / High / Medium / Low. Meta: Crítico < 7 dias.", desc_en: "Time to fix Critical / High / Medium / Low. Target: Critical < 7 days." },
+            { name: "Escape rate", name_en: "Escape rate", desc_pt: "% de vulnerabilidades encontradas em produção que deveriam ter sido pegas antes. Meta: < 10%.", desc_en: "% of vulnerabilities found in production that should have been caught earlier. Target: < 10%." },
+            { name: "Pipeline coverage", name_en: "Pipeline coverage", desc_pt: "% de repositórios com SAST + SCA + secret scanning. Meta: > 90%.", desc_en: "% of repositories with SAST + SCA + secret scanning. Target: > 90%." },
+            { name: "Vulnerability age", name_en: "Vulnerability age", desc_pt: "Idade média dos achados críticos abertos. Meta: < 30 dias.", desc_en: "Average age of open critical findings. Target: < 30 days." },
+            { name: "Deploy frequency", name_en: "Deploy frequency", desc_pt: "Métrica DORA: frequência de deploy seguro. DevSecOps não pode travar entregas.", desc_en: "DORA metric: how often we deploy safely. DevSecOps should not slow delivery." },
+            { name: "Change failure rate", name_en: "Change failure rate", desc_pt: "Deploys que causam incidentes. DORA + segurança.", desc_en: "Deploys that cause incidents. DORA + security." },
+            { name: "Dependency freshness", name_en: "Dependency freshness", desc_pt: "% de dependências dentro de 6 meses da mais recente. Meta: > 80%.", desc_en: "% of dependencies within 6 months of latest. Target: > 80%." }
+          ] %}
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            {% for kpi in kpis %}
+            <div class="wow fadeInUp" style="display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 22px;transition:border-color .2s,background .2s;" onmouseover="this.style.borderColor='rgba(0,224,163,.25)';this.style.background='rgba(0,224,163,.05)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)';this.style.background='rgba(255,255,255,.03)'">
+              <div style="min-width:32px;height:32px;background:rgba(0,224,163,.15);border:1px solid rgba(0,224,163,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="color:#00e0a3;font-weight:800;font-size:.82rem;">{{ loop.index }}</span>
+              </div>
+              <div style="padding-top:4px;">
+                <strong style="color:#00e0a3;font-size:.95rem;">{{ kpi.name_en if lang == "en" else kpi.name }}</strong>
+                <span style="color:rgba(255,255,255,.65);font-size:.9rem;"> — {{ kpi.desc_en if lang == "en" else kpi.desc_pt }}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 ERROS -->
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Watch out{% else %}Atenção{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}4 mistakes that kill 80% of DevSecOps programs{% else %}4 erros que matam 80% dos programas DevSecOps{% endif %}</h2>
-      <div class="ev-pain-grid">
+      <div class="ev-pain-grid mt-4">
         <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-ban"></i></div><p><strong>{% if lang == "en" %}Security-as-a-gatekeeper{% else %}Segurança como gatekeeper{% endif %}</strong> — {% if lang == "en" %}blocking deploys without context kills credibility and bypass grows.{% else %}bloquear deploy sem contexto mata credibilidade e vira bypass.{% endif %}</p></div>
         <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-tools"></i></div><p><strong>{% if lang == "en" %}Tools without process{% else %}Ferramentas sem processo{% endif %}</strong> — {% if lang == "en" %}buying 5 platforms without model, RACI or SLA produces shelfware.{% else %}comprar 5 plataformas sem modelo, RACI e SLA gera shelfware.{% endif %}</p></div>
         <div class="ev-pain-card wow fadeInUp"><div class="ev-pain-card__icon"><i class="fas fa-user-slash"></i></div><p><strong>{% if lang == "en" %}Zero developer ownership{% else %}Zero ownership do dev{% endif %}</strong> — {% if lang == "en" %}if a developer does not see, fix and close findings, there is no DevSecOps.{% else %}se o dev não vê, não corrige e não fecha achados, não existe DevSecOps.{% endif %}</p></div>
@@ -157,15 +221,27 @@ langEnUrl: "/en/guides/devsecops/"
     </div>
   </section>
 
-  <!-- Interlinking -->
+  <!-- RELACIONADOS -->
   <section class="ev-section ev-section--alt">
     <div class="container">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Go deeper{% else %}Aprofunde{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Related content{% else %}Conteúdos relacionados{% endif %}</h2>
-      <div class="row mt-4">
-        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/guias/sast-vs-dast-vs-sca/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">SAST vs DAST vs SCA</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Differences, blind spots and how to combine them in CI/CD.{% else %}Diferenças, pontos cegos e como combinar no CI/CD.{% endif %}</p></a></div>
-        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/solucoes/secure-code/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">Secure Code</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Evernow Secure Code pillar: AppSec + DevSecOps end-to-end.{% else %}Pilar Secure Code da Evernow: AppSec + DevSecOps ponta a ponta.{% endif %}</p></a></div>
-        <div class="col-md-4 mb-4"><a href="{{ urlPrefix }}/produtos/devsecops/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;"><h5 style="color:#fff;">{% if lang == "en" %}Managed DevSecOps{% else %}DevSecOps gerenciado{% endif %}</h5><p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Designed, deployed and operated by Evernow.{% else %}Projetado, implantado e operado pela Evernow.{% endif %}</p></a></div>
+      <div class="ev-related-grid mt-4">
+        <a href="{{ urlPrefix }}/guias/sast-vs-dast-vs-sca/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-search-plus" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>SAST vs DAST vs SCA</h5>
+          <p>{% if lang == "en" %}Differences, blind spots and how to combine them in CI/CD.{% else %}Diferenças, pontos cegos e como combinar no CI/CD.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/solucoes/secure-code/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-shield-alt" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>Secure Code</h5>
+          <p>{% if lang == "en" %}Evernow Secure Code pillar: AppSec + DevSecOps end-to-end.{% else %}Pilar Secure Code da Evernow: AppSec + DevSecOps ponta a ponta.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/produtos/devsecops/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-cogs" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>{% if lang == "en" %}Managed DevSecOps{% else %}DevSecOps gerenciado{% endif %}</h5>
+          <p>{% if lang == "en" %}Designed, deployed and operated by Evernow.{% else %}Projetado, implantado e operado pela Evernow.{% endif %}</p>
+        </a>
       </div>
     </div>
   </section>
@@ -184,11 +260,7 @@ langEnUrl: "/en/guides/devsecops/"
   "headline": "{% if lang == 'en' %}DevSecOps: the complete 2026 guide{% else %}DevSecOps: o guia completo de 2026{% endif %}",
   "description": "{% if lang == 'en' %}What DevSecOps is, how to implement it across the CI/CD pipeline, executive KPIs and common mistakes.{% else %}O que é DevSecOps, como implementar no pipeline CI/CD, KPIs executivos e erros comuns.{% endif %}",
   "author": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Evernow",
-    "logo": { "@type": "ImageObject", "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png" }
-  },
+  "publisher": { "@type": "Organization", "name": "Evernow", "logo": { "@type": "ImageObject", "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png" } },
   "datePublished": "2026-04-22",
   "inLanguage": "{% if lang == 'en' %}en{% else %}pt-BR{% endif %}",
   "mainEntityOfPage": "https://evernow.com.br{% if lang == 'en' %}/en/guides/devsecops/{% else %}/guias/devsecops/{% endif %}"
