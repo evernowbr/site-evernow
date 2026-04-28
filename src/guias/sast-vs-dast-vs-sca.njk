@@ -25,25 +25,51 @@ langEnUrl: "/en/guides/sast-vs-dast-vs-sca/"
     {% include "components/header.njk" %}
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="banner-main-con">
+    <section class="banner-main-con ev-hero" style="padding:60px 0 50px;">
       <div class="container">
-        <div class="banner-con">
-          <div class="row align-items-center">
-            <div class="col-lg-8 banner-main-left-con">
-              <div class="banner-left-con wow slideInLeft">
-                <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:12px;">{% if lang == "en" %}Guide · AppSec{% else %}Guia · AppSec{% endif %}</p>
-                <div class="banner-heading">
-                  <h1>SAST vs DAST vs SCA</h1>
+        <div class="row align-items-center">
+          <div class="col-lg-7 wow slideInLeft">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px;">
+              <span style="background:rgba(0,224,163,.12);border:1px solid rgba(0,224,163,.3);color:#00e0a3;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:20px;">{% if lang == "en" %}Guide · AppSec{% else %}Guia · AppSec{% endif %}</span>
+              <span style="color:rgba(255,255,255,.4);font-size:.78rem;"><i class="fas fa-clock" style="margin-right:5px;"></i>{% if lang == "en" %}10 min read{% else %}10 min de leitura{% endif %}</span>
+              <span style="color:rgba(255,255,255,.4);font-size:.78rem;"><i class="fas fa-calendar-alt" style="margin-right:5px;"></i>{% if lang == "en" %}Updated Apr 2026{% else %}Atualizado Abr 2026{% endif %}</span>
+            </div>
+            <h1 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;line-height:1.15;">
+              <span style="color:#00e0a3;">SAST</span> vs <span style="color:#5b8fff;">DAST</span> vs <span style="color:#a855f7;">SCA</span>
+            </h1>
+            <p class="ev-hero__sub mt-3">
+              {% if lang == "en" %}The three most confused tools in AppSec. What each one really sees, where each one fails, and how to combine them in a CI/CD pipeline without slowing delivery.{% else %}As três ferramentas mais confundidas em AppSec. O que cada uma enxerga de verdade, onde falha e como combiná-las em um pipeline CI/CD sem travar entregas.{% endif %}
+            </p>
+            <div class="ev-hero__trust mt-4">
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Detection comparison table{% else %}Tabela comparativa de detecção{% endif %}</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Practical CI/CD integration{% else %}Integração CI/CD prática{% endif %}</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Recommended tools{% else %}Ferramentas recomendadas{% endif %}</span>
+            </div>
+            <div class="mt-4 d-flex flex-wrap" style="gap:14px;">
+              <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to an AppSec specialist{% else %}Fale com um especialista AppSec{% endif %}</a>
+              <a href="{{ urlPrefix }}/solucoes/secure-code/" class="ev-btn-outline">{% if lang == "en" %}See Secure Code{% else %}Ver Secure Code{% endif %}</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 wow slideInRight mt-5 mt-lg-0">
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(0,224,163,.2);border-radius:14px;padding:28px;">
+              <p style="color:#00e0a3;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;">{% if lang == "en" %}Quick comparison{% else %}Comparação rápida{% endif %}</p>
+              <div style="display:flex;flex-direction:column;gap:0;">
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);">
+                  <span style="font-weight:700;color:#00e0a3;font-size:.9rem;">SAST</span>
+                  <span style="font-size:.82rem;color:rgba(255,255,255,.65);">{% if lang == "en" %}Source code, pre-commit{% else %}Código-fonte, pré-commit{% endif %}</span>
                 </div>
-                <div class="banner-content">
-                  <p class="col-lg-11 pl-0 pr-0" style="color:rgba(255,255,255,.85);">
-                    {% if lang == "en" %}The three most confused tools in AppSec. What each one really sees, where each one fails, and how to combine them in a CI/CD pipeline without slowing delivery.{% else %}As três ferramentas mais confundidas em AppSec. O que cada uma enxerga de verdade, onde falha e como combiná-las em um pipeline CI/CD sem travar entregas.{% endif %}
-                  </p>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);">
+                  <span style="font-weight:700;color:#5b8fff;font-size:.9rem;">DAST</span>
+                  <span style="font-size:.82rem;color:rgba(255,255,255,.65);">{% if lang == "en" %}Running app, staging{% else %}App rodando, staging{% endif %}</span>
                 </div>
-                <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
-                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to an AppSec specialist{% else %}Fale com um especialista AppSec{% endif %}</a>
-                  <a href="{{ urlPrefix }}/solucoes/secure-code/" class="ev-btn-outline">{% if lang == "en" %}See Secure Code{% else %}Ver Secure Code{% endif %}</a>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
+                  <span style="font-weight:700;color:#a855f7;font-size:.9rem;">SCA</span>
+                  <span style="font-size:.82rem;color:rgba(255,255,255,.65);">{% if lang == "en" %}Dependencies, CVE/NVD{% else %}Dependências, CVE/NVD{% endif %}</span>
                 </div>
+              </div>
+              <div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+                <p style="font-size:.82rem;color:rgba(255,255,255,.5);margin:0;font-style:italic;">{% if lang == "en" %}No single tool covers 100%. You need all three layers.{% else %}Nenhuma ferramenta sozinha cobre 100%. Precisa das três camadas.{% endif %}</p>
               </div>
             </div>
           </div>
@@ -54,83 +80,115 @@ langEnUrl: "/en/guides/sast-vs-dast-vs-sca/"
 </div>
 
 <main>
-  <!-- TL;DR comparative -->
-  <section class="ev-section">
-    <div class="container">
+
+  <!-- 3 CARDS PRINCIPAIS -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Quick answer{% else %}Resposta rápida{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Each tool covers a different layer{% else %}Cada ferramenta cobre uma camada diferente{% endif %}</h2>
-      <div class="row mt-4">
-        <div class="col-lg-4 mb-4">
-          <div style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.25);border-radius:12px;padding:28px;height:100%;">
-            <h4 style="color:#00e0a3;">SAST</h4>
-            <p style="font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);">{% if lang == "en" %}Static Application Security Testing{% else %}Análise Estática{% endif %}</p>
-            <p>{% if lang == "en" %}Reads your <strong>source code</strong> without running it. Finds SQL injection, insecure deserialization, hardcoded secrets, unsafe APIs.{% else %}Lê seu <strong>código-fonte</strong> sem executá-lo. Encontra SQL injection, desserialização insegura, secrets hardcoded, uso de APIs inseguras.{% endif %}</p>
-            <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:14px;"><strong>{% if lang == "en" %}Stage:{% else %}Momento:{% endif %}</strong> {% if lang == "en" %}IDE + pull request{% else %}IDE + pull request{% endif %}</p>
+      <div class="row mt-5">
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;height:100%;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:#00e0a3;border-radius:14px 0 0 14px;"></div>
+            <div style="width:44px;height:44px;background:rgba(0,224,163,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+              <i class="fas fa-code" style="color:#00e0a3;font-size:1.1rem;"></i>
+            </div>
+            <h4 style="color:#00e0a3;font-size:1.3rem;font-weight:800;margin-bottom:4px;">SAST</h4>
+            <p style="font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:14px;">{% if lang == "en" %}Static Application Security Testing{% else %}Análise Estática{% endif %}</p>
+            <p style="color:rgba(255,255,255,.8);line-height:1.7;">{% if lang == "en" %}Reads your <strong>source code</strong> without running it. Finds SQL injection, insecure deserialization, hardcoded secrets, unsafe APIs.{% else %}Lê seu <strong>código-fonte</strong> sem executá-lo. Encontra SQL injection, desserialização insegura, secrets hardcoded, uso de APIs inseguras.{% endif %}</p>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+              <span style="font-size:.82rem;color:rgba(255,255,255,.5);"><i class="fas fa-clock" style="margin-right:6px;color:#00e0a3;"></i>{% if lang == "en" %}Stage: IDE + pull request{% else %}Momento: IDE + pull request{% endif %}</span>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
-          <div style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.25);border-radius:12px;padding:28px;height:100%;">
-            <h4 style="color:#00e0a3;">DAST</h4>
-            <p style="font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);">{% if lang == "en" %}Dynamic Application Security Testing{% else %}Análise Dinâmica{% endif %}</p>
-            <p>{% if lang == "en" %}Attacks your <strong>running application</strong>, like an external hacker. Finds XSS, auth flaws, misconfig, IDOR, broken business logic.{% else %}Ataca sua <strong>aplicação rodando</strong>, como um hacker externo. Encontra XSS, falhas de auth, misconfig, IDOR, lógica quebrada.{% endif %}</p>
-            <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:14px;"><strong>{% if lang == "en" %}Stage:{% else %}Momento:{% endif %}</strong> {% if lang == "en" %}Staging / pre-prod{% else %}Staging / pré-prod{% endif %}</p>
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;height:100%;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:#5b8fff;border-radius:14px 0 0 14px;"></div>
+            <div style="width:44px;height:44px;background:rgba(91,143,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+              <i class="fas fa-bug" style="color:#5b8fff;font-size:1.1rem;"></i>
+            </div>
+            <h4 style="color:#5b8fff;font-size:1.3rem;font-weight:800;margin-bottom:4px;">DAST</h4>
+            <p style="font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:14px;">{% if lang == "en" %}Dynamic Application Security Testing{% else %}Análise Dinâmica{% endif %}</p>
+            <p style="color:rgba(255,255,255,.8);line-height:1.7;">{% if lang == "en" %}Attacks your <strong>running application</strong>, like an external hacker. Finds XSS, auth flaws, misconfig, IDOR, broken business logic.{% else %}Ataca sua <strong>aplicação rodando</strong>, como um hacker externo. Encontra XSS, falhas de auth, misconfig, IDOR, lógica quebrada.{% endif %}</p>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+              <span style="font-size:.82rem;color:rgba(255,255,255,.5);"><i class="fas fa-clock" style="margin-right:6px;color:#5b8fff;"></i>{% if lang == "en" %}Stage: Staging / pre-prod{% else %}Momento: Staging / pré-prod{% endif %}</span>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
-          <div style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.25);border-radius:12px;padding:28px;height:100%;">
-            <h4 style="color:#00e0a3;">SCA</h4>
-            <p style="font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);">{% if lang == "en" %}Software Composition Analysis{% else %}Análise de Dependências{% endif %}</p>
-            <p>{% if lang == "en" %}Maps your <strong>open-source dependencies</strong> and cross-references with CVE/NVD. Finds vulnerable libraries, incompatible licenses, transitive risks.{% else %}Mapeia as <strong>dependências open-source</strong> e cruza com CVE/NVD. Encontra libs vulneráveis, licenças incompatíveis, riscos transitivos.{% endif %}</p>
-            <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:14px;"><strong>{% if lang == "en" %}Stage:{% else %}Momento:{% endif %}</strong> {% if lang == "en" %}Build + continuous{% else %}Build + contínuo{% endif %}</p>
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;height:100%;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:#a855f7;border-radius:14px 0 0 14px;"></div>
+            <div style="width:44px;height:44px;background:rgba(168,85,247,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+              <i class="fas fa-cubes" style="color:#a855f7;font-size:1.1rem;"></i>
+            </div>
+            <h4 style="color:#a855f7;font-size:1.3rem;font-weight:800;margin-bottom:4px;">SCA</h4>
+            <p style="font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:14px;">{% if lang == "en" %}Software Composition Analysis{% else %}Análise de Dependências{% endif %}</p>
+            <p style="color:rgba(255,255,255,.8);line-height:1.7;">{% if lang == "en" %}Maps your <strong>open-source dependencies</strong> and cross-references with CVE/NVD. Finds vulnerable libraries, incompatible licenses, transitive risks.{% else %}Mapeia as <strong>dependências open-source</strong> e cruza com CVE/NVD. Encontra libs vulneráveis, licenças incompatíveis, riscos transitivos.{% endif %}</p>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);">
+              <span style="font-size:.82rem;color:rgba(255,255,255,.5);"><i class="fas fa-clock" style="margin-right:6px;color:#a855f7;"></i>{% if lang == "en" %}Stage: Build + continuous{% else %}Momento: Build + contínuo{% endif %}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Tabela comparativa -->
+  <!-- TABELA COMPARATIVA -->
   <section class="ev-section ev-section--alt">
     <div class="container">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Side-by-side{% else %}Lado a lado{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}What each tool really finds (and misses){% else %}O que cada ferramenta realmente encontra (e deixa passar){% endif %}</h2>
       <div class="row mt-4">
-        <div class="col-lg-10 mx-auto">
-          <div style="overflow-x:auto;">
-            <table style="width:100%;border-collapse:collapse;background:rgba(255,255,255,.03);">
+        <div class="col-lg-11 mx-auto">
+          <div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(255,255,255,.08);">
+            <table style="width:100%;border-collapse:collapse;min-width:480px;">
               <thead>
-                <tr style="background:rgba(0,224,163,.1);">
-                  <th style="padding:14px;text-align:left;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">{% if lang == "en" %}Vulnerability{% else %}Vulnerabilidade{% endif %}</th>
-                  <th style="padding:14px;text-align:center;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">SAST</th>
-                  <th style="padding:14px;text-align:center;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">DAST</th>
-                  <th style="padding:14px;text-align:center;color:#00e0a3;border-bottom:1px solid rgba(255,255,255,.1);">SCA</th>
+                <tr style="background:rgba(0,224,163,.08);">
+                  <th style="padding:16px 20px;text-align:left;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.6);">{% if lang == "en" %}Vulnerability{% else %}Vulnerabilidade{% endif %}</th>
+                  <th style="padding:16px 20px;text-align:center;color:#00e0a3;font-size:.88rem;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);">SAST</th>
+                  <th style="padding:16px 20px;text-align:center;color:#5b8fff;font-size:.88rem;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);">DAST</th>
+                  <th style="padding:16px 20px;text-align:center;color:#a855f7;font-size:.88rem;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);">SCA</th>
                 </tr>
               </thead>
-              <tbody style="color:rgba(255,255,255,.85);">
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">SQL Injection</td><td style="text-align:center;">✅</td><td style="text-align:center;">✅</td><td style="text-align:center;">—</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">XSS</td><td style="text-align:center;">⚠️</td><td style="text-align:center;">✅</td><td style="text-align:center;">—</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">Broken Authentication</td><td style="text-align:center;">—</td><td style="text-align:center;">✅</td><td style="text-align:center;">—</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">IDOR / Broken Access Control</td><td style="text-align:center;">—</td><td style="text-align:center;">✅</td><td style="text-align:center;">—</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">Hardcoded secrets</td><td style="text-align:center;">✅</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">Log4Shell (CVE-2021-44228)</td><td style="text-align:center;">—</td><td style="text-align:center;">⚠️</td><td style="text-align:center;">✅</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">{% if lang == "en" %}Vulnerable transitive dep{% else %}Dependência transitiva vulnerável{% endif %}</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✅</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">{% if lang == "en" %}Incompatible license (GPL){% else %}Licença incompatível (GPL){% endif %}</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✅</td></tr>
-                <tr><td style="padding:12px;border-bottom:1px solid rgba(255,255,255,.05);">{% if lang == "en" %}Insecure deserialization{% else %}Desserialização insegura{% endif %}</td><td style="text-align:center;">✅</td><td style="text-align:center;">⚠️</td><td style="text-align:center;">—</td></tr>
-                <tr><td style="padding:12px;">{% if lang == "en" %}Business logic flaw{% else %}Falha de lógica de negócio{% endif %}</td><td style="text-align:center;">—</td><td style="text-align:center;">⚠️</td><td style="text-align:center;">—</td></tr>
+              <tbody>
+                {% set rows = [
+                  { v: "SQL Injection", s: "✅", d: "✅", c: "—" },
+                  { v: "XSS", s: "⚠️", d: "✅", c: "—" },
+                  { v: "Broken Authentication", s: "—", d: "✅", c: "—" },
+                  { v: "IDOR / Broken Access Control", s: "—", d: "✅", c: "—" },
+                  { v: "Hardcoded secrets", s: "✅", d: "—", c: "—" },
+                  { v: "Log4Shell (CVE-2021-44228)", s: "—", d: "⚠️", c: "✅" },
+                  { v_pt: "Dependência transitiva vulnerável", v_en: "Vulnerable transitive dep", s: "—", d: "—", c: "✅" },
+                  { v_pt: "Licença incompatível (GPL)", v_en: "Incompatible license (GPL)", s: "—", d: "—", c: "✅" },
+                  { v_pt: "Desserialização insegura", v_en: "Insecure deserialization", s: "✅", d: "⚠️", c: "—" },
+                  { v_pt: "Falha de lógica de negócio", v_en: "Business logic flaw", s: "—", d: "⚠️", c: "—" }
+                ] %}
+                {% for row in rows %}
+                <tr style="{% if loop.index % 2 == 0 %}background:rgba(255,255,255,.02);{% endif %}transition:background .15s;" onmouseover="this.style.background='rgba(0,224,163,.04)'" onmouseout="this.style.background='{% if loop.index % 2 == 0 %}rgba(255,255,255,.02){% else %}transparent{% endif %}'">
+                  <td style="padding:13px 20px;color:rgba(255,255,255,.8);font-size:.9rem;{% if not loop.last %}border-bottom:1px solid rgba(255,255,255,.05);{% endif %}">{{ (row.v_en if lang == "en" else row.v_pt) if row.v_pt else row.v }}</td>
+                  <td style="padding:13px 20px;text-align:center;font-size:1.1rem;{% if not loop.last %}border-bottom:1px solid rgba(255,255,255,.05);{% endif %}">{{ row.s }}</td>
+                  <td style="padding:13px 20px;text-align:center;font-size:1.1rem;{% if not loop.last %}border-bottom:1px solid rgba(255,255,255,.05);{% endif %}">{{ row.d }}</td>
+                  <td style="padding:13px 20px;text-align:center;font-size:1.1rem;{% if not loop.last %}border-bottom:1px solid rgba(255,255,255,.05);{% endif %}">{{ row.c }}</td>
+                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div>
-          <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-top:14px;">✅ {% if lang == "en" %}detects{% else %}detecta{% endif %} · ⚠️ {% if lang == "en" %}partial detection{% else %}detecção parcial{% endif %} · — {% if lang == "en" %}blind spot{% else %}ponto cego{% endif %}</p>
-          <p style="margin-top:18px;"><strong>{% if lang == "en" %}Conclusion:{% else %}Conclusão:{% endif %}</strong> {% if lang == "en" %}no single tool covers 100%. Using only SAST leaves logic flaws exposed. Using only DAST misses hardcoded secrets. Using only SCA misses your own code. You need the three layers.{% else %}nenhuma ferramenta sozinha cobre 100%. Usar só SAST deixa lógica exposta. Usar só DAST ignora secrets. Usar só SCA ignora seu próprio código. Precisa das três camadas.{% endif %}</p>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.45);margin-top:14px;">✅ {% if lang == "en" %}detects{% else %}detecta{% endif %} · ⚠️ {% if lang == "en" %}partial detection{% else %}detecção parcial{% endif %} · — {% if lang == "en" %}blind spot{% else %}ponto cego{% endif %}</p>
+          <div style="background:rgba(0,224,163,.06);border-left:4px solid #00e0a3;border-radius:0 10px 10px 0;padding:16px 20px;margin-top:20px;">
+            <p style="margin:0;color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.7;"><strong>{% if lang == "en" %}Conclusion:{% else %}Conclusão:{% endif %}</strong> {% if lang == "en" %}No single tool covers 100%. Using only SAST leaves logic flaws exposed. Using only DAST misses hardcoded secrets. Using only SCA misses your own code. You need the three layers.{% else %}Nenhuma ferramenta sozinha cobre 100%. Usar só SAST deixa lógica exposta. Usar só DAST ignora secrets. Usar só SCA ignora seu próprio código. Precisa das três camadas.{% endif %}</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pipeline integrado -->
+  <!-- PIPELINE INTEGRADO -->
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Practical pipeline{% else %}Pipeline prático{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}How to integrate the three in CI/CD without slowing delivery{% else %}Como integrar os três no CI/CD sem travar entregas{% endif %}</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5">{% if lang == "en" %}Each stage has its own time budget — the right tool at the right gate.{% else %}Cada estágio tem seu próprio orçamento de tempo — a ferramenta certa na porta certa.{% endif %}</p>
       <div class="ev-delivery-grid">
         <div class="ev-delivery-card wow fadeInUp">
           <div class="ev-delivery-card__icon"><i class="fas fa-code"></i></div>
@@ -154,7 +212,7 @@ langEnUrl: "/en/guides/sast-vs-dast-vs-sca/"
         </div>
         <div class="ev-delivery-card wow fadeInUp">
           <div class="ev-delivery-card__icon"><i class="fas fa-rocket"></i></div>
-          <h4>5. Produção</h4>
+          <h4>5. {% if lang == "en" %}Production{% else %}Produção{% endif %}</h4>
           <p>{% if lang == "en" %}Continuous SCA (new CVEs on deployed artifacts) + external DAST monitoring. Alert on every new CVSS ≥ 7.{% else %}SCA contínuo (novas CVEs em artefatos deployados) + monitoramento DAST externo. Alerta a cada nova CVE CVSS ≥ 7.{% endif %}</p>
         </div>
         <div class="ev-delivery-card wow fadeInUp">
@@ -166,48 +224,61 @@ langEnUrl: "/en/guides/sast-vs-dast-vs-sca/"
     </div>
   </section>
 
-  <!-- Ferramentas recomendadas -->
+  <!-- MID-PAGE CTA -->
+  <section style="background:linear-gradient(90deg,rgba(0,224,163,.12) 0%,rgba(0,224,163,.03) 100%);border-top:1px solid rgba(0,224,163,.2);border-bottom:1px solid rgba(0,224,163,.2);padding:40px 0;">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:8px;color:#fff;">
+            {% if lang == "en" %}Need help designing your AppSec pipeline?{% else %}Precisa estruturar seu pipeline AppSec?{% endif %}
+          </h3>
+          <p style="color:rgba(255,255,255,.7);margin:0;font-size:.95rem;">
+            {% if lang == "en" %}Free 30-minute call to map your gaps and recommend the right toolset.{% else %}30 min gratuitos para mapear seus gaps e recomendar o toolset certo.{% endif %}
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-right">
+          <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FERRAMENTAS RECOMENDADAS -->
   <section class="ev-section ev-section--alt">
     <div class="container">
       <div class="ev-section__tag wow fadeInUp">{% if lang == "en" %}Recommended tooling{% else %}Ferramentas recomendadas{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if lang == "en" %}Platforms Evernow deploys in production{% else %}Plataformas que a Evernow implanta em produção{% endif %}</h2>
-      <div class="row mt-4">
-        <div class="col-md-4 mb-4">
-          <a href="{{ urlPrefix }}/parceiros/fortify/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;">
-            <h5 style="color:#fff;">Fortify · SAST + DAST</h5>
-            <p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Gartner leader, deep coverage in Java, .NET, C/C++.{% else %}Líder Gartner, cobertura profunda em Java, .NET, C/C++.{% endif %}</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="{{ urlPrefix }}/parceiros/sonarqube/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;">
-            <h5 style="color:#fff;">SonarQube · SAST</h5>
-            <p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Dev-first experience, low false-positive rate, deep IDE integration.{% else %}Experiência dev-first, baixo falso-positivo, integração profunda com IDE.{% endif %}</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="{{ urlPrefix }}/parceiros/semgrep/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;">
-            <h5 style="color:#fff;">Semgrep · SAST + Secrets</h5>
-            <p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Fast, open-source foundation, custom rules, PR-first feedback.{% else %}Rápido, base open-source, regras customizadas, feedback em PR.{% endif %}</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="{{ urlPrefix }}/parceiros/sonatype/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;">
-            <h5 style="color:#fff;">Sonatype · SCA</h5>
-            <p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Governed repository + full dependency intelligence.{% else %}Repositório governado + inteligência completa de dependências.{% endif %}</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="{{ urlPrefix }}/parceiros/veracode/" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:24px;text-decoration:none;height:100%;">
-            <h5 style="color:#fff;">Veracode · SAST + DAST + SCA</h5>
-            <p style="color:rgba(255,255,255,.7);font-size:.9rem;">{% if lang == "en" %}Unified AppSec platform, strong for regulated industries.{% else %}Plataforma AppSec unificada, forte em setores regulados.{% endif %}</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="{{ urlPrefix }}/produtos/sast-dast-sca/" style="display:block;background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.3);border-radius:10px;padding:24px;text-decoration:none;height:100%;">
-            <h5 style="color:#00e0a3;">{% if lang == "en" %}→ Managed service{% else %}→ Serviço gerenciado{% endif %}</h5>
-            <p style="color:rgba(255,255,255,.75);font-size:.9rem;">{% if lang == "en" %}Evernow designs, deploys and operates your full SAST/DAST/SCA program.{% else %}A Evernow projeta, implanta e opera seu programa completo SAST/DAST/SCA.{% endif %}</p>
-          </a>
-        </div>
+      <div class="ev-related-grid mt-4">
+        <a href="{{ urlPrefix }}/parceiros/fortify/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-shield-alt" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>Fortify · SAST + DAST</h5>
+          <p>{% if lang == "en" %}Gartner leader, deep coverage in Java, .NET, C/C++.{% else %}Líder Gartner, cobertura profunda em Java, .NET, C/C++.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/parceiros/sonarqube/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-code" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>SonarQube · SAST</h5>
+          <p>{% if lang == "en" %}Dev-first experience, low false-positive rate, deep IDE integration.{% else %}Experiência dev-first, baixo falso-positivo, integração profunda com IDE.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/parceiros/semgrep/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-search" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>Semgrep · SAST + Secrets</h5>
+          <p>{% if lang == "en" %}Fast, open-source foundation, custom rules, PR-first feedback.{% else %}Rápido, base open-source, regras customizadas, feedback em PR.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/parceiros/sonatype/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-cubes" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>Sonatype · SCA</h5>
+          <p>{% if lang == "en" %}Governed repository + full dependency intelligence.{% else %}Repositório governado + inteligência completa de dependências.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/parceiros/veracode/" class="ev-related-card wow fadeInUp">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-layer-group" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5>Veracode · SAST + DAST + SCA</h5>
+          <p>{% if lang == "en" %}Unified AppSec platform, strong for regulated industries.{% else %}Plataforma AppSec unificada, forte em setores regulados.{% endif %}</p>
+        </a>
+        <a href="{{ urlPrefix }}/produtos/sast-dast-sca/" class="ev-related-card wow fadeInUp" style="border-color:rgba(0,224,163,.3);background:rgba(0,224,163,.06);">
+          <div style="width:36px;height:36px;background:rgba(0,224,163,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><i class="fas fa-arrow-right" style="color:#00e0a3;font-size:.9rem;"></i></div>
+          <h5 style="color:#00e0a3;">{% if lang == "en" %}Managed service{% else %}Serviço gerenciado{% endif %}</h5>
+          <p>{% if lang == "en" %}Evernow designs, deploys and operates your full SAST/DAST/SCA program.{% else %}A Evernow projeta, implanta e opera seu programa completo SAST/DAST/SCA.{% endif %}</p>
+        </a>
       </div>
     </div>
   </section>
@@ -226,11 +297,7 @@ langEnUrl: "/en/guides/sast-vs-dast-vs-sca/"
   "headline": "SAST vs DAST vs SCA",
   "description": "{% if lang == 'en' %}Differences between SAST, DAST and SCA, where each fails, and how to integrate the three in CI/CD without slowing delivery.{% else %}Diferenças entre SAST, DAST e SCA, onde cada um falha e como integrar os três no CI/CD sem travar entregas.{% endif %}",
   "author": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Evernow",
-    "logo": { "@type": "ImageObject", "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png" }
-  },
+  "publisher": { "@type": "Organization", "name": "Evernow", "logo": { "@type": "ImageObject", "url": "https://evernow.com.br/assets/image/logo/evernow-dark.png" } },
   "datePublished": "2026-04-22",
   "inLanguage": "{% if lang == 'en' %}en{% else %}pt-BR{% endif %}",
   "mainEntityOfPage": "https://evernow.com.br{% if lang == 'en' %}/en/guides/sast-vs-dast-vs-sca/{% else %}/guias/sast-vs-dast-vs-sca/{% endif %}"
