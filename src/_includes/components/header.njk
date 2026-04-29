@@ -149,11 +149,11 @@
             <!-- Mobile: lang switcher -->
             <li class="nav-item d-lg-none mt-3">
               {% if lang == 'pt' %}
-              <a href="{{ langEnUrl if langEnUrl else '/en' + page.url }}" class="lang-flag-btn" data-set-lang="en" aria-label="Switch to English">
+              <a href="{{ langEnUrl if langEnUrl else '/en' + (page.url | replace('.html','')) }}" class="lang-flag-btn" data-set-lang="en" aria-label="Switch to English">
                 <span class="lang-flag">🇺🇸</span><span class="lang-flag-text">EN</span>
               </a>
               {% else %}
-              <a href="{{ langPtUrl if langPtUrl else (page.url | replace('/en/', '/')) }}" class="lang-flag-btn" data-set-lang="pt" aria-label="Mudar para Português">
+              <a href="{{ langPtUrl if langPtUrl else ((page.url | replace('/en/', '/')) | replace('.html','')) }}" class="lang-flag-btn" data-set-lang="pt" aria-label="Mudar para Português">
                 <span class="lang-flag">🇧🇷</span><span class="lang-flag-text">PT</span>
               </a>
               {% endif %}
@@ -163,11 +163,11 @@
           <a href="{{ urlPrefix }}/contact" class="my-2 my-sm-0 contact-btn ev-contact-btn">{{ "nav.contato" | t }}</a>
 
           {% if lang == 'pt' %}
-          <a href="{{ langEnUrl if langEnUrl else '/en' + page.url }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="en" aria-label="Switch to English">
+          <a href="{{ langEnUrl if langEnUrl else '/en' + (page.url | replace('.html','')) }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="en" aria-label="Switch to English">
             <span class="lang-flag">🇺🇸</span><span class="lang-flag-text">EN</span>
           </a>
           {% else %}
-          <a href="{{ langPtUrl if langPtUrl else (page.url | replace('/en/', '/')) }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="pt" aria-label="Mudar para Português">
+          <a href="{{ langPtUrl if langPtUrl else ((page.url | replace('/en/', '/')) | replace('.html','')) }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="pt" aria-label="Mudar para Português">
             <span class="lang-flag">🇧🇷</span><span class="lang-flag-text">PT</span>
           </a>
           {% endif %}

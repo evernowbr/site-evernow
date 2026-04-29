@@ -114,11 +114,11 @@ eleventyExcludeFromCollections: true
 {%- endif -%}
 {%- endfor %}
 
-{# ── Posts de blog (mantêm .html — sem migração) ──────────────────────── #}
+{# ── Posts de blog (URLs limpas — .html fica no arquivo, sitemap usa URL canônica) #}
 {%- for post in blogPostPages -%}
 {%- if post.lang == 'pt' -%}
-{%- set _ptUrl = "/blog/" + post.slug + ".html" -%}
-{%- set _enUrl = "/en/blog/" + post.slug + ".html" -%}
+{%- set _ptUrl = "/blog/" + post.slug -%}
+{%- set _enUrl = "/en/blog/" + post.slug -%}
   <url>
     <loc>https://evernow.com.br{{ _ptUrl }}</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR"     href="https://evernow.com.br{{ _ptUrl }}"/>

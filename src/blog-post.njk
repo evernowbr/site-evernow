@@ -154,7 +154,7 @@
                         {% for recent in publishedPosts %}
                            {% if shown < 9 and recent.slug != postPage.slug %}
                               <li class="sidebar-recent__item">
-                                 <a href="{{ urlPrefix }}/blog/{{ recent.slug }}.html" class="sidebar-recent__link">
+                                 <a href="{{ urlPrefix }}/blog/{{ recent.slug }}" class="sidebar-recent__link">
                                     {{ recent.title | truncate(65) }}
                                  </a>
                                  <span class="sidebar-recent__date">
@@ -200,7 +200,7 @@
   "inLanguage": "{% if lang == 'en' %}en{% else %}pt-BR{% endif %}",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://evernow.com.br{% if lang == 'en' %}/en{% endif %}/blog/{{ postPage.slug }}.html"
+    "@id": "https://evernow.com.br{% if lang == 'en' %}/en{% endif %}/blog/{{ postPage.slug }}"
   },
   "articleSection": {% if postPage.categories and postPage.categories.length %}{{ postPage.categories | dump }}{% else %}["Cibersegurança"]{% endif %},
   "keywords": {% if postPage.tags and postPage.tags.length %}{{ postPage.tags | join(", ") | dump }}{% else %}"cibersegurança, evernow"{% endif %}
