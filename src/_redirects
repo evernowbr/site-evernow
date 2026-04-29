@@ -65,6 +65,12 @@
 /nossos-parceiros/ /parceiros 301
 # /servicos já é 308 → /servicos/ pelo Cloudflare por default
 
+# Sitelinks reprovados pelo Google Ads (descobertos em 28/04 via Recomendações)
+/seguranca-de-aplicacoes  /solucoes/secure-code/ 301
+/seguranca-de-aplicacoes/ /solucoes/secure-code/ 301
+/somos-a-evernow          /about 301
+/somos-a-evernow/         /about 301
+
 # ─── ALIAS amigáveis para entrar direto em páginas-chave (sem 301, 200 rewrite) ─
 # /pentest-preco → /guias/quanto-custa-pentest/ (bom para email/LinkedIn)
 /pentest-preco /guias/quanto-custa-pentest/ 301
