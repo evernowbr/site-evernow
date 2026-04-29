@@ -13,7 +13,7 @@
                <div class="w-100 d-flex flex-column blog-card">
                   {% if post.featuredImage %}
                   <div class="post-image">
-                     <a href="/blog/{{ post.slug }}.html">
+                     <a href="/blog/{{ post.slug }}">
                         <img src="{{ post.featuredImage }}" alt="{{ post.title }}" loading="lazy" class="blog-card__img">
                      </a>
                   </div>
@@ -23,10 +23,10 @@
                         <i class="fa fa-calendar-o mr-1"></i>{{ post.datePt }}
                      </span>
                      <h3 class="blog-card__title">
-                        <a href="/blog/{{ post.slug }}.html">{{ post.title }}</a>
+                        <a href="/blog/{{ post.slug }}">{{ post.title }}</a>
                      </h3>
                      <p class="blog-card__excerpt flex-grow-1">{{ post.excerpt }}</p>
-                     <a href="/blog/{{ post.slug }}.html" class="blog-card__readmore">
+                     <a href="/blog/{{ post.slug }}" class="blog-card__readmore">
                         {{ "blog.posts.read_more" | t }} <i class="fa fa-arrow-right"></i>
                      </a>
                   </div>
