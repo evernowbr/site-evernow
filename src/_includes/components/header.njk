@@ -3,7 +3,7 @@
   <div class="container">
     <div class="header-con">
       <nav class="navbar navbar-expand-lg navbar-light p-0">
-        <a class="navbar-brand p-0" href="{{ urlPrefix }}/index.html">
+        <a class="navbar-brand p-0" href="{{ urlPrefix }}/">
           <img src="/assets/image/logo/evernow-dark.png" alt="Evernow" class="img-fluid">
         </a>
         <button class="navbar-toggler p-0 collapsed" type="button" data-toggle="collapse"
@@ -25,8 +25,8 @@
               <div class="ev-dropdown__menu">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--1">
-                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/about.html">{{ "nav.sobre" | t }}</a>
-                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/parceiros.html">{{ "nav.parceiros" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/about">{{ "nav.sobre" | t }}</a>
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/parceiros">{{ "nav.parceiros" | t }}</a>
                     <a class="ev-dropdown__item" href="https://suporte.evernow.com.br" target="_blank" rel="noopener">{{ "nav.support" | t }}</a>
                   </div>
                 </div>
@@ -139,8 +139,8 @@
               <div class="ev-dropdown__menu">
                 <div class="ev-dropdown__menu-inner">
                   <div class="ev-dropdown__grid ev-dropdown__grid--1">
-                    {% if lang != "en" %}<a class="ev-dropdown__item" href="{{ urlPrefix }}/blog.html">Blog</a>{% endif %}
-                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/assessment.html">Assessment</a>
+                    {% if lang != "en" %}<a class="ev-dropdown__item" href="{{ urlPrefix }}/blog">Blog</a>{% endif %}
+                    <a class="ev-dropdown__item" href="{{ urlPrefix }}/assessment">Assessment</a>
                   </div>
                 </div>
               </div>
@@ -160,7 +160,7 @@
             </li>
           </ul>
 
-          <a href="{{ urlPrefix }}/contact.html" class="my-2 my-sm-0 contact-btn ev-contact-btn">{{ "nav.contato" | t }}</a>
+          <a href="{{ urlPrefix }}/contact" class="my-2 my-sm-0 contact-btn ev-contact-btn">{{ "nav.contato" | t }}</a>
 
           {% if lang == 'pt' %}
           <a href="{{ langEnUrl if langEnUrl else '/en' + page.url }}" class="lang-flag-btn d-none d-lg-inline-flex" data-set-lang="en" aria-label="Switch to English">

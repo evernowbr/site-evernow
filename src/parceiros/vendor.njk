@@ -18,7 +18,7 @@ permalink: "{% if vendor.lang == 'en' %}/en/partners/{{ vendor.slug }}/{% else %
 {% endif %}
 {% set breadcrumbs = [
   { label: ("Home" if vend_lang == "en" else "Início"), url: urlPrefix + "/" },
-  { label: ("Partners" if vend_lang == "en" else "Parceiros"), url: urlPrefix + "/parceiros.html" },
+  { label: ("Partners" if vend_lang == "en" else "Parceiros"), url: urlPrefix + "/parceiros" },
   { label: vendor.nome }
 ] %}
 
@@ -36,7 +36,7 @@ permalink: "{% if vendor.lang == 'en' %}/en/partners/{{ vendor.slug }}/{% else %
           <div class="col-lg-7 col-md-7 col-sm-12">
             <div class="banner-left-con wow slideInLeft">
               <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
-                <a href="{{ urlPrefix }}/parceiros.html" style="color:#00e0a3;text-decoration:none;">{% if vend_lang == "en" %}Partners{% else %}Parceiros{% endif %}</a>
+                <a href="{{ urlPrefix }}/parceiros" style="color:#00e0a3;text-decoration:none;">{% if vend_lang == "en" %}Partners{% else %}Parceiros{% endif %}</a>
                 <span style="opacity:.4;margin:0 6px;">/</span>
                 <a href="{{ urlPrefix }}/solucoes/{{ vendor.pilarSlug }}/" style="color:#00e0a3;text-decoration:none;">{{ vendor.pilarNome }}</a>
                 <span style="opacity:.4;margin:0 6px;">/</span>{{ vendor.categoria }}
@@ -44,8 +44,8 @@ permalink: "{% if vendor.lang == 'en' %}/en/partners/{{ vendor.slug }}/{% else %
               <h1>{{ vendData.heroTitle }}</h1>
               <p class="ev-hero__sub">{{ vendData.heroSubtitle }}</p>
               <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
-                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if vend_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
-                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if vend_lang == "en" %}Request POC{% else %}Solicitar POC{% endif %}</a>
+                <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if vend_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                <a href="{{ urlPrefix }}/assessment" class="ev-btn-outline">{% if vend_lang == "en" %}Request POC{% else %}Solicitar POC{% endif %}</a>
               </div>
               <div class="ev-hero__trust mt-4">
                 <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if vend_lang == "en" %}Certified partner{% else %}Parceiro certificado{% endif %}</span>

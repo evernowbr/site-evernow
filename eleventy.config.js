@@ -2,6 +2,10 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
+  // Permite permalinks sem extensão (ex: /about em vez de /about.html).
+  // Cloudflare Pages serve arquivos sem extensão corretamente com Content-Type text/html.
+  eleventyConfig.configureErrorReporting({ allowMissingExtensions: true });
+
   // Arquivos raiz (robots.txt, _headers, _redirects, llms.txt)
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/llms.txt": "llms.txt" });

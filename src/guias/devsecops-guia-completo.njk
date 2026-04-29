@@ -16,7 +16,7 @@ langEnUrl: "/en/guides/devsecops/"
 {% set langEnUrl = "/en/guides/devsecops/" %}
 {% set breadcrumbs = [
   { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
-  { label: ("Guides" if lang == "en" else "Guias"), url: urlPrefix + "/guias/" },
+  { label: ("Guides" if lang == "en" else "Guias"), url: (urlPrefix + "/guides/") if lang == "en" else "/guias/" },
   { label: "DevSecOps" }
 ] %}
 
@@ -46,7 +46,7 @@ langEnUrl: "/en/guides/devsecops/"
               <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Common mistakes{% else %}Erros comuns{% endif %}</span>
             </div>
             <div class="mt-4 d-flex flex-wrap" style="gap:14px;">
-              <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a DevSecOps specialist{% else %}Fale com especialista DevSecOps{% endif %}</a>
+              <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Talk to a DevSecOps specialist{% else %}Fale com especialista DevSecOps{% endif %}</a>
               <a href="{{ urlPrefix }}/produtos/devsecops/" class="ev-btn-outline">{% if lang == "en" %}See managed service{% else %}Ver serviço gerenciado{% endif %}</a>
             </div>
           </div>
@@ -167,7 +167,7 @@ langEnUrl: "/en/guides/devsecops/"
           </p>
         </div>
         <div class="col-lg-4 text-lg-right">
-          <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
+          <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
         </div>
       </div>
     </div>

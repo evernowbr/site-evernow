@@ -70,8 +70,8 @@
                         {# Breadcrumb — CSS pseudo-element adds ">" between li items #}
                         <div class="breadcrumb">
                            <ul class="list-unstyled mb-0 d-flex justify-content-center flex-wrap">
-                              <li><a href="{{ urlPrefix }}/index.html" class="text-white">{{ "post.banner.home" | t }}</a></li>
-                              <li><a href="{{ urlPrefix }}/blog.html" class="text-white">{{ "post.banner.blog" | t }}</a></li>
+                              <li><a href="{{ urlPrefix }}/" class="text-white">{{ "post.banner.home" | t }}</a></li>
+                              <li><a href="{{ urlPrefix }}/blog" class="text-white">{{ "post.banner.blog" | t }}</a></li>
                               <li class="active text-white">{{ postPage.title | truncate(55) }}</li>
                            </ul>
                         </div>
@@ -138,7 +138,7 @@
 
                   {# Back to blog #}
                   <div class="mt-4 pt-4 border-top">
-                     <a href="{{ urlPrefix }}/blog.html" class="btn-back-blog">
+                     <a href="{{ urlPrefix }}/blog" class="btn-back-blog">
                         <i class="fa fa-arrow-left mr-1"></i>{{ "post.navigation.back" | t }}
                      </a>
                   </div>

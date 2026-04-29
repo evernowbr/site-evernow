@@ -16,7 +16,7 @@ langEnUrl: "/en/services/soc-as-a-service/"
 {% set langEnUrl = "/en/services/soc-as-a-service/" %}
 {% set breadcrumbs = [
   { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
-  { label: ("Services" if lang == "en" else "Serviços"), url: urlPrefix + "/servicos/" },
+  { label: ("Services" if lang == "en" else "Serviços"), url: (urlPrefix + "/services/") if lang == "en" else "/servicos/" },
   { label: ("SOC as a Service" if lang == "en" else "SOC como Serviço") }
 ] %}
 
@@ -41,8 +41,8 @@ langEnUrl: "/en/services/soc-as-a-service/"
                   </p>
                 </div>
                 <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
-                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Request SOC proposal{% else %}Solicitar proposta SOC{% endif %}</a>
-                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}SOC maturity assessment{% else %}Assessment de maturidade SOC{% endif %}</a>
+                  <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Request SOC proposal{% else %}Solicitar proposta SOC{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment" class="ev-btn-outline">{% if lang == "en" %}SOC maturity assessment{% else %}Assessment de maturidade SOC{% endif %}</a>
                 </div>
                 <div class="ev-hero__trust mt-4">
                   <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Brazilian analysts in PT/EN{% else %}Analistas brasileiros em PT/EN{% endif %}</span>

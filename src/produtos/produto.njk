@@ -23,7 +23,7 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
   { label: product.titulo }
 ] %}
 
-{# Ícones de entrega por produto — fallback genérico se não definido #}
+{# ── Ícones de entrega ──────────────────────────────────────────────────── #}
 {% set deliveryIconMap = {
   "devsecops":                    ["fas fa-search-plus","fas fa-code-branch","fas fa-tasks","fas fa-chart-bar","fas fa-graduation-cap"],
   "sast-dast-sca":                ["fas fa-microscope","fas fa-vial","fas fa-cubes","fas fa-filter","fas fa-file-alt"],
@@ -54,7 +54,16 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
 } %}
 {% set dIcons = deliveryIconMap[product.slug] if deliveryIconMap[product.slug] else [] %}
 
-{# Monta vendorsList resolvendo nomes de string → {name, logo} via vendorMap #}
+{# ── Imagem hero por pilar ──────────────────────────────────────────────── #}
+{% set pilarImageMap = {
+  "secure-code":  "/assets/image/service/hero-secure-code.png",
+  "data-shield":  "/assets/image/service/hero-data-shield.png",
+  "assurance":    "/assets/image/service/hero-assurance.png",
+  "managed-ops":  "/assets/image/service/hero-managed-ops.png"
+} %}
+{% set heroImg = pilarImageMap[product.pilar] if pilarImageMap[product.pilar] else "/assets/image/service/hero-secure-code.png" %}
+
+{# ── Vendor list ────────────────────────────────────────────────────────── #}
 {%- set vendorsList = [] -%}
 {%- for vname in product.vendors -%}
   {%- if vname is string and vendorMap[vname] -%}
@@ -69,28 +78,52 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
     {% include "components/header.njk" %}
     {% include "components/breadcrumbs.njk" %}
 
-    <section class="banner-main-con ev-hero">
+    {# ── HERO ─────────────────────────────────────────────────────────── #}
+    <section class="banner-main-con ev-hero" style="padding:60px 0 50px;">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-9 col-md-11">
-            <div class="banner-left-con wow slideInLeft">
-              <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px;">
-                <a href="{{ urlPrefix }}/solucoes/{{ product.pilar }}/" style="color:#00e0a3;text-decoration:none;">{{ product.pilarNome }}</a>
-                <span style="opacity:.4;margin:0 6px;">/</span>{{ product.categoria }}
-              </p>
-              <h1>{{ prodData.heroTitle }}</h1>
-              <p class="ev-hero__sub">{{ prodData.heroSubtitle }}</p>
-              <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
-                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{{ prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") }}</a>
-                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{{ prodData.ctaSecundario if prodData.ctaSecundario else ("Take the assessment" if prod_lang == "en" else "Fazer o assessment") }}</a>
-              </div>
-              <div class="ev-hero__trust mt-4">
-                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
-                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
-                <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
-              </div>
+        <div class="row align-items-center">
+
+          {# Esquerda #}
+          <div class="col-lg-6 wow slideInLeft">
+            <p style="color:#00e0a3;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:14px;">
+              <a href="{{ urlPrefix }}/solucoes/{{ product.pilar }}/" style="color:#00e0a3;text-decoration:none;">{{ product.pilarNome }}</a>
+              <span style="opacity:.35;margin:0 6px;">/</span>{{ product.categoria }}
+            </p>
+            <h1 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.18;">{{ prodData.heroTitle }}</h1>
+            <p class="ev-hero__sub mt-3">{{ prodData.heroSubtitle }}</p>
+            <div class="ev-hero__trust mt-4">
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Certified specialists{% else %}Especialistas certificados{% endif %}</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Results in 90 days{% else %}Resultados em 90 dias{% endif %}</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if prod_lang == "en" %}Platform agnostic{% else %}Agnóstico de plataforma{% endif %}</span>
+            </div>
+            <div class="mt-4 d-flex flex-wrap" style="gap:14px;">
+              <a href="{{ urlPrefix }}/contact" class="contact-btn">{{ prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") }}</a>
+              <a href="{{ urlPrefix }}/assessment" class="ev-btn-outline">{{ prodData.ctaSecundario if prodData.ctaSecundario else ("Take the assessment" if prod_lang == "en" else "Fazer o assessment") }}</a>
             </div>
           </div>
+
+          {# Direita — imagem + métricas flutuantes #}
+          <div class="col-lg-6 wow slideInRight mt-5 mt-lg-0">
+            <div style="position:relative;">
+              <div class="ev-hero-img-frame">
+                <img src="{{ heroImg }}" alt="{{ prodData.heroTitle }}"
+                     class="img-fluid w-100"
+                     fetchpriority="high" loading="eager" decoding="async">
+              </div>
+              {# Badges de métricas flutuantes sobre a imagem #}
+              {%- if prodData.metricas and prodData.metricas.length >= 2 -%}
+              <div style="position:absolute;bottom:-16px;left:0;right:0;display:flex;gap:12px;justify-content:center;padding:0 16px;">
+                {%- for metrica in prodData.metricas | slice(0, 2) -%}
+                <div style="background:rgba(15,26,92,.95);border:1px solid rgba(0,224,163,.35);border-radius:12px;padding:14px 18px;text-align:center;flex:1;backdrop-filter:blur(8px);box-shadow:0 8px 32px rgba(0,0,0,.4);">
+                  <div style="font-size:1.5rem;font-weight:800;color:#00e0a3;line-height:1;">{{ metrica.valor }}</div>
+                  <div style="font-size:.72rem;color:rgba(255,255,255,.6);margin-top:4px;line-height:1.3;">{{ metrica.desc }}</div>
+                </div>
+                {%- endfor -%}
+              </div>
+              {%- endif -%}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -99,11 +132,30 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
 
 <main>
 
-  {# 1. Dores #}
+  {# ── STATS BAR ────────────────────────────────────────────────────────── #}
+  {%- if prodData.metricas and prodData.metricas.length -%}
+  <section style="background:#0f1a5c;padding:40px 0 28px;border-bottom:1px solid rgba(255,255,255,.06);">
+    <div class="container overlay-content">
+      <div class="row text-center">
+        {%- for metrica in prodData.metricas -%}
+        <div class="col-6 col-md-3 mb-3 wow fadeInUp">
+          <div style="padding:0 8px;">
+            <div style="font-size:2rem;font-weight:800;color:#00e0a3;line-height:1;margin-bottom:6px;">{{ metrica.valor }}</div>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.5);margin:0;line-height:1.4;">{{ metrica.desc }}</p>
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  {# ── 1. DORES ─────────────────────────────────────────────────────────── #}
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}The problem{% else %}O problema{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}Why does your company need this now?{% else %}Por que sua empresa precisa disso agora?{% endif %}</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5">{% if prod_lang == "en" %}Recognize any of these situations? They are more common than you think — and all solvable.{% else %}Reconhece alguma dessas situações? São mais comuns do que parece — e todas têm solução.{% endif %}</p>
       <div class="ev-pain-grid">
         {%- set painIcons = ["fas fa-exclamation-triangle","fas fa-clock","fas fa-lock-open","fas fa-clipboard-list"] -%}
         {%- for dor in prodData.dores -%}
@@ -118,11 +170,12 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
     </div>
   </section>
 
-  {# 2. Entregas — com ícones #}
+  {# ── 2. ENTREGAS ──────────────────────────────────────────────────────── #}
   <section class="ev-section ev-section--alt">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}How Evernow solves it{% else %}Como a Evernow resolve{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}What we deliver{% else %}O que entregamos{% endif %}</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5">{% if prod_lang == "en" %}Each deliverable is designed to generate measurable impact from the first weeks.{% else %}Cada entregável é projetado para gerar impacto mensurável desde as primeiras semanas.{% endif %}</p>
       <div class="ev-delivery-grid">
         {%- for entrega in prodData.entregas -%}
         <div class="ev-delivery-card wow fadeInUp">
@@ -137,12 +190,32 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
     </div>
   </section>
 
-  {# 3. Metodologia #}
+  {# ── MID-PAGE CTA ─────────────────────────────────────────────────────── #}
+  <section style="background:linear-gradient(90deg,rgba(0,224,163,.12) 0%,rgba(0,224,163,.03) 100%);border-top:1px solid rgba(0,224,163,.2);border-bottom:1px solid rgba(0,224,163,.2);padding:40px 0;">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:8px;color:#fff;">
+            {% if prod_lang == "en" %}Want to understand how this works in your environment?{% else %}Quer entender como isso funciona no seu ambiente?{% endif %}
+          </h3>
+          <p style="color:rgba(255,255,255,.7);margin:0;font-size:.92rem;">
+            {% if prod_lang == "en" %}Free 30-minute conversation with a senior specialist — no commitment.{% else %}30 min gratuitos com especialista sênior — sem compromisso de compra.{% endif %}
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-right">
+          <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if prod_lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── 3. METODOLOGIA ───────────────────────────────────────────────────── #}
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}Methodology{% else %}Metodologia{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}How it works in practice{% else %}Como funciona na prática{% endif %}</h2>
-      <div class="ev-method">
+      <p class="ev-section__desc wow fadeInUp">{% if prod_lang == "en" %}A structured process, transparent at every step.{% else %}Um processo estruturado, transparente em cada etapa.{% endif %}</p>
+      <div class="ev-method mt-4">
         {%- for etapa in prodData.metodologia -%}
         <div class="ev-method-step wow fadeInUp">
           <h4>{{ etapa.etapa }}</h4>
@@ -153,17 +226,20 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
     </div>
   </section>
 
-  {# 4. Métricas #}
+  {# ── 4. MÉTRICAS — redesenhado ────────────────────────────────────────── #}
   {%- if prodData.metricas and prodData.metricas.length -%}
   <section class="ev-section ev-section--alt">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}Expected results{% else %}Resultados esperados{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}What you gain from this{% else %}O que você ganha com isso{% endif %}</h2>
-      <div class="ev-metrics">
+      <div class="row mt-5">
         {%- for metrica in prodData.metricas -%}
-        <div class="ev-metric wow fadeInUp">
-          <span class="ev-metric__value">{{ metrica.valor }}</span>
-          <p class="ev-metric__desc">{{ metrica.desc }}</p>
+        <div class="col-md-6 col-lg-3 mb-4 wow fadeInUp">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,224,163,.15);border-radius:16px;padding:32px 24px;text-align:center;height:100%;position:relative;overflow:hidden;transition:border-color .2s,transform .2s;" onmouseover="this.style.borderColor='rgba(0,224,163,.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(0,224,163,.15)';this.style.transform='translateY(0)'">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,rgba(0,224,163,.6),rgba(0,224,163,.15));"></div>
+            <div style="font-size:2.6rem;font-weight:900;background:linear-gradient(135deg,#00e0a3,#4de8bc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:12px;">{{ metrica.valor }}</div>
+            <p style="font-size:.88rem;color:rgba(255,255,255,.65);margin:0;line-height:1.5;">{{ metrica.desc }}</p>
+          </div>
         </div>
         {%- endfor -%}
       </div>
@@ -171,46 +247,54 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
   </section>
   {%- endif -%}
 
-  {# 5. Plataformas / vendors — grid estático (sem carrossel) #}
+  {# ── 5. VENDORS ───────────────────────────────────────────────────────── #}
   {%- if vendorsList and vendorsList.length -%}
-  <section class="ev-section ev-section--alt" style="padding:40px 0;">
+  <section class="ev-section bg-overly-img" style="padding:48px 0;">
     <div class="container overlay-content">
-      <p class="ev-vendors-carousel__title">{% if prod_lang == "en" %}Platforms and vendors we use{% else %}Plataformas e fabricantes que utilizamos{% endif %}</p>
-      <div class="ev-vendor-static-grid">
-        {%- for vendor in vendorsList -%}
-        {%- if vendor.slug -%}
-        <a href="{{ urlPrefix }}/{% if prod_lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vendor.slug }}/" class="ev-vendor-static-item" title="{% if prod_lang == 'en' %}View{% else %}Ver página{% endif %} {{ vendor.name }}">
-          <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async">
-        </a>
-        {%- else -%}
-        <div class="ev-vendor-static-item">
-          <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0 wow fadeInLeft">
+          <div class="ev-section__tag">{% if prod_lang == "en" %}Tooling{% else %}Tooling{% endif %}</div>
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">{% if prod_lang == "en" %}Platforms and vendors we use{% else %}Plataformas e fabricantes que utilizamos{% endif %}</h3>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">{% if prod_lang == "en" %}Evernow is vendor-agnostic. We recommend based on your technical context and budget.{% else %}A Evernow é agnóstica de ferramenta. Recomendamos com base no seu contexto técnico e budget.{% endif %}</p>
         </div>
-        {%- endif -%}
-        {%- endfor -%}
+        <div class="col-lg-8 wow fadeInRight">
+          <div class="ev-vendor-static-grid" style="justify-content:flex-start;gap:20px;">
+            {%- for vendor in vendorsList -%}
+            {%- if vendor.slug -%}
+            <a href="{{ urlPrefix }}/{% if prod_lang == 'en' %}partners{% else %}parceiros{% endif %}/{{ vendor.slug }}/" class="ev-vendor-static-item" title="{{ vendor.name }}" style="width:120px;height:48px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;" onmouseover="this.style.background='rgba(0,224,163,.08)';this.style.borderColor='rgba(0,224,163,.25)'" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+              <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async" style="max-width:100%;max-height:32px;filter:brightness(0) invert(1);height:auto;">
+            </a>
+            {%- else -%}
+            <div class="ev-vendor-static-item" style="width:120px;height:48px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;">
+              <img src="{{ vendor.logo }}" alt="{{ vendor.name }}" loading="lazy" decoding="async" style="max-width:100%;max-height:32px;filter:brightness(0) invert(1);height:auto;">
+            </div>
+            {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
       </div>
     </div>
   </section>
   {%- endif -%}
 
-  {# 6. Parceiros #}
+  {# ── 6. PARCEIROS ─────────────────────────────────────────────────────── #}
   {% set partnersTagKey = ("Clients who trust Evernow" if prod_lang == "en" else "Clientes que confiam na Evernow") %}
   {% set partnersContainerClass = "border-bottom pb-5" %}
   {% include "components/partners-grid.njk" %}
 
-  {# 7. FAQ #}
+  {# ── 7. FAQ ───────────────────────────────────────────────────────────── #}
   {% set faqItems = prodData.faq %}
   {% set faqTag = "FAQ" %}
   {% set faqTitle = ("Frequently asked questions about " if prod_lang == "en" else "Perguntas frequentes sobre ") + product.titulo %}
   {% include "components/faq-section.njk" %}
 
-  {# 8. Produtos relacionados — lookup via productCardsBySlug (evita bug do selectattr em templates paginados) #}
+  {# ── 8. RELACIONADOS ──────────────────────────────────────────────────── #}
   {%- if product.relacionados and product.relacionados.length -%}
   <section class="ev-section bg-overly-img">
     <div class="container overlay-content">
       <div class="ev-section__tag wow fadeInUp">{% if prod_lang == "en" %}See also{% else %}Veja também{% endif %}</div>
       <h2 class="ev-section__title wow fadeInUp">{% if prod_lang == "en" %}Complementary services{% else %}Serviços complementares{% endif %}</h2>
-      <div class="ev-pilar-product-grid">
+      <div class="ev-pilar-product-grid mt-4">
         {%- for relSlug in product.relacionados -%}
         {%- set relCard = productCardsBySlug[relSlug] -%}
         {%- if relCard -%}
@@ -239,7 +323,7 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
   </section>
   {%- endif -%}
 
-  {# 9. CTA Final #}
+  {# ── 9. CTA FINAL ─────────────────────────────────────────────────────── #}
   {% set ctaTitle = ("Want to move forward with " if prod_lang == "en" else "Quer avançar com ") + product.titulo + "?" %}
   {% set ctaSubtitle = ("Talk to an Evernow specialist and define the next step clearly." if prod_lang == "en" else "Fale com um especialista da Evernow e defina o próximo passo com clareza.") %}
   {% set ctaPrimary = prodData.ctaPrimario if prodData.ctaPrimario else ("Talk to a specialist" if prod_lang == "en" else "Fale com um especialista") %}
