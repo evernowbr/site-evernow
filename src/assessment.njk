@@ -8,11 +8,11 @@ permalink: "{% if lang == 'en' %}/en/{% endif %}assessment.html"
 pageMeta: assessment
 ---
 {% set urlPrefix = "" if lang == "pt" else "/en" %}
-{% set langPtUrl = "/assessment.html" %}
-{% set langEnUrl = "/en/assessment.html" %}
+{% set langPtUrl = "/assessment" %}
+{% set langEnUrl = "/en/assessment" %}
 {% set breadcrumbs = [
   { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
-  { label: ("Resources" if lang == "en" else "Recursos"), url: urlPrefix + "/recursos/" },
+  { label: ("Guides" if lang == "en" else "Guias"), url: (urlPrefix + "/guides/") if lang == "en" else "/guias/" },
   { label: "Assessment" }
 ] %}
 

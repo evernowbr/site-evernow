@@ -8,8 +8,8 @@ permalink: "{% if lang == 'en' %}/en/{% endif %}parceiros.html"
 pageMeta: parceiros-index
 ---
 {% set urlPrefix = "" if lang == "pt" else "/en" %}
-{% set langPtUrl = "/parceiros.html" %}
-{% set langEnUrl = "/en/parceiros.html" %}
+{% set langPtUrl = "/parceiros" %}
+{% set langEnUrl = "/en/parceiros" %}
 {% set breadcrumbs = [
   { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
   { label: ("Partners" if lang == "en" else "Parceiros") }
@@ -95,7 +95,7 @@ pageMeta: parceiros-index
           <div class="mt-4 p-4" style="background:rgba(0,224,163,.06);border:1px solid rgba(0,224,163,.2);border-radius:10px;">
             <p style="color:#00e0a3;font-weight:700;font-size:.88rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">{% if lang == "en" %}Manufacturer or reseller?{% else %}Fabricante ou revendedor?{% endif %}</p>
             <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.6;margin-bottom:16px;">{% if lang == "en" %}If you want to bring Evernow as a technical arm for your clients covering implementation, operations, and support, talk to us about a commercial partnership.{% else %}Se você quer levar a Evernow como braço técnico para os seus clientes, implementação, operação e suporte, fale com a gente sobre parceria comercial.{% endif %}</p>
-            <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Explore partnership{% else %}Explorar parceria{% endif %}</a>
+            <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Explore partnership{% else %}Explorar parceria{% endif %}</a>
           </div>
         </div>
       </div>

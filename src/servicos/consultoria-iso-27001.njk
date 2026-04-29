@@ -14,7 +14,7 @@ langEnUrl: "/en/services/iso-27001-consulting/"
 {% set urlPrefix = "" if lang == "pt" else "/en" %}
 {% set breadcrumbs = [
   { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
-  { label: ("Services" if lang == "en" else "Serviços"), url: urlPrefix + "/servicos/" },
+  { label: ("Services" if lang == "en" else "Serviços"), url: (urlPrefix + "/services/") if lang == "en" else "/servicos/" },
   { label: ("ISO 27001 consulting" if lang == "en" else "Consultoria ISO 27001") }
 ] %}
 
@@ -39,8 +39,8 @@ langEnUrl: "/en/services/iso-27001-consulting/"
                   </p>
                 </div>
                 <div class="banner-btn mt-4" style="display:flex;gap:14px;flex-wrap:wrap;">
-                  <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Request proposal{% else %}Solicitar proposta{% endif %}</a>
-                  <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if lang == "en" %}Free gap analysis{% else %}Gap analysis gratuito{% endif %}</a>
+                  <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Request proposal{% else %}Solicitar proposta{% endif %}</a>
+                  <a href="{{ urlPrefix }}/assessment" class="ev-btn-outline">{% if lang == "en" %}Free gap analysis{% else %}Gap analysis gratuito{% endif %}</a>
                 </div>
                 <div class="ev-hero__trust mt-4">
                   <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Lead Auditor ISO 27001 team{% else %}Time Lead Auditor ISO 27001{% endif %}</span>

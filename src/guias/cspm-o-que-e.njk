@@ -16,7 +16,7 @@ langEnUrl: "/en/guides/cspm/"
 {% set langEnUrl = "/en/guides/cspm/" %}
 {% set breadcrumbs = [
   { label: ("Home" if lang == "en" else "Início"), url: urlPrefix + "/" },
-  { label: ("Guides" if lang == "en" else "Guias"), url: urlPrefix + "/guias/" },
+  { label: ("Guides" if lang == "en" else "Guias"), url: (urlPrefix + "/guides/") if lang == "en" else "/guias/" },
   { label: "CSPM" }
 ] %}
 
@@ -46,7 +46,7 @@ langEnUrl: "/en/guides/cspm/"
               <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {% if lang == "en" %}Noise prioritization{% else %}Priorização de ruído{% endif %}</span>
             </div>
             <div class="mt-4 d-flex flex-wrap" style="gap:14px;">
-              <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Talk to a cloud specialist{% else %}Fale com especialista cloud{% endif %}</a>
+              <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Talk to a cloud specialist{% else %}Fale com especialista cloud{% endif %}</a>
               <a href="{{ urlPrefix }}/produtos/cspm/" class="ev-btn-outline">{% if lang == "en" %}See managed CSPM{% else %}Ver CSPM gerenciado{% endif %}</a>
             </div>
           </div>
@@ -178,7 +178,7 @@ langEnUrl: "/en/guides/cspm/"
           </p>
         </div>
         <div class="col-lg-4 text-lg-right">
-          <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if lang == "en" %}Request diagnosis{% else %}Solicitar diagnóstico{% endif %}</a>
+          <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if lang == "en" %}Request diagnosis{% else %}Solicitar diagnóstico{% endif %}</a>
         </div>
       </div>
     </div>
@@ -253,7 +253,7 @@ langEnUrl: "/en/guides/cspm/"
         <div class="col-lg-4 mb-4 wow fadeInLeft">
           <div class="ev-section__tag">FAQ</div>
           <h2 class="ev-section__title mt-2">{% if lang == "en" %}Frequent questions about CSPM{% else %}Perguntas frequentes sobre CSPM{% endif %}</h2>
-          <a href="{{ urlPrefix }}/contact.html" class="contact-btn mt-4 d-inline-block" style="font-size:.88rem;padding:10px 20px;">{% if lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
+          <a href="{{ urlPrefix }}/contact" class="contact-btn mt-4 d-inline-block" style="font-size:.88rem;padding:10px 20px;">{% if lang == "en" %}Talk to a specialist{% else %}Falar com especialista{% endif %}</a>
         </div>
         <div class="col-lg-8 wow fadeInRight">
           <div class="accordion" id="faqCspmAccordion">

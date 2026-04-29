@@ -9,14 +9,14 @@
             {{ ctaSubtitle if ctaSubtitle else ("Talk to an Evernow specialist and define the next step clearly." if lang == "en" else "Fale com um especialista da Evernow e defina o próximo passo com clareza.") }}
           </p>
           {%- if ctaSecondary -%}
-          <a href="{{ urlPrefix }}/assessment.html" class="btn mt-3"
+          <a href="{{ urlPrefix }}/assessment" class="btn mt-3"
              style="border:1px solid #00e0a3;color:#00e0a3;padding:10px 24px;border-radius:4px;font-weight:600;text-decoration:none;">
             {{ ctaSecondary }}
           </a>
           {%- endif -%}
         </div>
         <div class="col-lg-4 col-md-12 text-lg-right">
-          <a href="{{ urlPrefix }}/contact.html" class="contact-btn" style="font-size:1rem;">
+          <a href="{{ urlPrefix }}/contact" class="contact-btn" style="font-size:1rem;">
             {{ ctaPrimary if ctaPrimary else ("Talk to a specialist" if lang == "en" else "Fale com um especialista") }}
           </a>
         </div>

@@ -56,8 +56,8 @@ permalink: "{% if industry.lang == 'en' %}/en/industries/{{ enSlugs.industries[i
               <h1>{{ indData.heroTitle }}</h1>
               <p class="ev-hero__sub">{{ indData.heroSubtitle }}</p>
               <div class="banner-btn mt-4" style="display:flex;gap:16px;flex-wrap:wrap;">
-                <a href="{{ urlPrefix }}/contact.html" class="contact-btn">{% if ind_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
-                <a href="{{ urlPrefix }}/assessment.html" class="ev-btn-outline">{% if ind_lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
+                <a href="{{ urlPrefix }}/contact" class="contact-btn">{% if ind_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+                <a href="{{ urlPrefix }}/assessment" class="ev-btn-outline">{% if ind_lang == "en" %}Take the assessment{% else %}Fazer o assessment{% endif %}</a>
               </div>
               <div class="ev-hero__trust mt-4">
                 <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> {{ trust[0] if trust else ("Certified specialists" if ind_lang == "en" else "Especialistas certificados") }}</span>
@@ -134,7 +134,7 @@ permalink: "{% if industry.lang == 'en' %}/en/industries/{{ enSlugs.industries[i
           <div class="ev-section__tag">{% if ind_lang == "en" %}Why Evernow{% else %}Por que a Evernow{% endif %}</div>
           <h2 class="ev-section__title">{% if ind_lang == "en" %}Specialists who know your market{% else %}Especialistas que conhecem o seu mercado{% endif %}</h2>
           <p class="ev-section__desc">{{ indData.credibilidade }}</p>
-          <a href="{{ urlPrefix }}/contact.html" class="contact-btn mt-4 d-inline-block">{% if ind_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
+          <a href="{{ urlPrefix }}/contact" class="contact-btn mt-4 d-inline-block">{% if ind_lang == "en" %}Talk to a specialist{% else %}Fale com um especialista{% endif %}</a>
         </div>
         <div class="col-lg-7 wow fadeInRight">
           <div class="ev-spec-grid">

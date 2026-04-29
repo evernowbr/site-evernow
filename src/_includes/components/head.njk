@@ -30,22 +30,15 @@
   <meta name="keywords" content="{{ 'meta.defaultKeywords' | t }}" />
 {%- endif %}
 <meta name="robots" content="{{ 'noindex,nofollow' if noIndex else 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}" />
-{# ── Canonical normalization ───────────────────────────────────────────────
-   Cloudflare _redirects faz 308 de /pagina.html → /pagina (sem extensão)
-   para um conjunto de páginas-folha estáticas. Os permalinks 11ty geram
-   page.url = "/pagina.html" para essas páginas. Sem normalização, o canonical
-   apontaria para uma URL que redireciona — perda de equity. Strip ".html"
-   apenas para esse conjunto. /blog/<slug>.html PERMANECE com .html.
+{# ── Canonical: strip de .html para todas as páginas exceto /404.html.
+   Os permalinks estáticos geram URLs com .html; Cloudflare Pages serve a
+   versão limpa e faz 301 (via _redirects). O canonical DEVE apontar para
+   a URL limpa para evitar dispersão de PageRank.
+   Posts de blog (/blog/slug.html) mantêm .html — decisão arquitetural.
 #}
-{%- set _stripHtmlPaths = ["/pentest.html", "/about.html", "/services.html", "/solutions.html",
-                           "/contact.html", "/cases.html", "/parceiros.html", "/assessment.html",
-                           "/blog.html",
-                           "/en/pentest.html", "/en/about.html", "/en/services.html", "/en/solutions.html",
-                           "/en/contact.html", "/en/cases.html", "/en/parceiros.html", "/en/assessment.html",
-                           "/en/blog.html"] -%}
 {%- set _canonical = page.url -%}
-{%- if page.url in _stripHtmlPaths -%}
-  {%- set _canonical = page.url | replace(".html", "") -%}
+{%- if _canonical.endsWith('.html') and _canonical != '/404.html' and _canonical != '/en/404.html' -%}
+  {%- set _canonical = _canonical | replace('.html', '') -%}
 {%- endif -%}
 <link rel="canonical" href="https://evernow.com.br{{ _canonical }}" />
 

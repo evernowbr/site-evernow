@@ -80,5 +80,24 @@
 /devsecops /guias/devsecops/ 301
 /cspm /guias/cspm-o-que-e/ 301
 
+# ─── EN path aliases (caminhos PT usados em templates EN) ────────────────────
+# Específicos primeiro (slugs diferentes PT→EN), depois catch-all por prefixo
+/en/guias/quanto-custa-pentest/      /en/guides/pentest-pricing/          301
+/en/guias/cspm-o-que-e/              /en/guides/cspm/                     301
+/en/guias/*                          /en/guides/:splat                    301
+/en/servicos/adequacao-lgpd/         /en/services/lgpd-compliance/        301
+/en/servicos/consultoria-iso-27001/  /en/services/iso-27001-consulting/   301
+/en/servicos/soc-como-servico/       /en/services/soc-as-a-service/       301
+/en/servicos/*                       /en/services/:splat                  301
+/en/parceiros/*                      /en/partners/:splat                  301
+/en/produtos/*                       /en/products/:splat                  301
+
+# ─── Normalização .html → URL limpa (301 permanente) ─────────────────────────
+# Exceções explícitas primeiro (404 deve ser servido como-está, sem redirect)
+/404.html      /404.html      200
+/en/404.html   /en/404.html   200
+# Redirect 301 de qualquer outra .html para versão sem extensão
+/*.html        /:splat        301
+
 # ─── 404 fallback (se nenhuma regra bater) ────────────────────────────────────
 /* /404.html 404
