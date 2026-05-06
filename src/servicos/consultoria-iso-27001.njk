@@ -145,7 +145,7 @@ langEnUrl: "/en/services/iso-27001-consulting/"
   "@type": "FAQPage",
   "mainEntity": [
     {%- for item in faqItems -%}
-    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    { "@type": "Question", "name": {{ item.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} } }{{ "," if not loop.last }}
     {%- endfor -%}
   ]
 }
