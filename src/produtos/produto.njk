@@ -350,7 +350,7 @@ permalink: "{% if product.lang == 'en' %}/en/products/{{ enSlugs.products[produc
       "@type": "FAQPage",
       "mainEntity": [
         {%- for item in _faqData -%}
-        { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+        { "@type": "Question", "name": {{ item.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} } }{{ "," if not loop.last }}
         {%- endfor -%}
       ]
     }

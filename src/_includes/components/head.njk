@@ -3,9 +3,12 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 <!-- SEO -->
-{% if seoTitle %}
-  <title>{{ seoTitle }}</title>
-  <meta name="description" content="{{ seoDescription if seoDescription else seoTitle }}" />
+{%- set _resolvedTitle = (seoTitleEn if lang == 'en' and seoTitleEn else seoTitle) -%}
+{%- set _resolvedDesc  = (seoDescriptionEn if lang == 'en' and seoDescriptionEn else seoDescription) -%}
+{%- set _resolvedKw    = (seoKeywordsEn if lang == 'en' and seoKeywordsEn else seoKeywords) -%}
+{% if _resolvedTitle %}
+  <title>{{ _resolvedTitle }}</title>
+  <meta name="description" content="{{ _resolvedDesc if _resolvedDesc else _resolvedTitle }}" />
 {% elif pageMeta %}
   {% set _titleKey = "meta." + pageMeta + ".title" %}
   {% set _descKey  = "meta." + pageMeta + ".description" %}
@@ -15,9 +18,9 @@
   <title>{{ "meta.defaultTitle" | t }}</title>
   <meta name="description" content="{{ "meta.defaultDescription" | t }}" />
 {% endif %}
-{# Keywords: prioridade seoKeywords front-matter → meta.<pageMeta>.keywords no i18n → default #}
-{%- if seoKeywords -%}
-  <meta name="keywords" content="{{ seoKeywords }}" />
+{# Keywords: prioridade seoKeywords (com fallback EN) front-matter → meta.<pageMeta>.keywords no i18n → default #}
+{%- if _resolvedKw -%}
+  <meta name="keywords" content="{{ _resolvedKw }}" />
 {%- elif pageMeta -%}
   {%- set _kwKey = "meta." + pageMeta + ".keywords" -%}
   {%- set _kwValue = _kwKey | t -%}
@@ -60,8 +63,8 @@
 
 <!-- Open Graph -->
 {%- set _ogImage = seoImage if seoImage else "https://evernow.com.br/assets/image/logo/evernow-og.png" -%}
-{%- if seoTitle -%}
-  {%- set _ogTitle = seoTitle -%}
+{%- if _resolvedTitle -%}
+  {%- set _ogTitle = _resolvedTitle -%}
 {%- elif _ogTitleKey -%}
   {%- set _ogTitle = _ogTitleKey | t -%}
 {%- elif pageMeta -%}
@@ -69,8 +72,8 @@
 {%- else -%}
   {%- set _ogTitle = "meta.defaultTitle" | t -%}
 {%- endif -%}
-{%- if seoDescription -%}
-  {%- set _ogDesc = seoDescription -%}
+{%- if _resolvedDesc -%}
+  {%- set _ogDesc = _resolvedDesc -%}
 {%- elif _ogDescKey -%}
   {%- set _ogDesc = _ogDescKey | t -%}
 {%- elif pageMeta -%}

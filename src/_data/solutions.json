@@ -270,8 +270,52 @@
             "iOS, Android, and desktop coverage"
           ]
         }
+      ],
+      "faqs": [
+        {
+          "q": "How long does it take to implement a mature AppSec program?",
+          "a": "60 to 90 days for baseline (SAST + SCA + threat modeling on ~30 devs). Full maturity with continuous DAST, RASP in production and SAMM level 3 takes 9-18 months. First visible wins (critical vulnerabilities eliminated) show in 4-6 weeks."
+        },
+        {
+          "q": "Which tools do you implement in this pillar?",
+          "a": "Typical stack: Fortify or SonarQube (enterprise SAST), Veracode or Snyk (SaaS SAST/DAST/SCA), Sonatype Nexus (SCA + supply chain), Semgrep (custom SAST), JScrambler (JS/RASP), Guardsquare (mobile), Security Compass SD Elements (threat modeling). We recommend without margin bias."
+        },
+        {
+          "q": "Is AppSec without slowing down deploys possible?",
+          "a": "Yes. The rule: low-false-positive tools, gates configured to fail only on CRITICAL/HIGH with CVSS ≥ 7.0, time-boxed exceptions with tickets. Typical time-to-deploy grows 5-12% in the first weeks then stabilizes. After 3 months, devs report that catching bugs at design saves total time."
+        },
+        {
+          "q": "How do you measure AppSec maturity?",
+          "a": "OWASP SAMM or BSIMM as baseline. Core KPIs: % builds with SAST/SCA, MTTR of critical findings, escapes to production per month, % commits with up-to-date threat model, false-positive rate after tuning, pipeline coverage."
+        },
+        {
+          "q": "Do you only consult or also operate continuously?",
+          "a": "Both. About 60% of AppSec engagements are consulting + implementation for 3-6 months. 30% evolve into Managed AppSec (continuous tool operation with SLA). 10% are point-in-time audits (independent code review, threat model review)."
+        }
       ]
-    }
+    },
+    "faqs": [
+      {
+        "q": "Quanto tempo leva pra implementar um programa AppSec maduro?",
+        "a": "60 a 90 dias para baseline (SAST + SCA + threat modeling em ~30 devs). Maturidade completa com DAST contínuo, RASP em produção e SAMM nível 3 leva 9-18 meses. Os primeiros ganhos visíveis (vulnerabilidades críticas eliminadas) aparecem em 4-6 semanas."
+      },
+      {
+        "q": "Quais ferramentas vocês implementam neste pillar?",
+        "a": "Stack típica: Fortify ou SonarQube (SAST enterprise), Veracode ou Snyk (SAST/DAST/SCA SaaS), Sonatype Nexus (SCA + supply chain), Semgrep (SAST customizável), JScrambler (JS/RASP), Guardsquare (mobile), Security Compass SD Elements (threat modeling). Recomendamos sem viés de margem."
+      },
+      {
+        "q": "AppSec sem trava no deploy é possível?",
+        "a": "Sim. A regra: ferramentas com baixo falso-positivo, gates configurados pra falhar só em CRITICAL/HIGH com CVSS ≥ 7.0, exceções com timebox + ticket. Time-to-deploy típico cresce 5-12% nas primeiras semanas e estabiliza. Após 3 meses, devs reportam que pegar bug em design economiza tempo total."
+      },
+      {
+        "q": "Como medir maturidade AppSec?",
+        "a": "OWASP SAMM ou BSIMM como baseline. KPIs principais: % de builds com SAST/SCA, MTTR de findings críticos, escapes pra produção/mês, % commits com threat model atualizado, false-positive rate após tuning, cobertura de pipeline."
+      },
+      {
+        "q": "Vocês fazem só consultoria ou também operam continuamente?",
+        "a": "Os 2. Cerca de 60% dos engajamentos AppSec são consultoria + implementação por 3-6 meses. 30% evoluem pra Managed AppSec (operação contínua das ferramentas com SLA). 10% são audits pontuais (code review independente, threat model review)."
+      }
+    ]
   },
   {
     "slug": "data-shield",
@@ -514,8 +558,52 @@
             "Alerts prioritized by real impact"
           ]
         }
+      ],
+      "faqs": [
+        {
+          "q": "What's the difference between DSPM and DLP?",
+          "a": "DSPM (Data Security Posture Management) is VISIBILITY: discovers, classifies and maps where sensitive data lives (cloud, SaaS, databases). DLP is CONTROL: blocks active exfiltration (email, USB, web upload). DSPM tells you what exists; DLP acts when someone tries to take it where it shouldn't go. The two are complementary."
+        },
+        {
+          "q": "What technical tools does LGPD require?",
+          "a": "LGPD doesn't require specific tools, but it requires PROOF of compliance. Minimum stack: Data Discovery + Classification (Securiti, Microsoft Purview), Consent Management (Securiti, OneTrust), Encryption at-rest and in-transit (cloud-native KMS), auditable logs. For large companies: continuous DSPM + DLP + Privacy Ops automation."
+        },
+        {
+          "q": "How do you protect data in third-party SaaS (Salesforce, Workday)?",
+          "a": "Combination of: (1) DSPM with SaaS connectors for inventory, (2) Cloud DLP (Microsoft Purview, Forcepoint) for egress control, (3) CASB for access policies, (4) DPA contracts with vendors. Securiti.ai covers 100+ SaaS natively."
+        },
+        {
+          "q": "Is data-in-use encryption (in-process) viable?",
+          "a": "Yes, but requires specific tech: TEE (Intel SGX, AMD SEV), Confidential Computing (Azure CC, GCP Confidential VMs), homomorphic encryption (partial — only basic arithmetic today), data tokenization (more mature — OpenText Voltage). We assess cost/benefit case by case."
+        },
+        {
+          "q": "How much does a complete Data Shield program cost?",
+          "a": "2026 ranges for a mid-sized company (100-500 employees): R$ 150-350k for the initial project (3-6 months) + R$ 8-25k/month for continuous operations. Includes DSPM (Securiti), DLP (Purview or Forcepoint), encryption (Voltage or KMS), DPO as a Service, and ANPD monitoring."
+        }
       ]
-    }
+    },
+    "faqs": [
+      {
+        "q": "Qual a diferença entre DSPM e DLP?",
+        "a": "DSPM (Data Security Posture Management) é VISIBILIDADE: descobre, classifica e mapeia onde dados sensíveis estão (cloud, SaaS, banco). DLP é CONTROLE: bloqueia exfiltração ativa (email, USB, web upload). DSPM diz o que existe; DLP age quando alguém tenta tirar de onde devia ficar. Os 2 são complementares."
+      },
+      {
+        "q": "LGPD exige quais ferramentas técnicas?",
+        "a": "LGPD não exige ferramenta específica, mas exige PROVAS de adequação. Stack mínimo: Data Discovery + Classification (Securiti, Microsoft Purview), Consent Management (Securiti, OneTrust), Encryption at-rest e in-transit (KMS nativo cloud), Logs auditáveis. Para grandes empresas: DSPM contínuo + DLP + Privacy Ops automation."
+      },
+      {
+        "q": "Como protege dados em SaaS de terceiros (Salesforce, Workday)?",
+        "a": "Combinação de: (1) DSPM com conectores SaaS pra inventário, (2) Cloud DLP (Microsoft Purview, Forcepoint) pra controle de saída, (3) CASB pra políticas de acesso, (4) contratos de DPA com fornecedores. Securiti.ai cobre 100+ SaaS nativamente."
+      },
+      {
+        "q": "Criptografia de dados em uso (in-process) é viável?",
+        "a": "Sim, mas exige tecnologia específica: TEE (Intel SGX, AMD SEV), Confidential Computing (Azure CC, GCP Confidential VMs), homomorphic encryption (parcial — apenas operações aritméticas básicas hoje), data tokenization (mais maduro — OpenText Voltage faz). Avaliamos custo/benefício caso a caso."
+      },
+      {
+        "q": "Quanto custa um programa Data Shield completo?",
+        "a": "Faixas 2026 para empresa média (100-500 func): R$ 150-350k para projeto inicial (3-6 meses) + R$ 8-25k/mês de operação contínua. Inclui DSPM (Securiti), DLP (Purview ou Forcepoint), criptografia (Voltage ou KMS), DPO as a Service, e monitoramento ANPD."
+      }
+    ]
   },
   {
     "slug": "assurance",

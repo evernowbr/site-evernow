@@ -6,8 +6,11 @@ pagination:
   alias: lang
 permalink: "{% if lang == 'en' %}/en/services/lgpd-compliance/{% else %}/servicos/adequacao-lgpd/{% endif %}"
 seoTitle: "Adequação LGPD para Empresas | Roadmap em 120 Dias | Evernow"
-seoDescription: "Consultoria completa de adequação LGPD: data mapping, DPIA, políticas, DPO as a Service e evidências para ANPD. Roadmap em 120 dias com entregáveis semanais."
+seoDescription: "Consultoria de adequação LGPD: data mapping, DPIA, políticas, DPO as a Service e evidências para ANPD em 120 dias com entregáveis semanais."
 seoKeywords: "adequação lgpd, consultoria lgpd, implantação lgpd, lgpd empresa, dpo as a service, projeto lgpd, conformidade lgpd"
+seoTitleEn: "LGPD Compliance for Brazilian Operations | 120-Day Roadmap | Evernow"
+seoDescriptionEn: "LGPD compliance consulting: data mapping, DPIA, policies, DPO as a Service and ANPD-ready evidence in 120 days with weekly deliverables."
+seoKeywordsEn: "lgpd compliance, lgpd consulting, lgpd implementation, lgpd brazil, dpo as a service, lgpd project, brazilian data protection"
 langPtUrl: "/servicos/adequacao-lgpd/"
 langEnUrl: "/en/services/lgpd-compliance/"
 ---
@@ -191,12 +194,47 @@ langEnUrl: "/en/services/lgpd-compliance/"
     </div>
   </section>
 
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "Quanto tempo leva adequação LGPD completa?", a: "Para empresa de médio porte (100-1000 funcionários), o roadmap completo da Evernow é de 120 dias com entregáveis semanais: mês 1 (mapeamento, ROPA), mês 2 (DPIA + bases legais), mês 3 (políticas + treinamento + contratos), mês 4 (canal de titular + evidências ANPD). Pequenas empresas conseguem em 60-90 dias." },
+      { q: "Preciso de DPO próprio ou DPO as a Service?", a: "LGPD exige DPO mas não exige interno. DPO as a Service faz sentido para empresas com até ~500 funcionários (custo de R$ 4-12k/mês vs R$ 25k+ de salário interno). Empresas com tratamento massivo de dados (varejo digital, banco, healthcare) ou alto risco geralmente preferem DPO interno em médio prazo." },
+      { q: "O que é DPIA e quando é obrigatória?", a: "DPIA (Relatório de Impacto à Proteção de Dados, ou RIPD em PT-BR) é avaliação detalhada de risco. ANPD exige DPIA quando: tratamento envolve dados sensíveis em larga escala, decisões automatizadas com impacto, monitoramento sistemático de áreas públicas, dados de crianças/adolescentes, ou novas tecnologias com risco alto." },
+      { q: "Vocês ajudam em incidente de vazamento?", a: "Sim. Temos playbook de resposta a incidente LGPD: contenção em 24h, análise forense, comunicação ANPD em até 48h conforme Resolução CD/ANPD 15/2024, comunicação aos titulares se aplicável, e apoio em eventual TAP (Termo de Ajuste de Conduta). Nossa equipe inclui DPOs certificados ANPD-trained." },
+      { q: "Quanto custa adequação LGPD?", a: "Faixas em 2026: pequena empresa (<100 func, sem dados sensíveis) R$ 25-60k. Média (100-500) R$ 80-180k. Grande (500+, com dados sensíveis) R$ 200-500k+. Inclui consultoria, ferramentas (Securiti ou Microsoft Purview) e DPO as a Service por 12 meses. Auditorias e POCs são separadas." },
+      { q: "ANPD pode multar mesmo empresa pequena?", a: "Sim. Em 2024-2026 a ANPD aplicou multas em empresas de todos portes. Multa máxima: 2% do faturamento até R$ 50 milhões por infração. Empresas pequenas geralmente são notificadas primeiro com prazo pra corrigir. Não responder ou repetir infração é o que escala pra multa pesada." }
+    ],
+    en: [
+      { q: "How long does full LGPD compliance take?", a: "For a mid-sized company (100-1000 employees), Evernow's full roadmap is 120 days with weekly deliverables: month 1 (mapping, ROPA), month 2 (DPIA + legal bases), month 3 (policies + training + contracts), month 4 (data subject channel + ANPD evidence). Small companies can do it in 60-90 days." },
+      { q: "Do I need an in-house DPO or DPO as a Service?", a: "LGPD requires a DPO but not in-house. DPO as a Service makes sense for companies up to ~500 employees (cost of R$ 4-12k/month vs R$ 25k+ internal salary). Companies with massive data processing (digital retail, banks, healthcare) or high risk usually prefer in-house DPO mid-term." },
+      { q: "What is a DPIA and when is it mandatory?", a: "DPIA (Data Protection Impact Assessment, or RIPD in PT-BR) is a detailed risk assessment. ANPD requires DPIA when: processing involves sensitive data at scale, automated decisions with impact, systematic monitoring of public areas, data of children/teens, or high-risk new technologies." },
+      { q: "Do you help with a data breach incident?", a: "Yes. We have an LGPD incident response playbook: containment in 24h, forensic analysis, ANPD notification within 48h per Resolution CD/ANPD 15/2024, data subject notification if applicable, and support for any TAP (Conduct Adjustment Term). Our team includes ANPD-trained DPOs." },
+      { q: "How much does LGPD compliance cost?", a: "Ranges in 2026: small company (<100 employees, no sensitive data) R$ 25-60k. Medium (100-500) R$ 80-180k. Large (500+, with sensitive data) R$ 200-500k+. Includes consulting, tools (Securiti or Microsoft Purview) and DPO as a Service for 12 months. Audits and POCs are separate." },
+      { q: "Can ANPD fine even small companies?", a: "Yes. In 2024-2026, ANPD applied fines to companies of all sizes. Maximum fine: 2% of revenue, up to R$ 50 million per infraction. Small companies are usually notified first with time to fix. Failing to respond or repeating infractions is what escalates to a heavy fine." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about LGPD compliance" if lang == "en" else "Perguntas frequentes sobre adequação LGPD") %}
+  {% include "components/faq-section.njk" %}
+
   {% set ctaTitle = ("Ready to kick off your LGPD program?" if lang == "en" else "Pronto para destravar seu programa de LGPD?") %}
   {% set ctaSubtitle = ("Free 30-minute diagnosis with a certified DPO. Walk out with priorities and a realistic roadmap." if lang == "en" else "Diagnóstico gratuito de 30 min com DPO certificado. Sai com prioridades e roadmap realista.") %}
   {% set ctaPrimary = ("Request diagnosis" if lang == "en" else "Solicitar diagnóstico") %}
   {% set ctaSecondary = ("Take the free assessment" if lang == "en" else "Fazer assessment gratuito") %}
   {% include "components/cta-final.njk" %}
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
