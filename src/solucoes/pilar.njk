@@ -147,6 +147,15 @@ permalink: "{% if solution.lang == 'en' %}/en{% endif %}/solucoes/{{ solution.sl
   {% set partnersTagKey = ("Companies that trust Evernow" if sol_lang == "en" else "Empresas que confiam na Evernow") %}
   {% include "components/partners-grid.njk" %}
 
+  {# FAQ Section (bilingual via solution.faqs) #}
+  {%- set sourceFaqs = (solution.en.faqs if sol_lang == 'en' and solution.en and solution.en.faqs else solution.faqs) -%}
+  {%- if sourceFaqs and sourceFaqs.length -%}
+  {% set faqItems = sourceFaqs %}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about " if sol_lang == "en" else "Perguntas frequentes sobre ") + solution.titulo %}
+  {% include "components/faq-section.njk" %}
+  {%- endif -%}
+
   <!-- CTA Final -->
   {% set ctaTitle = ("Ready to build " if sol_lang == "en" else "Pronto para estruturar ") + solution.titulo + ("?" if sol_lang == "en" else "?") %}
   {% set ctaSubtitle = ("Talk to a specialist and define the next step, from the assessment to the operational program." if sol_lang == "en" else "Fale com um especialista e defina o próximo passo, do assessment ao programa operacional.") %}
@@ -171,3 +180,17 @@ permalink: "{% if solution.lang == 'en' %}/en{% endif %}/solucoes/{{ solution.sl
   "url": "https://evernow.com.br{% if sol_lang == 'en' %}/en{% endif %}/solucoes/{{ solution.slug }}/"
 }
 </script>
+
+{%- if sourceFaqs and sourceFaqs.length -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in sourceFaqs -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}

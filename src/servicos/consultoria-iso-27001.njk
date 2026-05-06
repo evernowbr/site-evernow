@@ -6,7 +6,7 @@ pagination:
   alias: lang
 permalink: "{% if lang == 'en' %}/en/services/iso-27001-consulting/{% else %}/servicos/consultoria-iso-27001/{% endif %}"
 seoTitle: "Consultoria ISO 27001: Certificação em 8 Meses | Evernow"
-seoDescription: "Implementação e manutenção do SGSI ISO/IEC 27001:2022. Gap analysis, 93 controles do Anexo A, SoA, auditoria e preparação para certificação. Plano de 8 meses."
+seoDescription: "Implementação do SGSI ISO/IEC 27001:2022. Gap analysis, 93 controles do Anexo A, SoA e auditoria com plano de 8 meses."
 seoKeywords: "consultoria iso 27001, certificação iso 27001, implantação iso 27001, iso 27001 2022, sgsi, consultoria sgsi, iso 27001 empresa"
 langPtUrl: "/servicos/consultoria-iso-27001/"
 langEnUrl: "/en/services/iso-27001-consulting/"
@@ -111,12 +111,45 @@ langEnUrl: "/en/services/iso-27001-consulting/"
     </div>
   </section>
 
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "Quanto custa certificação ISO 27001 no Brasil?", a: "Faixas 2026: pequena empresa (até 50 func) R$ 80-180k em 8 meses. Média (50-300) R$ 200-400k. Grande (300+) R$ 500k-1.5M. Inclui: consultoria Evernow (60% do total), ferramentas (GRC, monitoring), e auditoria de certificação (R$ 40-120k pago direto ao certificador acreditado pelo INMETRO)." },
+      { q: "ISO 27001 vale pra empresa pequena?", a: "Vale se: (a) você vende para empresas que exigem (governo, banco, healthcare, multinacionais), (b) você processa dados sensíveis em escala, (c) você quer evitar perda de tempo respondendo questionários de RFP. Para SaaS B2B, ISO 27001 + SOC 2 acelera ciclo de venda enterprise em 30-60 dias." },
+      { q: "Qual auditor certificador vocês recomendam?", a: "Trabalhamos com BSI, DNV, Bureau Veritas, TÜV Rheinland e SGS — todos acreditados pelo INMETRO. Recomendação varia por porte: BSI para enterprise global, Bureau Veritas para mercado regulado BR, DNV para tech. Nunca revendemos auditoria — você contrata direto pra preservar independência." },
+      { q: "ISO 27001:2022 vs ISO 27001:2013, preciso recertificar?", a: "Sim. ISO 27001:2022 reorganiza os controles do Anexo A (passou de 114 pra 93, agrupados em 4 temas) e adiciona 11 controles novos de cloud, threat intel e privacidade. Empresas certificadas em 2013 têm prazo até outubro de 2025 pra migrar — depois disso o certificado fica inválido." },
+      { q: "Vocês ajudam na manutenção pós-certificação?", a: "Sim. Pacote de manutenção inclui: revisão anual da SoA, monitoramento contínuo dos 93 controles, suporte para auditorias de manutenção (anos 1 e 2) e recertificação (ano 3), atualização de políticas conforme mudanças regulatórias, e treinamento periódico. Custo médio: 30-40% do projeto inicial por ano." }
+    ],
+    en: [
+      { q: "How much does ISO 27001 certification cost in Brazil?", a: "Ranges in 2026: small company (up to 50 employees) R$ 80-180k in 8 months. Medium (50-300) R$ 200-400k. Large (300+) R$ 500k-1.5M. Includes: Evernow consulting (60% of total), tools (GRC, monitoring), and certification audit (R$ 40-120k paid directly to the INMETRO-accredited certifier)." },
+      { q: "Is ISO 27001 worth it for a small company?", a: "Yes if: (a) you sell to companies that require it (government, banks, healthcare, multinationals), (b) you process sensitive data at scale, (c) you want to avoid wasting time answering RFP questionnaires. For B2B SaaS, ISO 27001 + SOC 2 accelerates the enterprise sales cycle by 30-60 days." },
+      { q: "Which certification auditor do you recommend?", a: "We work with BSI, DNV, Bureau Veritas, TÜV Rheinland and SGS — all INMETRO-accredited. Recommendation varies by size: BSI for global enterprise, Bureau Veritas for regulated BR markets, DNV for tech. We never resell the audit — you contract directly to preserve independence." },
+      { q: "ISO 27001:2022 vs ISO 27001:2013, do I need to recertify?", a: "Yes. ISO 27001:2022 reorganizes Annex A controls (from 114 to 93, grouped in 4 themes) and adds 11 new controls on cloud, threat intel and privacy. Companies certified in 2013 have until October 2025 to migrate — after that the certificate becomes invalid." },
+      { q: "Do you help with post-certification maintenance?", a: "Yes. The maintenance package includes: annual SoA review, continuous monitoring of the 93 controls, support for surveillance audits (years 1 and 2) and recertification (year 3), policy updates per regulatory changes, and periodic training. Average cost: 30-40% of the initial project per year." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about ISO 27001" if lang == "en" else "Perguntas frequentes sobre ISO 27001") %}
+  {% include "components/faq-section.njk" %}
+
   {% set ctaTitle = ("Plan your certification with a real partner" if lang == "en" else "Planeje sua certificação com um parceiro de verdade") %}
   {% set ctaSubtitle = ("Free gap analysis: we show exactly how far you are from ISO 27001 and the shortest path to certificate." if lang == "en" else "Gap analysis gratuito: mostramos exatamente a distância até a ISO 27001 e o caminho mais curto para certificar.") %}
   {% set ctaPrimary = ("Request gap analysis" if lang == "en" else "Solicitar gap analysis") %}
   {% set ctaSecondary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
   {% include "components/cta-final.njk" %}
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {

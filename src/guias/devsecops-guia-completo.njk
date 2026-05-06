@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/guides/devsecops/{% else %}/guias/devsecops/{% endif %}"
-seoTitle: "DevSecOps: Guia Completo 2026 com Pipeline, Ferramentas e KPIs | Evernow"
+seoTitle: "DevSecOps: Guia Completo 2026 com Pipeline e KPIs | Evernow"
 seoDescription: "O que é DevSecOps, como implementar do shift-left ao shift-right, ferramentas SAST/DAST/SCA/IaC/DSPM no pipeline CI/CD, KPIs executivos e erros a evitar."
 seoKeywords: "devsecops, o que é devsecops, como implementar devsecops, guia devsecops, shift left, devsecops ci cd, consultoria devsecops"
 langPtUrl: "/guias/devsecops/"
@@ -246,6 +246,32 @@ langEnUrl: "/en/guides/devsecops/"
     </div>
   </section>
 
+  {# FAQ Section (bilingual) #}
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "Qual a diferença entre DevOps e DevSecOps?", a: "DevSecOps é DevOps com segurança integrada em todas as etapas do pipeline (não como gate final). Adiciona threat modeling no design, SAST/SCA no commit, DAST em staging e RASP em produção, com automação que não trava entregas." },
+      { q: "Quanto tempo leva pra implementar DevSecOps numa empresa?", a: "Implementação base de DevSecOps maduro leva 60 a 90 dias para uma equipe de 30-50 devs. Os primeiros ganhos (SAST e SCA no CI) aparecem em 2-3 semanas. Maturidade completa com threat modeling sistemático leva 6-12 meses." },
+      { q: "DevSecOps trava o deploy?", a: "Não, quando bem implementado. A regra é: ferramentas com baixo falso-positivo (Semgrep, Sonatype) configuradas pra falhar só em CRITICAL/HIGH com CVSS ≥ 7,0. Findings menores viram tickets, não bloqueio. Time-to-deploy típico cresce 5-12% nas primeiras semanas e estabiliza." },
+      { q: "Quais ferramentas SAST, DAST e SCA são essenciais no pipeline?", a: "SAST: Fortify ou SonarQube (enterprise) ou Semgrep (custom). DAST: Veracode DAST ou OWASP ZAP. SCA: Sonatype Nexus ou Veracode SCA. Cobre 90% dos casos B2B. Para mobile, adicione Guardsquare ou JScrambler." },
+      { q: "Como medir maturidade DevSecOps?", a: "Use OWASP SAMM ou BSIMM como baseline. KPIs principais: % de builds com SAST/SCA, MTTR de findings críticos, escapes pra produção/mês, % de commits com threat model atualizado, tempo médio de tuning de regras." },
+      { q: "Qual o ROI de DevSecOps?", a: "Custo médio de breach pós-deploy nos relatórios IBM/Ponemon (US$ 4,8M global, R$ 6,2M Brasil em 2024). Detectar e corrigir em design custa ~5% disso; em produção, 30-100x mais caro. ROI fica positivo após 1 vulnerabilidade crítica evitada por ano." },
+      { q: "Preciso de DevSecOps mesmo se já tenho SOC?", a: "Sim. SOC opera em produção (defesa reativa); DevSecOps preveni código vulnerável de chegar lá. São complementares: AppSec preventivo + SOC reativo. Sem DevSecOps, o SOC fica sobrecarregado de incidentes preveníveis." }
+    ],
+    en: [
+      { q: "What is the difference between DevOps and DevSecOps?", a: "DevSecOps is DevOps with security integrated at every pipeline stage (not as a final gate). It adds threat modeling at design time, SAST/SCA at commit, DAST in staging, and RASP in production, with automation that does not slow down delivery." },
+      { q: "How long does it take to implement DevSecOps in a company?", a: "Baseline DevSecOps maturity takes 60 to 90 days for a 30-50 dev team. First wins (SAST and SCA in CI) show in 2-3 weeks. Full maturity with systematic threat modeling takes 6-12 months." },
+      { q: "Does DevSecOps slow down deploys?", a: "No, when implemented properly. Rule of thumb: low-false-positive tools (Semgrep, Sonatype) configured to fail only on CRITICAL/HIGH with CVSS ≥ 7.0. Lower findings become tickets, not blockers. Typical time-to-deploy grows 5-12% in the first weeks then stabilizes." },
+      { q: "Which SAST, DAST and SCA tools are essential in the pipeline?", a: "SAST: Fortify or SonarQube (enterprise) or Semgrep (custom). DAST: Veracode DAST or OWASP ZAP. SCA: Sonatype Nexus or Veracode SCA. This covers 90% of B2B cases. For mobile, add Guardsquare or JScrambler." },
+      { q: "How do you measure DevSecOps maturity?", a: "Use OWASP SAMM or BSIMM as a baseline. Core KPIs: % builds with SAST/SCA, MTTR of critical findings, escapes to production per month, % commits with up-to-date threat model, average rule tuning time." },
+      { q: "What is the ROI of DevSecOps?", a: "Average post-deploy breach cost per IBM/Ponemon (US$ 4.8M globally, R$ 6.2M in Brazil, 2024). Detecting and fixing at design time costs ~5% of that; in production, 30-100x more. ROI is positive after avoiding one critical vulnerability per year." },
+      { q: "Do I need DevSecOps if I already have a SOC?", a: "Yes. SOC operates in production (reactive defense); DevSecOps prevents vulnerable code from reaching it. They are complementary: preventive AppSec + reactive SOC. Without DevSecOps, the SOC ends up overloaded with preventable incidents." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about DevSecOps" if lang == "en" else "Perguntas frequentes sobre DevSecOps") %}
+  {% include "components/faq-section.njk" %}
+
   {% set ctaTitle = ("Turn DevSecOps into an operating reality" if lang == "en" else "Transforme DevSecOps em realidade operacional") %}
   {% set ctaSubtitle = ("Free 30 minutes with a DevSecOps architect to map your state and priorities." if lang == "en" else "30 min gratuitos com arquiteto DevSecOps para mapear seu estado e prioridades.") %}
   {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
@@ -264,5 +290,17 @@ langEnUrl: "/en/guides/devsecops/"
   "datePublished": "2026-04-22",
   "inLanguage": "{% if lang == 'en' %}en{% else %}pt-BR{% endif %}",
   "mainEntityOfPage": "https://evernow.com.br{% if lang == 'en' %}/en/guides/devsecops/{% else %}/guias/devsecops/{% endif %}"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
 }
 </script>

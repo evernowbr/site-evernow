@@ -149,4 +149,39 @@ pageMeta: assessment
       </div>
     </div>
   </section>
+
+  {# FAQ Section (bilingual) #}
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "O assessment é mesmo gratuito? Onde está o catch?", a: "Sim, sem cobrança. São 30 minutos com especialista sênior, sem obrigação de contratar nada. Razão: 1 em cada 4 assessments termina em projeto contratado, então o ROI pra Evernow vem da conversão. Pra você é diagnóstico de qualidade sem custo." },
+      { q: "Quem participa do assessment pelo lado de vocês?", a: "Especialista sênior do pillar específico (ex: arquiteto DevSecOps se sua dor é AppSec, DPO certificado se é LGPD, head SOC se é detecção e resposta). Nunca apenas vendedor — sempre alguém técnico que pode discutir profundidade real." },
+      { q: "Que tipo de empresa se beneficia mais do assessment?", a: "Empresas em 3 momentos: (a) madurando programa de segurança (CTO/CISO chegou recente, quer baseline), (b) preparando-se pra compliance (LGPD, ISO 27001, PCI DSS), (c) pós-incidente (precisa estruturar resposta e prevenir reincidência). Médio e grande porte (50+ devs ou 100+ funcionários TI)." },
+      { q: "Como me preparo pro assessment?", a: "Não precisa de slide deck. Tenha em mente: principais sistemas críticos, tipos de dados sensíveis processados, ferramentas atuais (SAST, EDR, SIEM, etc), incidentes recentes, frameworks aplicáveis (LGPD, ISO, PCI), e 1-2 dores específicas que querem resolver. 30 min são suficientes pra mapeamento inicial." },
+      { q: "O que recebo no final do assessment?", a: "Email no mesmo dia com: resumo executivo do estado atual, 3-5 prioridades técnicas identificadas, ranges de investimento típicos pra cada prioridade, e próximos passos sugeridos (próprio time vs consultoria). Se aplicável, agendamos call de follow-up técnica." }
+    ],
+    en: [
+      { q: "Is the assessment really free? Where's the catch?", a: "Yes, no charge. It's 30 minutes with a senior specialist, with no obligation to hire anything. Why: 1 in 4 assessments converts into a contracted project, so the ROI for Evernow comes from conversion. For you, it's a quality diagnostic at no cost." },
+      { q: "Who from your side joins the assessment?", a: "A senior specialist from the specific pillar (e.g., DevSecOps architect if your pain is AppSec, certified DPO if it's LGPD, SOC head if detection & response). Never just a salesperson — always someone technical who can discuss real depth." },
+      { q: "What kind of company benefits most from the assessment?", a: "Companies at 3 moments: (a) maturing a security program (recently hired CTO/CISO who wants a baseline), (b) preparing for compliance (LGPD, ISO 27001, PCI DSS), (c) post-incident (needs to structure response and prevent recurrence). Mid to large size (50+ devs or 100+ IT staff)." },
+      { q: "How do I prepare for the assessment?", a: "No slide deck needed. Have in mind: main critical systems, types of sensitive data processed, current tools (SAST, EDR, SIEM, etc), recent incidents, applicable frameworks (LGPD, ISO, PCI), and 1-2 specific pains you want to solve. 30 min is enough for initial mapping." },
+      { q: "What do I get at the end of the assessment?", a: "Same-day email with: executive summary of current state, 3-5 identified technical priorities, typical investment ranges for each priority, and suggested next steps (in-house team vs consulting). If applicable, we schedule a technical follow-up call." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about the assessment" if lang == "en" else "Perguntas frequentes sobre o assessment") %}
+  {% include "components/faq-section.njk" %}
+
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>

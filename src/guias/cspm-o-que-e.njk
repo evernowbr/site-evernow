@@ -5,8 +5,8 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/guides/cspm/{% else %}/guias/cspm-o-que-e/{% endif %}"
-seoTitle: "CSPM: O que é Cloud Security Posture Management e Como Implementar | Evernow"
-seoDescription: "Guia completo de CSPM em 2026: diferença de CSPM vs CNAPP vs CWPP, os 8 controles essenciais, integração AWS/Azure/GCP e como priorizar findings na prática."
+seoTitle: "CSPM: O que é, vs CNAPP/CWPP e Como Implementar | Evernow"
+seoDescription: "Guia completo CSPM 2026: diferença vs CNAPP e CWPP, 8 controles essenciais, integração AWS/Azure/GCP e como priorizar findings."
 seoKeywords: "cspm, cloud security posture management, o que é cspm, cspm brasil, cspm vs cnapp, cspm vs cwpp, misconfiguração cloud, segurança aws azure gcp"
 langPtUrl: "/guias/cspm-o-que-e/"
 langEnUrl: "/en/guides/cspm/"
@@ -345,12 +345,45 @@ langEnUrl: "/en/guides/cspm/"
     </div>
   </section>
 
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "Qual a diferença entre CSPM, CWPP e CNAPP?", a: "CSPM (Cloud Security Posture Management) audita configurações da infra cloud (IAM, S3 buckets, VPC). CWPP (Cloud Workload Protection Platform) protege as cargas rodando — VMs, containers, serverless. CNAPP é a plataforma unificada que combina CSPM + CWPP + CIEM + DSPM em uma. Em 2026, CNAPP virou o padrão pra empresas com mais de 50 workloads cloud." },
+      { q: "CSPM substitui o nativo da AWS/Azure/GCP?", a: "Complementa, não substitui. AWS Security Hub, Azure Defender e GCP Security Command Center cobrem o seu próprio cloud. CSPM third-party (Orca, Wiz, Prisma) trabalha multi-cloud com modelo unificado de findings + priorização baseada em risco real (path de exploitação) — coisa que o nativo não faz tão bem." },
+      { q: "Em quanto tempo conseguimos baixar 80% dos findings críticos?", a: "Tipicamente 60-90 dias com Evernow operando. Os primeiros 30 dias são quick wins óbvios (S3 público, IAM com permissão *:*, VPC default). Os 60 dias seguintes envolvem refactor de IAM (least privilege) e segregação de redes — exige times de cloud engineering envolvidos." },
+      { q: "CSPM gera ruído? Como filtrar?", a: "Sim, qualquer ferramenta nova gera 200-2000 findings de baseline. Filtre por: (1) Path de exploitação (Reachability), (2) Asset crítico (prod > dev), (3) Exposição internet (público > privado), (4) Compliance match (SOC2, PCI). Bons CSPMs reduzem 70%+ do backlog inicial com tuning correto." },
+      { q: "Vale a pena pra empresa com poucos workloads cloud?", a: "Se tem <10 contas AWS/Azure/GCP e <50 workloads, o nativo (Security Hub etc) já dá conta. CSPM third-party justifica a partir de multi-cloud + multi-tenant + compliance externo (PCI, SOC2). Para small cloud, foque em IAM hygiene, IaC scanning (Checkov/Terrascan) e CIS benchmarks." }
+    ],
+    en: [
+      { q: "What is the difference between CSPM, CWPP and CNAPP?", a: "CSPM (Cloud Security Posture Management) audits cloud infra configurations (IAM, S3 buckets, VPC). CWPP (Cloud Workload Protection Platform) protects running workloads — VMs, containers, serverless. CNAPP is the unified platform combining CSPM + CWPP + CIEM + DSPM. In 2026, CNAPP has become the standard for companies with more than 50 cloud workloads." },
+      { q: "Does CSPM replace AWS/Azure/GCP native tools?", a: "It complements, not replaces. AWS Security Hub, Azure Defender and GCP Security Command Center cover their own cloud. Third-party CSPM (Orca, Wiz, Prisma) works multi-cloud with a unified findings model + risk-based prioritization (exploitation path) — something native tools do not do as well." },
+      { q: "How long until we cut 80% of critical findings?", a: "Typically 60-90 days with Evernow running operations. The first 30 days are obvious quick wins (public S3, IAM with *:* permissions, default VPC). The next 60 days involve IAM refactor (least privilege) and network segregation — requires cloud engineering teams involved." },
+      { q: "Does CSPM generate noise? How do you filter it?", a: "Yes — any new tool generates 200-2000 baseline findings. Filter by: (1) Exploitation path (Reachability), (2) Critical asset (prod > dev), (3) Internet exposure (public > private), (4) Compliance match (SOC2, PCI). Good CSPMs reduce 70%+ of initial backlog with proper tuning." },
+      { q: "Is it worth it for a company with few cloud workloads?", a: "If you have <10 AWS/Azure/GCP accounts and <50 workloads, native tools (Security Hub etc) cover it. Third-party CSPM is justified from multi-cloud + multi-tenant + external compliance (PCI, SOC2). For small cloud, focus on IAM hygiene, IaC scanning (Checkov/Terrascan) and CIS benchmarks." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about CSPM" if lang == "en" else "Perguntas frequentes sobre CSPM") %}
+  {% include "components/faq-section.njk" %}
+
   {% set ctaTitle = ("Ready to turn cloud into a controlled surface?" if lang == "en" else "Pronto para transformar cloud em superfície controlada?") %}
   {% set ctaSubtitle = ("Free 30-minute cloud diagnosis — we show the top-5 critical risks today in your environment." if lang == "en" else "30 min gratuitos de diagnóstico cloud — mostramos os 5 riscos críticos mais altos no seu ambiente hoje.") %}
   {% set ctaPrimary = ("Request diagnosis" if lang == "en" else "Solicitar diagnóstico") %}
   {% set ctaSecondary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
   {% include "components/cta-final.njk" %}
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {

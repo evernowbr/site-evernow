@@ -70,6 +70,14 @@
 /seguranca-de-aplicacoes/ /solucoes/secure-code/ 301
 /somos-a-evernow          /about 301
 /somos-a-evernow/         /about 301
+/contrate-seu-servico     /contact 301
+/contrate-seu-servico/    /contact 301
+
+# Posts blog WP que perderam /blog/ no path (descobertos via GSC/GA4)
+/pentest-continuo-para-empresas  /blog/pentest-continuo-para-empresas 301
+/pentest-continuo-para-empresas/ /blog/pentest-continuo-para-empresas 301
+/pentest-continuo                /blog/pentest-continuo-para-empresas 301
+/pentest-continuo/               /blog/pentest-continuo-para-empresas 301
 
 # ─── ALIAS amigáveis para entrar direto em páginas-chave (sem 301, 200 rewrite) ─
 # /pentest-preco → /guias/quanto-custa-pentest/ (bom para email/LinkedIn)

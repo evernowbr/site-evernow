@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: lang
 permalink: "{% if lang == 'en' %}/en/guides/sast-vs-dast-vs-sca/{% else %}/guias/sast-vs-dast-vs-sca/{% endif %}"
-seoTitle: "SAST vs DAST vs SCA: Diferenças, Quando Usar e Como Integrar no CI/CD | Evernow"
+seoTitle: "SAST vs DAST vs SCA: Quando Usar Cada Um | Evernow"
 seoDescription: "Guia prático: diferenças entre SAST, DAST e SCA, quando cada um falha e como combinar os três no pipeline sem quebrar a velocidade de deploy."
 seoKeywords: "sast vs dast, sast dast sca, diferença sast dast, sast dast sca ci cd, appsec pipeline, devsecops ferramentas"
 langPtUrl: "/guias/sast-vs-dast-vs-sca/"
@@ -283,12 +283,45 @@ langEnUrl: "/en/guides/sast-vs-dast-vs-sca/"
     </div>
   </section>
 
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "Posso usar só SAST e dispensar DAST?", a: "Não com segurança. SAST acha o que está no código (SQLi, XSS, hardcoded secrets, IaC misconfig) mas erra falhas de configuração de runtime, business logic e fluxos de autenticação que só aparecem na app rodando. DAST cobre exatamente isso. Os 3 (SAST, DAST, SCA) são complementares — só com os 3 você cobre 80%+ das classes OWASP." },
+      { q: "SCA e SBOM são a mesma coisa?", a: "Não. SBOM é o INVENTÁRIO de dependências (lista versionada). SCA é a ferramenta que LÊ o SBOM e cruza com bases de CVE pra detectar vulnerabilidades. SCA também valida licenças e integridade. Quem só tem SBOM sem SCA, tem inventário sem alertas." },
+      { q: "Qual ferramenta gratuita de SAST funciona em CI/CD?", a: "Semgrep Community Edition é a melhor opção open source: rápido, customizável, integra GitHub/GitLab Actions em <5 min, suporta Python/JS/Go/Java/PHP/etc. SonarQube Community também é robusto mas exige servidor próprio. Snyk Open Source tem tier free pra projetos públicos." },
+      { q: "DAST quebra produção?", a: "Pode quebrar se mal configurado. Boas práticas: rodar em staging idêntico, agendar fora do horário pico, configurar rate limit no scanner (1-2 req/s no início), usar autenticação real e excluir endpoints destrutivos (/delete, /reset). Veracode DAST e OWASP ZAP têm modo seguro embutido." },
+      { q: "Como priorizar findings dos 3?", a: "Use 4 fatores: severidade CVSS (crítico/alto = primeiro), exploit-in-the-wild conhecido (KEV catalog CISA), exposição (asset interno vs externo), e contexto de negócio. SAST com 1000 findings vira ruído sem priorização. Ferramenta com Reachability Analysis (Veracode, Snyk) reduz 60-70% do backlog." }
+    ],
+    en: [
+      { q: "Can I use SAST only and skip DAST?", a: "Not safely. SAST finds what's in the code (SQLi, XSS, hardcoded secrets, IaC misconfig) but misses runtime config flaws, business logic and authentication flows that only show up when the app is running. DAST covers exactly that. The three (SAST, DAST, SCA) are complementary — only with all three do you cover 80%+ of OWASP classes." },
+      { q: "Are SCA and SBOM the same thing?", a: "No. SBOM is the dependency INVENTORY (versioned list). SCA is the tool that READS the SBOM and cross-references CVE databases to detect vulnerabilities. SCA also validates licenses and integrity. Having SBOM without SCA means inventory without alerts." },
+      { q: "Which free SAST tool works in CI/CD?", a: "Semgrep Community Edition is the best open source option: fast, customizable, integrates with GitHub/GitLab Actions in <5 min, supports Python/JS/Go/Java/PHP/etc. SonarQube Community is also robust but requires its own server. Snyk Open Source has a free tier for public projects." },
+      { q: "Does DAST break production?", a: "It can if misconfigured. Best practices: run in identical staging, schedule outside peak hours, configure scanner rate limit (1-2 req/s initially), use real authentication and exclude destructive endpoints (/delete, /reset). Veracode DAST and OWASP ZAP have built-in safe mode." },
+      { q: "How do you prioritize findings across the three?", a: "Use 4 factors: CVSS severity (critical/high = first), known exploit-in-the-wild (CISA KEV catalog), exposure (internal vs external asset), and business context. SAST with 1000 findings becomes noise without prioritization. A tool with Reachability Analysis (Veracode, Snyk) reduces backlog by 60-70%." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about SAST, DAST and SCA" if lang == "en" else "Perguntas frequentes sobre SAST, DAST e SCA") %}
+  {% include "components/faq-section.njk" %}
+
   {% set ctaTitle = ("Need help designing your AppSec pipeline?" if lang == "en" else "Precisa estruturar seu pipeline AppSec?") %}
   {% set ctaSubtitle = ("Free 30-minute call with a senior specialist to map your gaps and prioritize fixes." if lang == "en" else "30 min gratuitos com um especialista sênior para mapear gaps e priorizar correções.") %}
   {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
   {% set ctaSecondary = ("Take the assessment" if lang == "en" else "Fazer o assessment") %}
   {% include "components/cta-final.njk" %}
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {

@@ -116,4 +116,235 @@ pageMeta: parceiros-index
     </div>
   </section>
 
+  {# Vendors agrupados por categoria #}
+  <section class="ev-section">
+    <div class="container overlay-content">
+      <div class="ev-section__tag">{% if lang == "en" %}Solutions by category{% else %}Soluções por categoria{% endif %}</div>
+      <h2 class="ev-section__title">{% if lang == "en" %}24 platforms organized by what they solve{% else %}24 plataformas organizadas pelo que resolvem{% endif %}</h2>
+      <p class="ev-section__desc" style="max-width:760px;margin-bottom:32px;">{% if lang == "en" %}Each platform we represent is selected for a specific role in your security stack. Below, the categories with the leading vendors we implement and operate.{% else %}Cada plataforma que representamos é selecionada para um papel específico no seu stack de segurança. Abaixo, as categorias com os vendors líderes que implementamos e operamos.{% endif %}</p>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,224,163,.15);border-radius:12px;padding:24px;height:100%;">
+            <h3 style="color:#00e0a3;font-size:1.1rem;margin-bottom:14px;">{% if lang == "en" %}AppSec & DevSecOps{% else %}AppSec & DevSecOps{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.5;margin-bottom:14px;">{% if lang == "en" %}SAST, DAST, SCA, threat modeling and code protection across the CI/CD pipeline.{% else %}SAST, DAST, SCA, threat modeling e proteção de código integrados ao pipeline CI/CD.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.88rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/fortify/" style="color:#fff;text-decoration:none;">Fortify by OpenText</a> — SAST enterprise</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/veracode/" style="color:#fff;text-decoration:none;">Veracode</a> — SAST/DAST/SCA SaaS</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/sonarqube/" style="color:#fff;text-decoration:none;">SonarQube</a> — Quality + SAST</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/semgrep/" style="color:#fff;text-decoration:none;">Semgrep</a> — SAST customizável</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/sonatype/" style="color:#fff;text-decoration:none;">Sonatype Nexus</a> — SCA & supply chain</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/jscrambler/" style="color:#fff;text-decoration:none;">JScrambler</a> — JS/RASP</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/guardsquare/" style="color:#fff;text-decoration:none;">Guardsquare</a> — Mobile App Protection</li>
+              <li><a href="{{ urlPrefix }}/parceiros/security-compass/" style="color:#fff;text-decoration:none;">Security Compass</a> — Threat Modeling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,224,163,.15);border-radius:12px;padding:24px;height:100%;">
+            <h3 style="color:#00e0a3;font-size:1.1rem;margin-bottom:14px;">{% if lang == "en" %}Data Security & Privacy{% else %}Segurança e Privacidade de Dados{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.5;margin-bottom:14px;">{% if lang == "en" %}DSPM, DLP, encryption, KMS/HSM, data classification and LGPD/GDPR consent operations.{% else %}DSPM, DLP, criptografia, KMS/HSM, classificação e operação de consentimento LGPD/GDPR.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.88rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/securiti/" style="color:#fff;text-decoration:none;">Securiti.ai</a> — Privacy automation</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/opentext-voltage/" style="color:#fff;text-decoration:none;">OpenText Voltage</a> — Data-centric crypto</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/microsoft-purview/" style="color:#fff;text-decoration:none;">Microsoft Purview</a> — Data governance</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/aws-kms/" style="color:#fff;text-decoration:none;">AWS KMS</a> — Key management</li>
+              <li><a href="{{ urlPrefix }}/parceiros/azure-key-vault/" style="color:#fff;text-decoration:none;">Azure Key Vault</a> — Secrets/certs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,224,163,.15);border-radius:12px;padding:24px;height:100%;">
+            <h3 style="color:#00e0a3;font-size:1.1rem;margin-bottom:14px;">{% if lang == "en" %}Managed Operations & SOC{% else %}Operações Gerenciadas & SOC{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.5;margin-bottom:14px;">{% if lang == "en" %}EDR/XDR, SIEM/SOAR, NDR, PAM and 24x7 detection and response.{% else %}EDR/XDR, SIEM/SOAR, NDR, PAM e detecção e resposta 24x7.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.88rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/sentinelone/" style="color:#fff;text-decoration:none;">SentinelOne</a> — EDR/XDR</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/microsoft-sentinel/" style="color:#fff;text-decoration:none;">Microsoft Sentinel</a> — SIEM cloud</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/darktrace/" style="color:#fff;text-decoration:none;">Darktrace</a> — NDR / AI Security</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/senhasegura/" style="color:#fff;text-decoration:none;">senhasegura</a> — PAM</li>
+              <li><a href="{{ urlPrefix }}/parceiros/aws-security-hub/" style="color:#fff;text-decoration:none;">AWS Security Hub</a> — Cloud posture</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,224,163,.15);border-radius:12px;padding:24px;height:100%;">
+            <h3 style="color:#00e0a3;font-size:1.1rem;margin-bottom:14px;">{% if lang == "en" %}Vulnerability Management & Pentest{% else %}Gestão de Vulnerabilidades & Pentest{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.5;margin-bottom:14px;">{% if lang == "en" %}VMDR, automated pentest, security testing and third-party risk monitoring.{% else %}VMDR, pentest automatizado, security testing e monitoramento de risco de terceiros.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.88rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/qualys/" style="color:#fff;text-decoration:none;">Qualys VMDR</a> — Vuln management</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/tenable/" style="color:#fff;text-decoration:none;">Tenable.io</a> — Nessus enterprise</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/ridge-security/" style="color:#fff;text-decoration:none;">Ridge Security</a> — PTaaS</li>
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/rainforest/" style="color:#fff;text-decoration:none;">Rainforest</a> — Security testing</li>
+              <li><a href="{{ urlPrefix }}/parceiros/security-scorecard/" style="color:#fff;text-decoration:none;">SecurityScorecard</a> — TPRM</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,224,163,.15);border-radius:12px;padding:24px;height:100%;">
+            <h3 style="color:#00e0a3;font-size:1.1rem;margin-bottom:14px;">{% if lang == "en" %}Cloud Security{% else %}Cloud Security{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.5;margin-bottom:14px;">{% if lang == "en" %}CSPM, CWPP, agentless cloud visibility and multi-cloud governance.{% else %}CSPM, CWPP, visibilidade cloud agentless e governança multi-cloud.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.88rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2"><a href="{{ urlPrefix }}/parceiros/orca-security/" style="color:#fff;text-decoration:none;">Orca Security</a> — Cloud agentless</li>
+              <li><a href="{{ urlPrefix }}/parceiros/aws-security-hub/" style="color:#fff;text-decoration:none;">AWS Security Hub</a> — AWS-native posture</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {# Como funciona uma POC #}
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag">{% if lang == "en" %}Process{% else %}Processo{% endif %}</div>
+      <h2 class="ev-section__title">{% if lang == "en" %}How a POC works with Evernow{% else %}Como funciona uma POC com a Evernow{% endif %}</h2>
+      <p class="ev-section__desc" style="max-width:760px;margin-bottom:32px;">{% if lang == "en" %}A real proof of concept in 2 to 4 weeks, in your environment, with technical findings and ROI analysis. No marketing demos.{% else %}Uma prova de conceito real em 2 a 4 semanas, no seu ambiente, com achados técnicos e análise de ROI. Sem demos de marketing.{% endif %}</p>
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div style="background:rgba(255,255,255,.04);padding:20px;border-radius:10px;height:100%;">
+            <div style="color:#00e0a3;font-size:.78rem;font-weight:700;letter-spacing:.08em;margin-bottom:8px;">{% if lang == "en" %}WEEK 1{% else %}SEMANA 1{% endif %}</div>
+            <h4 style="color:#fff;font-size:1rem;margin-bottom:8px;">{% if lang == "en" %}Scope alignment{% else %}Alinhamento de escopo{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.5;">{% if lang == "en" %}Kickoff with 2 calls: technical (your team + our engineer) and executive (success criteria + ROI baseline).{% else %}Kickoff com 2 calls: técnica (seu time + nosso engenheiro) e executiva (critérios de sucesso + baseline de ROI).{% endif %}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div style="background:rgba(255,255,255,.04);padding:20px;border-radius:10px;height:100%;">
+            <div style="color:#00e0a3;font-size:.78rem;font-weight:700;letter-spacing:.08em;margin-bottom:8px;">{% if lang == "en" %}WEEK 2{% else %}SEMANA 2{% endif %}</div>
+            <h4 style="color:#fff;font-size:1rem;margin-bottom:8px;">{% if lang == "en" %}Real environment integration{% else %}Integração em ambiente real{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.5;">{% if lang == "en" %}We deploy in dev/staging with the engineer certified on the platform. CI/CD, SIEM and ITSM integration when applicable.{% else %}Implantamos em dev/staging com engenheiro certificado na plataforma. Integração CI/CD, SIEM e ITSM quando aplicável.{% endif %}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div style="background:rgba(255,255,255,.04);padding:20px;border-radius:10px;height:100%;">
+            <div style="color:#00e0a3;font-size:.78rem;font-weight:700;letter-spacing:.08em;margin-bottom:8px;">{% if lang == "en" %}WEEK 3{% else %}SEMANA 3{% endif %}</div>
+            <h4 style="color:#fff;font-size:1rem;margin-bottom:8px;">{% if lang == "en" %}Findings & tuning{% else %}Achados e tuning{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.5;">{% if lang == "en" %}Real findings catalogued, prioritized by exploitability, with rule tuning to reduce false positives by 60-70%.{% else %}Achados reais catalogados, priorizados por exploitabilidade, com tuning de regras pra reduzir falso positivo em 60-70%.{% endif %}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div style="background:rgba(255,255,255,.04);padding:20px;border-radius:10px;height:100%;">
+            <div style="color:#00e0a3;font-size:.78rem;font-weight:700;letter-spacing:.08em;margin-bottom:8px;">{% if lang == "en" %}WEEK 4{% else %}SEMANA 4{% endif %}</div>
+            <h4 style="color:#fff;font-size:1rem;margin-bottom:8px;">{% if lang == "en" %}Executive report{% else %}Relatório executivo{% endif %}</h4>
+            <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.5;">{% if lang == "en" %}Findings report, recommendation, ROI analysis and license + operations proposal. Decision in your hands, technically informed.{% else %}Relatório de achados, recomendação, análise de ROI e proposta comercial de licenciamento + operação. Decisão na sua mão, tecnicamente informada.{% endif %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Modelos de licenciamento #}
+  <section class="ev-section">
+    <div class="container overlay-content">
+      <div class="ev-section__tag">{% if lang == "en" %}Engagement models{% else %}Modelos de engajamento{% endif %}</div>
+      <h2 class="ev-section__title">{% if lang == "en" %}Licensing, implementation and operations: 3 models{% else %}Licenciamento, implementação e operação: 3 modelos{% endif %}</h2>
+      <p class="ev-section__desc" style="max-width:760px;margin-bottom:32px;">{% if lang == "en" %}Choose how far Evernow goes in your operation: license-only, implement-only, or full managed operations with SLA.{% else %}Escolha até onde a Evernow entra na sua operação: só licenciamento, implementação completa, ou operação gerenciada ponta-a-ponta com SLA.{% endif %}</p>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px;height:100%;">
+            <h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px;">{% if lang == "en" %}Licensing only{% else %}Apenas licenciamento{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.55);font-size:.86rem;margin-bottom:14px;">{% if lang == "en" %}For internal teams already certified.{% else %}Para times internos já certificados.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.9rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2">✓ {% if lang == "en" %}Manufacturer pricing via authorized channel{% else %}Preço de canal autorizado{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}Transparent licensing model{% else %}Modelo de licenciamento transparente{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}Faturamento BR e SLA jurídico nacional{% else %}Faturamento BR e SLA jurídico nacional{% endif %}</li>
+              <li>✓ {% if lang == "en" %}Renewal alerts and assistance{% else %}Alerta e assistência de renovação{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background:rgba(0,224,163,.08);border:1px solid rgba(0,224,163,.4);border-radius:12px;padding:28px;height:100%;position:relative;">
+            <div style="position:absolute;top:-10px;right:20px;background:#00e0a3;color:#0f1a5c;font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;">{% if lang == "en" %}Most chosen{% else %}Mais escolhido{% endif %}</div>
+            <h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px;">{% if lang == "en" %}License + Implementation{% else %}Licença + Implementação{% endif %}</h3>
+            <p style="color:rgba(255,255,255,.55);font-size:.86rem;margin-bottom:14px;">{% if lang == "en" %}For teams that want fast wins without internal learning curve.{% else %}Para times que querem ganho rápido sem curva de aprendizado.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.9rem;color:rgba(255,255,255,.85);">
+              <li class="mb-2">✓ {% if lang == "en" %}Everything from licensing-only{% else %}Tudo do modelo Apenas Licenciamento{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}Full implementation with certified engineer{% else %}Implementação completa com engenheiro certificado{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}CI/CD, SIEM, ITSM integrations{% else %}Integrações CI/CD, SIEM, ITSM{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}Rule tuning + first results in 30 days{% else %}Tuning de regras + primeiros resultados em 30 dias{% endif %}</li>
+              <li>✓ {% if lang == "en" %}Technical and executive training{% else %}Treinamento técnico e executivo{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px;height:100%;">
+            <h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px;">{% if lang == "en" %}Managed operations (MSP){% else %}Operação gerenciada (MSP){% endif %}</h3>
+            <p style="color:rgba(255,255,255,.55);font-size:.86rem;margin-bottom:14px;">{% if lang == "en" %}For teams that want results, not platform management.{% else %}Para times que querem resultado, não gestão de plataforma.{% endif %}</p>
+            <ul class="list-unstyled" style="font-size:.9rem;color:rgba(255,255,255,.8);">
+              <li class="mb-2">✓ {% if lang == "en" %}Everything from License + Implementation{% else %}Tudo do modelo Licença + Implementação{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}24x7 monitoring and tuning{% else %}Monitoramento e tuning 24x7{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}Monthly findings and ROI reports{% else %}Relatórios mensais de achados e ROI{% endif %}</li>
+              <li class="mb-2">✓ {% if lang == "en" %}Direct support with implementing engineer{% else %}Suporte direto com engenheiro que implementou{% endif %}</li>
+              <li>✓ {% if lang == "en" %}Contractual SLA with metrics{% else %}SLA contratual com métricas{% endif %}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# FAQ Section (bilingual) #}
+  {%- set faqItemsByLang = {
+    pt: [
+      { q: "Vocês são fabricantes ou revendedores?", a: "Nem um nem outro: somos parceiros tecnológicos certificados. Vendemos via canal autorizado de cada vendor (mesmo desconto que o canal direto), mas o nosso valor está em implementar, integrar, treinar e operar a plataforma. Não somos um catálogo de produtos — somos quem opera os produtos pra entregar resultado." },
+      { q: "Como funciona o licenciamento? É mais caro que comprar direto do fabricante?", a: "Não. Compramos no mesmo canal autorizado. O preço é igual ou melhor do que o canal direto, e ainda inclui faturamento BR (sem necessidade de remessa internacional), SLA jurídico nacional, e renovação assistida. Empresas brasileiras evitam complicações tributárias e timeouts de suporte global." },
+      { q: "Quanto tempo leva uma POC?", a: "2 a 4 semanas tipicamente. POCs simples (SAST plug-and-play, EDR endpoint) ficam em 2 semanas. POCs complexas (SIEM com 50+ data sources, CSPM multi-cloud, threat modeling sistemático) ficam em 4 semanas. Sempre em ambiente real do cliente, com achados reais e relatório executivo no final." },
+      { q: "Vocês têm parceria com fabricantes que não estão na lista?", a: "Listamos publicamente as 24 plataformas onde temos certificação técnica e capacidade de operação gerenciada comprovada. Trabalhamos com mais 30+ vendors menores via parcerias indiretas. Se você tem necessidade específica não listada, fale conosco — provavelmente temos." },
+      { q: "Diferença prática entre revendedor comum e parceiro certificado?", a: "Revendedor vende e some. Parceiro certificado tem engenheiros que passaram em provas técnicas DA PRÓPRIA plataforma (não generalistas), implementa em ambiente real, faz tuning de regras pra reduzir falso positivo, integra com seu stack, treina seu time e opera com SLA contratual. A diferença é quem fica responsável pelo resultado." },
+      { q: "Vocês trabalham só com licenciamento ou também com operação contínua?", a: "Os 2. Cerca de 60% dos engajamentos são License + Implementação (modelo mais escolhido). 30% são Operação Gerenciada (MSP) com SLA 24x7. 10% são licenciamento puro pra times já certificados. Modelo é definido na proposta e pode evoluir ao longo do contrato." },
+      { q: "Como vocês mensuram resultados das implementações?", a: "Usamos KPIs definidos no kickoff: tempo médio de detecção (MTTD), tempo de resposta (MTTR), % de findings críticos resolvidos por sprint, taxa de falso positivo após tuning, MTBF (média entre falhas), cobertura de pipeline em DevSecOps. Relatórios mensais executivos + dashboards técnicos." }
+    ],
+    en: [
+      { q: "Are you a manufacturer or a reseller?", a: "Neither: we are certified technology partners. We sell through each vendor's authorized channel (same discount as direct), but our value lies in implementing, integrating, training and operating the platform. We are not a product catalog — we are the team that operates the products to deliver results." },
+      { q: "How does licensing work? Is it more expensive than buying directly from the manufacturer?", a: "No. We buy through the same authorized channel. The price is equal to or better than the direct channel, plus you get BR invoicing (no international wire transfers), local legal SLA, and assisted renewal. Brazilian companies avoid tax complications and global support timeouts." },
+      { q: "How long does a POC take?", a: "Typically 2 to 4 weeks. Simple POCs (plug-and-play SAST, endpoint EDR) take 2 weeks. Complex POCs (SIEM with 50+ data sources, multi-cloud CSPM, systematic threat modeling) take 4 weeks. Always in the client's real environment, with real findings and an executive report at the end." },
+      { q: "Do you have partnerships with vendors not on this list?", a: "We publicly list the 24 platforms where we have technical certification and proven managed operations capability. We work with another 30+ smaller vendors through indirect partnerships. If you have a specific need that's not listed, talk to us — we probably cover it." },
+      { q: "What's the practical difference between a regular reseller and a certified partner?", a: "Resellers sell and disappear. A certified partner has engineers who passed technical exams ON THE PLATFORM ITSELF (not generalists), implements in real environments, tunes rules to reduce false positives, integrates with your stack, trains your team and operates with a contractual SLA. The difference is who is accountable for the result." },
+      { q: "Do you only do licensing, or also continuous operations?", a: "Both. About 60% of engagements are License + Implementation (most-chosen model). 30% are Managed Operations (MSP) with 24x7 SLA. 10% are pure licensing for already-certified teams. Model is defined in the proposal and may evolve over the contract." },
+      { q: "How do you measure implementation results?", a: "We use KPIs defined at kickoff: mean time to detect (MTTD), mean time to respond (MTTR), % of critical findings resolved per sprint, false-positive rate after tuning, MTBF (mean between failures), pipeline coverage in DevSecOps. Monthly executive reports + technical dashboards." }
+    ]
+  } -%}
+  {%- set faqItems = faqItemsByLang[lang] -%}
+  {% set faqTag = "FAQ" %}
+  {% set faqTitle = ("Frequently asked questions about our partnerships" if lang == "en" else "Perguntas frequentes sobre nossas parcerias") %}
+  {% include "components/faq-section.njk" %}
+
+  {# CTA Final #}
+  {% set ctaTitle = ("Need help choosing the right platform for your stack?" if lang == "en" else "Precisa de ajuda pra escolher a plataforma certa para seu stack?") %}
+  {% set ctaSubtitle = ("Free 30-minute call with a senior architect to map your context and recommend with no margin bias." if lang == "en" else "30 min gratuitos com arquiteto sênior pra mapear seu contexto e recomendar sem viés de margem.") %}
+  {% set ctaPrimary = ("Talk to a specialist" if lang == "en" else "Fale com um especialista") %}
+  {% set ctaSecondary = ("Take the assessment" if lang == "en" else "Fazer o assessment") %}
+  {% include "components/cta-final.njk" %}
+
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Cybersecurity Vendor Implementation and Managed Operations",
+  "name": "{% if lang == 'en' %}Certified Cybersecurity Partners | Evernow{% else %}Parceiros Certificados de Cibersegurança | Evernow{% endif %}",
+  "description": "{% if lang == 'en' %}Certified partner of Fortify, Veracode, SonarQube, Sonatype, Tenable, SentinelOne, Microsoft Sentinel and 17 other leading cybersecurity platforms. POC, licensing, implementation, training and managed operations.{% else %}Parceira certificada de Fortify, Veracode, SonarQube, Sonatype, Tenable, SentinelOne, Microsoft Sentinel e mais 17 plataformas líderes de cibersegurança. POC, licenciamento, implementação, treinamento e operação gerenciada.{% endif %}",
+  "provider": { "@type": "Organization", "name": "Evernow", "url": "https://evernow.com.br" },
+  "areaServed": { "@type": "Country", "name": "BR" },
+  "url": "https://evernow.com.br{% if lang == 'en' %}/en/parceiros{% else %}/parceiros{% endif %}"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems -%}
+    { "@type": "Question", "name": {{ item.q | dump }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} } }{{ "," if not loop.last }}
+    {%- endfor -%}
+  ]
+}
+</script>
