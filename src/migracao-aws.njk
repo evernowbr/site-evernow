@@ -1,0 +1,697 @@
+---
+layout: layouts/base.njk
+permalink: "migracao-aws/index.html"
+seoTitle: "Billing AWS em Reais com NF Nacional e NOC 24/7 | Evernow"
+seoDescription: "Pague sua AWS em boleto BRL com nota fiscal nacional brasileira. Sem IOF, sem spread cambial, dólar Ptax, NOC 24/7 incluso, FinOps gratuito e até 50 dias de fluxo de caixa. Agende uma reunião com arquiteto sênior. Sem migrar infraestrutura."
+seoKeywords: "billing aws em reais, pagar aws em reais, aws boleto brl, aws nota fiscal brasil, nf nacional aws, aws cnpj, revenda aws brasil, reseller aws brasil, parceiro premier aws brasil, parceiro aws brasil, aws partner network brasil, migração billing aws, faturamento aws brasil, aws sem iof, aws sem spread cambial, aws dólar ptax, cartão de crédito aws, aws cartão problema, noc aws 24 horas, suporte aws 24/7, finops aws, nops aws, aws organizations brasil, consolidated billing aws, aws enterprise support brasil, aws reseller evernow, gestão de custos aws, otimização aws, savings plans aws, instâncias reservadas aws, compliance fiscal aws"
+seoImage: "https://evernow.com.br/assets/image/og/migracao-aws-og.png"
+---
+{% set urlPrefix = "" %}
+
+<div class="header-and-banner-con w-100">
+  <div class="header-and-banner-inner-con overlay-content">
+    {% include "components/header.njk" %}
+
+    <!-- ============================================= -->
+    <!-- HERO -->
+    <!-- ============================================= -->
+    <section class="banner-main-con ev-hero" style="padding: 80px 0 70px;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 wow slideInLeft">
+            <p style="color:#00e0a3;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:14px;">
+              Gerencie seu billing AWS com a Evernow
+            </p>
+            <h1 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:20px;">
+              Pare de pagar sua AWS em dólar <span style="color:#00e0a3;">no cartão de crédito</span>
+            </h1>
+            <p class="ev-hero__sub" style="font-size:1.1rem;line-height:1.6;">
+              Simplifique sua cobrança e transforme sua operação em vantagem competitiva, estratégica e segura para o seu negócio. <strong style="color:#00e0a3;font-weight:700;">ROI já no primeiro ciclo de faturamento</strong>
+            </p>
+            <div class="ev-hero__trust mt-4">
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Até 50 dias para pagar</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Cobrança em reais</span>
+              <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Sem IOF</span>
+            </div>
+            <div class="mt-5 d-flex flex-wrap align-items-center" style="gap:22px;">
+              <a href="#reuniao" class="ev-cta-meeting">
+                <span class="ev-cta-meeting__icon"><i class="fas fa-calendar-check"></i></span>
+                <span class="ev-cta-meeting__text">
+                  <strong>Marcar reunião</strong>
+                  <small>30 min com arquiteto sênior</small>
+                </span>
+                <i class="fas fa-arrow-right ev-cta-meeting__arrow"></i>
+              </a>
+              <a href="#diagnostico"
+                 style="color:rgba(255,255,255,.7);font-weight:600;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;transition:color .2s;"
+                 onmouseover="this.style.color='#00e0a3'"
+                 onmouseout="this.style.color='rgba(255,255,255,.7)'">
+                Prefiro enviar minha fatura
+                <i class="fas fa-arrow-right" style="margin-left:8px;font-size:.85rem;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero video -->
+          <div id="video" class="col-lg-7 wow slideInRight mt-5 mt-lg-0" style="scroll-margin-top:80px;">
+            <div style="position:relative;">
+              <div style="position:absolute;inset:-20px;border-radius:28px;background:radial-gradient(ellipse at center,rgba(0,224,163,.22) 0%,transparent 65%);z-index:0;filter:blur(14px);"></div>
+              <div style="position:relative;z-index:1;border-radius:16px;overflow:hidden;border:1px solid rgba(0,224,163,.32);box-shadow:0 0 60px rgba(0,224,163,.18),0 25px 60px rgba(0,0,0,.65);">
+                <video controls playsinline preload="metadata"
+                       style="width:100%;display:block;background:#000;aspect-ratio:16/9;">
+                  <source src="/assets/video/Evernow_Eficiência_AWS_e_FinOps_1080p_caption.mp4" type="video/mp4">
+                  Seu navegador não suporta vídeo HTML5.
+                </video>
+              </div>
+              <p style="color:rgba(255,255,255,.5);font-size:.82rem;text-align:center;margin-top:18px;letter-spacing:.04em;">
+                <i class="fas fa-play-circle" style="color:#00e0a3;margin-right:6px;"></i>
+                A oferta inteira em menos de 1 minuto
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============================================= -->
+  <!-- STATS BAR -->
+  <!-- ============================================= -->
+  <section style="background:#0f1a5c;padding:32px 0;border-bottom:1px solid rgba(255,255,255,.06);">
+    <div class="container overlay-content">
+      <div class="row text-center justify-content-center">
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h3 style="color:#00e0a3;font-size:2.2rem;font-weight:800;margin-bottom:4px;">31%</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.55);margin:0;">economia média em infra (IDC)</p>
+        </div>
+        <div class="col-6 col-md-4 mb-4 mb-md-0">
+          <h3 style="color:#00e0a3;font-size:2.2rem;font-weight:800;margin-bottom:4px;">50d</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.55);margin:0;">fluxo de caixa antes do pagamento</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <h3 style="color:#00e0a3;font-size:2.2rem;font-weight:800;margin-bottom:4px;">1h</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.55);margin:0;">SLA P1 do NOC 24/7 incluso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CLIENTES QUE CONFIAM NA EVERNOW -->
+  <!-- ============================================= -->
+  {% set partnersTagKey = "Clientes que confiam na Evernow" %}
+  {% set partnersSectionStyle = "background:#050a18;padding:50px 0 40px;border-bottom:1px solid rgba(255,255,255,.04);" %}
+  {% set partnersSliderStyle = "background:transparent;padding-top:0;padding-bottom:0;" %}
+  {% include "components/partners-grid.njk" %}
+
+  <!-- ============================================= -->
+  <!-- COMPARAÇÃO ANTES x DEPOIS (high-converting) -->
+  <!-- ============================================= -->
+  <section id="comparativo" class="ev-section bg-overly-img" style="scroll-margin-top:80px;">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">A virada</div>
+      <h2 class="ev-section__title wow fadeInUp">Antes vs. depois da migração de billing</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5">Sua infraestrutura AWS não muda nada. O que muda é tudo ao redor da fatura.</p>
+
+      <div class="row mt-4">
+        <!-- ANTES -->
+        <div class="col-lg-6 mb-4 wow fadeInLeft">
+          <div style="background:rgba(255,90,90,.07);border:1px solid rgba(255,90,90,.2);border-radius:14px;padding:32px;height:100%;">
+            <p style="color:#ff9e9e;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px;">Como você está hoje</p>
+            <h4 style="color:#fff;font-weight:700;margin-bottom:22px;font-size:1.3rem;">Pagamento direto no cartão</h4>
+            <ul class="list-unstyled" style="font-size:.94rem;color:rgba(255,255,255,.75);line-height:1.7;">
+              <li class="mb-3"><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>IOF de 6,38% sobre cada fatura</li>
+              <li class="mb-3"><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>Spread cambial do cartão (5–8% acima do Ptax)</li>
+              <li class="mb-3"><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>Nota fiscal internacional vira dor de cabeça fiscal</li>
+              <li class="mb-3"><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>Pagamento D+0 / D+30 (estoura limite em pico)</li>
+              <li class="mb-3"><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>Suporte AWS: pago à parte (US$ 100–15.000/mês)</li>
+              <li class="mb-3"><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>Plantão técnico recai no seu time interno</li>
+              <li><i class="fas fa-times-circle" style="color:#ff9e9e;margin-right:10px;"></i>Sem FinOps tooling: você descobre o gasto só no fim do mês</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DEPOIS -->
+        <div class="col-lg-6 mb-4 wow fadeInRight">
+          <div style="background:rgba(0,224,163,.07);border:1px solid rgba(0,224,163,.3);border-radius:14px;padding:32px;height:100%;">
+            <p style="color:#00e0a3;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px;">Como você fica com a Evernow</p>
+            <h4 style="color:#fff;font-weight:700;margin-bottom:22px;font-size:1.3rem;">Billing via parceiro Premier AWS</h4>
+            <ul class="list-unstyled" style="font-size:.94rem;color:rgba(255,255,255,.85);line-height:1.7;">
+              <li class="mb-3"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i><strong>Zero IOF</strong>, pagamento em boleto BRL</li>
+              <li class="mb-3"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i><strong>Câmbio Ptax</strong>, sem spread de cartão</li>
+              <li class="mb-3"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i><strong>NF nacional</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i><strong>Até 50 dias</strong> de prazo entre consumo e pagamento</li>
+              <li class="mb-3"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i><strong>NOC 24/7</strong> + Suporte N1/N2 certificado AWS, incluso</li>
+              <li class="mb-3"><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i>Atendimento em PT, EN e ES, SLA P1 = 1h</li>
+              <li><i class="fas fa-check-circle" style="color:#00e0a3;margin-right:10px;"></i>Plataforma de <strong>FinOps inclusa</strong> (nOps)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 wow fadeInUp">
+        <p style="color:rgba(255,255,255,.6);font-size:.95rem;max-width:680px;margin:0 auto 20px;">
+          Em uma fatura de <strong style="color:#00e0a3;">US$ 10.000/mês</strong>, a diferença entre os dois modelos pode passar de <strong style="color:#00e0a3;">R$ 95.000 ao ano</strong> apenas em IOF + câmbio.
+        </p>
+        <div class="d-inline-flex flex-wrap justify-content-center align-items-center" style="gap:20px;">
+          <a href="#reuniao" class="ev-cta-meeting">
+            <span class="ev-cta-meeting__icon"><i class="fas fa-calendar-check"></i></span>
+            <span class="ev-cta-meeting__text">
+              <strong>Marcar reunião</strong>
+              <small>30 min, sem compromisso</small>
+            </span>
+            <i class="fas fa-arrow-right ev-cta-meeting__arrow"></i>
+          </a>
+          <a href="#diagnostico" style="color:rgba(255,255,255,.7);font-weight:600;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;" onmouseover="this.style.color='#00e0a3'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Calcular minha economia <i class="fas fa-arrow-right" style="margin-left:8px;font-size:.85rem;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- BENEFÍCIOS / 6 PILARES -->
+  <!-- ============================================= -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Os 6 pilares da oferta</div>
+      <h2 class="ev-section__title wow fadeInUp">Tudo o que você ganha numa decisão só</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5" style="font-size:.95rem;max-width:820px;">Você não está trocando de cloud. Está trocando o jeito de pagar e o nível de cuidado em volta dela.</p>
+
+      <div class="ev-delivery-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-coins"></i></div>
+          <h4>Economia direta + ROI</h4>
+          <p>Eliminação de IOF e spread cambial. Dólar Ptax, parcelamento em até 6x sem juros em Instância Reservada e até 31% de economia em infraestrutura (IDC).</p>
+        </div>
+
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-hourglass-half"></i></div>
+          <h4>Fluxo de caixa de 50 dias</h4>
+          <p>Consumo medido dia 1 a 30, faturamento entre dia 20 e 30 do mês seguinte, boleto com vencimento em mais 30 dias. Quase dois meses para crescer antes do caixa sentir.</p>
+        </div>
+
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-headset"></i></div>
+          <h4>NOC 24/7 incluso</h4>
+          <p>Suporte Nível 1 e 2 com engenheiros certificados AWS, em português, inglês e espanhol. SLA P1 de 1 hora. Seu time interno volta a entregar roadmap, não a apagar incêndio.</p>
+        </div>
+
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Compliance fiscal &amp; LGPD</h4>
+          <p>Nota fiscal nacional emitida no Brasil, recolhimento automático de impostos. AWS já alinhada a LGPD, ISO 27001/17/18 e SOC 1/2/3. 43% menos incidentes de segurança/ano.</p>
+        </div>
+
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-chart-line"></i></div>
+          <h4>FinOps gratuito</h4>
+          <p>Plataforma nOps inclusa: dashboards de consumo, anomaly detection, recomendações de RI/Savings Plans e alocação por tag. Você descobre o gasto em tempo real, não no fim do mês.</p>
+        </div>
+
+        <div class="ev-delivery-card wow fadeInUp">
+          <div class="ev-delivery-card__icon"><i class="fas fa-user-cog"></i></div>
+          <h4>Arquitetos AWS sob demanda</h4>
+          <p>Pré-vendas, revisão de arquitetura e Well-Architected Review acessíveis via parceria. Você ganha um time AWS no banco. Sem CLT, sem contrato de consultoria de R$ 30k por mês.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- MID CTA -->
+  <!-- ============================================= -->
+  <section style="background:linear-gradient(90deg,rgba(0,224,163,.12) 0%,rgba(0,224,163,.04) 100%);border-top:1px solid rgba(0,224,163,.2);border-bottom:1px solid rgba(0,224,163,.2);padding:40px 0;">
+    <div class="container overlay-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:8px;color:#fff;">
+            Quer ver isso aplicado na sua AWS?
+          </h3>
+          <p style="color:rgba(255,255,255,.7);margin:0;font-size:.95rem;">
+            Agende 30 minutos com um arquiteto sênior. Conversa exploratória, sem compromisso. Enviamos uma estimativa precisa depois da qualificação.
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-right">
+          <div class="d-inline-flex flex-wrap justify-content-lg-end align-items-center" style="gap:18px;">
+            <a href="#reuniao" class="ev-cta-meeting">
+              <span class="ev-cta-meeting__icon"><i class="fas fa-calendar-check"></i></span>
+              <span class="ev-cta-meeting__text">
+                <strong>Marcar reunião</strong>
+                <small>30 min com arquiteto sênior</small>
+              </span>
+              <i class="fas fa-arrow-right ev-cta-meeting__arrow"></i>
+            </a>
+            <a href="#diagnostico" style="color:rgba(255,255,255,.75);font-weight:600;font-size:.9rem;text-decoration:none;" onmouseover="this.style.color='#00e0a3'" onmouseout="this.style.color='rgba(255,255,255,.75)'">Enviar fatura <i class="fas fa-arrow-right" style="margin-left:6px;font-size:.8rem;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CICLO DE FATURAMENTO (TIMELINE) -->
+  <!-- ============================================= -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Ciclo de pagamento</div>
+      <h2 class="ev-section__title wow fadeInUp">Como você ganha 50 dias de fôlego no caixa</h2>
+      <p class="ev-section__desc wow fadeInUp mb-5">O ciclo de billing é desenhado para previsibilidade. Não há juros, não há multa por crescimento, não há surpresas no fim do mês.</p>
+
+      <div class="ev-method mt-4">
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Dia 1–30/31</h4>
+          <p>Consumo AWS medido normalmente. Console, conta e IAM seguem nas suas mãos. Você opera como sempre operou.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Até dia 5 (mês seguinte)</h4>
+          <p>AWS fatura para o parceiro. Você nem enxerga esse passo: ele acontece nos bastidores da parceria.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>Dia 20–30 (mês seguinte)</h4>
+          <p>O parceiro emite NF nacional + boleto BRL no seu CNPJ, com detalhamento idêntico ao console AWS.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>+30 dias após NF</h4>
+          <p>Boleto vence. Total: até <strong style="color:#00e0a3;">50 dias</strong> entre consumir e pagar. Decisões de escala deixam de depender de aprovação do financeiro no mesmo mês.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- ROI / CUSTO DA INAÇÃO -->
+  <!-- ============================================= -->
+  <section class="ev-section bg-overly-img">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">O custo de não decidir hoje</div>
+      <h2 class="ev-section__title wow fadeInUp">A cada mês parado, é dinheiro que não volta</h2>
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInLeft">
+          <div style="background:rgba(255,90,90,.07);border:1px solid rgba(255,90,90,.2);border-radius:12px;padding:28px;">
+            <p style="color:#ff9e9e;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:16px;">Fonte: IDC + AWS Cloud Value Framework</p>
+            <div class="row text-center">
+              <div class="col-4">
+                <h3 style="color:#ff9e9e;font-size:1.7rem;font-weight:800;margin-bottom:4px;">6,38%</h3>
+                <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin:0;">IOF queimado em cada fatura no cartão</p>
+              </div>
+              <div class="col-4">
+                <h3 style="color:#ff9e9e;font-size:1.7rem;font-weight:800;margin-bottom:4px;">5–8%</h3>
+                <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin:0;">spread cambial acima do Ptax</p>
+              </div>
+              <div class="col-4">
+                <h3 style="color:#ff9e9e;font-size:1.7rem;font-weight:800;margin-bottom:4px;">264%</h3>
+                <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin:0;">ROI em 3 anos perdido se não otimizar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <p style="font-size:1rem;color:rgba(255,255,255,.8);line-height:1.75;">
+            Cada mês operando no modelo antigo é um corte invisível no orçamento. Numa conta AWS de US$ 10 mil por mês paga no cartão, são <strong style="color:#00e0a3;">cerca de R$ 8 mil mensais</strong> queimados só em IOF e spread. Isso sem contar suporte por fora e o plantão técnico que sobra pro seu time. Em 12 meses, vira uma vaga sênior que você não conseguiu abrir.
+          </p>
+          <div class="mt-4 d-flex flex-wrap align-items-center" style="gap:20px;">
+            <a href="#reuniao" class="ev-cta-meeting">
+              <span class="ev-cta-meeting__icon"><i class="fas fa-calendar-check"></i></span>
+              <span class="ev-cta-meeting__text">
+                <strong>Parar de queimar caixa</strong>
+                <small>Reunião de 30 min, sem compromisso</small>
+              </span>
+              <i class="fas fa-arrow-right ev-cta-meeting__arrow"></i>
+            </a>
+            <a href="#diagnostico" style="color:rgba(255,255,255,.75);font-weight:600;font-size:.92rem;text-decoration:none;" onmouseover="this.style.color='#00e0a3'" onmouseout="this.style.color='rgba(255,255,255,.75)'">Enviar fatura <i class="fas fa-arrow-right" style="margin-left:6px;font-size:.8rem;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- COMO FUNCIONA -->
+  <!-- ============================================= -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">O processo</div>
+      <h2 class="ev-section__title wow fadeInUp">Da decisão à primeira fatura BRL em 14 dias</h2>
+      <p class="ev-section__desc wow fadeInUp mb-2">Sem janela de migração. Sem refactor. Sem downtime. A AWS continua sendo sua AWS.</p>
+
+      <div class="ev-method mt-4">
+        <div class="ev-method-step wow fadeInUp">
+          <h4>1. Reunião exploratória (24h)</h4>
+          <p>Conversa de 30 min com arquiteto AWS sênior pra entender seu setup, volume de consumo e prioridades. Você escolhe o melhor horário direto na agenda online.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>2. Qualificação &amp; estimativa</h4>
+          <p>Você compartilha a última fatura AWS e dados básicos da empresa. Avaliação financeira pelo parceiro Premier AWS e estimativa precisa de economia em IOF, câmbio e suporte.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>3. Vinculação técnica</h4>
+          <p>Vinculação da conta AWS ao billing do parceiro Premier AWS via autorização padrão da Amazon. Você não muda IAM, infraestrutura ou usuários.</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>4. Onboarding FinOps</h4>
+          <p>Ativação do nOps, configuração de alertas de custo, tagging strategy e revisão inicial de oportunidades (RIs, Savings Plans, idle resources).</p>
+        </div>
+        <div class="ev-method-step wow fadeInUp">
+          <h4>5. Primeira NF em BRL</h4>
+          <p>No próximo ciclo de billing, sua fatura sai em real, com NF nacional e detalhamento idêntico ao console AWS. NOC 24/7 já ativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FAQ -->
+  <!-- ============================================= -->
+  <section class="ev-section ev-section--alt" style="border-top:1px solid rgba(255,255,255,0.05);">
+    <div class="container overlay-content">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 wow fadeInLeft">
+          <div class="ev-section__tag">Dúvidas frequentes</div>
+          <h2 class="ev-section__title mt-2">Perguntas que todo CTO faz</h2>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.6;margin-top:12px;">
+            Mais dúvidas? Fale com um especialista sem compromisso.
+          </p>
+          <a href="#reuniao" class="ev-cta-meeting mt-3">
+            <span class="ev-cta-meeting__icon"><i class="fas fa-calendar-check"></i></span>
+            <span class="ev-cta-meeting__text">
+              <strong>Marcar reunião</strong>
+              <small>30 min, sem compromisso</small>
+            </span>
+            <i class="fas fa-arrow-right ev-cta-meeting__arrow"></i>
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-12 wow fadeInRight">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="card bg-transparent border-0 mb-3" style="border-bottom:1px solid rgba(255,255,255,0.1) !important;">
+              <div class="card-header bg-transparent border-0 p-0" id="heading1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left text-white text-decoration-none shadow-none font-weight-bold d-flex justify-content-between align-items-center py-3 px-0"
+                          type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    <span style="font-size:1.05rem;">Minha infraestrutura AWS vai mudar?</span>
+                    <i class="fas fa-chevron-down" style="color:#00e0a3;font-size:.8rem;flex-shrink:0;margin-left:12px;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#faqAccordion">
+                <div class="card-body text-white-50 px-0 pt-0 pb-4">
+                  <p>Não muda nada. Conta AWS, console, IAM, instâncias, redes, billing alarms: tudo permanece exatamente como está. Você não toca em um único recurso. O que muda é só a entidade que emite a fatura no fim do mês. Deixa de ser a AWS Inc. nos EUA e passa a ser um distribuidor oficial AWS no Brasil (CNPJ BR), gerenciado pela Evernow.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-transparent border-0 mb-3" style="border-bottom:1px solid rgba(255,255,255,0.1) !important;">
+              <div class="card-header bg-transparent border-0 p-0" id="heading2">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left text-white text-decoration-none shadow-none font-weight-bold d-flex justify-content-between align-items-center py-3 px-0 collapsed"
+                          type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    <span style="font-size:1.05rem;">Tenho contrato/plano AWS Enterprise Support. Perco?</span>
+                    <i class="fas fa-chevron-down" style="color:#00e0a3;font-size:.8rem;flex-shrink:0;margin-left:12px;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+                <div class="card-body text-white-50 px-0 pt-0 pb-4">
+                  <p>Você ganha suporte equivalente sem custo separado: NOC 24/7, atendimento N1 e N2 por engenheiros AWS-certified, SLA P1 de 1 hora, em PT/EN/ES. Para casos extremos, o escalonamento para a AWS continua disponível via parceiro Premier AWS. Para muitos clientes isso elimina contratos de Business ou Enterprise Support pagos à parte.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-transparent border-0 mb-3" style="border-bottom:1px solid rgba(255,255,255,0.1) !important;">
+              <div class="card-header bg-transparent border-0 p-0" id="heading3">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left text-white text-decoration-none shadow-none font-weight-bold d-flex justify-content-between align-items-center py-3 px-0 collapsed"
+                          type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    <span style="font-size:1.05rem;">E se eu quiser sair depois? Tem fidelidade?</span>
+                    <i class="fas fa-chevron-down" style="color:#00e0a3;font-size:.8rem;flex-shrink:0;margin-left:12px;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#faqAccordion">
+                <div class="card-body text-white-50 px-0 pt-0 pb-4">
+                  <p>O modelo de billing é mensal e sem fidelidade. A AWS exige apenas uma autorização formal para retomar o billing direto ou migrar para outro parceiro. O processo de saída é mais simples do que cancelar um SaaS. Não há rescisão contratual nem multa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-transparent border-0 mb-3" style="border-bottom:1px solid rgba(255,255,255,0.1) !important;">
+              <div class="card-header bg-transparent border-0 p-0" id="heading4">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left text-white text-decoration-none shadow-none font-weight-bold d-flex justify-content-between align-items-center py-3 px-0 collapsed"
+                          type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    <span style="font-size:1.05rem;">Como fica a segurança e o acesso à minha conta?</span>
+                    <i class="fas fa-chevron-down" style="color:#00e0a3;font-size:.8rem;flex-shrink:0;margin-left:12px;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#faqAccordion">
+                <div class="card-body text-white-50 px-0 pt-0 pb-4">
+                  <p>Acesso administrativo da conta AWS permanece 100% no seu controle. O parceiro Premier AWS tem visibilidade exclusivamente sobre dados de consumo (necessário para faturamento), nunca sobre seus dados de aplicação, secrets, S3 buckets ou recursos. O modelo é o mesmo do AWS Reseller padrão, alinhado a SOC 2, ISO 27001 e práticas de zero-trust.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-transparent border-0 mb-3" style="border-bottom:1px solid rgba(255,255,255,0.1) !important;">
+              <div class="card-header bg-transparent border-0 p-0" id="heading5">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left text-white text-decoration-none shadow-none font-weight-bold d-flex justify-content-between align-items-center py-3 px-0 collapsed"
+                          type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    <span style="font-size:1.05rem;">Tenho várias contas AWS (Organizations). Funciona?</span>
+                    <i class="fas fa-chevron-down" style="color:#00e0a3;font-size:.8rem;flex-shrink:0;margin-left:12px;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#faqAccordion">
+                <div class="card-body text-white-50 px-0 pt-0 pb-4">
+                  <p>Sim. AWS Organizations e múltiplas contas linkadas são totalmente suportadas. A conta payer/master é vinculada ao parceiro Premier AWS, e as filhas continuam consolidando consumo normalmente. Para grupos econômicos, é possível separar centros de custo por NF distinta, conforme sua necessidade contábil.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA FINAL — TRILHA 1: REUNIÃO (HubSpot Meetings) -->
+  <!-- ============================================= -->
+  <section id="reuniao" class="ev-section bg-overly-img" style="scroll-margin-top:80px;">
+    <div class="container overlay-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 text-center mb-4">
+          <div class="ev-section__tag">Marcar reunião</div>
+          <h2 class="ev-section__title mt-2">30 minutos com um arquiteto AWS sênior</h2>
+          <p class="ev-section__desc mx-auto mt-3">
+            Escolha o melhor horário na agenda abaixo. Conversa exploratória, sem compromisso. A estimativa precisa de economia em IOF, câmbio e suporte é entregue após a qualificação inicial.
+          </p>
+          <div class="ev-hero__trust justify-content-center mt-4">
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Horários flexíveis</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Sem compromisso</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> NDA disponível</span>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Start of Meetings Embed Script -->
+          <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/dirceu-baptista-gardin-junior/reuniao-comercial?embed=true" style="min-height:720px;background:#fff;border-radius:12px;overflow:hidden;"></div>
+          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" async defer></script>
+          <!-- End of Meetings Embed Script -->
+          <noscript>
+            <p style="text-align:center;color:rgba(255,255,255,.7);padding:24px;border:1px dashed rgba(255,255,255,.2);border-radius:12px;">
+              Habilite JavaScript ou <a href="https://meetings.hubspot.com/dirceu-baptista-gardin-junior/reuniao-comercial" target="_blank" rel="noopener" style="color:#00e0a3;font-weight:700;">abra a agenda em uma nova aba</a>.
+            </p>
+          </noscript>
+          <p style="text-align:center;color:rgba(255,255,255,.45);font-size:.82rem;margin-top:20px;">
+            Prefere mandar a fatura por aqui? <a href="#diagnostico" style="color:#00e0a3;font-weight:600;text-decoration:none;">Use o formulário abaixo</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA FINAL — TRILHA 2: FORMULÁRIO (qualificação completa) -->
+  <!-- ============================================= -->
+  <section id="diagnostico" class="ev-section ev-section--alt" style="scroll-margin-top:80px;">
+    <div class="container overlay-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <div class="ev-section__tag">Diagnóstico por formulário</div>
+          <h2 class="ev-section__title mt-2">Sem tempo pra agendar? Envie sua fatura</h2>
+          <p class="ev-section__desc mx-auto mt-3">
+            Preencha o formulário com os dados da sua empresa e a última fatura AWS. Entramos em contato para agendar a reunião e iniciar a qualificação financeira pelo parceiro Premier AWS.
+          </p>
+          <div class="ev-hero__trust justify-content-center mt-4">
+            <span class="ev-hero__trust-item"><i class="fas fa-check-circle"></i> Retorno rápido</span>
+            <span class="ev-hero__trust-item"><i class="fas fa-shield-alt"></i> Dados sob LGPD &amp; NDA</span>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <script src="https://js.hsforms.net/forms/embed/49406327.js" defer></script>
+          <div class="hs-form-frame" data-region="na1"
+               data-form-id="fbcedeb4-75d3-4247-a39b-b5cfe447aef9"
+               data-portal-id="49406327"></div>
+          <p style="text-align:center;color:rgba(255,255,255,.45);font-size:.78rem;margin-top:16px;line-height:1.6;max-width:680px;margin-left:auto;margin-right:auto;">
+            Ao enviar você concorda com nossa <a href="/politica-de-privacidade" style="color:rgba(255,255,255,.7);text-decoration:underline;">Política de Privacidade</a> e autoriza o uso dos dados para qualificação comercial. NDA mútuo disponível mediante solicitação.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- RELACIONADOS -->
+  <!-- ============================================= -->
+  <section class="ev-section ev-section--alt">
+    <div class="container overlay-content">
+      <div class="ev-section__tag wow fadeInUp">Continue explorando</div>
+      <h2 class="ev-section__title wow fadeInUp">Outras frentes da Evernow</h2>
+      <div class="ev-related-grid mt-4">
+        <a href="/solucoes/cloud-services/" class="ev-related-card wow fadeInUp">
+          <h5>Cloud Services</h5>
+          <p>Arquitetura, migração, modernização e operação em AWS, Azure e GCP.</p>
+        </a>
+        <a href="/pentest" class="ev-related-card wow fadeInUp">
+          <h5>Pentest Cloud</h5>
+          <p>Teste de segurança ofensiva em AWS, Azure e GCP por time certificado OSCP/OSWE.</p>
+        </a>
+        <a href="/contact" class="ev-related-card wow fadeInUp">
+          <h5>Falar com especialista</h5>
+          <p>Conversa de 30 minutos com arquiteto sênior, sem compromisso de compra.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Minha infraestrutura AWS vai mudar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não muda nada. Conta AWS, console, IAM, instâncias, redes, billing alarms: tudo permanece exatamente como está. O que muda é só a entidade que emite a fatura. Deixa de ser a AWS Inc. nos EUA e passa a ser um distribuidor oficial AWS no Brasil (CNPJ BR), gerenciado pela Evernow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tenho contrato/plano AWS Enterprise Support. Perco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você ganha suporte equivalente sem custo separado: NOC 24/7, atendimento N1 e N2 por engenheiros AWS-certified, SLA P1 de 1 hora, em PT/EN/ES. Para muitos clientes isso elimina contratos de Business ou Enterprise Support pagos à parte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "E se eu quiser sair depois? Tem fidelidade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O modelo de billing é mensal e sem fidelidade. A AWS exige apenas uma autorização formal para retomar o billing direto ou migrar para outro parceiro. O processo de saída é mais simples do que cancelar um SaaS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como fica a segurança e o acesso à minha conta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Acesso administrativo da conta AWS permanece 100% no seu controle. O parceiro Premier AWS tem visibilidade exclusivamente sobre dados de consumo (necessário para faturamento), nunca sobre seus dados de aplicação, secrets, S3 buckets ou recursos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tenho várias contas AWS (Organizations). Funciona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. AWS Organizations e múltiplas contas linkadas são totalmente suportadas. A conta payer/master é vinculada ao parceiro Premier AWS, e as filhas continuam consolidando consumo normalmente."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Structured Data: Service (billing AWS gerenciado) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Billing AWS em Reais — Evernow",
+  "alternateName": [
+    "Revenda AWS Brasil",
+    "AWS Reseller Brasil",
+    "AWS Solution Provider Brasil",
+    "Faturamento AWS em CNPJ Nacional",
+    "AWS em Boleto BRL",
+    "Migração de Billing AWS"
+  ],
+  "serviceType": "AWS Billing, Reseller &amp; FinOps Management",
+  "category": "Cloud Computing Reseller Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Evernow",
+    "url": "https://evernow.com.br",
+    "logo": "https://evernow.com.br/assets/image/logo/evernow-dark.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Irmã Gabriela, 51",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+  },
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Empresas brasileiras que utilizam Amazon Web Services (AWS) e pagam diretamente no cartão de crédito em dólar"
+  },
+  "description": "Serviço de billing AWS em reais via revenda oficial gerenciada pela Evernow. Sua conta AWS é faturada em boleto BRL com nota fiscal nacional brasileira, dólar Ptax sem spread cambial, zero IOF, NOC 24/7 com engenheiros AWS-certified, FinOps incluso (nOps), suporte premium em PT/EN/ES com SLA P1 de 1 hora e até 50 dias de fluxo de caixa entre consumo e pagamento. Compatível com AWS Organizations, Consolidated Billing e múltiplas contas. Sem migração de infraestrutura, sem downtime e sem refactor.",
+  "keywords": "billing aws em reais, pagar aws em reais, aws boleto brl, nota fiscal aws brasil, nf nacional aws, aws cnpj, revenda aws, reseller aws brasil, parceiro premier aws, parceiro aws brasil, aws sem iof, aws sem spread cambial, dólar ptax aws, finops aws, noc aws 24/7, aws organizations brasil, consolidated billing aws, savings plans, instâncias reservadas",
+  "serviceOutput": [
+    "Fatura AWS mensal em boleto BRL",
+    "Nota fiscal nacional brasileira",
+    "Dashboard FinOps (nOps) com recomendações de Reserved Instances e Savings Plans",
+    "NOC 24/7 com engenheiros AWS-certified",
+    "Reunião com arquiteto AWS sênior via agendamento online"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Diferenciais do billing AWS Evernow",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cobrança em reais (boleto BRL)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nota fiscal nacional brasileira" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dólar Ptax sem spread cambial" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zero IOF na fatura AWS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NOC 24/7 incluso com engenheiros AWS-certified" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plataforma de FinOps (nOps) incluída" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Até 50 dias de fluxo de caixa" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arquitetos AWS sob demanda" } }
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "0",
+    "description": "Reunião gratuita de 30 minutos com arquiteto AWS sênior, agendada online conforme sua disponibilidade. Sem compromisso.",
+    "availability": "https://schema.org/InStock",
+    "url": "https://evernow.com.br/migracao-aws/#reuniao"
+  }
+}
+</script>
